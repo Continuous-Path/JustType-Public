@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AccessiblePrompt overlay layout. Used by AccessiblePrompt to display
+  a message over the user's app (above the IME) with a UnDo-to-close
+  footer. Width is MATCH_PARENT; positioned at top of screen by the
+  WindowManager.LayoutParams the host configures.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/accessible_prompt_background"
+    android:padding="16dp"
+    android:elevation="8dp">
+
+    <TextView
+        android:id="@+id/acc_prompt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/textColorSecondary"
+        android:alpha="0.3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accessible_prompt_dismiss_hint"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="?android:attr/textColorSecondary" />
+
+</LinearLayout>

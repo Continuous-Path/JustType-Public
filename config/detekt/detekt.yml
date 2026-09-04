@@ -1,0 +1,29 @@
+# detekt configuration for JustType
+# Lenient thresholds to accommodate the legacy codebase.
+# Existing violations are suppressed via baseline.xml — only new code triggers failures.
+
+complexity:
+  LongMethod:
+    threshold: 200
+  LargeClass:
+    threshold: 10000
+  ComplexCondition:
+    threshold: 6
+  CyclomaticComplexMethod:
+    threshold: 30
+  TooManyFunctions:
+    thresholdInFiles: 100
+    thresholdInClasses: 80
+  LongParameterList:
+    functionThreshold: 10
+    constructorThreshold: 10
+
+style:
+  MaxLineLength:
+    maxLineLength: 200
+  WildcardImport:
+    active: false
+  MagicNumber:
+    active: false
+  ReturnCount:
+    max: 8

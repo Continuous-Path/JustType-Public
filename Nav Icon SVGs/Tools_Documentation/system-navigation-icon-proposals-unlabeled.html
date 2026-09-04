@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JustType System Navigation Icon Proposals</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #6c7884;
+      --line: #17212b;
+      --soft: #d9dee4;
+      --paper: #f7f9fb;
+      --panel: #ffffff;
+      --accent: #006d77;
+      --transform: #c2410c;
+      --key: 92px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    main {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px 24px 48px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: 0 0 24px;
+      color: #334250;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    h2 {
+      margin: 28px 0 12px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+      gap: 14px;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 18px;
+    }
+
+    .card,
+    .layout {
+      background: var(--panel);
+      border: 1px solid #dce2e8;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .sample {
+      width: var(--key);
+      height: var(--key);
+      margin: 0 auto 10px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #bcc6d0;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .label {
+      min-height: 34px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 650;
+    }
+
+    .note {
+      margin-top: 6px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    svg {
+      width: 72px;
+      height: 72px;
+      overflow: visible;
+    }
+
+    .stroke {
+      fill: none;
+      stroke: var(--line);
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .thin {
+      fill: none;
+      stroke: var(--line);
+      stroke-width: 3.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .clock {
+      fill: none;
+      stroke: var(--line);
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .fill {
+      fill: var(--line);
+    }
+
+    .soft {
+      fill: #e5e9ee;
+      stroke: #8b98a5;
+      stroke-width: 2.8;
+    }
+
+    .ghost {
+      fill: #eef1f4;
+      stroke: #a6b0ba;
+      stroke-width: 3;
+      opacity: 0.65;
+    }
+
+    .accent {
+      stroke: var(--accent);
+    }
+
+    .accent-fill {
+      fill: var(--accent);
+    }
+
+    .transform {
+      stroke: var(--transform);
+    }
+
+    .transform-fill {
+      fill: var(--transform);
+    }
+
+    .gridline {
+      fill: none;
+      stroke: var(--line);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .gridline-accent {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .mini-text {
+      font-size: 15px;
+      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      fill: var(--line);
+      text-anchor: middle;
+    }
+
+    .tiny-text {
+      font-size: 11px;
+      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      fill: var(--line);
+      text-anchor: middle;
+    }
+
+    .tiny-text.accent-fill {
+      fill: var(--accent);
+    }
+
+    .keymap {
+      display: grid;
+      grid-template-columns: repeat(3, 82px);
+      grid-template-rows: repeat(3, 82px);
+      gap: 7px;
+      justify-content: center;
+    }
+
+    .mini-key {
+      border: 1px solid #c6d0da;
+      border-radius: 7px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      padding: 4px;
+    }
+
+    .mini-key.center {
+      padding: 3px;
+      color: #34414e;
+      font-size: 11px;
+      line-height: 1.05;
+      font-weight: 800;
+      text-align: center;
+      word-break: normal;
+    }
+
+    .mini-key svg {
+      width: 58px;
+      height: 58px;
+    }
+
+    .center {
+      background: #eef2f5;
+    }
+
+    .layout h3 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      main {
+        max-width: none;
+        padding: 18px;
+      }
+
+      .card,
+      .layout {
+        break-inside: avoid;
+      }
+    }
+
+
+    h1,
+    h2,
+    h3,
+    .intro,
+    .label,
+    .note {
+      display: none;
+    }
+
+    main {
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>JustType System Navigation Icon Proposals</h1>
+  <p class="intro">Draft icon set for compact eight-key System Navigation overlays. Each sample is shown inside a key-sized box, with labels for review only. The icon language uses heavy simple strokes, small context marks, and minimal text so symbols remain legible when the floating keyboard is small.</p>
+
+  <h2>Core Navigation</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Android Home">
+          <circle class="fill" cx="36" cy="36" r="12"></circle>
+          <path class="fill accent-fill" d="M25 68 A11 11 0 0 1 47 68 V76 H25 Z"></path>
+          <path class="thin accent" d="M29 60 L25 55 M43 60 L47 55"></path>
+          <circle class="fill" cx="31" cy="68" r="1.6"></circle>
+          <circle class="fill" cx="41" cy="68" r="1.6"></circle>
+        </svg>
+      </div>
+      <div class="label">Android Home</div>
+      <div class="note">Plain Android Home circle with small Android context mark.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Android Back">
+          <path class="fill" d="M48 18 L22 36 L48 54 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Android Back</div>
+      <div class="note">Plain Android Back triangle.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Android App Switcher">
+          <rect class="fill" x="23" y="23" width="28" height="28" rx="2"></rect>
+        </svg>
+      </div>
+      <div class="label">Android App Switcher</div>
+      <div class="note">Plain Android App Switcher square.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 256 256" aria-label="Single tap">
+          <path class="fill" d="M56,76a60,60,0,0,1,120,0,8,8,0,0,1-16,0,44,44,0,0,0-88,0,8,8,0,1,1-16,0Zm140,44a27.9,27.9,0,0,0-13.36,3.39A28,28,0,0,0,144,106.7V76a28,28,0,0,0-56,0v80l-3.82-6.13a28,28,0,0,0-48.41,28.17l29.32,50A8,8,0,1,0,78.89,220L49.6,170a12,12,0,1,1,20.78-12l.14.23,18.68,30A8,8,0,0,0,104,184V76a12,12,0,0,1,24,0v68a8,8,0,1,0,16,0V132a12,12,0,0,1,24,0v20a8,8,0,0,0,16,0v-4a12,12,0,0,1,24,0v36c0,21.61-7.1,36.3-7.16,36.42a8,8,0,0,0,3.58,10.73A7.9,7.9,0,0,0,208,232a8,8,0,0,0,7.16-4.42c.37-.73,8.85-18,8.85-43.58V148A28,28,0,0,0,196,120Z"></path>
+        </svg>
+      </div>
+      <div class="label">Single Tap</div>
+      <div class="note">Concrete hand shape with tap ripple.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 320 256" aria-label="Double tap">
+          <path class="fill" d="M56,76a60,60,0,0,1,120,0,8,8,0,0,1-16,0,44,44,0,0,0-88,0,8,8,0,1,1-16,0Zm140,44a27.9,27.9,0,0,0-13.36,3.39A28,28,0,0,0,144,106.7V76a28,28,0,0,0-56,0v80l-3.82-6.13a28,28,0,0,0-48.41,28.17l29.32,50A8,8,0,1,0,78.89,220L49.6,170a12,12,0,1,1,20.78-12l.14.23,18.68,30A8,8,0,0,0,104,184V76a12,12,0,0,1,24,0v68a8,8,0,1,0,16,0V132a12,12,0,0,1,24,0v20a8,8,0,0,0,16,0v-4a12,12,0,0,1,24,0v36c0,21.61-7.1,36.3-7.16,36.42a8,8,0,0,0,3.58,10.73A7.9,7.9,0,0,0,208,232a8,8,0,0,0,7.16-4.42c.37-.73,8.85-18,8.85-43.58V148A28,28,0,0,0,196,120Z"></path>
+          <path class="fill accent-fill" d="M220.78125,82.7734375 L233.16796875,70.38671875 L220.69921875,57.958984375 L228.328125,50.330078125 L240.796875,62.7578125 L253.18359375,50.37109375 L260.607421875,57.8359375 L248.220703125,70.22265625 L260.73046875,82.732421875 L253.1015625,90.361328125 L240.591796875,77.8515625 L228.205078125,90.23828125 Z M307.775390625,89.294921875 V100.0 H267.375 Q268.03125,93.9296875 271.3125,88.4951171875 Q274.59375,83.060546875 284.2734375,74.078125 Q292.06640625,66.818359375 293.830078125,64.234375 Q296.208984375,60.666015625 296.208984375,57.1796875 Q296.208984375,53.32421875 294.1376953125,51.2529296875 Q292.06640625,49.181640625 288.416015625,49.181640625 Q284.806640625,49.181640625 282.673828125,51.35546875 Q280.541015625,53.529296875 280.212890625,58.57421875 L268.728515625,57.42578125 Q269.75390625,47.91015625 275.16796875,43.767578125 Q280.58203125,39.625 288.703125,39.625 Q297.603515625,39.625 302.689453125,44.423828125 Q307.775390625,49.22265625 307.775390625,56.359375 Q307.775390625,60.419921875 306.3193359375,64.0908203125 Q304.86328125,67.76171875 301.705078125,71.78125 Q299.61328125,74.447265625 294.158203125,79.451171875 Q288.703125,84.455078125 287.2470703125,86.095703125 Q285.791015625,87.736328125 284.888671875,89.294921875 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Double Tap</div>
+      <div class="note">Same tap hand, with compact x2 cue.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 256 256" aria-label="Tap and hold">
+          <path class="fill" d="M196,88a27.86,27.86,0,0,0-13.35,3.39A28,28,0,0,0,144,74.7V44a28,28,0,0,0-56,0v80l-3.82-6.13A28,28,0,0,0,35.73,146l4.67,8.23C74.81,214.89,89.05,240,136,240a88.1,88.1,0,0,0,88-88V116A28,28,0,0,0,196,88Zm12,64a72.08,72.08,0,0,1-72,72c-37.63,0-47.84-18-81.68-77.68l-4.69-8.27,0-.05A12,12,0,0,1,54,121.61a11.88,11.88,0,0,1,6-1.6,12,12,0,0,1,10.41,6,1.76,1.76,0,0,0,.14.23l18.67,30A8,8,0,0,0,104,152V44a12,12,0,0,1,24,0v68a8,8,0,0,0,16,0V100a12,12,0,0,1,24,0v20a8,8,0,0,0,16,0v-4a12,12,0,0,1,24,0Z"></path>
+          <path class="fill accent-fill" d="M195,4 H205 A2,2 0 0 1 207,6 V12 A2,2 0 0 1 205,14 H195 A2,2 0 0 1 193,12 V6 A2,2 0 0 1 195,4 Z"></path>
+          <path class="clock accent" d="M168,48 A32,32 0 1 0 232,48 A32,32 0 1 0 168,48 Z"></path>
+          <path class="clock accent" d="M200,48 L220,33"></path>
+          <path class="fill accent-fill" d="M196,48 A4,4 0 1 0 204,48 A4,4 0 1 0 196,48 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Tap and Hold</div>
+      <div class="note">Pressing hand with stopwatch cue.</div>
+    </article>
+  </section>
+
+  <h2>Layer And Mode Controls</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Switch to layer 2">
+          <rect class="thin" x="8" y="11" width="24" height="24" rx="3"></rect>
+          <path class="gridline" d="M16 11 V35 M24 11 V35 M8 19 H32 M8 27 H32"></path>
+          <rect class="thin accent" x="40" y="34" width="24" height="24" rx="3"></rect>
+          <path class="gridline-accent" d="M48 34 V58 M56 34 V58 M40 42 H64 M40 50 H64"></path>
+          <path class="thin accent" d="M32 15 C53 15 58 18 58 34"></path>
+          <path class="fill accent-fill" d="M58 34 L52 25 L64 25 Z"></path>
+          <text class="tiny-text" x="20" y="48">1</text>
+          <text class="tiny-text accent-fill" x="52" y="70">2</text>
+        </svg>
+      </div>
+      <div class="label">Layer 1 to 2</div>
+      <div class="note">Stacked panels with target layer emphasized.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Switch to layer 1">
+          <rect class="thin accent" x="8" y="11" width="24" height="24" rx="3"></rect>
+          <path class="gridline-accent" d="M16 11 V35 M24 11 V35 M8 19 H32 M8 27 H32"></path>
+          <rect class="thin" x="40" y="34" width="24" height="24" rx="3"></rect>
+          <path class="gridline" d="M48 34 V58 M56 34 V58 M40 42 H64 M40 50 H64"></path>
+          <path class="thin accent" d="M40 54 C19 54 14 51 14 35"></path>
+          <path class="fill accent-fill" d="M14 35 L20 44 L8 44 Z"></path>
+          <text class="tiny-text accent-fill" x="20" y="8">1</text>
+          <text class="tiny-text" x="52" y="31">2</text>
+        </svg>
+      </div>
+      <div class="label">Layer 2 to 1</div>
+      <div class="note">Mirror of layer switch direction.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Back to navigation layer 1">
+          <text class="tiny-text accent-fill" x="26" y="13">1</text>
+          <rect class="thin accent" x="14" y="18" width="24" height="24" rx="3"></rect>
+          <path class="gridline-accent" d="M22 18 V42 M30 18 V42 M14 26 H38 M14 34 H38"></path>
+          <rect class="thin" x="42" y="48" width="22" height="22" rx="3"></rect>
+          <path class="gridline" d="M49.3 48 V70 M56.7 48 V70 M42 55.3 H64 M42 62.7 H64"></path>
+          <path class="thin accent" d="M42 59 C28 59 22 52 26 42"></path>
+          <path class="fill accent-fill" d="M26 42 L32 51 H20 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Back to Nav 1</div>
+      <div class="note">Layer switch plus return arrow cue.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Back to navigation layer 2">
+          <text class="tiny-text accent-fill" x="26" y="13">2</text>
+          <rect class="thin accent" x="14" y="18" width="24" height="24" rx="3"></rect>
+          <path class="gridline-accent" d="M22 18 V42 M30 18 V42 M14 26 H38 M14 34 H38"></path>
+          <rect class="thin" x="42" y="48" width="22" height="22" rx="3"></rect>
+          <path class="gridline" d="M49.3 48 V70 M56.7 48 V70 M42 55.3 H64 M42 62.7 H64"></path>
+          <path class="thin accent" d="M42 59 C28 59 22 52 26 42"></path>
+          <path class="fill accent-fill" d="M26 42 L32 51 H20 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Back to Nav 2</div>
+      <div class="note">Return variant for modal layers.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="-20 0 104 72" aria-label="Longer path">
+          <path class="thin" d="M36 10 H48"></path>
+          <path class="fill" d="M57 10 L48 3 V17 Z"></path>
+          <path class="thin accent" d="M27 30 H57"></path>
+          <path class="fill accent-fill" d="M66 30 L57 23 V37 Z"></path>
+          <path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path>
+          <path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path>
+          <path class="thin transform" d="M31 10 H22"></path>
+          <path class="transform-fill" d="M13 10 L22 4 V16 Z"></path>
+          <path class="thin transform" d="M62 10 H71"></path>
+          <path class="transform-fill" d="M80 10 L71 16 V4 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Longer Path</div>
+      <div class="note">Generic length increase control; leave lower label area in app.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="-20 0 104 72" aria-label="Shorter path">
+          <path class="thin" d="M31 10 H54"></path>
+          <path class="fill" d="M63 10 L54 3 V17 Z"></path>
+          <path class="thin accent" d="M36 30 H48"></path>
+          <path class="fill accent-fill" d="M57 30 L48 23 V37 Z"></path>
+          <path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path>
+          <path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path>
+          <path class="thin transform" d="M11 10 H20"></path>
+          <path class="transform-fill" d="M27 10 L18 4 V16 Z"></path>
+          <path class="thin transform" d="M84 10 H76"></path>
+          <path class="transform-fill" d="M67 10 L76 4 V16 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Shorter Path</div>
+      <div class="note">Generic length decrease control; leave lower label area in app.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard mode">
+          <rect class="thin" x="24" y="13" width="24" height="24" rx="3"></rect>
+          <path class="gridline" d="M32 13 V37 M40 13 V37 M24 21 H48 M24 29 H48"></path>
+          <path class="thin accent" d="M36 6 V13 M36 48 V37 M11 25 H24 M61 25 H48"></path>
+          <path class="fill accent-fill" d="M36 -7 L28 6 H44 Z M36 55 L43 42 H29 Z M6 25 L19 18 V32 Z M66 25 L53 32 V18 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Mode</div>
+      <div class="note">Keyboard tile with four-way reposition cue.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Scroll mode">
+          <rect class="thin" x="8" y="10" width="24" height="24" rx="3"></rect>
+          <path class="gridline" d="M16 10 V34 M24 10 V34 M8 18 H32 M8 26 H32"></path>
+          <rect class="ghost" x="39" y="10" width="13" height="22" rx="2"></rect>
+          <rect class="thin" x="53" y="10" width="13" height="22" rx="2"></rect>
+          <path class="thin accent" d="M43 21 H58"></path>
+          <path class="fill accent-fill" d="M62 21 L54 16 V26 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Scroll Mode</div>
+      <div class="note">Screen-to-screen movement cue.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Drag mode">
+          <rect class="thin" x="8" y="10" width="24" height="24" rx="3"></rect>
+          <path class="gridline" d="M16 10 V34 M24 10 V34 M8 18 H32 M8 26 H32"></path>
+          <rect class="soft" x="41" y="18" width="10" height="10" rx="2"></rect>
+          <path class="thin accent" d="M51 23 H62"></path>
+          <path class="fill accent-fill" d="M66 23 L58 18 V28 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Drag Mode</div>
+      <div class="note">Object plus held movement trail.</div>
+    </article>
+  </section>
+
+  <h2>Directional Actions</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate up">
+          <path class="stroke" d="M36 56 V18"></path>
+          <path class="fill" d="M36 12 L25 29 H47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Up</div>
+      <div class="note">Plain arrows for focus navigation.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate left">
+          <path class="stroke" d="M56 36 H18"></path>
+          <path class="fill" d="M12 36 L29 25 V47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Left</div>
+      <div class="note">Same arrow family for Layer 1 and pick-up mode.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate right">
+          <path class="stroke" d="M16 36 H54"></path>
+          <path class="fill" d="M60 36 L43 47 V25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Right</div>
+      <div class="note">Same arrow family for Layer 1 and pick-up mode.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate down">
+          <path class="stroke" d="M36 16 V54"></path>
+          <path class="fill" d="M36 60 L47 43 H25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Down</div>
+      <div class="note">Plain arrows for focus navigation.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate up left">
+          <path class="stroke" d="M53 53 L25 25"></path>
+          <path class="fill" d="M18 18 L38 24 L24 38 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Up Left</div>
+      <div class="note">Diagonal focus navigation.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate up right">
+          <path class="stroke" d="M19 53 L47 25"></path>
+          <path class="fill" d="M54 18 L48 38 L34 24 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Up Right</div>
+      <div class="note">Diagonal focus navigation.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate down left">
+          <path class="stroke" d="M53 19 L25 47"></path>
+          <path class="fill" d="M18 54 L24 34 L38 48 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Down Left</div>
+      <div class="note">Diagonal focus navigation.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Navigate down right">
+          <path class="stroke" d="M19 19 L47 47"></path>
+          <path class="fill" d="M54 54 L34 48 L48 34 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Navigate Down Right</div>
+      <div class="note">Diagonal focus navigation.</div>
+    </article>
+  </section>
+
+  <h2>Move Keyboard Actions</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard up left">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M27 27 L17 17"></path>
+          <path class="fill accent-fill" d="M12 12 L25 16 L16 25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Up Left</div>
+      <div class="note">Keyboard moves to the upper-left edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard up">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M36 26 V17"></path>
+          <path class="fill accent-fill" d="M36 4 L29 17 H43 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Up</div>
+      <div class="note">Keyboard moves to the top edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard up right">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M45 27 L55 17"></path>
+          <path class="fill accent-fill" d="M60 12 L56 25 L47 16 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Up Right</div>
+      <div class="note">Keyboard moves to the upper-right edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard left">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M26 36 H17"></path>
+          <path class="fill accent-fill" d="M4 36 L17 29 V43 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Left</div>
+      <div class="note">Keyboard moves to the left edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard right">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M46 36 H55"></path>
+          <path class="fill accent-fill" d="M68 36 L55 43 V29 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Right</div>
+      <div class="note">Keyboard moves to the right edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard down left">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M27 45 L17 55"></path>
+          <path class="fill accent-fill" d="M12 60 L16 47 L25 56 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Down Left</div>
+      <div class="note">Keyboard moves to the lower-left edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard down">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M36 46 V55"></path>
+          <path class="fill accent-fill" d="M36 68 L43 55 H29 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Down</div>
+      <div class="note">Keyboard moves to the bottom edge.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Move keyboard down right">
+          <rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect>
+          <path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path>
+          <path class="thin accent" d="M45 45 L55 55"></path>
+          <path class="fill accent-fill" d="M60 60 L47 56 L56 47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Move Keyboard Down Right</div>
+      <div class="note">Keyboard moves to the lower-right edge.</div>
+    </article>
+  </section>
+
+  <h2>Scroll Actions</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Scroll up">
+          <rect class="ghost" x="20" y="9" width="32" height="23" rx="3"></rect>
+          <rect class="thin" x="20" y="40" width="32" height="23" rx="3"></rect>
+          <path class="stroke accent" d="M36 58 V25"></path>
+          <path class="fill accent-fill" d="M36 19 L25 36 H47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Scroll Up</div>
+      <div class="note">Gesture direction shown; current screen solid.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Scroll left">
+          <rect class="ghost" x="8" y="20" width="24" height="32" rx="3"></rect>
+          <rect class="thin" x="40" y="20" width="24" height="32" rx="3"></rect>
+          <path class="stroke accent" d="M57 36 H25"></path>
+          <path class="fill accent-fill" d="M19 36 L36 25 V47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Scroll Left</div>
+      <div class="note">Faded rectangle indicates incoming/replaced screen relation.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Scroll right">
+          <rect class="thin" x="8" y="20" width="24" height="32" rx="3"></rect>
+          <rect class="ghost" x="40" y="20" width="24" height="32" rx="3"></rect>
+          <path class="stroke accent" d="M15 36 H47"></path>
+          <path class="fill accent-fill" d="M53 36 L36 47 V25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Scroll Right</div>
+      <div class="note">Screen rectangles distinguish scroll from focus movement.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Scroll down">
+          <rect class="thin" x="20" y="9" width="32" height="23" rx="3"></rect>
+          <rect class="ghost" x="20" y="40" width="32" height="23" rx="3"></rect>
+          <path class="stroke accent" d="M36 14 V47"></path>
+          <path class="fill accent-fill" d="M36 53 L47 36 H25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Scroll Down</div>
+      <div class="note">Gesture direction shown; current screen solid.</div>
+    </article>
+  </section>
+
+  <h2>Drag And Drop</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Pick up">
+          <rect class="soft" x="26" y="32" width="20" height="20" rx="4"></rect>
+          <path class="stroke accent" d="M36 40 V11"></path>
+          <path class="fill accent-fill" d="M36 5 L25 22 H47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Pick Up</div>
+      <div class="note">Object lifted from its position.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Drag up">
+          <rect class="soft" x="27" y="47" width="18" height="18" rx="3"></rect>
+          <path class="stroke accent" d="M36 47 V17"></path>
+          <path class="fill accent-fill" d="M36 11 L25 28 H47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Drag Up</div>
+      <div class="note">Object at source replaces arrow tail mark.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Drag left">
+          <rect class="soft" x="47" y="27" width="18" height="18" rx="3"></rect>
+          <path class="stroke accent" d="M47 36 H17"></path>
+          <path class="fill accent-fill" d="M11 36 L28 25 V47 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Drag Left</div>
+      <div class="note">Distinct from plain arrow by source object.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Drag right">
+          <rect class="soft" x="7" y="27" width="18" height="18" rx="3"></rect>
+          <path class="stroke accent" d="M25 36 H55"></path>
+          <path class="fill accent-fill" d="M61 36 L44 47 V25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Drag Right</div>
+      <div class="note">Object at source replaces arrow tail mark.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Drag down">
+          <rect class="soft" x="27" y="7" width="18" height="18" rx="3"></rect>
+          <path class="stroke accent" d="M36 25 V55"></path>
+          <path class="fill accent-fill" d="M36 61 L47 44 H25 Z"></path>
+        </svg>
+      </div>
+      <div class="label">Drag Down</div>
+      <div class="note">Distinct from scroll by no screen rectangles.</div>
+    </article>
+
+    <article class="card">
+      <div class="sample">
+        <svg viewBox="0 0 72 72" aria-label="Drop">
+          <rect class="soft" x="26" y="8" width="20" height="20" rx="4"></rect>
+          <path class="stroke accent" d="M36 19 V46"></path>
+          <path class="fill accent-fill" d="M36 52 L47 35 H25 Z"></path>
+          <path class="thin" d="M21 52 H51"></path>
+        </svg>
+      </div>
+      <div class="label">Drop</div>
+      <div class="note">Object released onto a landing line.</div>
+    </article>
+  </section>
+
+  <h2>Layer Mockups</h2>
+  <section class="layout-grid">
+    <article class="layout">
+      <h3>System Navigation Layer 1</h3>
+      <div class="keymap">
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="8" y="11" width="24" height="24" rx="3"></rect><path class="gridline" d="M16 11 V35 M24 11 V35 M8 19 H32 M8 27 H32"></path><rect class="thin accent" x="40" y="34" width="24" height="24" rx="3"></rect><path class="gridline-accent" d="M48 34 V58 M56 34 V58 M40 42 H64 M40 50 H64"></path><path class="thin accent" d="M32 15 C53 15 58 18 58 34"></path><path class="fill accent-fill" d="M58 34 L52 25 L64 25 Z"></path><text class="tiny-text" x="20" y="48">1</text><text class="tiny-text accent-fill" x="52" y="70">2</text></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M36 56 V18"></path><path class="fill" d="M36 12 L25 29 H47 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 256 256"><path class="fill" d="M56,76a60,60,0,0,1,120,0,8,8,0,0,1-16,0,44,44,0,0,0-88,0,8,8,0,1,1-16,0Zm140,44a27.9,27.9,0,0,0-13.36,3.39A28,28,0,0,0,144,106.7V76a28,28,0,0,0-56,0v80l-3.82-6.13a28,28,0,0,0-48.41,28.17l29.32,50A8,8,0,1,0,78.89,220L49.6,170a12,12,0,1,1,20.78-12l.14.23,18.68,30A8,8,0,0,0,104,184V76a12,12,0,0,1,24,0v68a8,8,0,1,0,16,0V132a12,12,0,0,1,24,0v20a8,8,0,0,0,16,0v-4a12,12,0,0,1,24,0v36c0,21.61-7.1,36.3-7.16,36.42a8,8,0,0,0,3.58,10.73A7.9,7.9,0,0,0,208,232a8,8,0,0,0,7.16-4.42c.37-.73,8.85-18,8.85-43.58V148A28,28,0,0,0,196,120Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M56 36 H18"></path><path class="fill" d="M12 36 L29 25 V47 Z"></path></svg></div>
+        <div class="mini-key center">SCREEN<br>TAP 1</div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M16 36 H54"></path><path class="fill" d="M60 36 L43 47 V25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 320 256"><path class="fill" d="M56,76a60,60,0,0,1,120,0,8,8,0,0,1-16,0,44,44,0,0,0-88,0,8,8,0,1,1-16,0Zm140,44a27.9,27.9,0,0,0-13.36,3.39A28,28,0,0,0,144,106.7V76a28,28,0,0,0-56,0v80l-3.82-6.13a28,28,0,0,0-48.41,28.17l29.32,50A8,8,0,1,0,78.89,220L49.6,170a12,12,0,1,1,20.78-12l.14.23,18.68,30A8,8,0,0,0,104,184V76a12,12,0,0,1,24,0v68a8,8,0,1,0,16,0V132a12,12,0,0,1,24,0v20a8,8,0,0,0,16,0v-4a12,12,0,0,1,24,0v36c0,21.61-7.1,36.3-7.16,36.42a8,8,0,0,0,3.58,10.73A7.9,7.9,0,0,0,208,232a8,8,0,0,0,7.16-4.42c.37-.73,8.85-18,8.85-43.58V148A28,28,0,0,0,196,120Z"></path><path class="fill accent-fill" d="M220.78125,82.7734375 L233.16796875,70.38671875 L220.69921875,57.958984375 L228.328125,50.330078125 L240.796875,62.7578125 L253.18359375,50.37109375 L260.607421875,57.8359375 L248.220703125,70.22265625 L260.73046875,82.732421875 L253.1015625,90.361328125 L240.591796875,77.8515625 L228.205078125,90.23828125 Z M307.775390625,89.294921875 V100.0 H267.375 Q268.03125,93.9296875 271.3125,88.4951171875 Q274.59375,83.060546875 284.2734375,74.078125 Q292.06640625,66.818359375 293.830078125,64.234375 Q296.208984375,60.666015625 296.208984375,57.1796875 Q296.208984375,53.32421875 294.1376953125,51.2529296875 Q292.06640625,49.181640625 288.416015625,49.181640625 Q284.806640625,49.181640625 282.673828125,51.35546875 Q280.541015625,53.529296875 280.212890625,58.57421875 L268.728515625,57.42578125 Q269.75390625,47.91015625 275.16796875,43.767578125 Q280.58203125,39.625 288.703125,39.625 Q297.603515625,39.625 302.689453125,44.423828125 Q307.775390625,49.22265625 307.775390625,56.359375 Q307.775390625,60.419921875 306.3193359375,64.0908203125 Q304.86328125,67.76171875 301.705078125,71.78125 Q299.61328125,74.447265625 294.158203125,79.451171875 Q288.703125,84.455078125 287.2470703125,86.095703125 Q285.791015625,87.736328125 284.888671875,89.294921875 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M36 16 V54"></path><path class="fill" d="M36 60 L47 43 H25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 256 256"><path class="fill" d="M196,88a27.86,27.86,0,0,0-13.35,3.39A28,28,0,0,0,144,74.7V44a28,28,0,0,0-56,0v80l-3.82-6.13A28,28,0,0,0,35.73,146l4.67,8.23C74.81,214.89,89.05,240,136,240a88.1,88.1,0,0,0,88-88V116A28,28,0,0,0,196,88Zm12,64a72.08,72.08,0,0,1-72,72c-37.63,0-47.84-18-81.68-77.68l-4.69-8.27,0-.05A12,12,0,0,1,54,121.61a11.88,11.88,0,0,1,6-1.6,12,12,0,0,1,10.41,6,1.76,1.76,0,0,0,.14.23l18.67,30A8,8,0,0,0,104,152V44a12,12,0,0,1,24,0v68a8,8,0,0,0,16,0V100a12,12,0,0,1,24,0v20a8,8,0,0,0,16,0v-4a12,12,0,0,1,24,0Z"></path><path class="fill accent-fill" d="M195,4 H205 A2,2 0 0 1 207,6 V12 A2,2 0 0 1 205,14 H195 A2,2 0 0 1 193,12 V6 A2,2 0 0 1 195,4 Z"></path><path class="clock accent" d="M168,48 A32,32 0 1 0 232,48 A32,32 0 1 0 168,48 Z"></path><path class="clock accent" d="M200,48 L220,33"></path><path class="fill accent-fill" d="M196,48 A4,4 0 1 0 204,48 A4,4 0 1 0 196,48 Z"></path></svg></div>
+      </div>
+    </article>
+
+    <article class="layout">
+      <h3>System Navigation Layer 2</h3>
+      <div class="keymap">
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin accent" x="8" y="11" width="24" height="24" rx="3"></rect><path class="gridline-accent" d="M16 11 V35 M24 11 V35 M8 19 H32 M8 27 H32"></path><rect class="thin" x="40" y="34" width="24" height="24" rx="3"></rect><path class="gridline" d="M48 34 V58 M56 34 V58 M40 42 H64 M40 50 H64"></path><path class="thin accent" d="M40 54 C19 54 14 51 14 35"></path><path class="fill accent-fill" d="M14 35 L20 44 L8 44 Z"></path><text class="tiny-text accent-fill" x="20" y="8">1</text><text class="tiny-text" x="52" y="31">2</text></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="24" y="13" width="24" height="24" rx="3"></rect><path class="gridline" d="M32 13 V37 M40 13 V37 M24 21 H48 M24 29 H48"></path><path class="thin accent" d="M36 6 V13 M36 48 V37 M11 25 H24 M61 25 H48"></path><path class="fill accent-fill" d="M36 -7 L28 6 H44 Z M36 55 L43 42 H29 Z M6 25 L19 18 V32 Z M66 25 L53 32 V18 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="8" y="10" width="24" height="24" rx="3"></rect><path class="gridline" d="M16 10 V34 M24 10 V34 M8 18 H32 M8 26 H32"></path><rect class="ghost" x="39" y="10" width="13" height="22" rx="2"></rect><rect class="thin" x="53" y="10" width="13" height="22" rx="2"></rect><path class="thin accent" d="M43 21 H58"></path><path class="fill accent-fill" d="M62 21 L54 16 V26 Z"></path></svg></div>
+        <div class="mini-key center"></div>
+        <div class="mini-key center">SYSTEM<br>NAV 2</div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="8" y="10" width="24" height="24" rx="3"></rect><path class="gridline" d="M16 10 V34 M24 10 V34 M8 18 H32 M8 26 H32"></path><rect class="soft" x="41" y="18" width="10" height="10" rx="2"></rect><path class="thin accent" d="M51 23 H62"></path><path class="fill accent-fill" d="M66 23 L58 18 V28 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="fill" d="M48 18 L22 36 L48 54 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><circle class="fill" cx="36" cy="36" r="12"></circle><path class="fill accent-fill" d="M25 68 A11 11 0 0 1 47 68 V76 H25 Z"></path><path class="thin accent" d="M29 60 L25 55 M43 60 L47 55"></path><circle class="fill" cx="31" cy="68" r="1.6"></circle><circle class="fill" cx="41" cy="68" r="1.6"></circle></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="fill" x="23" y="23" width="28" height="28" rx="2"></rect></svg></div>
+      </div>
+    </article>
+
+    <article class="layout">
+      <h3>Scroll Mode</h3>
+      <div class="keymap">
+        <div class="mini-key"><svg viewBox="0 0 72 72"><text class="tiny-text accent-fill" x="26" y="13">2</text><rect class="thin accent" x="14" y="18" width="24" height="24" rx="3"></rect><path class="gridline-accent" d="M22 18 V42 M30 18 V42 M14 26 H38 M14 34 H38"></path><rect class="thin" x="42" y="48" width="22" height="22" rx="3"></rect><path class="gridline" d="M49.3 48 V70 M56.7 48 V70 M42 55.3 H64 M42 62.7 H64"></path><path class="thin accent" d="M42 59 C28 59 22 52 26 42"></path><path class="fill accent-fill" d="M26 42 L32 51 H20 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="ghost" x="20" y="9" width="32" height="23" rx="3"></rect><rect class="thin" x="20" y="40" width="32" height="23" rx="3"></rect><path class="stroke accent" d="M36 58 V25"></path><path class="fill accent-fill" d="M36 19 L25 36 H47 Z"></path></svg></div>
+        <div class="mini-key center"></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="ghost" x="8" y="20" width="24" height="32" rx="3"></rect><rect class="thin" x="40" y="20" width="24" height="32" rx="3"></rect><path class="stroke accent" d="M57 36 H25"></path><path class="fill accent-fill" d="M19 36 L36 25 V47 Z"></path></svg></div>
+        <div class="mini-key center">SCROLL<br>MODE</div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="8" y="20" width="24" height="32" rx="3"></rect><rect class="ghost" x="40" y="20" width="24" height="32" rx="3"></rect><path class="stroke accent" d="M15 36 H47"></path><path class="fill accent-fill" d="M53 36 L36 47 V25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="-20 0 104 72"><path class="thin" d="M36 10 H48"></path><path class="fill" d="M57 10 L48 3 V17 Z"></path><path class="thin accent" d="M27 30 H57"></path><path class="fill accent-fill" d="M66 30 L57 23 V37 Z"></path><path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path><path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path><path class="thin transform" d="M31 10 H22"></path><path class="transform-fill" d="M13 10 L22 4 V16 Z"></path><path class="thin transform" d="M62 10 H71"></path><path class="transform-fill" d="M80 10 L71 16 V4 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="20" y="9" width="32" height="23" rx="3"></rect><rect class="ghost" x="20" y="40" width="32" height="23" rx="3"></rect><path class="stroke accent" d="M36 14 V47"></path><path class="fill accent-fill" d="M36 53 L47 36 H25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="-20 0 104 72"><path class="thin" d="M31 10 H54"></path><path class="fill" d="M63 10 L54 3 V17 Z"></path><path class="thin accent" d="M36 30 H48"></path><path class="fill accent-fill" d="M57 30 L48 23 V37 Z"></path><path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path><path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path><path class="thin transform" d="M11 10 H20"></path><path class="transform-fill" d="M27 10 L18 4 V16 Z"></path><path class="thin transform" d="M84 10 H76"></path><path class="transform-fill" d="M67 10 L76 4 V16 Z"></path></svg></div>
+      </div>
+    </article>
+
+    <article class="layout">
+      <h3>Drag Pick Up Mode</h3>
+      <div class="keymap">
+        <div class="mini-key"><svg viewBox="0 0 72 72"><text class="tiny-text accent-fill" x="26" y="13">2</text><rect class="thin accent" x="14" y="18" width="24" height="24" rx="3"></rect><path class="gridline-accent" d="M22 18 V42 M30 18 V42 M14 26 H38 M14 34 H38"></path><rect class="thin" x="42" y="48" width="22" height="22" rx="3"></rect><path class="gridline" d="M49.3 48 V70 M56.7 48 V70 M42 55.3 H64 M42 62.7 H64"></path><path class="thin accent" d="M42 59 C28 59 22 52 26 42"></path><path class="fill accent-fill" d="M26 42 L32 51 H20 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M36 56 V18"></path><path class="fill" d="M36 12 L25 29 H47 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="soft" x="26" y="32" width="20" height="20" rx="4"></rect><path class="stroke accent" d="M36 40 V11"></path><path class="fill accent-fill" d="M36 5 L25 22 H47 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M56 36 H18"></path><path class="fill" d="M12 36 L29 25 V47 Z"></path></svg></div>
+        <div class="mini-key center">DRAG<br>SELECT</div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M16 36 H54"></path><path class="fill" d="M60 36 L43 47 V25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="-20 0 104 72"><path class="thin" d="M36 10 H48"></path><path class="fill" d="M57 10 L48 3 V17 Z"></path><path class="thin accent" d="M27 30 H57"></path><path class="fill accent-fill" d="M66 30 L57 23 V37 Z"></path><path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path><path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path><path class="thin transform" d="M31 10 H22"></path><path class="transform-fill" d="M13 10 L22 4 V16 Z"></path><path class="thin transform" d="M62 10 H71"></path><path class="transform-fill" d="M80 10 L71 16 V4 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><path class="stroke" d="M36 16 V54"></path><path class="fill" d="M36 60 L47 43 H25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="-20 0 104 72"><path class="thin" d="M31 10 H54"></path><path class="fill" d="M63 10 L54 3 V17 Z"></path><path class="thin accent" d="M36 30 H48"></path><path class="fill accent-fill" d="M57 30 L48 23 V37 Z"></path><path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path><path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path><path class="thin transform" d="M11 10 H20"></path><path class="transform-fill" d="M27 10 L18 4 V16 Z"></path><path class="thin transform" d="M84 10 H76"></path><path class="transform-fill" d="M67 10 L76 4 V16 Z"></path></svg></div>
+      </div>
+    </article>
+
+    <article class="layout">
+      <h3>Drag Move And Drop Mode</h3>
+      <div class="keymap">
+        <div class="mini-key"><svg viewBox="0 0 72 72"><text class="tiny-text accent-fill" x="26" y="13">2</text><rect class="thin accent" x="14" y="18" width="24" height="24" rx="3"></rect><path class="gridline-accent" d="M22 18 V42 M30 18 V42 M14 26 H38 M14 34 H38"></path><rect class="thin" x="42" y="48" width="22" height="22" rx="3"></rect><path class="gridline" d="M49.3 48 V70 M56.7 48 V70 M42 55.3 H64 M42 62.7 H64"></path><path class="thin accent" d="M42 59 C28 59 22 52 26 42"></path><path class="fill accent-fill" d="M26 42 L32 51 H20 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="soft" x="27" y="47" width="18" height="18" rx="3"></rect><path class="stroke accent" d="M36 47 V17"></path><path class="fill accent-fill" d="M36 11 L25 28 H47 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="soft" x="26" y="8" width="20" height="20" rx="4"></rect><path class="stroke accent" d="M36 19 V46"></path><path class="fill accent-fill" d="M36 52 L47 35 H25 Z"></path><path class="thin" d="M21 52 H51"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="soft" x="47" y="27" width="18" height="18" rx="3"></rect><path class="stroke accent" d="M47 36 H17"></path><path class="fill accent-fill" d="M11 36 L28 25 V47 Z"></path></svg></div>
+        <div class="mini-key center">DRAG<br>MOVE</div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="soft" x="7" y="27" width="18" height="18" rx="3"></rect><path class="stroke accent" d="M25 36 H55"></path><path class="fill accent-fill" d="M61 36 L44 47 V25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="-20 0 104 72"><path class="thin" d="M36 10 H48"></path><path class="fill" d="M57 10 L48 3 V17 Z"></path><path class="thin accent" d="M27 30 H57"></path><path class="fill accent-fill" d="M66 30 L57 23 V37 Z"></path><path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path><path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path><path class="thin transform" d="M31 10 H22"></path><path class="transform-fill" d="M13 10 L22 4 V16 Z"></path><path class="thin transform" d="M62 10 H71"></path><path class="transform-fill" d="M80 10 L71 16 V4 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="soft" x="27" y="7" width="18" height="18" rx="3"></rect><path class="stroke accent" d="M36 25 V55"></path><path class="fill accent-fill" d="M36 61 L47 44 H25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="-20 0 104 72"><path class="thin" d="M31 10 H54"></path><path class="fill" d="M63 10 L54 3 V17 Z"></path><path class="thin accent" d="M36 30 H48"></path><path class="fill accent-fill" d="M57 30 L48 23 V37 Z"></path><path class="thin transform" d="M-2 10 H-13 C-21 10 -21 30 -13 30 H-2"></path><path class="transform-fill" d="M-2 30 L-11 24 V36 Z"></path><path class="thin transform" d="M11 10 H20"></path><path class="transform-fill" d="M27 10 L18 4 V16 Z"></path><path class="thin transform" d="M84 10 H76"></path><path class="transform-fill" d="M67 10 L76 4 V16 Z"></path></svg></div>
+      </div>
+    </article>
+
+    <article class="layout">
+      <h3>Move Keyboard Mode</h3>
+      <div class="keymap">
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M27 27 L17 17"></path><path class="fill accent-fill" d="M12 12 L25 16 L16 25 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M36 26 V17"></path><path class="fill accent-fill" d="M36 4 L29 17 H43 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M45 27 L55 17"></path><path class="fill accent-fill" d="M60 12 L56 25 L47 16 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M26 36 H17"></path><path class="fill accent-fill" d="M4 36 L17 29 V43 Z"></path></svg></div>
+        <div class="mini-key center">MOVE<br>KEYBOARD</div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M46 36 H55"></path><path class="fill accent-fill" d="M68 36 L55 43 V29 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M27 45 L17 55"></path><path class="fill accent-fill" d="M12 60 L16 47 L25 56 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M36 46 V55"></path><path class="fill accent-fill" d="M36 68 L43 55 H29 Z"></path></svg></div>
+        <div class="mini-key"><svg viewBox="0 0 72 72"><rect class="thin" x="26" y="26" width="20" height="20" rx="3"></rect><path class="gridline" d="M32.7 26 V46 M39.3 26 V46 M26 32.7 H46 M26 39.3 H46"></path><path class="thin accent" d="M45 45 L55 55"></path><path class="fill accent-fill" d="M60 60 L47 56 L56 47 Z"></path></svg></div>
+      </div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

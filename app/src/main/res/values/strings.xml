@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">JustType</string>
+    <string name="ime_name">JustType Keyboard</string>
+    <string name="justtype_settings_shortcut_label">JustType Settings</string>
+
+    <!-- TEST SUGGESTION BY KIRK -->
+    
+    <!-- Settings Activity -->
+    <string name="settings_title">JustType Settings</string>
+    <string name="format_phrase_delay_disabled">DISABLED</string>
+    <string name="format_phrase_delay_sec">%.1f sec</string>
+    <string name="format_keyboard_size_percent">%.0f%%</string>
+    <string name="format_key_history_height_dp">%.0fdp</string>
+
+    <!-- Welcome Guide -->
+    <string name="welcome_guide_title">Welcome Guide</string>
+    <string name="welcome_guide_open_button">Open Welcome Guide</string>
+    <string name="welcome_guide_next">Next</string>
+    <string name="welcome_guide_back">Back</string>
+    <string name="welcome_guide_skip">Skip</string>
+    <string name="welcome_guide_finish">Finish</string>
+    <string name="welcome_guide_step_indicator">Step %1$d of %2$d</string>
+    <string name="welcome_guide_step_intro_title">Welcome to JustType</string>
+    <string name="welcome_guide_step_intro_body">JustType is an accessible 8-key keyboard for people who find a normal touchscreen keyboard hard to use. It predicts the words you want, and works with direct touch, swiping, switches, a joystick, or head movement.\n\nThis short guide turns JustType on and helps you choose the input method that fits. A caregiver can help with setup.</string>
+    <string name="welcome_guide_step_enable_ime_title">Enable the keyboard</string>
+    <string name="welcome_guide_step_enable_ime_body">First, turn JustType on in your device\'s keyboard settings:\n\n1. Tap \"Open keyboard settings\" and switch on JustType Keyboard, then come back here.\n2. Tap \"Switch keyboard\" and choose JustType.\n\nThe line below shows whether JustType is enabled yet.</string>
+    <string name="welcome_guide_step_done_title">You\'re ready</string>
+    <string name="welcome_guide_step_done_body">You\'re ready to type! Open any text box and JustType will appear.\n\nNot sure which input method to use? Tap below for help choosing. You can reopen this guide or open Input Methods anytime from JustType Settings.</string>
+    <!-- Enable-keyboard step controls -->
+    <string name="welcome_enable_open_settings_button">Open keyboard settings</string>
+    <string name="welcome_enable_switch_button">Switch keyboard</string>
+    <string name="welcome_enable_status_enabled">✓ JustType is enabled</string>
+    <string name="welcome_enable_status_not_enabled">JustType is not enabled yet</string>
+    <!-- Done step + input-method chooser -->
+    <string name="welcome_done_choose_method">Help me choose an input method</string>
+    <string name="welcome_chooser_title">Which fits you best?</string>
+    <string name="welcome_chooser_open_input_methods">Open Input Methods</string>
+    <string name="welcome_chooser_back">Back</string>
+    <string name="welcome_chooser_opt_tap">I can tap the screen accurately</string>
+    <string name="welcome_chooser_opt_swipe">I can swipe but not tap precisely</string>
+    <string name="welcome_chooser_opt_one_switch">I use a single switch</string>
+    <string name="welcome_chooser_opt_two_switch">I use two switches</string>
+    <string name="welcome_chooser_opt_joystick">I use a joystick</string>
+    <string name="welcome_chooser_opt_head">I move my head (head tracking)</string>
+
+    <!-- Navigation Mode -->
+    <string name="navigation_mode_title">Navigation Mode</string>
+    <string name="navigation_mode_main_row_label">Navigation Mode</string>
+    <string name="navigation_mode_toggle_label">Enable Navigation Mode</string>
+    <string name="navigation_mode_info_overview">Drives your device with the same 8-key grid. A small floating keyboard appears on top of any app; arrow keys move focus, and other keys perform actions like Tap and Back.</string>
+    <string name="sr_nav_live_drag">Live Drag</string>
+    <string name="info_prompt_nav_live_drag">When on, DRAG holds the target down and moves it in real time as you press the arrows, dropping it where it lands. When off, you aim a cursor first and the move happens all at once when you press DROP.</string>
+    <string name="navigation_mode_info_requires_service">Requires the JustType Navigation accessibility service to be enabled in system Settings.</string>
+    <string name="navigation_mode_status_service_running">Service running</string>
+    <string name="navigation_mode_status_service_not_running">Service NOT enabled</string>
+    <string name="navigation_mode_service_not_enabled_toast">JustType Navigation accessibility service is not enabled — turn it on in system Settings first</string>
+    <string name="navigation_mode_disabled_toast">Enable Navigation Mode in JustType Settings to use the Nav keyboard</string>
+    <string name="navigation_mode_two_switch_codes_unconfigured">Configure your red + green switch codes in JustType Settings to use Two-Switch Selection with the Nav keyboard</string>
+    <string name="navigation_mode_joystick_unsupported">Joystick on the Nav keyboard needs Android 14 or newer</string>
+    <string name="navigation_mode_status_overlay_granted">Overlay permission granted</string>
+    <string name="navigation_mode_status_overlay_missing">Overlay permission missing</string>
+    <string name="navigation_mode_open_accessibility_settings">Open Accessibility Settings</string>
+    <string name="navigation_mode_show_overlay_now">Show overlay now</string>
+    <!-- Nav keyboard appearance -->
+    <string name="nav_appearance_section">Keyboard appearance</string>
+    <string name="nav_appearance_theme">Theme</string>
+    <string name="nav_appearance_theme_system">System default</string>
+    <string name="nav_appearance_theme_light">Light</string>
+    <string name="nav_appearance_theme_dark">Dark</string>
+    <string name="nav_appearance_key_opacity">Key opacity</string>
+    <string name="nav_appearance_panel_opacity">Background opacity</string>
+    <string name="nav_appearance_size">Keyboard size</string>
+    <string name="nav_appearance_transparency_mode">When keys are transparent</string>
+    <string name="nav_appearance_mode_glyph_outline">Keep glyphs and outline</string>
+    <string name="nav_appearance_mode_glyph_only">Glyphs only</string>
+    <string name="nav_appearance_mode_uniform">Fade everything together</string>
+    <string name="nav_appearance_hide_handle">Hide drag handle</string>
+    <string name="nav_appearance_apply_hint">Changes apply next time the overlay is shown.</string>
+    <string name="navigation_mode_service_description">JustType Navigation lets you drive your device with the JustType 8-key grid. A small floating keyboard moves accessibility focus, taps the focused item, and performs system actions like Back.</string>
+    <string name="navigation_mode_service_summary">8-key floating navigation overlay</string>
+    <string name="navigation_mode_service_prompt_title">Enable JustType Navigation</string>
+    <string name="navigation_mode_service_prompt_message">Navigation Mode needs the JustType Navigation accessibility service. Open system Settings to enable it.</string>
+    <string name="settings_nav_warning">The JustType Navigation Keyboard is not enabled. Turn on its accessibility service to use it.</string>
+    <string name="settings_enable_nav_keyboard">Enable Navigation Keyboard</string>
+    <string name="navigation_mode_no_focus">No focused element</string>
+    <string name="navigation_mode_stub_pressed">Stub key %1$d</string>
+    <string name="nav_drag_handle_glyph" translatable="false">⋮⋮⋮</string>
+    <string name="nav_drag_handle_desc" translatable="false">Drag to move the navigation keyboard</string>
+    <!-- Center-cell mode labels (per the icon-proposal layer mockups) -->
+    <string name="nav_center_layer_1">SCREEN\nTAP 1</string>
+    <string name="nav_center_layer_2">SYSTEM\nNAV 2</string>
+    <string name="nav_center_scroll">SCROLL\nSCREEN</string>
+    <string name="nav_center_drag_select">SELECT\nTARGET</string>
+    <string name="nav_center_drag_move">MOVE\nTARGET</string>
+    <string name="nav_center_move_keyboard">MOVE\nKEYBOARD</string>
+    <!-- ScrollMode key captions (icon on top, caption below, per the layout spec) -->
+    <string name="nav_scroll_back">BACK</string>
+    <string name="nav_scroll_longer">LONGER</string>
+    <string name="nav_scroll_shorter">SHORTER</string>
+    <!-- Drag-page key caption (pick-up SELECT key) -->
+    <string name="nav_drag_select">SELECT</string>
+    <string name="nav_scroll_min">MIN</string>
+    <string name="nav_scroll_speed_tbd" translatable="false">[TBD]</string>
+    <!-- Nav page key captions -->
+    <string name="nav_key_more">MORE</string>
+    <string name="nav_key_tap">TAP</string>
+    <string name="nav_key_double_tap">DOUBLE TAP</string>
+    <string name="nav_key_long_tap">LONG TAP</string>
+    <!-- More page (system nav 2) key captions -->
+    <string name="nav_key_back">BACK</string>
+    <string name="nav_key_move">MOVE</string>
+    <string name="nav_key_scroll">SCROLL</string>
+    <string name="nav_key_drag">DRAG</string>
+    <string name="nav_key_home">HOME</string>
+    <string name="nav_key_recents">RECENTS</string>
+
+    <!-- Input Methods Activity -->
+    <string name="setup_directional_selection">Set up Directional Selection</string>
+    <string name="setup_direct_selection">Set up Direct Selection</string>
+    <string name="setup_touch_screen_switch">Set up Touchscreen Switch</string>
+    <string name="setup_joystick">Set up Joystick</string>
+    <string name="setup_single_switch_scanning">Set up Single Switch Scanning</string>
+    <string name="setup_two_switch_selection">Set up Two-Switch Selection</string>
+    <string name="setup_head_tracking">Set up Head Tracking</string>
+    <string name="setup_mouse_joystick">Set up Mouse Joystick</string>
+    <string name="format_timeout_sec">%d sec</string>
+    
+    <!-- Developer Settings Activity -->
+    <string name="toast_db_reset_success">Word database reset. It will reinitialize on next use.</string>
+    <string name="toast_reset_failed">Reset failed: %s</string>
+    <string name="toast_enter_name">Enter a name.</string>
+    <string name="toast_no_database_to_save">No database to save yet.</string>
+    <string name="toast_saved_as_db">Saved as %s.db</string>
+    <string name="toast_save_failed">Save failed: %s</string>
+    <string name="toast_no_file_named">No file named %s.db</string>
+    <string name="toast_loaded_db">Loaded %s.db. Re-open app screen to apply.</string>
+    <string name="toast_load_failed">Load failed: %s</string>
+    <string name="toast_debug_log_path">debug.log: %s</string>
+    <string name="toast_debug_log_cleared">debug.log cleared</string>
+    <string name="toast_failed_to_clear">Failed to clear: %s</string>
+    <string name="toast_debug_logging_enabled">Debug logging enabled</string>
+    <string name="toast_debug_logging_disabled">Debug logging disabled</string>
+    
+    <!-- Two-Switch Setup Activity -->
+    <string name="touch_switch_active_left">Touchscreen switch is active (left side)</string>
+    <string name="waiting_for_red_switch">Waiting for Red Switch…</string>
+    <string name="touch_switch_active_right">Touchscreen switch is active (right side)</string>
+    <string name="waiting_for_green_switch">Waiting for Green Switch…</string>
+    <string name="red_switch_touch_screen">Red Switch = Touchscreen (Left)</string>
+    <string name="green_switch_touch_screen">Green Switch = Touchscreen (Right)</string>
+    <string name="red_switch_label">Red Switch = %s</string>
+    <string name="green_switch_label">Green Switch = %s</string>
+    <string name="red_switch_label_with_touch">Red Switch = %s + Touchscreen (Left)</string>
+    <string name="green_switch_label_with_touch">Green Switch = %s + Touchscreen (Right)</string>
+    <string name="assign_switch_waiting">Press your switch…</string>
+    <string name="content_desc_clear_red_switch">Clear Red Switch assignment</string>
+    <string name="content_desc_clear_green_switch">Clear Green Switch assignment</string>
+    <string name="headboard_switch_1">HeadBoard Switch 1</string>
+    <string name="headboard_switch_2">HeadBoard Switch 2</string>
+    <string name="switch_1">Switch 1</string>
+    <string name="switch_2">Switch 2</string>
+    <string name="switch_3">Switch 3</string>
+    <string name="switch_undefined">UNDEFINED</string>
+    <string name="format_highlight_timeout_disabled">Disabled (0s)</string>
+    <string name="format_highlight_timeout_sec">%ds</string>
+    <string name="format_delay_sec">%.2f s</string>
+    
+    <!-- Single Switch Setup Activity -->
+    <string name="touch_screen_switch_active">Touchscreen switch is active</string>
+    <string name="waiting_for_scanning_switch">Waiting for scanning switch…</string>
+    <string name="switch_configured_as">Switch configured as: %s</string>
+    <string name="switch_configured_as_with_touch">Switch configured as: %s + Touchscreen</string>
+    <string name="content_desc_clear_scan_switch">Clear scanning switch assignment</string>
+    <string name="numpad_1">Numpad 1</string>
+    <string name="numpad_2">Numpad 2</string>
+    <string name="numpad_3">Numpad 3</string>
+    <string name="scanning_switch_not_configured">Scanning switch not configured</string>
+    <string name="keycode_label">Keycode %d</string>
+    <string name="touch_screen">Touchscreen</string>
+    <string name="format_debounce_off">OFF</string>
+    <string name="format_debounce_ms">%d ms</string>
+    <string name="touch_screen_switch_mode_label">Touchscreen Switch Mode</string>
+    <string name="touch_screen_switch_mode_single">Single-Switch</string>
+    <string name="touch_screen_switch_mode_two">Two-Switch</string>
+    <string name="touch_screen_switch_flash">Flash Switch Bar on Activation</string>
+    <string name="show_region_border">Show Touch Region Border</string>
+    <string name="touch_screen_switch_beep">Beep on Switch Activation</string>
+    
+    <!-- Directional Selection Setup Activity -->
+    <string name="format_swipe_distance_dp">%d dp</string>
+    
+    <!-- Joystick / Head Tracking Setup Activity -->
+    <string name="format_decimal_two">%.2f</string>
+    <string name="format_percent">%d%%</string>
+    <string name="format_exit_delay_sec">%.1fs</string>
+
+    <!-- Edit Mode Pages -->
+    <string name="edit_key_select_text">SELECT\nTEXT</string>
+    <string name="edit_key_selecting_text">(SELECTING\nTEXT)</string>
+    <string name="edit_key_cut_copy_paste_shift">CUT /\nCOPY /\nPASTE /\nCASE \u27F3 </string>
+    <string name="edit_key_mode_character_line">CHAR /\nLINE\n\u27F3</string>
+    <string name="edit_key_mode_word_sentence">WORD /\nSENTENCE\n\u27F3</string>
+    <string name="edit_key_mode_paragraph_page">PARA /\nPAGE\n\u27F3</string>
+    <string name="edit_key_back_to_main">BACK\nTO\nMAIN</string>
+    <string name="edit_key_cut">CUT</string>
+    <string name="edit_key_copy">COPY</string>
+    <string name="edit_key_paste">PASTE</string>
+    <string name="edit_key_undo">UNDO</string>
+    <string name="edit_key_adjust_case">ADJUST\nCASE\nMODE</string>
+    <string name="edit_key_back_to_cursor">BACK TO\nCURSOR\nMODE</string>
+    <string name="edit_key_speak_selection">SPEAK\nSELECTION</string>
+    <string name="edit_key_speak_sentence">SPEAK\nSENTENCE</string>
+    <string name="edit_center_character_line">CURSOR MODE:\nCHARACTER / LINE</string>
+    <string name="edit_center_word_sentence">CURSOR MODE:\nWORD / SENTENCE</string>
+    <string name="edit_center_paragraph_page">CURSOR MODE:\nPARAGRAPH / PAGE</string>
+    <string name="edit_center_clipboard">CLIPBOARD</string>
+    <string name="edit_center_bookmark">BOOKMARK MODE</string>
+    <string name="edit_key_case_to_title">word\n\u2193\nWord</string>
+    <string name="edit_key_case_to_upper">word\n\u2193\nWORD</string>
+    <string name="edit_key_case_to_lower">Word\n\u2193\nword</string>
+    <string name="edit_key_undo_delete">UNDO /\nDELETE</string>
+    <string name="edit_key_case_to_sentence">APPLY\nSentence\ncase\u2026</string>
+    <string name="edit_key_edit_word">EDIT\nWORD</string>
+    <string name="edit_center_adjust_case">ADJUST CASE</string>
+    <string name="top_left">Top-Left</string>
+    <string name="top">Top</string>
+    <string name="top_right">Top-Right</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="bottom_left">Bottom-Left</string>
+    <string name="bottom">Bottom</string>
+    <string name="bottom_right">Bottom-Right</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 1: Internationalization string resources                -->
+    <!-- ============================================================ -->
+
+    <!-- Shared strings (reused across multiple screens) -->
+    <string name="content_desc_back">Back</string>
+    <string name="content_desc_key_history">Key History List</string>
+    <string name="content_desc_switch_bar">Switch button area</string>
+    <string name="content_desc_scan_key">Scan key %1$d</string>
+    <string name="heading_settings">Settings</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="no_folder_selected">No folder selected</string>
+    <string name="hint_vocab_name">Vocabulary name</string>
+    <string name="label_use_touch_screen_switch">Use Touchscreen Switch</string>
+    <string name="label_corner_bias">Corner Weighting (0.50 – 2.00)</string>
+    <string name="label_dead_zone_min">0.10</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_done">Done</string>
+    <string name="label_import">Import</string>
+    <string name="label_save">Save</string>
+    <string name="label_load">Load</string>
+
+    <!-- activity_settings.xml -->
+    <string name="settings_ime_warning">JustType is not currently selected as your keyboard. Please enable it in system settings.</string>
+    <string name="settings_open_keyboard_settings">Open Keyboard Settings</string>
+    <!-- Emergency Reset (anti-lockout recovery) -->
+    <string name="emergency_reset_section">Troubleshooting</string>
+    <string name="emergency_reset_label">Emergency Reset (Input Method)</string>
+    <string name="emergency_reset_description">Switch typing back to Direct Selection if the keyboard becomes unusable.</string>
+    <string name="emergency_reset_confirm_title">Reset input method?</string>
+    <string name="emergency_reset_confirm_message">This switches typing back to Direct Selection — tap a key to type. Your other settings are kept.</string>
+    <string name="emergency_reset_confirm_button">Reset</string>
+    <string name="emergency_reset_done">Reset to Direct Selection.</string>
+    <string name="ime_fallback_message">JustType had trouble loading the keyboard and is switching to a simple layout. If this keeps happening, open JustType Settings and tap Emergency Reset.</string>
+    <string name="ht_unavailable_message">Head tracking stopped responding. You can tap keys directly for now — it will switch back automatically when head tracking recovers.</string>
+    <string name="ht_recovered_message">Head tracking resumed.</string>
+    <string name="nav_ht_unavailable_message">Head tracking stopped responding. Minimized the Navigation keyboard — tap the button to reopen it.</string>
+    <!-- Language settings -->
+    <string name="settings_heading_language">UI Language</string>
+    <string name="settings_language_system_default">System Default</string>
+    <string name="settings_heading_typing_language">Typing Language</string>
+    <string name="settings_typing_language_desc">Word database used for predictions. More languages coming soon.</string>
+    <string name="sr_main_ui_language">UI Language</string>
+    <string name="sr_main_typing_language">Typing Language</string>
+    <string name="sr_main_spanish_region">Spanish Region</string>
+    <string name="sr_main_english_region">English Spelling</string>
+    <string name="info_prompt_english_region">Chooses which spelling is offered first where British and American English differ — colour/color, centre/center, realise/realize — and which regional words rank higher, such as lorry or apartment.\n\nBOTH spellings are always available whichever you pick; the other one simply appears further down the list. GENERAL offers them in plain frequency order.</string>
+    <string name="sr_main_excluded_words">Excluded Words</string>
+    <string name="info_prompt_excluded_words">Chooses how much coarse language is left out of the word predictions.\n\nOFFENSIVE WORDS (the default) leaves out common swearing and crude terms.\n\nPOTENTIALLY OFFENSIVE WORDS also leaves out milder words that some people find objectionable, such as anatomical and sexual terms.\n\nNONE offers every word in the dictionary, including all of the above.\n\nRacial, ethnic, religious and anti-LGBTQ slurs are never predicted at any setting. Whatever you choose here, you can always add any word you like to your own vocabulary.</string>
+    <string name="sr_main_show_accented_keys">Show accented characters on keys</string>
+    <string name="sr_main_require_accented_keys">Require use of accented character keys</string>
+
+    <string name="settings_input_methods">Input Methods</string>
+    <string name="settings_vocabulary_management">Vocabulary Management</string>
+    <string name="settings_backup_restore">Backup &amp; Restore</string>
+    <string name="settings_heading_keyboard">JustType Keyboard</string>
+    <string name="settings_letter_arrangement">Letter Arrangement</string>
+    <string name="settings_layout_alpha">Alphabetical Letter Arrangement</string>
+    <string name="settings_layout_opt">Optimized Letter Arrangement (more efficient)</string>
+    <string name="settings_keyboard_size">Keyboard size (40% – 95% of width)</string>
+    <string name="settings_keyboard_size_min">40%</string>
+    <string name="settings_heading_speech">Speech Output</string>
+    <string name="settings_speech_on_label">When Speech is turned ON:</string>
+    <string name="settings_speak_output_word">Speak Each Output Word</string>
+    <string name="settings_speak_output_phrase">Speak Each Abbreviated Phrase</string>
+    <string name="settings_speak_completed_sentence">Speak Each Completed Sentence</string>
+    <string name="settings_speak_sentence_hint">Speak sentence when adding a  .  !  or  ?</string>
+    <string name="settings_speak_punct_names">Speak the Name of Punctuation Characters</string>
+    <string name="settings_phrase_auto_output">Auto-Speak Delay</string>
+    <string name="settings_heading_display">JustType Display</string>
+    <string name="settings_next_letter_hints">Enable Standard Next-Letter Hints</string>
+    <string name="settings_next_letter_hints_desc">Show next-letter hints when typing</string>
+    <string name="settings_show_buttons_pressed">Show Keystroke History</string>
+    <string name="settings_key_history_height">Key History Height</string>
+    <string name="settings_shrink_to_fit">Shrink Key History to Fit</string>
+    <string name="settings_shrink_to_fit_desc">Reduce keys displayed in key history to show entire sequence</string>
+    <string name="settings_heading_selection_list">Selection List</string>
+    <string name="settings_auto_load_word">Auto-Load Word at Cursor</string>
+    <string name="settings_case_type_variants">Automatically Add Capitalized Word Forms to Selection List</string>
+    <string name="settings_case_type_deferred">Wait Until Word is Selected to Add Capitalized Forms</string>
+    <string name="settings_case_type_delay">Delay to Add Capitalized Forms (DISABLED)</string>
+    <string name="settings_show_abbrev">Show Phrase Abbreviation in Selection List</string>
+    <string name="settings_show_phrase">Show Expanded Phrase in Selection List</string>
+    <string name="settings_developer">Developer Settings</string>
+
+    <!-- activity_input_methods.xml -->
+    <string name="input_methods_title">Input Methods</string>
+    <string name="input_methods_touch_heading">Touchscreen Input Methods</string>
+    <string name="input_methods_direct_selection">Direct Selection</string>
+    <string name="input_methods_directional_selection">Directional Selection</string>
+    <string name="input_methods_touch_screen_switch">Touchscreen Switch</string>
+    <!-- "Adaptive Input Methods" per spec; resource id retains the legacy
+         "_other_" name to avoid breaking sibling locale files. -->
+    <string name="input_methods_other_heading">Adaptive Input Methods</string>
+    <string name="input_methods_head_tracking">Head Tracking</string>
+    <string name="input_methods_head_tracking_hint">(requires HeadBoard app)</string>
+    <string name="input_methods_joystick">Joystick</string>
+    <string name="input_methods_mouse_joystick">Mouse Joystick</string>
+    <string name="input_methods_single_switch">Single Switch Scanning</string>
+    <string name="input_methods_two_switch">Two-Switch Selection</string>
+    <string name="input_methods_heading_auditory">Auditory Feedback</string>
+    <string name="input_methods_beep_key">Beep when key is activated</string>
+    <string name="input_methods_error_beep">Beep When Keystroke Has No Effect (Error Beep)</string>
+    <string name="input_methods_speak_key">Speak Each Selected Key</string>
+    <string name="input_methods_speak_key_desc">Speak the key name when pressed</string>
+    <string name="input_methods_speak_punct">Speak Punctuation on Key</string>
+    <string name="input_methods_speak_punct_desc">Include punctuation when speaking an ambiguous key name</string>
+    <string name="input_methods_speak_word">Speak Each Selected Word</string>
+    <string name="input_methods_speak_word_desc">Speak a word when Select highlights it</string>
+    <string name="input_methods_speak_prompts">Speak prompts aloud</string>
+    <string name="input_methods_heading_visual">Visual Feedback</string>
+    <string name="input_methods_flash_key">Flash Key When Activated</string>
+    <string name="input_methods_heading_touch_overlay">Touch Overlay</string>
+    <string name="input_methods_touch_timeout">Touch timeout to hide keyboard (2 - 10 sec.)</string>
+    <string name="input_methods_touch_timeout_min">2s</string>
+
+    <!-- activity_developer_settings.xml -->
+    <string name="dev_title">Developer Settings</string>
+    <string name="dev_intro">Developer options will appear here.</string>
+    <string name="dev_heading_search">Search Parameters</string>
+    <string name="dev_basic_search_depth">Basic Search Depth (3–10)</string>
+    <string name="dev_search_expansion_depth">Search Expansion Depth (0–10)</string>
+    <string name="dev_min_qualifying_candidates">Minimum Qualifying Candidates (5–1000)</string>
+    <string name="dev_max_examined_nodes">Maximum Examined Nodes (50–10000)</string>
+    <string name="dev_ignore_men_limit">Ignore Maximum Examined Nodes limit</string>
+    <string name="dev_reset_lang_db">Reset Language DB to Defaults</string>
+    <string name="dev_hint_db_name">database name</string>
+    <string name="dev_heading_weights">Weights</string>
+    <string name="dev_sls_partition">List partition policy (Blocks / FTS Pin / Interleave)</string>
+    <string name="dev_sls_tone_promoted">Promote tone-pending words</string>
+    <string name="dev_select_behavior_mode">Select behavior (adaptive FTS promotion ladder)</string>
+    <string name="dev_select_behavior_stats">Show select-behavior stats</string>
+    <string name="dev_select_behavior_stats_empty">No select-press episodes recorded yet.</string>
+    <string name="dev_share_select_behavior_stats">Share</string>
+    <string name="dev_share_select_behavior_stats_subject">JustType select-behavior stats</string>
+    <string name="dev_ngb_conf_theta_adaptive">Adaptive confidence threshold</string>
+    <string name="info_prompt_ngb_conf_theta_adaptive">When on, the confidence threshold places itself from your own typing: every finished word confirms which thresholds would have signaled correctly, and the lowest one meeting your accuracy target is used (seeded from measured defaults until enough evidence accumulates). When off, the threshold below is used as-is.</string>
+    <string name="dev_show_sort_metric">Show sortMetric</string>
+    <string name="dev_sort_metric_verbosity">SortMetric detail tier (1=tag, 2=+score, 3=+values, 4=full)</string>
+    <string name="dev_heading_ime_debug">IME Debug / Timing</string>
+    <string name="dev_show_edit_ops">Show edit operations</string>
+    <string name="dev_debug_log_categories">Debug log categories</string>
+    <string name="dev_cat_lifecycle">Lifecycle / UI</string>
+    <string name="dev_cat_undo">Undo flow</string>
+    <string name="dev_cat_pull_in">Pull-in flow</string>
+    <string name="dev_cat_ambig">Ambiguous buffer</string>
+    <string name="dev_cat_selection">Selection / cursor sync</string>
+    <string name="dev_cat_input">InputConnection ops</string>
+    <string name="dev_cat_word_db">Word database</string>
+    <string name="dev_cat_text_edit">Text editing</string>
+    <string name="dev_cat_shift">Shift state</string>
+    <string name="dev_enable_debug_logging">Enable debug logging</string>
+    <string name="dev_enter_extra_blank_line">ENTER key inserts extra blank line</string>
+    <string name="dev_exact_case_pull_in">Require exact case match to pull-in words</string>
+    <string name="dev_head_tracking_debug_overlay">Head tracking debug overlay</string>
+    <string name="dev_force_pre34_joystick">Force pre-34 joystick path (Nav)</string>
+    <string name="dev_switch_input_logs">Log switch/gamepad input routing</string>
+    <string name="dev_scroll_logs">Log edge-scroll diagnostics</string>
+    <string name="dev_head_tracking_diag_logs">Head tracking diagnostic logs</string>
+    <string name="dev_head_tracking_rearm_in_feedback">Re-arm in Feedback Zone</string>
+    <string name="dev_toggle_debug_logging">Toggle debug logging</string>
+    <string name="dev_show_log_path">Show debug.log path</string>
+    <string name="dev_clear_log">Clear debug.log</string>
+    <string name="dev_freq_add_weight">FreqAddWeight (0.00–2.00)</string>
+    <string name="dev_freq_mult_weight">FreqMultWeight (1.00–2.00)</string>
+    <string name="dev_seq_add_weight">SeqAddWeight (0.00–50.00)</string>
+    <string name="dev_seq_mult_weight">SeqMultWeight (1.00–8.00)</string>
+    <string name="dev_use_add_weight">UseAddWeight (0.00–6.00)</string>
+    <string name="dev_use_mult_weight">UseMultWeight (1.00–2.00)</string>
+    <string name="dev_recency_add_weight">RecencyAddWeight (0.00–4.00)</string>
+    <string name="dev_recency_mult_weight">RecencyMultWeight (1.00–2.00)</string>
+    <string name="dev_case_switch_margin">Consecutive usages required to change preferred case form (1–8)</string>
+    <string name="dev_family_min_kr">Required remaining keys for expansion candidate (2–8)</string>
+    <string name="dev_family_stem_backoff">Remaining letters ignored when matching trie candidates (0–8)</string>
+
+    <!-- activity_setup_direct_selection.xml -->
+    <string name="setup_ds_title">Set Up Direct Selection</string>
+    <string name="setup_ds_how_it_works">How Direct Selection Works</string>
+    <string name="setup_ds_explanation">Direct Selection is the simplest touch input method. Simply tap directly on any key to select it.</string>
+    <string name="setup_ds_explanation2">This mode works best when you can accurately point and tap on the screen. Each tap on a key will immediately select that key.</string>
+    <string name="setup_ds_tips">Tips</string>
+    <string name="setup_ds_tips_text">• Tap once on a key to select it\n• Use the keyboard size setting to adjust key sizes\n• If you have difficulty with precise taps, consider trying Directional Selection instead</string>
+    <string name="setup_ds_touch_debounce">Ignore Rapid Key Hits (Debounce)</string>
+    <string name="setup_ds_debounce_desc">Ignore rapid repeated taps within this time window</string>
+    <string name="setup_ds_auto_repeat">Auto-Repeat Key Activation</string>
+    <string name="setup_ds_auto_repeat_desc">Hold a movement or scroll key on the navigation keyboard to repeat it</string>
+    <string name="setup_ds_auto_repeat_delay">Auto-Repeat Delay Time</string>
+
+    <!-- activity_setup_directional_selection.xml -->
+    <string name="setup_dir_title">Set Up Directional Selection</string>
+    <string name="setup_dir_how_it_works">How Directional Selection Works</string>
+    <string name="setup_dir_explanation">Directional Selection uses swipe gestures to navigate the keyboard. Swipe in any of 8 directions to select the corresponding key on the currently highlighted button.</string>
+    <string name="setup_dir_8_directions">8 Swipe Directions</string>
+    <string name="setup_dir_arrows">↖  ↑  ↗\n←  •  →\n↙  ↓  ↘</string>
+    <string name="setup_dir_swipe_desc">Swipe from anywhere on the screen in the direction of the key you want to select.</string>
+    <string name="setup_dir_swipe_sensitivity">Swipe Sensitivity (Minimum Swipe Length)</string>
+    <string name="setup_dir_swipe_distance_desc">Minimum distance required to register a swipe</string>
+    <string name="setup_dir_touch_timeout">Touch Timeout</string>
+    <string name="setup_dir_touch_timeout_desc">Hold touch this long to close the keyboard</string>
+    <string name="setup_dir_swipe_debounce">Ignore Rapid Screen Swipes (Debounce)</string>
+    <string name="setup_dir_debounce_desc">Ignore rapid repeated swipes within this time window</string>
+
+    <!-- activity_setup_touch_screen_switch.xml -->
+    <string name="setup_tss_title">Set up Touchscreen Switch</string>
+    <string name="setup_tss_how_it_works">How Touchscreen Switch Works</string>
+    <string name="setup_tss_explanation">Touchscreen Switch divides the screen into two halves that act as switch inputs. Use this with Single Switch Scanning or Two-Switch Selection modes.</string>
+    <string name="setup_tss_left_label">LEFT\n(Switch 1 / Green)</string>
+    <string name="setup_tss_right_label">RIGHT\n(Switch 2 / Red)</string>
+    <string name="setup_tss_usage_tips">• For Single Switch Scanning: Tap anywhere on the screen\n• For Two-Switch Selection: Tap left side for Red switch, right side for Green switch</string>
+    <string name="setup_tss_touch_debounce">Ignore Rapid Switch Hits (Debounce)</string>
+    <string name="setup_tss_debounce_desc">Ignore rapid repeated touches within this time window</string>
+    <string name="setup_tss_note">Note: This setting only affects touch screen switch input. Physical switch debouncing is configured separately in the Single Switch Scanning or Two-Switch Selection settings.</string>
+
+    <!-- activity_setup_single_switch.xml -->
+    <string name="setup_ss_title">Set up Single switch scanning</string>
+    <string name="setup_ss_activate_switch">ACTIVATE SCANNING SWITCH</string>
+    <string name="setup_ss_scanning_layout_size">Scanning Layout Key Size</string>
+    <string name="setup_ss_layout_small">Small</string>
+    <string name="setup_ss_layout_large">Large</string>
+    <string name="setup_ss_scan_step_delay">Scan Step Delay Time</string>
+    <string name="setup_ss_initial_delay">Add Extra Delay on First Scanned Key</string>
+    <string name="setup_ss_beep_each_step">Beep at Each Scanning Step</string>
+    <string name="setup_ss_skip_keys">Skip Keys with No Valid Next-Letters</string>
+    <string name="setup_ss_show_next_key">Show Next Key to be Scanned (when any key will be skipped)</string>
+    <string name="setup_ss_auto_repeat_mode">Key Activation Auto-Repeat Mode</string>
+    <string name="setup_ss_select_triggers_scan">Select Key Triggers Scan of Selection List</string>
+    <string name="setup_ss_repeat_count">Number of Times to Repeat Scan if No Key is Selected</string>
+    <string name="setup_ss_physical_debounce">Ignore Rapid Switch Hits (Debounce)</string>
+    <string name="setup_ss_debounce_desc">Ignore rapid repeated presses within this time window</string>
+
+    <!-- activity_setup_two_switch.xml -->
+    <string name="setup_ts_title">Set up Two-switch selection</string>
+    <string name="setup_ts_activate_red">Assign Red Switch</string>
+    <string name="setup_ts_activate_green">Assign Green Switch</string>
+    <string name="switch_unassigned_warning">No switch assigned</string>
+    <string name="setup_ts_highlight_timeout">Two-Switch Selection Reset Delay</string>
+    <string name="setup_ts_show_color_band">Show color code band at key bottom</string>
+    <string name="setup_ts_auto_repeat_key">Auto-Repeat Key Activation</string>
+    <string name="setup_ts_auto_repeat_switch">Auto-Repeat Switch Activation</string>
+    <string name="setup_ts_beep_activation">Beep on Each Switch Activation</string>
+
+    <!-- activity_setup_head_tracking.xml -->
+    <string name="setup_ht_vertical_sensitivity">Vertical Sensitivity (1.00 – 2.00)</string>
+    <string name="setup_ht_vertical_desc">Compensates for the natural range of head movement. Higher values make up/down movement easier.</string>
+    <string name="setup_ht_response_curve">Responsiveness (0.50 – 1.50)</string>
+    <string name="setup_ht_response_desc">Values below 1.0 make small movements more responsive. Values above 1.0 require more movement near center.</string>
+    <string name="setup_ht_section_zone_thresholds">Zone Thresholds</string>
+    <string name="setup_ht_section_tuning_feedback">Tuning and Feedback</string>
+    <string name="setup_ht_dead_zone">Resting Zone (0.10 - 0.50)</string>
+    <string name="setup_ht_active_zone">Active Zone (Resting Zone &lt; Active Zone &lt; Exit Zone)</string>
+    <string name="setup_ht_exit_zone">Exit Zone (Active Zone &lt; Exit Zone &lt; 1.0)</string>
+    <string name="setup_ht_key_activation">Key Activation Threshold (0% – 100%)</string>
+    <string name="setup_ht_key_activation_desc">How far your head must move back toward the center to activate a key. 0% => Activate as soon as you start to move back; 100% => Activate when you move back far where the key is no longer green.</string>
+    <string name="setup_ht_key_activation_min">0%</string>
+    <string name="setup_ht_aim_tolerance">Aim Tolerance (0% – 100%)</string>
+    <string name="setup_ht_aim_tolerance_desc">How far the cursor can drift past a key\'s natural boundary before a Correct gesture shifts the highlight to the next key. 0% => Correct triggers right at the boundary (most sensitive); 100% => cursor must reach the neighbor\'s center (least sensitive).</string>
+    <string name="setup_ht_aim_tolerance_min">0%</string>
+    <string name="setup_ht_exit_delay">Exit/Pause Keyboard Delay Time (2 – 5 sec)</string>
+    <string name="setup_ht_exit_delay_desc">Time cursor must stay in exit zone before triggering pop-out or pause.</string>
+    <string name="setup_ht_exit_delay_min">2s</string>
+    <string name="setup_ht_restart_timer">Restart Timer (0.5 – 3 sec)</string>
+    <string name="setup_ht_restart_timer_desc">After Pausing or Exiting, key activations are temporarily disabled for this long while re-entering the keyboard.</string>
+    <string name="setup_ht_restart_timer_min">0.5s</string>
+    <string name="info_prompt_ht_restart_timer">After Pausing or Exiting the keyboard, this is how long key activations are temporarily disabled when you re-enter. The delay prevents unintended activations from cursor wobble during re-entry. While the timer counts down, the blue center square flashes as a visual reminder to return your cursor to the center — that\'s the best position to begin selecting your next key.</string>
+
+    <!-- activity_setup_joystick.xml -->
+    <string name="setup_joy_title">Set up Joystick</string>
+    <string name="setup_joy_select_device">Select Joystick</string>
+    <string name="setup_joy_selecting_device">Move the joystick you want to use…</string>
+    <string name="setup_joy_device_none">No joystick selected</string>
+    <string name="setup_joy_device_selected">Selected: %s</string>
+    <string name="setup_joy_accept_any">Accept any joystick</string>
+    <string name="setup_joy_dead_zone">Resting Zone (0.10 – 0.80)</string>
+    <string name="setup_joy_active_zone">Active Zone (Resting Zone &lt; Active Zone &lt; Exit Zone)</string>
+
+    <!-- activity_setup_mouse_joystick.xml -->
+    <string name="setup_mj_title">Set up Mouse Joystick</string>
+    <string name="setup_mj_dead_zone">Resting Zone (0.05 – 0.80)</string>
+    <string name="setup_mj_active_zone">Active Zone (Resting Zone &lt; Active Zone &lt; 0.90)</string>
+    <string name="setup_mj_corner_bias">Corner Weighting (0.50 – 2.00)</string>
+    <string name="setup_mj_sensitivity">Movement Needed (higher = less sensitive)</string>
+    <string name="setup_mj_calibrate">Calibrate my joystick</string>
+    <string name="setup_mj_exit_delay">Exit Delay (0.5s – 5.0s)</string>
+    <string name="setup_mj_reengage_hysteresis">Reengage Delay (0.0s – 2.0s)</string>
+
+    <string name="reset_to_defaults">Reset to Defaults</string>
+
+    <!-- activity_backup_restore.xml -->
+    <string name="backup_heading">Backup &amp; Restore</string>
+    <string name="backup_intro">Choose a folder to store your backup files. Use Backup to save your data, or Restore to reload it later.</string>
+    <string name="backup_choose_folder">Choose Backup Folder</string>
+    <string name="backup_last_run">Last backup: none</string>
+    <string name="backup_create_now">Create Backup Now</string>
+    <string name="backup_restore_now">Restore from Backup</string>
+
+    <!-- activity_vocabulary_management.xml -->
+    <string name="vocab_mgmt_title">Vocabulary Management</string>
+    <string name="vocab_mgmt_accent_heading">Next-Letter Hints</string>
+    <string name="vocab_mgmt_accent_enable">Enable Accented Next-Letter Hints</string>
+    <string name="vocab_mgmt_accent_total">Total active words shown with Accented Hints: 0</string>
+    <string name="vocab_mgmt_accent_use_count">Turn OFF Accented Hints for Vocabulary Words Spelled More Than __ Times</string>
+    <string name="vocab_mgmt_accent_use_count_jt">Turn OFF Accented Hints for JustType Words Spelled More Than __ Times</string>
+    <string name="vocab_mgmt_main_modules">Main Vocabulary Modules</string>
+    <string name="vocab_mgmt_col_module_name">Module Name</string>
+    <string name="vocab_mgmt_col_active_word_count">Active\nWord\nCount</string>
+    <string name="vocab_mgmt_col_enable_module">Enable\nModule</string>
+    <string name="vocab_mgmt_col_show_accented">Show\nAccented\nHints</string>
+    <string name="vocab_mgmt_col_accented_word_count">Accented\nWord\nCount</string>
+    <string name="vocab_mgmt_justtype_db_words">JustType Database Words</string>
+    <string name="vocab_mgmt_custom_words">Custom Words</string>
+    <string name="vocab_mgmt_abbrev_phrases">Abbreviated Phrases</string>
+    <string name="vocab_mgmt_section_select_active">Select Active Vocabularies</string>
+    <string name="vocab_mgmt_section_manage_imported">Manage Imported Vocabulary Module Words</string>
+    <string name="vocab_mgmt_filter_heading">Manage JustType Database Words</string>
+    <string name="vocab_mgmt_enable_freq_filter">Restrict Uncommon Words</string>
+    <string name="vocab_mgmt_min_freq_include">Minimum Frequency for Words Allowed in Selection List (List Cutoff)</string>
+    <string name="vocab_mgmt_display_excluded">Add Restricted Words to End of List</string>
+    <string name="vocab_mgmt_min_freq_accent">Minimum Frequency to Show Accented Hints for JustType Words</string>
+    <string name="vocab_mgmt_max_freq_accent">Maximum Frequency to Show Accented Hints for JustType Words</string>
+    <string name="vocab_mgmt_select_active">Select Active Vocabularies</string>
+    <string name="vocab_mgmt_manage_vocabs">Manage Vocabularies (Import / Export / Merge / Delete)</string>
+
+    <!-- activity_manage_vocabularies.xml -->
+    <string name="manage_vocab_title">Import / Export / Merge / Delete Vocabularies</string>
+    <string name="manage_vocab_col_export">Export\nVocabulary</string>
+    <string name="manage_vocab_choose_file">Choose File to Import</string>
+    <string name="manage_vocab_no_slots">Merge or Delete a vocabulary in order to import a new Vocabulary file.</string>
+    <string name="manage_vocab_import_selected">Import Selected File</string>
+    <string name="manage_vocab_merge_delete_heading">Select Vocabularies to Merge, Delete or Export</string>
+    <string name="manage_vocab_col_name">Vocabulary\nName</string>
+    <string name="manage_vocab_col_date">Date\nAdded</string>
+    <string name="manage_vocab_col_word_count">Word\nCount</string>
+    <string name="manage_vocab_col_merge_from">Merge\nFrom</string>
+    <string name="manage_vocab_col_merge_into">Merge\nInto</string>
+    <string name="manage_vocab_col_delete">Delete\nVocabulary</string>
+    <string name="manage_vocab_merge">Merge Selected Vocabularies</string>
+    <string name="manage_vocab_delete">Delete Selected Vocabularies</string>
+
+    <!-- activity_vocabulary_import.xml -->
+    <string name="vocab_import_title">Import Vocabulary</string>
+    <string name="vocab_import_choose_file">Choose file</string>
+    <string name="vocab_import_modules_heading">Vocabulary Modules</string>
+
+    <!-- activity_select_active_vocabularies.xml -->
+    <string name="select_vocab_title">Select Active Vocabularies</string>
+    <string name="select_vocab_promote_imported">Promote Words from Active Imported Vocabularies</string>
+    <string name="select_vocab_col_module_name">Vocabulary\nModule Name</string>
+    <string name="select_vocab_col_active_count">Active\nWord\nCount</string>
+    <string name="select_vocab_col_date">Date\nAdded</string>
+    <string name="select_vocab_col_enable">Enable\nModule</string>
+    <string name="select_vocab_col_show_accented">Show\nAccented\nHints</string>
+    <string name="select_vocab_col_accented_count">Accented\nWord\nCount</string>
+    <string name="select_vocab_export_heading">Export Usage for Selected Vocabularies</string>
+    <string name="select_vocab_export_desc">Export Active Words that have been spelled:</string>
+    <string name="select_vocab_export_never">Never</string>
+    <string name="select_vocab_export_once">At Least Once</string>
+    <string name="select_vocab_export_at_least">At Least __ Times</string>
+    <string name="select_vocab_export_all">All Words</string>
+    <string name="select_vocab_export_button">Export Usage Data for Active Words in Selected Vocabularies</string>
+
+    <!-- activity_export_vocab_usage.xml -->
+    <string name="export_vocab_title">Export Vocabulary Usage</string>
+    <string name="export_vocab_intro">Select a folder to save the export file.</string>
+    <string name="export_vocab_choose_folder">Choose Export Folder</string>
+    <string name="export_vocab_file_name_label">Export file name</string>
+    <string name="export_vocab_hint_file_name">export file name</string>
+    <string name="export_vocab_export_now">Export Usage Data</string>
+
+    <!-- include_phrase_overlay.xml -->
+    <string name="phrase_overlay_title">Add New Phrase</string>
+    <string name="phrase_overlay_prompt">Type the phrase, then press DONE.</string>
+    <string name="phrase_overlay_abbrev_label">Abbreviation (Letter Spelling):</string>
+
+    <!-- activity_phrase_overlay.xml -->
+    <string name="phrase_overlay_instructions">Use the keyboard to enter the phrase and the abbreviation.</string>
+    <string name="phrase_overlay_phrase_label">Phrase (press \"DONE WITH PHRASE\" in Function layout when finished):</string>
+    <string name="phrase_overlay_abbrev_full_label">Abbreviation (press \"DONE\" in Letter Spelling layout when finished - leave abbreviation empty to Cancel):</string>
+
+    <!-- include_scan_layout.xml -->
+    <string name="scan_center_label">Center</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 2: Toast / programmatic string resources               -->
+    <!-- ============================================================ -->
+
+    <!-- BackupRestoreActivity -->
+    <string name="toast_choose_backup_folder">Choose a backup folder first.</string>
+    <string name="toast_backup_completed">Backup completed.</string>
+    <string name="toast_backup_failed">Backup failed.</string>
+    <string name="toast_restore_completed">Restore completed.</string>
+    <string name="toast_restore_failed">Restore failed.</string>
+    <string name="backup_last_run_format">Last backup: %s</string>
+    <string name="backup_last_run_none">Last backup: none</string>
+    <string name="backup_status_no_backup">No backup found in the selected folder.</string>
+    <string name="backup_status_incompatible">Backup format is not compatible with this version.</string>
+    <string name="dialog_restore_title">Restore backup?</string>
+    <string name="dialog_restore_message">This will overwrite current data. A restart may be needed to reload data.</string>
+    <string name="dialog_restore_button">Restore</string>
+    <string name="dialog_restore_previous_title">Restore previous data?</string>
+    <string name="dialog_restore_previous_message">A compatible backup was found. Restore now?</string>
+    <string name="dialog_later_button">Later</string>
+
+    <!-- ExportVocabUsageActivity -->
+    <string name="toast_choose_export_folder">Choose an export folder first.</string>
+    <string name="toast_export_completed">Export completed.</string>
+    <string name="toast_export_failed">Export failed.</string>
+
+    <!-- ManageVocabulariesActivity -->
+    <string name="toast_choose_file_first">Choose a file first.</string>
+    <string name="toast_enter_vocab_name">Enter a vocabulary name.</string>
+    <string name="toast_no_available_slot">No available slot to import.</string>
+    <string name="toast_imported_vocab">Imported \"%1$s\" (slot %2$d).</string>
+    <string name="toast_merge_target_conflict">Merge target cannot be in Merge From.</string>
+    <string name="toast_merged_vocabs">Merged %d vocabularies.</string>
+    <string name="toast_deleted_vocabs">Deleted %d vocabularies.</string>
+    <string name="dialog_rename_merge_target">Rename Merge Target</string>
+    <string name="dialog_rename_merge_message">Edit the name of the Merge Into vocabulary:</string>
+    <string name="dialog_confirm_delete_title">Confirm delete</string>
+    <string name="dialog_confirm_delete_message">Delete %s? This cannot be undone.</string>
+    <string name="dialog_confirm_delete_single">1 vocabulary</string>
+    <string name="dialog_confirm_delete_plural">%d vocabularies</string>
+    <string name="dialog_delete_button">Delete</string>
+    <string name="label_past_vocabularies">(Past Vocabularies)</string>
+    <string name="label_not_applicable">N/A</string>
+    <string name="label_em_dash">—</string>
+    <string name="label_unknown">Unknown</string>
+
+    <!-- VocabularyImportActivity -->
+    <string name="toast_selected_vocab_not_found">Selected vocabulary not found.</string>
+    <string name="toast_no_slot_to_replace">No available slot to replace.</string>
+    <string name="toast_no_merge_target">No available target to merge into.</string>
+    <string name="toast_removed_words">Removed %d words.</string>
+    <string name="toast_could_not_write_word_list">Could not write word list: source not a document.</string>
+    <string name="toast_could_not_locate_parent">Could not locate parent folder for word list.</string>
+    <string name="toast_unable_create_word_list">Unable to create word list file.</string>
+    <string name="toast_failed_writing_word_list">Failed writing word list: %s</string>
+    <string name="label_shared_text">Shared text</string>
+    <string name="label_shared_vocabulary">Shared Vocabulary</string>
+    <string name="dialog_all_slots_used">All Vocabulary slots used</string>
+    <string name="dialog_replace_button">Replace</string>
+    <string name="dialog_replace_vocab_title">Replace Vocabulary %d</string>
+    <string name="dialog_replace_vocab_message">Do you want to delete \"%s\" or merge it with another vocabulary?</string>
+    <string name="dialog_merge_button">Merge</string>
+    <string name="dialog_select_merge_target">Select merge target</string>
+
+    <!-- SelectActiveVocabulariesActivity -->
+    <string name="toast_no_vocabs_to_export">No vocabularies selected to export. Check the \"Export Vocabulary\" column on one or more rows.</string>
+    <string name="format_at_least_times">At Least %s Times</string>
+    <string name="label_disabled">DISABLED</string>
+    <string name="export_button_with_accent">Export Usage Data for Active Words in Selected Vocabularies (accent filters apply)</string>
+    <string name="dialog_continue_export_title">Continue export?</string>
+    <string name="dialog_continue_export_message">This export will include approximately %d words. You can go back and adjust the Export-column selections or the Use-Count filter to export fewer words. Do you still want to continue?</string>
+    <string name="dialog_continue_button">Continue</string>
+
+    <!-- SettingsActivity -->
+    <string name="format_casetype_delay_disabled">Delay to Add Capitalized Forms (DISABLED)</string>
+    <string name="format_casetype_delay_sec">Delay to Add Capitalized Forms: %.1f seconds</string>
+
+    <!-- VocabularyManagementActivity -->
+    <string name="format_freq_off">OFF</string>
+    <string name="format_freq_no_minimum">NO MINIMUM</string>
+    <string name="format_freq_no_maximum">NO MAXIMUM</string>
+    <string name="format_freq_below_list_cutoff">%s (BELOW LIST CUTOFF)</string>
+    <string name="format_accent_usecount_disabled">DISABLED</string>
+    <string name="format_accent_total">Total active words shown with Accented Hints: %d</string>
+    <string name="format_accent_usecount_title">Turn OFF Accented Hints for Vocabulary Words Spelled More Than %s Times</string>
+    <string name="format_accent_usecount_title_jt">Turn OFF Accented Hints for JustType Words Spelled More Than %s Times</string>
+    <!-- Phase 3D: cleaner title text when the use-count slider is at 0 (OFF),
+         replacing the awkward "Spelled More Than DISABLED Times" rendering. -->
+    <string name="format_accent_usecount_title_off">Accented Hints enabled for all words in selected Vocabularies</string>
+    <string name="format_accent_usecount_title_off_jt">Accented Hints enabled for all JustType Words</string>
+    <string name="toast_accent_range_error">Maximum value must be greater than or equal to Minimum value</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 3: JTUI button label string resources                  -->
+    <!-- ============================================================ -->
+
+    <!-- Main page button labels -->
+    <string name="jtui_btn_undo_delete">UnDo /\nDELETE</string>
+    <string name="jtui_btn_select">SELECT</string>
+
+    <!-- Symbol page labels -->
+    <string name="jtui_btn_type_multiple_symbols">TYPE\nREPEATED\nSYMBOLS</string>
+    <string name="jtui_btn_back_to_main">BACK\nTO\nMAIN</string>
+    <string name="jtui_btn_symbol_pg_2">SYMBOL\nPG. 2</string>
+    <string name="jtui_btn_space">&lt;SPACE&gt;</string>
+    <string name="jtui_btn_back">BACK</string>
+    <string name="jtui_btn_symbol_pg_3">SYMBOL\nPG. 3</string>
+    <string name="jtui_btn_all_symbols_mode">ALL\nSYMBOLS\nMODE</string>
+    <string name="jtui_btn_all_symbols_up">UP</string>
+    <string name="jtui_btn_all_symbols_page">PAGE %1$d</string>
+    <string name="jtui_btn_all_symbols_page1">RETURN\nTO PAGE\n1</string>
+    <!-- ALL SYMBOLS category names (shown in the center square) -->
+    <string name="jtui_symcat_all">ALL SYMBOLS</string>
+    <string name="jtui_symcat_punctuation">Punctuation</string>
+    <string name="jtui_symcat_brackets">Brackets</string>
+    <string name="jtui_symcat_quotes">Quotes</string>
+    <string name="jtui_symcat_currency">Currency</string>
+    <string name="jtui_symcat_math">Math</string>
+    <string name="jtui_symcat_signs">Signs</string>
+    <string name="jtui_symcat_fractions">Fractions</string>
+    <string name="jtui_symcat_superscripts">Super-\nscripts\n&amp; Units</string>
+    <string name="jtui_symcat_arrows">Arrows</string>
+    <string name="jtui_symcat_shapes">Shapes</string>
+    <string name="jtui_symcat_marks">Marks</string>
+    <string name="jtui_symcat_science">Science</string>
+    <string name="jtui_btn_cancel">CANCEL</string>
+
+    <!-- Multi-symbol page labels -->
+    <string name="jtui_btn_multi_symbols_pg_2">REPEATED\nSYMBOLS\nPG. 2</string>
+    <string name="jtui_btn_multi_symbols_pg_3">REPEATED\nSYMBOLS\nPG. 3</string>
+
+    <!-- Number page labels -->
+    <string name="jtui_btn_delete">DELETE</string>
+    <string name="jtui_btn_done">&lt;DONE&gt;</string>
+    <string name="jtui_btn_numbers_6_0">6 - 0\n+-./,</string>
+    <string name="jtui_btn_numbers_punct">+-./,</string>
+    <string name="jtui_btn_numbers_1_5">1 - 5\n(OR\n&lt;DONE&gt;)</string>
+    <string name="jtui_btn_cancel_paren">(CANCEL)</string>
+    <string name="jtui_btn_shift">SHIFT</string>
+
+    <!-- Function page labels -->
+    <string name="jtui_btn_delete_word">DELETE\nWORD</string>
+    <string name="jtui_btn_done_with_phrase">DONE WITH\nPHRASE</string>
+    <string name="jtui_btn_caps_lock_on_off_spaced">CAPS\nLOCK\nON / OFF</string>
+    <string name="jtui_btn_enter">ENTER</string>
+    <string name="jtui_btn_function_pg_1">FUNCTION\nPG. 1</string>
+    <string name="jtui_btn_cancel_phrase">CANCEL\nPHRASE</string>
+    <string name="jtui_btn_caps_lock_on_off">CAPS\nLOCK\nON/OFF</string>
+    <string name="jtui_btn_phrase_entry_functions">PHRASE\nENTRY\nFUNCTIONS</string>
+    <string name="jtui_btn_speech_on_off">SPEECH\nON/OFF</string>
+    <string name="jtui_btn_speak_sentence">SPEAK\nSENTENCE</string>
+    <string name="jtui_btn_function_pg_2">FUNCTION\nPG. 2</string>
+    <string name="jtui_btn_speak_last_selection">SPEAK\n(LAST)\nSELECTION</string>
+    <string name="jtui_btn_page_up">PAGE\nUP</string>
+    <string name="jtui_btn_delete_char">DELETE\nCHAR</string>
+    <string name="jtui_btn_page_down">PAGE\nDOWN</string>
+    <string name="jtui_btn_speak_next_sentence">SPEAK\nNEXT\nSENTENCE</string>
+
+    <!-- Navigation page labels -->
+    <string name="jtui_btn_open_nav_keyboard">NAV\nKBD</string>
+    <string name="jtui_btn_nav_back">&lt;\nBACK</string>
+    <string name="jtui_btn_add_new_word">ADD NEW\nWORD</string>
+    <string name="jtui_btn_add_new_phrase">ADD NEW\nPHRASE</string>
+    <string name="jtui_btn_settings">SETTINGS</string>
+    <string name="jtui_btn_edit_mode">EDIT\nMODE</string>
+    <string name="jtui_btn_menu">|||\nMENU</string>
+    <string name="jtui_btn_123_mode">123\nMODE</string>
+
+    <!-- v4.1 Navigate / Letter-Symbol Mode labels -->
+    <string name="jtui_btn_letter_symbol_mode">LETTER /\nSYMBOL\nMODE</string>
+    <string name="jtui_btn_system_nav_mode">SYSTEM\nNAV\nMODE</string>
+    <string name="jtui_btn_123_number_mode">123\nNUMBER\nMODE</string>
+    <string name="jtui_btn_letter_spell_mode">LETTER\nSPELL\nMODE</string>
+    <string name="jtui_btn_punct_symbol_mode">!.?\nSYMBOL\nMODE</string>
+    <string name="jtui_btn_emoji_gifs">EMOJI /\nGIFs /\n???</string>
+    <string name="jtui_btn_nav_left">←</string>
+    <string name="jtui_btn_nav_right">→</string>
+
+    <!-- v4.1 Spell Mode SHIFT cycle (SHIFT → CAPS LOCK ON → CAPS LOCK OFF, three taps) -->
+    <string name="jtui_btn_spell_caps_lock_on">CAPS LOCK\nON</string>
+    <string name="jtui_btn_spell_caps_lock_off">CAPS LOCK\nOFF</string>
+
+    <!-- v4.1 center-square mode labels (consistent all-uppercase) -->
+    <string name="jtui_center_letters_symbols">LETTERS /\nSYMBOLS</string>
+    <string name="jtui_center_navigate">NAVIGATE</string>
+    <string name="jtui_center_symbols">SYMBOLS</string>
+    <string name="jtui_center_repeated_symbols">REPEATED\nSYMBOLS</string>
+    <string name="jtui_center_numbers">123\nNUMBERS</string>
+    <string name="jtui_center_numeric_punctuation">NUMERIC\nPUNCTUATION</string>
+    <string name="jtui_center_functions">FUNCTIONS</string>
+
+    <!-- v4.1 Symbols-page first-page labels (page 2/3 + repeated variants already exist above) -->
+    <string name="jtui_btn_symbol_pg_1">SYMBOL\nPG. 1</string>
+    <string name="jtui_btn_multi_symbols_pg_1">REPEATED\nSYMBOLS\nPG. 1</string>
+
+    <!-- Edit mode bookmark labels -->
+    <string name="jtui_btn_jump_to_mark_a">JUMP TO\nMARK A</string>
+    <string name="jtui_btn_set_mark_a">SET\nMARK A</string>
+    <string name="jtui_btn_set_mark_b">SET\nMARK B</string>
+    <string name="jtui_btn_jump_to_mark_b">JUMP TO\nMARK B</string>
+    <string name="jtui_btn_back_to_edit">BACK\nTO\nEDIT</string>
+
+    <!-- renderKeyLabels dynamic labels -->
+    <string name="jtui_label_bookmark_mode">BOOKMARK\nMODE\n\u27F3</string>
+    <string name="jtui_label_speech">SPEECH</string>
+    <string name="jtui_label_caps_lock">CAPS\nLOCK</string>
+    <string name="jtui_label_on">ON</string>
+    <string name="jtui_label_off">OFF</string>
+    <string name="jtui_label_on_active">[ON]</string>
+    <string name="jtui_label_off_active">[OFF]</string>
+
+    <!-- Spelling banner + key hint chips -->
+    <string name="jtui_spelling_banner_top">TWO - KEY</string>
+    <string name="jtui_spelling_banner_mid">SPELLING</string>
+    <string name="jtui_hint_symbols">SYM</string>
+    <string name="jtui_hint_functions">FNS</string>
+    <string name="jtui_hint_navigation">NAV</string>
+
+    <!-- editModeArrowLabel cursor unit labels -->
+    <string name="jtui_unit_line">LINE</string>
+    <string name="jtui_unit_char">CHAR</string>
+    <string name="jtui_unit_sentence">SENTENCE</string>
+    <string name="jtui_unit_word">WORD</string>
+    <string name="jtui_unit_page">PAGE</string>
+    <string name="jtui_unit_para">PARA</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 4: KeyboardSettingsController string resources          -->
+    <!-- ============================================================ -->
+
+    <!-- SliderStepSize enum labels -->
+    <string name="settings_ctrl_step_one_notch">1 notch</string>
+    <string name="settings_ctrl_step_five_percent">5%</string>
+    <string name="settings_ctrl_step_ten_percent">10%</string>
+
+    <!-- Page nav key action labels -->
+    <string name="settings_ctrl_revert">REVERT</string>
+    <string name="settings_ctrl_revert_to">REVERT\nTO\n%s</string>
+    <string name="settings_ctrl_apply">APPLY</string>
+    <string name="settings_ctrl_confirm_seconds">CONFIRM\n%ds</string>
+    <string name="settings_ctrl_confirm_change_seconds">CONFIRM\nCHANGE\n%ds</string>
+    <string name="settings_ctrl_turn_off">TURN\nOFF</string>
+    <string name="settings_ctrl_turn_on">TURN\nON</string>
+    <string name="settings_ctrl_adjust">ADJUST</string>
+    <string name="settings_ctrl_next">NEXT</string>
+    <string name="settings_ctrl_open">OPEN</string>
+    <string name="settings_ctrl_up">↑ UP</string>
+    <string name="settings_ctrl_left">← LEFT</string>
+    <string name="settings_ctrl_right">RIGHT →</string>
+    <string name="settings_ctrl_down">↓ DOWN</string>
+    <string name="settings_ctrl_back">BACK</string>
+
+    <!-- Slider page key labels -->
+    <string name="settings_ctrl_dec">← DEC</string>
+    <string name="settings_ctrl_inc">INC →</string>
+    <string name="settings_ctrl_apply_and_exit">APPLY &amp;\nEXIT</string>
+    <string name="settings_ctrl_test">TEST</string>
+    <string name="settings_ctrl_test_time">TEST\nTIME:\n%d sec</string>
+    <string name="settings_ctrl_step_label">STEP:\n%s</string>
+
+    <!-- Speech/status strings -->
+    <string name="settings_ctrl_applied">Applied</string>
+    <string name="settings_ctrl_reverted">Reverted</string>
+    <string name="settings_ctrl_test_complete">Test complete</string>
+    <string name="settings_ctrl_auto_reverted">Auto-reverted</string>
+    <string name="settings_ctrl_change_confirmed">Change confirmed</string>
+    <string name="settings_ctrl_testing_for_seconds">Testing for %d seconds</string>
+    <string name="settings_ctrl_step_speech">Step: %s</string>
+    <string name="settings_ctrl_seconds_speech">%d seconds</string>
+
+    <!-- Key capture (switch assignment) -->
+    <string name="sr_key_capture_prompt">Press switch now…</string>
+    <string name="sr_key_capture_assigned">Assigned: %s</string>
+    <string name="sr_key_capture_not_assigned">Not assigned</string>
+    <string name="sr_key_capture_assign">ASSIGN</string>
+
+    <!-- Friendly names for captured switch keys -->
+    <string name="sr_key_label_number">Key %d</string>
+    <string name="sr_key_label_numpad">Numpad %d</string>
+    <string name="sr_key_label_space">Space</string>
+    <string name="sr_key_label_enter">Enter</string>
+
+    <!-- Settings renderer (4.3) -->
+    <string name="row_setting_chevron" translatable="false">›</string>
+
+    <!-- TalkBack content descriptions for rendered settings rows -->
+    <string name="sr_a11y_toggle">%1$s, %2$s, toggle</string>
+    <string name="sr_a11y_toggle_unavailable">Setting unavailable — requires accented characters shown on keys</string>
+    <string name="sr_a11y_slider">%1$s, %2$s, range %3$s to %4$s</string>
+    <string name="sr_a11y_choice">%1$s, current %2$s</string>
+    <string name="sr_a11y_subpage">Open %1$s</string>
+    <string name="sr_a11y_key_capture">%1$s, %2$s</string>
+
+    <!-- Display text -->
+    <string name="settings_ctrl_on">ON</string>
+    <string name="settings_ctrl_off">OFF</string>
+    <string name="settings_ctrl_on_speech">on</string>
+    <string name="settings_ctrl_off_speech">off</string>
+    <string name="settings_ctrl_settings_fallback">Settings</string>
+    <string name="settings_ctrl_adjust_title">Adjust: %s</string>
+
+    <!-- Auto-revert display -->
+    <string name="settings_ctrl_keep_change_revert">Keep change?\nReverting in %ds</string>
+
+    <!-- Test mode display -->
+    <string name="settings_ctrl_test_mode">Test Mode</string>
+    <string name="settings_ctrl_test_mode_fallback">Test</string>
+    <string name="settings_ctrl_press_any_key">Press any key to test</string>
+    <string name="settings_ctrl_test_mode_center">TEST MODE\n%s\nPress keys to test</string>
+    <string name="settings_ctrl_testing_title">Testing: %s</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 5: SettingsRegistry string resources                    -->
+    <!-- ============================================================ -->
+
+    <!-- Format strings used in SettingsRegistry formatValue lambdas -->
+    <string name="sr_format_off">OFF</string>
+    <string name="sr_format_ms">%d ms</string>
+    <string name="sr_format_sec">%d sec</string>
+    <string name="sr_format_sec_float">%.1f sec</string>
+    <string name="sr_format_sec_float2">%.2f sec</string>
+    <string name="sr_format_percent">%d%%</string>
+    <string name="sr_format_dp_float">%.0f dp</string>
+    <string name="sr_format_dp_int">%d dp</string>
+    <string name="sr_format_decimal2">%.2f</string>
+    <string name="sr_format_decimal1">%.1f</string>
+    <string name="sr_format_day_singular">1 day</string>
+    <string name="sr_format_days_plural">%d days</string>
+    <string name="sr_format_infinite">Infinite</string>
+
+    <!-- Page titles -->
+    <string name="sr_page_main">Settings</string>
+    <string name="sr_main_nav_language_options">LANGUAGE OPTIONS</string>
+    <string name="sr_main_nav_keyboard_setup">KEYBOARD SETUP</string>
+    <string name="sr_main_sec_keyboard_setup">Keyboard Setup</string>
+    <string name="sr_page_language_options">Language Options</string>
+    <string name="sr_page_keyboard_setup">Keyboard Setup</string>
+    <string name="sr_page_input_methods">Input Methods</string>
+    <string name="sr_page_head_tracking">Head Tracking</string>
+    <string name="sr_page_joystick">Joystick</string>
+    <string name="sr_page_mouse_joystick">Mouse Joystick</string>
+    <string name="sr_page_single_switch">Single Switch</string>
+    <string name="sr_page_two_switch">Two Switch</string>
+    <string name="sr_page_touch_switch">Touchscreen Switch</string>
+    <string name="sr_page_direct_selection">Direct Selection</string>
+    <string name="sr_page_directional_selection">Directional Selection</string>
+    <string name="sr_page_vocabulary">Vocabulary</string>
+    <string name="sr_page_backup_info">Backup &amp; Restore</string>
+    <string name="sr_page_developer">Developer</string>
+
+    <!-- Choice option display names -->
+    <string name="sr_opt_optimized">Optimized</string>
+    <string name="sr_opt_alphabetical">Alphabetical</string>
+    <string name="sr_opt_none">None</string>
+    <string name="sr_opt_head_tracking">Head Tracking</string>
+    <string name="sr_opt_joystick">Joystick</string>
+    <string name="sr_opt_mouse_joystick">Mouse Joystick</string>
+    <string name="sr_opt_single_switch">Single Switch</string>
+    <string name="sr_opt_two_switch">Two Switch</string>
+    <string name="sr_opt_large">Large</string>
+    <string name="sr_opt_small">Small</string>
+    <string name="sr_opt_single">Single</string>
+    <string name="sr_opt_two">Two</string>
+
+    <!-- Main page: navigation links -->
+    <string name="sr_main_nav_input_methods">Input Methods</string>
+    <string name="sr_main_nav_vocabulary">Vocabulary Management</string>
+    <string name="sr_main_nav_backup">Backup &amp; Restore</string>
+    <string name="sr_main_nav_backup_desc">Use touchscreen settings for file operations</string>
+    <string name="sr_main_nav_developer">Developer Settings</string>
+
+    <!-- Main page: Keyboard section -->
+    <string name="sr_main_sec_keyboard">Keyboard</string>
+    <string name="sr_main_letter_arrangement">Letter Arrangement</string>
+    <string name="sr_main_optimized_layout_source">Optimized Layout From</string>
+    <string name="sr_main_ngb_predictions">Context Predictions</string>
+    <string name="info_prompt_ngb_predictions">Shows likely next words in the selection list based on the previous word, before and while you type. Turning this off restores the frequency-only list.</string>
+    <string name="sr_main_ngb_confidence">Confidence Signal</string>
+    <string name="info_prompt_ngb_confidence">Signals you when the top list item is probably your word, so you can stop typing and select it. Requires Context Predictions.</string>
+    <string name="sr_main_ngb_confidence_action">Confidence Signal Type</string>
+    <string name="info_prompt_ngb_confidence_action">How the signal is delivered: a short rising beep, a green flash on the Select key, or both.</string>
+    <string name="sr_main_ngb_confidence_threshold">Confidence Threshold</string>
+    <string name="info_prompt_ngb_confidence_threshold">How sure JustType must be before signaling. Higher values signal less often and are almost always right; lower values signal more often and can save more keystrokes.</string>
+    <string name="sr_main_word_list_style">Word List Style</string>
+    <string name="sr_opt_wls_predictive">Predictive (recommended)</string>
+    <string name="sr_opt_wls_steady1">Steady first word</string>
+    <string name="sr_opt_wls_steady2">Steady start (2 fixed)</string>
+    <string name="sr_opt_wls_classic">Classic — fixed order</string>
+    <string name="sr_main_ngb_conf_precision">Signal Accuracy Target</string>
+    <string name="info_prompt_word_list_style">How the word list balances predictions against a fixed, learnable order. Predictive: the most likely words lead, using the words you typed before — fewest keystrokes (recommended). Steady first word: the first slot always shows the same word for the same keys; predictions follow (roughly 7–15% more keystrokes). Steady start: the first two slots are fixed (roughly 16–33% more). Classic: no predictions at all — the list depends only on the keys you typed, like classic JustType (roughly 40–69% more). Prediction settings below are inactive in Classic.</string>
+    <string name="info_prompt_ngb_conf_precision">If the signal is going to interrupt you, it should be right at least this often. JustType measures its own accuracy on your typing and tunes the signal to meet your target. Higher settings make the signal more trustworthy but rarer.</string>
+    <string name="sr_opt_ngb_conf_beep">Beep</string>
+    <string name="sr_opt_ngb_conf_flash">Flash</string>
+    <string name="sr_opt_ngb_conf_both">Beep + Flash</string>
+    <string name="ngb_conf_saved_prompt">The Confidence Signal could have saved you %1$d keystrokes. You can turn it on in Settings, under Word Selection.</string>
+    <string name="sr_main_tone_entry_position">Tone Mark Entry Position</string>
+    <string name="sr_opt_tone_entry_end">End of syllable</string>
+    <string name="sr_opt_tone_entry_after_vowel">After tone vowel</string>
+    <string name="info_prompt_tone_entry_position">Where the tone-mark key is pressed when typing a syllable. End of syllable is the standard Telex/VNI convention. After tone vowel enters the tone immediately after its vowel — candidates before the tone show unmarked vowels, and the tone keys display the possible vowel forms. Changing this rebuilds the dictionary index.</string>
+    <string name="sr_main_tone_label_style">Tone Key Labels</string>
+    <string name="sr_main_word_selection">Word Selection</string>
+    <string name="sr_opt_word_selection_list">List-based</string>
+    <string name="sr_opt_word_selection_paged">Page-based</string>
+    <string name="sr_main_paged_listed_words">Number of Listed Words</string>
+    <string name="sr_opt_tone_marks">Tone marks (◌̀ ◌́)</string>
+    <string name="sr_opt_tone_vni">VNI digits (1–5)</string>
+    <string name="sr_opt_tone_telex">Telex letters (s f r x j)</string>
+    <string name="sr_opt_layout_match">Match typing language</string>
+    <string name="sr_main_keyboard_size">Keyboard Size</string>
+    <string name="sr_main_extra_blank_line">Extra Blank Line on Enter</string>
+
+    <!-- Main page: Performance section -->
+    <string name="sr_main_sec_performance">Performance</string>
+    <string name="sr_main_battery_saver_mode">Battery Saver Mode</string>
+    <string name="info_prompt_battery_saver_mode">Speeds up typing on older or low-power devices by turning off context predictions, key-press animations, and some background learning. Word predictions still work, just without these extras.</string>
+
+    <!-- Main page: Speech Output section -->
+    <string name="sr_main_sec_speech">Speech Output</string>
+    <string name="sr_main_speak_output_word">Speak Output Word</string>
+    <string name="sr_main_speak_output_phrase">Speak Each Abbreviated Phrase</string>
+    <string name="sr_main_speak_output_sentence">Speak Output Sentence</string>
+    <string name="sr_main_speak_punct_names">Speak Punctuation Names</string>
+    <string name="sr_main_speaking_indicator_icon">Speaking Indicator Icon</string>
+    <string name="sr_opt_indicator_outlined">Outlined</string>
+    <string name="sr_opt_indicator_wave">Audio wave</string>
+    <string name="sr_main_phrase_speak_delay">Auto-Speak Delay</string>
+    <string name="sr_main_phrase_speak_delay_desc">Max delay before speaking selected text</string>
+
+    <!-- Main page: JustType Display section -->
+    <string name="sr_main_sec_display">JustType Display</string>
+    <string name="sr_main_next_letter_hints">Next-Letter Hints</string>
+    <string name="sr_main_show_key_history">Show Key History</string>
+    <string name="sr_main_key_history_height">Key History Height</string>
+    <string name="sr_main_shrink_key_history">Shrink Key History to Fit</string>
+    <string name="sr_main_sec_appearance">Appearance</string>
+    <string name="sr_main_selection_text_size">Word List Text Size</string>
+    <string name="sr_main_highlight_key_history">Highlight Word in Key History</string>
+    <string name="sr_main_vertical_key_history">Vertical Key History in Landscape</string>
+    <string name="sr_main_mark_latest_key_history">Mark Newest Key in History</string>
+
+    <!-- Main page: Selection List section -->
+    <string name="sr_main_sec_selection">Selection List</string>
+    <string name="sr_main_auto_restore_selection">Auto-Load Word at Cursor</string>
+    <string name="sr_main_exact_case_pull_in">Exact Case Pull-In</string>
+    <string name="sr_main_show_case_type_variants">Automatically Add Capitalized Word Forms to Selection List</string>
+    <string name="sr_main_deferred_case_expansion">Wait Until Word is Selected to Add Capitalized Forms</string>
+    <string name="sr_main_case_expansion_delay">Delay to Add Capitalized Forms</string>
+    <string name="sr_main_show_abbrev_in_selection">Show Phrase Abbreviation in Selection List</string>
+    <string name="sr_main_show_phrase_in_selection">Show Expanded Phrase in Selection List</string>
+
+    <!-- Input Methods page -->
+    <string name="sr_input_methods_sec_primary">Adaptive Input Method</string>
+    <string name="sr_input_methods_primary_method">Adaptive Input Method</string>
+    <string name="sr_input_methods_direct_selection">Direct Selection</string>
+    <string name="sr_input_methods_directional_selection">Directional Selection</string>
+    <string name="sr_input_methods_touch_screen_switch">Touchscreen Switch</string>
+    <string name="sr_input_methods_sec_method_setup">Method Setup</string>
+    <string name="sr_input_methods_nav_head_tracking">Head Tracking Settings</string>
+    <string name="sr_input_methods_nav_joystick">Joystick Settings</string>
+    <string name="sr_input_methods_nav_mouse_joystick">Mouse Joystick Settings</string>
+    <string name="sr_input_methods_nav_single_switch">Single Switch Settings</string>
+    <string name="sr_input_methods_nav_two_switch">Two Switch Settings</string>
+    <string name="sr_input_methods_nav_touch_switch">Touchscreen Switch Settings</string>
+    <string name="sr_input_methods_nav_direct_sel">Direct Selection Settings</string>
+    <string name="sr_input_methods_nav_directional_sel">Directional Selection Settings</string>
+    <string name="sr_input_methods_cannot_disable_both">Cannot disable — set a Primary Input Method first</string>
+    <string name="sr_input_methods_sec_feedback">Feedback</string>
+    <string name="sr_input_methods_flash_key">Flash Key When Activated</string>
+    <string name="sr_input_methods_beep_key">Beep when key is activated</string>
+    <string name="sr_input_methods_vibration_feedback">Vibrate when key is activated</string>
+    <string name="info_prompt_vibration_feedback">Vibrate briefly when a key is activated, and with a distinct double-pulse when a keystroke has no effect. Useful in quiet or noisy environments, or alongside the beep. Turn off if vibration is distracting.</string>
+    <string name="sr_input_methods_speak_selected_word">Speak Each Selected Word</string>
+    <string name="sr_input_methods_speak_selected_key">Speak Each Selected Key</string>
+    <string name="sr_input_methods_speak_punctuation">Speak Punctuation on Key</string>
+    <string name="sr_input_methods_speak_prompts">Speak Prompts Aloud</string>
+
+    <!-- Head Tracking page -->
+    <string name="sr_head_tracking_sec_zones">Zone Thresholds</string>
+    <string name="sr_head_tracking_dead_zone">Resting Zone</string>
+    <string name="sr_head_tracking_active_zone">Active Zone</string>
+    <string name="sr_head_tracking_exit_zone">Exit Zone</string>
+    <string name="sr_head_tracking_activation_threshold">Activation Threshold</string>
+    <string name="sr_head_tracking_aim_tolerance">Aim Tolerance</string>
+    <string name="sr_head_tracking_exit_delay">Exit Delay</string>
+    <string name="sr_head_tracking_restart_delay">Restart Timer</string>
+    <string name="sr_head_tracking_sec_tuning">Tuning and Feedback</string>
+    <string name="sr_head_tracking_vertical_sensitivity">Vertical Sensitivity</string>
+    <string name="sr_head_tracking_response_curve">Responsiveness</string>
+    <string name="sr_head_tracking_corner_bias">Corner Weighting</string>
+    <string name="sr_head_tracking_debug_overlay">Debug Overlay</string>
+    <string name="sr_head_tracking_diag_logs">Diagnostic Logs</string>
+    <string name="sr_head_tracking_rearm_in_feedback">Re-arm in Feedback Zone</string>
+    <string name="sr_head_tracking_correction_beep">Correction Gesture Beep</string>
+    <string name="sr_head_tracking_correction_flash_red">Correction Gesture - Cancelled Key Flashes Red</string>
+
+    <!-- Joystick page -->
+    <string name="sr_joystick_dead_zone">Resting Zone</string>
+    <string name="sr_joystick_active_zone">Active Zone</string>
+    <string name="sr_joystick_corner_bias">Corner Weighting</string>
+
+    <!-- Mouse Joystick page -->
+    <string name="sr_mouse_joystick_dead_zone">Resting Zone</string>
+    <string name="sr_mouse_joystick_active_zone">Active Zone</string>
+    <string name="sr_mouse_joystick_corner_bias">Corner Weighting</string>
+    <!-- Renamed from "Mouse Sensitivity": the value is dp of movement REQUIRED, so a higher number
+         is LESS sensitive. "Movement needed" reads the right way round. -->
+    <string name="sr_mouse_joystick_sensitivity">Movement Needed</string>
+    <string name="sr_mouse_joystick_barrier_height">Barrier Height</string>
+    <string name="sr_mouse_joystick_exit_delay">Exit Delay</string>
+    <string name="sr_mouse_joystick_reengage_hysteresis">Reengage Delay</string>
+    <!-- MJ tuning presets + section headers -->
+    <string name="sr_mouse_joystick_preset_header">Tuning presets</string>
+    <string name="sr_mouse_joystick_preset_light">Light touch — small, easy movements</string>
+    <string name="sr_mouse_joystick_preset_standard">Standard</string>
+    <string name="sr_mouse_joystick_preset_firm">Firm push — larger, deliberate movements</string>
+    <string name="sr_mouse_joystick_fine_tuning_header">Fine tuning</string>
+    <string name="sr_mouse_joystick_advanced_header">Advanced</string>
+    <string name="toast_mj_preset_applied">Preset applied</string>
+
+    <!-- Single Switch page -->
+    <string name="sr_single_switch_debounce">Ignore Rapid Switch Hits (Debounce)</string>
+    <string name="sr_single_switch_debounce_desc">Ignore rapid repeated switch activations within this time window (default 120 ms)</string>
+    <string name="sr_single_switch_scan_step_delay">Scan Step Delay Time</string>
+    <string name="sr_single_switch_initial_delay">Add Extra Delay on First Scanned Key</string>
+    <string name="sr_single_switch_scan_repeat_count">Number of Times to Repeat Scan if No Key is Selected</string>
+    <string name="sr_single_switch_skip_no_valid">Skip Keys with No Valid Next-Letters</string>
+    <string name="sr_single_switch_show_next_key">Show Next Key to be Scanned (when any key will be skipped)</string>
+    <string name="sr_single_switch_auto_repeat_mode">Key Activation Auto-Repeat Mode</string>
+    <string name="sr_single_switch_auto_repeat_delay">Auto-Repeat Delay Time</string>
+    <string name="sr_single_switch_select_triggers_scan">Select Key Triggers Scan of Selection List</string>
+    <string name="sr_single_switch_beep_each_step">Beep at Each Scanning Step</string>
+    <string name="sr_single_switch_scan_layout_size">Scanning Layout Key Size</string>
+    <string name="sr_single_switch_highlight_timeout">Two-Switch Selection Reset Delay</string>
+    <string name="sr_single_switch_assign_switch">ACTIVATE SCANNING SWITCH</string>
+
+    <!-- Two Switch page -->
+    <string name="sr_two_switch_assign_red">ACTIVATE RED SWITCH</string>
+    <string name="sr_two_switch_assign_green">ACTIVATE GREEN SWITCH</string>
+    <string name="sr_two_switch_auto_repeat_mode">Auto-Repeat Switch Activation</string>
+    <string name="sr_two_switch_auto_repeat_delay">Auto-Repeat Switch Activation Delay Time</string>
+    <string name="sr_two_switch_repeat_activations">Auto-Repeat Key Activation</string>
+    <string name="sr_two_switch_repeat_activation_delay">Auto-Repeat Key Activation Delay Time</string>
+    <string name="sr_two_switch_beep_activation">Beep on Each Switch Activation</string>
+    <string name="sr_two_switch_show_band">Show Color Band</string>
+    <string name="sr_two_switch_stuck_timeout">Stuck Switch Timeout</string>
+
+    <!-- Touchscreen Switch page -->
+    <string name="sr_touch_switch_sec_how">How Touchscreen Switch Works</string>
+    <string name="sr_touch_switch_info_1">Touchscreen Switch divides the screen into two halves that act as switch inputs. Use this with Single Switch Scanning or Two-Switch Selection modes.</string>
+    <string name="sr_touch_switch_info_2">\u2022 For Single Switch Scanning: Tap anywhere on the screen\n\u2022 For Two-Switch Selection: Tap left side for Red switch, right side for Green switch</string>
+    <string name="sr_touch_switch_sec_settings">Touchscreen Settings</string>
+    <string name="sr_touch_switch_mode">Switch Mode</string>
+    <string name="sr_touch_switch_debounce">Ignore Rapid Switch Hits (Debounce)</string>
+    <string name="sr_touch_switch_debounce_desc">Ignore rapid repeated touches within this time window (default 120 ms)</string>
+    <string name="sr_touch_switch_overlay_timeout">Overlay Mode Display Timeout</string>
+    <string name="sr_touch_switch_flash">Flash Switch Bar on Activation</string>
+    <string name="sr_touch_switch_beep">Beep on Switch Activation</string>
+    <string name="sr_touch_switch_button_height">Button Height</string>
+    <string name="sr_touch_switch_overlay_opacity">Button Opacity</string>
+    <string name="sr_touch_switch_overlay_mode">Overlay Mode</string>
+    <string name="sr_touch_switch_overlay_mode_desc">When enabled, the entire screen is used for switch input. When disabled, only the button area is active.</string>
+    <string name="setup_tss_button_height">Touchscreen Switch Height</string>
+    <string name="setup_tss_button_height_desc">Height of the switch buttons as a percentage of screen height</string>
+    <string name="setup_tss_overlay_opacity">Button Opacity</string>
+    <string name="setup_tss_overlay_opacity_desc">Opacity of the switch buttons</string>
+    <string name="setup_tss_overlay_mode">Overlay Mode</string>
+    <string name="setup_tss_overlay_mode_desc">When enabled, the entire screen is used for switch input. When disabled, only the button area is active (auto-enabled if keyboard + buttons exceed 2/3 of screen height).</string>
+    <string name="format_tss_button_height_percent">%d%%</string>
+
+    <!-- Direct Selection page -->
+    <string name="sr_direct_selection_sec_how">How Direct Selection Works</string>
+    <string name="sr_direct_selection_info_1">Direct Selection is the simplest touch input method. Simply tap directly on any key to select it.</string>
+    <string name="sr_direct_selection_info_2">This mode works best when you can accurately point and tap on the screen. Each tap on a key will immediately select that key.</string>
+    <string name="sr_direct_selection_sec_tips">Tips</string>
+    <string name="sr_direct_selection_info_tips">\u2022 Tap once on a key to select it\n\u2022 Use the keyboard size setting to adjust key sizes\n\u2022 If you have difficulty with precise taps, consider trying Directional Selection instead</string>
+    <string name="sr_direct_selection_sec_settings">Settings</string>
+    <string name="sr_direct_selection_debounce">Ignore Rapid Key Hits (Debounce)</string>
+    <string name="sr_direct_selection_debounce_desc">Ignore rapid repeated taps within this time window (default 120 ms)</string>
+    <string name="sr_direct_selection_auto_repeat">Auto-Repeat Key Activation</string>
+    <string name="sr_direct_selection_auto_repeat_desc">Hold a movement or scroll key on the navigation keyboard to repeat it</string>
+    <string name="sr_direct_selection_auto_repeat_delay">Auto-Repeat Delay Time</string>
+
+    <!-- Directional Selection page -->
+    <string name="sr_directional_selection_sec_how">How Directional Selection Works</string>
+    <string name="sr_directional_selection_info_1">Directional Selection uses swipe gestures to navigate the keyboard. Swipe in any of 8 directions to select the corresponding key on the currently highlighted button.</string>
+    <string name="sr_directional_selection_info_2">Swipe from anywhere on the screen in the direction of the key you want to select.</string>
+    <string name="sr_directional_selection_sec_settings">Settings</string>
+    <string name="sr_directional_selection_debounce">Ignore Rapid Screen Swipes (Debounce)</string>
+    <string name="sr_directional_selection_debounce_desc">Ignore rapid repeated swipes within this time window (default 120 ms)</string>
+    <string name="sr_directional_selection_swipe_sensitivity">Swipe Sensitivity (Minimum Swipe Length)</string>
+    <string name="sr_directional_selection_swipe_sensitivity_desc">Minimum distance required to register a swipe</string>
+
+    <!-- Vocabulary page -->
+    <string name="sr_vocabulary_sec_sources">Vocabulary Sources</string>
+    <string name="sr_vocabulary_include_justtype">Include JustType Dictionary</string>
+    <string name="sr_vocabulary_include_custom_words">Include Custom Words</string>
+    <string name="sr_vocabulary_include_phrases">Include Abbreviation/Phrase Pairs</string>
+    <string name="sr_vocabulary_promote_imported">Promote Words from Active Imported Vocabularies</string>
+    <string name="sr_vocabulary_sec_filter">Limit Uncommon Words</string>
+    <string name="sr_vocabulary_enable_freq_filter">Restrict Uncommon Words</string>
+<!-- Phase 3D: sr_vocabulary_min_freq_next_letter removed (orphan key). -->
+    <string name="sr_vocabulary_min_freq_selection">Limit Selection List to Common Words</string>
+    <string name="sr_vocabulary_show_excluded">Add Restricted Words to End of List</string>
+    <string name="sr_vocabulary_sec_accent">Accented Next-Letter Hints</string>
+    <string name="sr_vocabulary_enable_accent">Enable Accented Next-Letter Hints</string>
+    <string name="sr_vocabulary_accent_min_freq">Minimum Frequency for Accented Hints</string>
+    <string name="sr_vocabulary_accent_max_freq">Maximum Frequency for Accented Hints</string>
+    <string name="sr_vocabulary_accent_max_use_count">Accent Max Use Count</string>
+    <string name="sr_vocabulary_accent_max_use_jt">Accent Max Use (JT)</string>
+
+    <!-- v4.1 Phase 4 Spell Mode diacritic + case settings -->
+    <string name="sr_spell_sec_diacritics">Spell Mode Diacritics</string>
+    <string name="sr_spell_diacritic_scope">Include diacritic letters in Letter Spell Mode</string>
+    <string name="sr_spell_scope_off">None</string>
+    <string name="sr_spell_scope_current">From current typing language</string>
+    <string name="sr_spell_scope_loaded">From all downloaded typing languages</string>
+    <string name="sr_spell_scope_all">All</string>
+    <string name="sr_spell_diacritic_scope_info">Chooses which accented letters Letter Spell Mode offers when you pick a base letter. \"From current typing language\" shows only the accents used by the language you are typing in; \"From all downloaded typing languages\" includes every language on your device; \"All\" shows every accent; \"None\" shows none. Each language\'s accents are learned automatically from its words.</string>
+
+    <!-- Per-language TTS voice selection -->
+    <string name="sr_main_section_language_options">Language Options</string>
+    <string name="sr_main_voice_type">Personal Voice Type Preference</string>
+    <string name="sr_main_ui_voice_type">UI Feedback Language Voice Type Preference</string>
+    <string name="info_prompt_ui_voice_type">Your preferred voice type for UI feedback — the voice that speaks prompts, key names, and announcements to you. Some users choose the opposite of their personal voice type so system feedback is easy to tell apart from their own spoken words. Used to suggest and default the UI Feedback Voice.</string>
+    <string name="sr_voice_type_any">No preference</string>
+    <string name="sr_voice_type_male">Male</string>
+    <string name="sr_voice_type_female">Female</string>
+    <string name="sr_voice_type_child">Child</string>
+    <string name="info_prompt_voice_type">Your preferred voice type. JustType uses it to suggest a voice when you choose one for a language. Availability depends on the speech engines installed on your device, and the match is a best guess — use Test to confirm. Child voices in particular are uncommon.</string>
+    <string name="tts_voice_automatic">Automatic</string>
+    <string name="tts_voice_picker_title">Choose a voice for %1$s</string>
+    <string name="tts_voice_picker_scanning">Finding voices…</string>
+    <string name="tts_voice_picker_test">Test</string>
+    <string name="tts_voice_picker_confirm">Use this voice</string>
+    <string name="tts_voice_picker_none_found">No installed voice supports %1$s. Install or enable a speech voice, then try again.</string>
+    <string name="tts_voice_picker_install">Install a voice</string>
+    <string name="tts_voice_picker_no_gender_match">Couldn\'t find a voice matching your preferred voice type — test the options and choose one.</string>
+    <string name="tts_voice_generic">Voice</string>
+    <string name="tts_friendly_lang_region">%1$s (%2$s)</string>
+    <string name="tts_friendly_name_format">%1$s %2$s %3$d</string>
+    <string name="tts_friendly_name_with_engine">%1$s — %2$s</string>
+    <string name="tts_default_voice">DEFAULT VOICE</string>
+    <string name="tts_default_voice_male">DEFAULT MALE VOICE</string>
+    <string name="tts_default_voice_female">DEFAULT FEMALE VOICE</string>
+    <string name="tts_default_voice_child">DEFAULT CHILD VOICE</string>
+    <string name="sr_spell_show_diacritics">Show diacritics in Spell Mode</string>
+    <string name="sr_spell_show_diacritics_info">When enabled, picking a letter in Letter Spell Mode opens a variant page so you can pick an accented form (á, ä, etc.). When disabled, only the base letter is entered and Spell Mode stays at a fixed two keystrokes per character.</string>
+    <string name="sr_spell_show_uncommon_diacritics">Show uncommon diacritics</string>
+    <string name="sr_spell_show_uncommon_diacritics_info">When enabled, less common variants (ā, ů, ǔ, etc.) are added to the variant page alongside common ones. Requires \"Show diacritics in Spell Mode\" to be on.</string>
+    <string name="sr_spell_viet_mode">Vietnamese variants</string>
+    <string name="sr_spell_viet_off">Off</string>
+    <string name="sr_spell_viet_include">Include (sorted first)</string>
+    <string name="sr_spell_viet_only">Only Vietnamese</string>
+    <string name="sr_spell_viet_mode_info">Vietnamese-specific variants (ư, ầ, ằ, etc.) are independent from common / uncommon. Include adds them to the variant page sorted to the front; Only shows just Vietnamese-tagged variants (and hides everything else).</string>
+    <string name="sr_spell_turkish_azeri_override">Turkish / Azerbaijani case override</string>
+    <string name="sr_spell_turkish_azeri_override_info">When enabled, i uppercases to İ (dotted capital) and ı uppercases to I (plain), regardless of system locale. Useful when typing Turkish or Azerbaijani in a non-Turkish system locale.</string>
+
+    <!-- Backup Info page -->
+    <string name="sr_backup_sec_info">Backup &amp; Restore</string>
+    <string name="sr_backup_sec_note">Use touchscreen settings for backup and restore operations</string>
+
+    <!-- Developer page -->
+    <string name="sr_developer_sec_sort">Sort Weights</string>
+    <string name="sr_developer_freq_add_weight">Freq Add Weight</string>
+    <string name="sr_developer_freq_mult_weight">Freq Mult Weight</string>
+    <string name="sr_developer_seq_add_weight">Seq Add Weight</string>
+    <string name="sr_developer_seq_mult_weight">Seq Mult Weight</string>
+    <string name="sr_developer_use_add_weight">Use Add Weight</string>
+    <string name="sr_developer_use_mult_weight">Use Mult Weight</string>
+    <string name="sr_developer_recency_add_weight">Recency Add Weight</string>
+    <string name="sr_developer_recency_mult_weight">Recency Mult Weight</string>
+    <string name="sr_developer_sls_partition">List Partition Policy</string>
+    <string name="sr_developer_sls_partition_blocks">Blocks</string>
+    <string name="sr_developer_sls_partition_pin">FTS Pin</string>
+    <string name="sr_developer_sls_partition_interleave">Interleave</string>
+    <string name="info_prompt_sls_partition">How the selection list is ordered. Blocks (default): fully-typed words always come first, then completions. FTS Pin: the top fully-typed word keeps slot 1, everything else is ordered purely by sort metric. Interleave: the whole list is ordered by sort metric. Fully-typed words are always listed under every policy.</string>
+    <string name="sr_developer_sls_tone_promoted">Promote Tone-Pending Words</string>
+    <string name="info_prompt_sls_tone_promoted">When on (default), words with all letters typed and only the tone keystroke remaining are guaranteed a place above letter-incomplete completions. When off they compete by sort metric like any other completion. Only affects tone-keystroke languages.</string>
+    <string name="sr_developer_select_behavior">Select Behavior Mode</string>
+    <string name="sr_developer_select_behavior_observe">Observe</string>
+    <string name="sr_developer_select_behavior_force_page1">Force Page 1</string>
+    <string name="sr_developer_select_behavior_force_head">Force Head</string>
+    <string name="sr_developer_select_behavior_adaptive">Adaptive</string>
+    <string name="info_prompt_select_behavior">Adaptive FTS promotion ladder. Observe (default): record Select-press patterns only, no behavior change. Force Page 1 / Force Head: at a Select press with no confidence signal, fully-typed words sitting below the head are promoted onto page 1 or into the head. Adaptive: reserved — observes only until the automatic ramp ships.</string>
+    <string name="sr_developer_sec_search">Search Parameters</string>
+    <string name="sr_developer_beam_search_depth">Beam Search Depth</string>
+    <string name="sr_developer_subseq_edit_distance">Subsequence Edit Distance</string>
+    <string name="sr_developer_max_queue_candidates">Max Queue Candidates</string>
+    <string name="sr_developer_max_examined_nodes">Max Examined Nodes</string>
+    <string name="sr_developer_ignore_max_examined">Ignore Max Examined Nodes</string>
+    <string name="sr_developer_crash_report_prompt">Offer Crash Report After Crash</string>
+    <string name="info_prompt_crash_report_prompt">When on (default), after JustType crashes, opening Settings offers to email a crash report. The report includes only the error and your device model — never anything you typed. Turn off to stop the prompt.</string>
+    <string name="sr_developer_case_switch_margin">Case Switch Margin</string>
+    <string name="sr_developer_family_min_kr">Family Expansion: Required Remaining Keys</string>
+    <string name="sr_developer_family_stem_backoff">Family Expansion: Ignored Trailing Letters</string>
+    <string name="sr_main_family_expansion">Family Expansion</string>
+    <string name="sr_main_family_expansion_delay">Family Expansion Delay</string>
+    <string name="info_prompt_family_expand">While typing a long word, selecting it and pausing inserts page groups of words that start the same way but end differently — plurals, verb forms, and longer words — highlighted in blue. An extra Select steps past them if the pause was unintentional. English and Spanish.</string>
+    <string name="info_prompt_family_expand_delay">How long to hold a selection before the related-words pages appear. Separate from the capitalized-forms delay in Keyboard Setup.</string>
+    <string name="sr_developer_sec_behavior">Behavior</string>
+    <string name="sr_developer_sec_debug">Debug</string>
+    <string name="sr_developer_enable_debug_log">Enable Debug Log</string>
+    <string name="sr_developer_debug_log_retention">Debug Log Retention</string>
+    <string name="sr_developer_show_sort_metric">Show Sort Metric</string>
+    <string name="sr_developer_show_edit_ops">Show Edit Operations</string>
+
+    <!-- Build-tier indicator suffix shown next to the Settings title for
+         beta + internal builds. Tier 0 (release) shows no suffix. -->
+    <string name="settings_tier_beta">beta</string>
+    <string name="settings_tier_internal">internal</string>
+
+    <!-- Submit Feedback (Phase D2) — bundles debug logs into a zip and
+         lets the user share via email / Drive / messaging app. -->
+    <string name="sr_main_sec_about">About</string>
+    <string name="sr_main_submit_feedback">Submit Feedback</string>
+    <string name="sr_main_submit_feedback_description">Bundles recent debug logs into a file you can send via email or any sharing app — useful if you\'ve run into a problem.</string>
+    <string name="feedback_share_chooser_title">Send debug logs via…</string>
+    <string name="feedback_subject_default">JustType debug logs</string>
+    <string name="feedback_no_logs_available">No debug logs are available to share.</string>
+    <string name="feedback_share_failed">Couldn\'t prepare the debug-log file.</string>
+    <!-- Crash report (emailed to the foundation; crash traces only, no typed text) -->
+    <string name="feedback_email" translatable="false">hello@continuouspath.org</string>
+    <string name="feedback_crash_subject">JustType crash report</string>
+    <string name="feedback_crash_chooser_title">Send crash report via…</string>
+    <string name="feedback_crash_body">JustType crashed recently. This report contains only the error details and your device model — no text you typed. Thanks for helping us fix it!</string>
+    <string name="crash_prompt_title">JustType crashed recently</string>
+    <string name="crash_prompt_message">Sending a quick crash report helps us fix the problem. It includes only the error details and your device model — never anything you typed.</string>
+    <string name="crash_prompt_send">Send report</string>
+    <string name="crash_prompt_dismiss">Not now</string>
+
+    <!-- Head tracking paused overlay -->
+    <string name="head_tracking_paused">HEAD\nTRACKING\nPAUSED</string>
+
+    <!-- Head-tracking center-label state messages (shown in place of the
+         normal "Main" / current-word indicator during exit / pause / resume) -->
+    <string name="head_tracking_label_pausing">Pausing\nJustType</string>
+    <string name="head_tracking_label_paused">Paused\nJustType</string>
+    <string name="head_tracking_label_exiting">Exiting\nJustType</string>
+    <string name="head_tracking_label_exited">Exited\nJustType</string>
+    <string name="head_tracking_label_resuming">Resuming\nJustType</string>
+
+    <!-- Vocabulary system module labels (SelectActiveVocabulariesActivity) -->
+    <string name="vocab_module_justtype_main">JustType Main Database</string>
+    <string name="vocab_module_custom_words">Custom User Words</string>
+    <string name="vocab_module_phrases">Abbreviations/Phrases</string>
+    <string name="vocab_module_past_vocabs">(Past Vocabularies)</string>
+
+    <!-- Vocabulary export module names -->
+    <string name="export_module_justtype">JustType Database</string>
+    <string name="export_module_custom">Custom Words</string>
+    <string name="export_module_phrases">Abbreviated Phrases</string>
+
+    <!-- Export file headers (ExportVocabUsageActivity) -->
+    <string name="export_header_usage_counts">%s Vocabulary Usage Counts:\n</string>
+    <string name="export_header_freq_class">JustType Main Database Words in Frequency Class %d\n</string>
+    <string name="export_header_words_spelled">Words spelled %d times\n</string>
+
+    <!-- Overlay permission dialog (first-run) -->
+    <!-- AccessiblePrompt -->
+    <string name="accessible_prompt_dismiss_hint">Press UnDo to close this message</string>
+
+    <string name="overlay_permission_title">Permission Needed</string>
+    <string name="overlay_permission_message">JustType needs permission to display over other apps. This enables advanced input methods like Directional Selection. You can grant this permission now or later in system settings.</string>
+    <string name="overlay_permission_grant">Grant Permission</string>
+    <string name="overlay_permission_later">Later</string>
+
+    <!-- Info-icon mechanism (Phase 3B) -->
+    <string name="info_icon_content_description">Show help for this setting</string>
+
+    <!-- Letter Arrangement confirmation dialog (Phase 3D) -->
+    <string name="letter_arrangement_confirm_title">Change Letter Arrangement?</string>
+    <string name="letter_arrangement_confirm_message">This will change how the letters are arranged on your keyboard, and will certainly require time to get used to it. Would you like to try it for a while?</string>
+    <string name="letter_arrangement_confirm_yes">Yes, try it</string>
+    <string name="letter_arrangement_confirm_no">Cancel</string>
+
+    <!-- INFO PROMPTs — JustType Settings page -->
+    <string name="info_prompt_ui_language">Controls the language used for all on-screen key labels, menus, help text, and messages. Choose System Default to follow your device language, or pick a specific language.</string>
+    <string name="info_prompt_typing_language">Selects which word database is used for typing words with the JustType keyboard, and which accents LETTER SPELL MODE offers. Changing it reloads the keyboard onto that language.</string>
+    <string name="info_prompt_spanish_region">Only affects Spanish. Picks your regional variety so region-specific word forms (e.g. Spain\'s vosotros forms) sink to the bottom of the selection list. \"General\" keeps all regions equal.</string>
+    <string name="info_prompt_show_accented_keys">Only affects languages whose accented letters have their own keys (e.g. Spanish). When ON, accented letters appear on their own keys for the most efficient typing. When OFF, the keyboard shows only the base letters — accented words are typed with their base letters and chosen from the selection list.</string>
+    <string name="info_prompt_require_accented_keys">Available when accented characters are shown on keys. When OFF, a word typed without its accents still appears in the selection list, slightly lower — typing q-u-e also offers qué. Turn ON only if you always type accents exactly; the reward is a very small efficiency gain.</string>
+    <string name="info_prompt_tone_label_style">Languages like Vietnamese type each syllable’s tone as its own key press — the tone’s symbol is shown at the bottom of its key. Choose how those symbols are labeled: the bare tone marks, the digits used by the VNI typing method, or the letters used by Telex.</string>
+    <string name="info_prompt_word_selection">How the Select key steps through the word list. List-based: each press moves down the list one word. Page-based: after stepping past the first listed words, the next press shows the following six words on the letter keys — press a key to choose its word, press Select again for the next six, or Delete to go back.</string>
+    <string name="info_prompt_paged_listed_words">With Page-based Word Selection, how many words the Select key steps through one at a time before switching to pages of six on the letter keys. Set to 0 to show pages immediately on the first Select press.</string>
+    <string name="info_prompt_optimized_layout_source">Each language has its own Optimized letter arrangement. If you have memorized one language\u2019s arrangement, you can keep using it for every language you type in \u2014 word prediction still uses the language you selected. Match typing language switches the arrangement automatically.</string>
+    <string name="info_prompt_letter_arrangement">Choose between Optimized (letters grouped by frequency for faster typing) and Alphabetical (letters in A-Z order for a more familiar appearance). The Optimized arrangement is more efficient, requires fewer keystrokes, and is recommended for most people. Changing this is reversible and can be tested before confirming.</string>
+    <string name="info_prompt_keyboard_size">Sets how much of the keyboard\'s width the key grid takes; the word list gets the rest. Increase for larger, easier-to-read keys; decrease to give the word list more room.</string>
+    <string name="info_prompt_extra_blank_line">When ON, pressing Enter inserts two line breaks instead of one, creating a visible blank line between paragraphs. Useful for drafting emails or documents with paragraph spacing.</string>
+    <string name="info_prompt_speak_output_word">When ON, each word is spoken aloud as soon as it is finalized — after you Select it and then as soon as you type the first key of the next word (or the Auto-Speak Delay is enabled and times out). This helps verify that the correct word was selected without having to look at the text field each time.</string>
+    <string name="info_prompt_speak_output_phrase">When ON, once a stored phrase is Selected in the Selection List, it is spoken aloud after the Auto-Speak Delay elapses. This lets you speak a stored phrase that you recall without having to type a following key first.</string>
+    <string name="info_prompt_speak_output_sentence">When ON, each completed sentence is spoken aloud after it is finalized by adding a period, exclamation point or question mark. Allows you to automatically speak each sentence as it is completed.</string>
+    <string name="info_prompt_speak_punct_names">When ON, punctuation characters (period, comma, etc.) are spoken by name when they are output. Useful for verifying that the intended punctuation was typed.</string>
+    <string name="info_prompt_speaking_indicator_icon">Chooses the small animated icon shown in the top-right corner of the keyboard while speech is being read aloud. The icon lets people nearby see that JustType is speaking.</string>
+    <string name="info_prompt_phrase_auto_output">The number of seconds that JustType will wait after a word or abbreviated phrase is selected before automatically speaking the selected word or phrase. Set to OFF (0) to disable automatic speaking. When the Auto-Speak Delay is disabled, the selected word or phrase will only be spoken when you begin typing the next word.</string>
+    <string name="info_prompt_next_letter_hints">As you are typing a word, JustType figures out all the possible words in the database that match the keys you have typed so far. JustType can also determine what all the letters are that come next in any of the words that you might be typing. When \"Next-Letter Hints\" is ON, JustType will \"highlight\" each of those letters on the keyboard by displaying these \"Next-Letters\" in bold font, while all other letters are \"grayed out.\" Turning \"Next-Letter Hints\" ON can help guide you as you spell longer words — if you have entered the correct key sequence so far, the next letter of your word will be highlighted. If your next letter is \"grayed out,\" you probably need to back up a little and fix a typing mistake (or add a new word that is not yet included in the database). When ALL of the letters on a key are \"grayed out\" it will not do anything if pressed (and if \"Error Beep\" is ON, you will hear a short beep that can help alert you to this).</string>
+    <string name="info_prompt_show_key_history">When ON, a strip above the keyboard shows the sequence of keys you have pressed for the current word. Helps you track your progress and spot errors.</string>
+    <string name="info_prompt_key_history_height">Sets the height of the key history strip above the keyboard. You set the height as a multiple (from 0.25 to 1.0) of the height of the keys in the keyboard. Increase for a taller, more readable strip; decrease to save screen space.</string>
+    <string name="info_prompt_key_history_shrink">When ON, the key history strip automatically reduces its height for longer words so that all of the keys pressed fit on the display. When OFF, the strip always uses the full configured height, and earlier keys scroll off to the left for longer words.</string>
+    <string name="info_prompt_key_history_highlight">When ON, each key in the history strip marks the letter that the currently selected word takes from that key, so you can see how the word is being formed. The marks follow along as you move through the selection list. When OFF, history keys show their letters with no marking.</string>
+    <string name="info_prompt_key_history_vertical">When ON, rotating to landscape moves the key history to a column beside the keyboard, using the extra horizontal space and leaving the keys larger. When OFF, landscape keeps the horizontal strip above the keyboard, the same as portrait. Portrait is not affected.</string>
+    <string name="info_prompt_key_history_mark_latest">When ON, the most recently pressed key in the history strip is outlined in blue, so you can always tell which end of the strip is newest — especially helpful when the history runs vertically in landscape. When OFF, all history keys look the same.</string>
+    <string name="info_prompt_selection_text_size">Sets the text size of the word list next to the keys. Increase for easier reading; decrease to fit more words on screen at once. In scanning layouts, larger text also means fewer words per column.</string>
+    <string name="info_prompt_auto_load_word">When ON, tapping on an existing word in the text field automatically loads it into the selection list so you can cycle through alternatives, extend the word by typing additional letters, or shorten it by hitting the UnDo key. When OFF, you must manually initiate editing of existing words by pressing the Select key. When \"Auto-Load\" is ON and Edit Mode is used to move the cursor into a word, the word will be automatically loaded when you return to the Main keyboard (by hitting \"BACK TO MAIN\").</string>
+    <string name="info_prompt_case_type_variants">When ON, the selection list includes any Capitalized Forms of a word that are available (e.g., \"brown\" for the color, and perhaps also \"Brown\" for \"Ms. Brown\"). When OFF, only the default capitalization of each word is shown in the list, and the SHIFT or CAPS LOCK functions must be used to create Capitalized Forms when desired.</string>
+    <string name="info_prompt_case_type_deferred">When ON, Capitalized Forms of a word are not added immediately when the word is Selected — they are only added for the Selected word after the \"Delay to Add Capitalized Forms\" elapses. This keeps the selection list shorter (fewer words to step over), while still making other forms available when wanted.</string>
+    <string name="info_prompt_case_type_delay">The number of seconds to wait before displaying Capitalized Forms of a word once it is Selected in the selection list. This Delay only applies when \"Wait Until Word is Selected to Add Capitalized Forms\" is ON, and the currently selected word has one or more variant Capitalized Forms. When this Delay is set to OFF (0), available Capitalized Forms are shown immediately (as soon as a word is Selected).</string>
+    <string name="info_prompt_show_abbrev_in_selection">When ON, the abbreviation that is associated with a phrase entry (e.g., \"CMBL\" for \"Call me back later. \") will be shown in the selection list (along with the phrase itself if \"Show Phrase in Selection\" is also ON). When OFF, phrase abbreviations are not shown in the selection list.</string>
+    <string name="info_prompt_show_phrase_in_selection">When ON, multi-word phrases that have been added with an associated abbreviation (e.g., the phrase \"Call me back later.\" that could be abbreviated as \"CMBL\") are shown in the selection list. When OFF, only the abbreviation is shown.</string>
+
+    <!-- INFO PROMPTs — Input Methods page -->
+    <string name="info_prompt_alternative_input_method">There are four adaptive input methods that can be used to activate keys, that can be used in addition to any touchscreen method that might be used. These adaptive methods include:\n(1) Head Tracking (move a cursor in response to head movement)\n(2) Joystick (requires an external joystick)\n(3) Single-Switch Scanning (single-switch linear scanning of the 8 keys)\n(4) Two-Switch Selection (a sequence of three activations of either of two switches immediately selects one of the 8 keys)\n(5) (None - use only one of the touchscreen methods, either Direct Selection or Directional Selection).</string>
+    <!-- Per-method INFO PROMPTs for the Adaptive Input Methods section. -->
+    <string name="info_prompt_im_head_tracking">The Head Tracking input method requires that the \"HeadBoard\" application (also available from the Continuous Path Foundation) is also installed and configured on your device (just follow the prompts when installing HeadBoard). The HeadBoard app uses the front-facing camera to track your head movement, and move an on-screen mouse cursor in response to it. This cursor appears whenever you are operating any software on your device OTHER THAN THE JUSTTYPE KEYBOARD ITSELF. When the cursor enters the keyboard, its exact location is no longer displayed. This is because keys are pressed just by moving your head in the general direction of the key you want to press. You don\'t have to be very precise — just move your head from the \"resting area\" (the center of the keyboard) in the direction of the key (the \"compass direction\" of the key from the center of the keyboard). As soon as the key turns green, move back toward the center. The key will be activated, and you can move directly toward the next key you want to press. If you accidentally activate the wrong key, just go up to the \"Undo\" key to remove that keystroke.</string>
+    <string name="info_prompt_im_joystick">The Joystick input method requires that you use an external Bluetooth joystick installed and configured on your device. JustType will display an on-screen mouse cursor that will move in response to how you move the joystick. This cursor appears whenever you are operating any software on your device OTHER THAN THE JUSTTYPE KEYBOARD ITSELF. When the cursor enters the keyboard, its exact location is no longer displayed. This is because keys are pressed just by moving the joystick in the general direction of the key you want to press. You don\'t have to be very precise — just move from the \"resting area\" (the center of the keyboard, where the joystick is close to its center position) in the direction of the key (the \"compass direction\" of the key from the center of the keyboard). As soon as the key turns green, move back toward the center. The key will be activated, and you can move directly toward the next key you want to press. If you accidentally activate the wrong key, just go up to the \"Undo\" key to remove that keystroke.</string>
+    <string name="info_prompt_im_single_switch">Single-Switch Scanning displays the keyboard as one or two horizontal rows of keys that are scanned (highlighted) in sequence. This allows you to close a single switch to activate the key that is currently highlighted. Because the JustType keyboard only has eight keys, it is easier and more efficient to just scan all the keys in sequence rather than arrange them in multiple rows and use some kind of \"row-column scanning\" that might be used on a keyboard with many more keys. The switch itself can be an external Bluetooth switch that has been installed and configured on your device. If you don\'t use an external switch, you can set up the \"Touchscreen Switch\" so that you can use the bottom of the device screen as your switch and just tap the screen to close the switch.</string>
+    <string name="info_prompt_im_two_switch">Two-Switch Selection is different from scanning methods: it uses two different switches (a \"green\" and a \"red\" switch, though the actual color of the switches doesn\'t really matter), and selecting a key requires a sequence of three switch hits on one of the two keys. The keys are each highlighted in either green or red — and all you do is hit the switch that matches the color of the key you want. At the start of a sequence, four of the keys are highlighted in green and the other four in red. Let\'s say the key you want to press is highlighted in green at this point — then you start by hitting the green switch. Then the four keys that were red stop being highlighted, and two of the keys that were green now turn red. Again, just keep hitting the switch that matches the color of the highlight on your key. After the second switch hit, there will only be two keys left — a green one and a red one — you know what to do. At first, you will find the changing highlighting helpful to guide you. But there is also a setting (\"Show color code band at bottom\") that you can turn ON whenever you want. This will display a rectangle below each key with three color bands, either green or red. The left-to-right sequence of color bands shows the sequence of switches that activate that key. Then you don\'t have to watch the key and think about it: if the band shows green then red then green, just hit the switches green-red-green without waiting, and the key will be activated.</string>
+    <string name="info_prompt_section_touchscreen_input_methods">NOTE: When Directional Selection (or the Touchscreen Switch) is turned ON below, JustType will \"capture\" all of the touch actions that are performed on all (or part) of the touchscreen. When this is happening, you are not able to touch and interact with other UI controls that may be displayed on the screen. If you or someone else needs to operate your device and thus needs to be able to interact with the screen, the simplest approach is to open the Functions keyboard and activate the \"HIDE KEYBOARD\" function. When the keyboard is hidden, this screen \"capture\" is paused so someone can interact as usual with whatever is shown on the screen. This also means that Directional Selection (or the Touchscreen Switch) will no longer work until the keyboard is displayed again. The simplest way to bring the keyboard back is by simply touching a text field. If there is a need to also enter text while Directional Selection (or the Touchscreen Switch) is OFF, first hide the keyboard with the \"HIDE KEYBOARD\" function, then go to the system settings and turn Directional Selection (or the Touchscreen Switch) OFF in the JustType settings. When you are done, just go back to settings and turn Directional Selection (or the Touchscreen Switch) back ON again.</string>
+    <string name="info_prompt_direct_selection">When ON, you can tap directly on each key to activate it. This is the default touch-screen input method. At least one of Direct Selection or Directional Selection will always remain enabled so a teacher or clinician can interact with the device directly.</string>
+    <string name="info_prompt_directional_selection">When this method is ON, keys can be activated by swiping anywhere on the keyboard and tracing a stroke in one of the 8 possible directions (toward any of the 8 compass points). A stroke of almost any length, anywhere on the keyboard, will activate the key that is in the same direction relative to the center of the keyboard. For many people, this can be much easier and quicker than having to precisely tap a specific key. At least one of Direct Selection or Directional Selection will always remain enabled so a teacher or clinician can interact with the device directly.</string>
+    <string name="info_prompt_im_touchscreen_switch">When ON, the touchscreen area at the bottom of the screen acts as a virtual switch, providing switch-style input without requiring any external hardware. Can operate in Single- or Two-Switch mode. When enabled, other settings control the size and behavior of the Touchscreen Switch.</string>
+    <string name="info_prompt_beep_on_key_select">When ON, a short single beep sounds each time a key is activated. Provides auditory confirmation that a key press was detected.</string>
+    <string name="info_prompt_error_beep">When ON, a short double-beep sounds when a key is activated that is not a \"valid\" key (the key has no effect). Provides an auditory indication that the key pressed was likely not the intended key.</string>
+    <string name="info_prompt_speak_selected_key">When ON, the \"name\" of each key (the list of the letters on the key, or the name of the function on the key) is spoken aloud when the key is activated. Helps identify which key was pressed when visual identification of the key is difficult.</string>
+    <string name="info_prompt_speak_punctuation">When ON, punctuation names are included when speaking selected key contents (e.g., \"E F G H apostrophe period\" instead of just \"E F G H\"). Only applies when \"Speak each selected key\" is ON.</string>
+    <string name="info_prompt_speak_selected_word">When ON, each time you press the Select key, the word that becomes selected in the selection list is spoken aloud. Since the vast majority of the time your intended word will be the first word in the list, turning this ON allows you to focus on the keyboard as you spell each word, and since the word is spoken aloud when you finish typing and hit Select, you don\'t have to keep looking up at the text to confirm that you are getting the word that you intended. When only \"Speak Each Output Word\" is ON (on the JustType Settings page), the word will not be spoken until you start typing the next word. This delays the time the word is spoken, but has the advantage of not speaking a word you don\'t actually want to say, but you have to \"step over it\" to Select a word that is lower down in the Selection List.</string>
+    <string name="info_prompt_speak_prompts_aloud">When ON, settings navigation prompts (such as \"UI Language\", \"Input Methods\", etc.) are spoken aloud when selected in addition to being displayed on screen. Turn OFF if you prefer visual-only prompts.</string>
+    <string name="info_prompt_flash_key_feedback">When ON, each key that is activated briefly flashes with a visual highlight when pressed. Provides immediate visual confirmation of each key that is activated.</string>
+
+    <!-- INFO PROMPTs — Set Up Head Tracking page -->
+    <string name="info_prompt_section_ht_zone_thresholds">The relative size of the center region where head movement has no effect — where you can just \"rest\" without trying to activate a key, and without worrying about activating a key unintentionally. A larger Resting Zone requires more head movement away from the center to get to where the surrounding keys start to respond to your head movement. Increase the size if the keys start to activate even though you are just trying to rest in the middle. The boundary of each Zone is set as a fraction between 0.0 and 1.0, with 0.0 at the center of the keyboard and 1.0 at the very edge.</string>
+    <string name="info_prompt_ht_active_zone">The relative distance that you have to move away from the center in order to activate a key. When you enter the Active Zone for a key, the key will turn green. After you enter the Active Zone and a key turns green, you just move back toward the center to activate the key. Decreasing the Active Zone makes it so that you can activate keys with less head movement, but may increase the chance that a key will be accidentally activated.</string>
+    <string name="info_prompt_ht_exit_zone">The relative limit that defines the outer boundary for head movement within the keyboard region. You can pause Head-Tracking by turning your head to the right until the you reach the boundary of the Exit Zone, and then keep your head turned until the Exit Delay time elapses. The keyboard border will start flashing when you reach the Exit Zone. Decrease the size of the Exit Zone to reduce how far you need to turn your head to pause or leave the keyboard. When you move upward (instead of to the right) into the Exit Zone, you can move the cursor out of the JustType keyboard. The keyboard border will start to flash, and then the cursor will appear in the region above the keyboard once the Exit Delay time elapses.</string>
+    <string name="info_prompt_ht_key_activation_threshold">Once a key turns green and you start moving back toward the center, this threshold determines how far you must move back before the key activates. A lower value means keys will be activated more quickly, since it will happen before you have to move very far back toward the center. Setting this value to 100% means that you have to go all the way back to the start of the Active Zone in order to activate the key.</string>
+    <string name="info_prompt_ht_exit_pause_delay">The number of seconds that the cursor must remain in the Exit Zone (with the keyboard border flashing) in order to pause or exit. If the keyboard border starts flashing but you don\'t want to exit or pause, just move your head back toward the center to continue using the keyboard. Once the keyboard border has flashed for the Exit/Pause Keyboard Delay Time, JustType will either (a) pause head tracking and display \"Head Tracking Paused\" (moving to the right) or (b) exit the keyboard into the region above (moving upward). Reverse the process, moving all the way to the left to resume typing (\"un-pause\"), or move down to make the cursor \"push against\" the top border of the keyboard to re-enter the keyboard. Increase the Exit/Pause Delay time (or the Exit Zone size) if pausing/exiting happens too easily.</string>
+    <string name="info_prompt_ht_corner_weighting">Adjusts the relative sensitivity of diagonal/corner keys (the \"ordinal\" directions — Northeast, Southwest, etc.) compared to \"cardinal\" keys (straight up/down or left/right — North, South, East, West). For some people, corner keys seem harder to trigger than the straight up/down/left/right keys. Values above 1.0 make it easier to reach corner keys — they become relatively bigger targets relative to other keys. Values below 1.0 do the opposite and make the cardinal directions (up, down, left, right) become bigger targets.</string>
+    <string name="info_prompt_ht_vertical_sensitivity">This adjusts the relative ease with which up/down head movement moves the cursor vertically compared to how much left/right movement moves the cursor horizontally. Increase if vertical movements feel sluggish compared to horizontal (or simply if it is more difficult to move your head up and down). Values above 1.0 amplify vertical motion, and values below 1.0 amplify horizontal motion.</string>
+    <string name="info_prompt_ht_responsiveness">Controls how much (or how fast) the cursor moves in response to head movement. Values above 1.0 make the cursor move faster/farther (easier to move larger distances). Values below 1.0 result in slower/smaller cursor movements (for more precise targeting).</string>
+    <string name="info_prompt_ht_debug_overlay">When ON, JustType displays a diagnostic overlay on the keyboard with zone boundaries, cursor position, and frame rate information. Useful for troubleshooting head tracking behavior.</string>
+
+    <!-- INFO PROMPTs — Set Up Joystick page -->
+    <string name="info_prompt_joy_resting_zone">The relative size of the center region where joystick movement has no effect — where you can just \"rest\" without trying to activate a key, and without worrying about activating a key unintentionally. A larger Resting Zone requires more joystick movement away from the center to get to where the surrounding keys start to respond to the joystick movement. Increase the size if the keys start to activate even though you are just trying to rest in the middle. The boundary of each Zone is set as a fraction between 0.0 and 1.0, with 0.0 at the center of the keyboard and 1.0 at the very edge.</string>
+    <string name="info_prompt_joy_active_zone">The relative amount of joystick deflection at which a key becomes armed for activation. When you enter the Active Zone for a key, the key will turn green. After you enter the Active Zone and a key turns green, you just release the joystick back toward the center to activate the key. Decreasing the Active Zone makes it so that you can activate keys with less joystick deflection, but may increase the chance that a key will be accidentally activated.</string>
+    <string name="info_prompt_joy_exit_zone">The relative limit that defines the outer boundary for joystick deflection within the keyboard region. You can move the cursor out of the JustType keyboard into the region above (or below) and use your joystick to navigate your device. When you move upward (instead of to the right) until you reach the Exit Zone, the keyboard border will start to flash, and once the Exit Delay time elapses, the cursor will appear in the region above the keyboard. Decrease the size of the Exit Zone to reduce how far you need to move the joystick to leave the keyboard (or pause the joystick). Although this is probably less useful, you can also pause joystick activity in the keyboard by deflecting the joystick to the right (instead of upward) to exit into the Selection List region. IMPORTANT NOTE: You will also need to open HeadBoard and configure a switch to use with the joystick in order to click (or double-click, etc.) at the joystick cursor location.</string>
+    <string name="info_prompt_joy_exit_pause_delay">The number of seconds that the joystick must remain in the Exit Zone (with the keyboard border flashing) in order to exit or pause. If the keyboard border starts flashing but you don\'t want to exit or pause, just move the joystick back toward the center to continue using the keyboard. Once the keyboard border has flashed for the Exit/Pause Keyboard Delay Time, JustType will either (a) exit the keyboard into the region above (when moving upward) or (b) pause the joystick and display \"Joystick Paused\" (moving to the right). Reverse the process, moving all the way to the left to resume typing (\"un-pause\"), or move down to make the cursor \"push against\" the top border of the keyboard to re-enter the keyboard. Increase the Exit/Pause Delay time (or the Exit Zone size) if pausing/exiting happens too easily.</string>
+    <string name="info_prompt_joy_corner_weighting">Adjusts the relative sensitivity of diagonal/corner keys (the \"ordinal\" directions — Northeast, Southwest, etc.) compared to \"cardinal\" keys (straight up/down or left/right — North, South, East, West). For some people, corner keys may seem harder (or easier) to trigger than the straight up/down/left/right keys. Values above 1.0 make it easier to reach corner keys — they become relatively bigger targets relative to other keys. Values below 1.0 do the opposite and make the cardinal directions (up, down, left, right) become bigger targets.</string>
+
+    <!-- INFO PROMPTs — Set Up Single Switch Scanning page -->
+    <string name="info_prompt_ss_assign_switch">If you want to use a Bluetooth switch, make sure that you have paired it with your Android device as a \"Connected Device\" in the system settings. If you want to use a switch that can be set up in HeadBoard (either a Head Movement switch or a Facial Gesture), then you will need to have configured and then enabled the switch below. Then press the \"Activate Scanning Switch\" button to enter switch assignment mode, and either press a physical switch or perform the HeadBoard action to trigger the switch you want to use. JustType will record which switch you triggered and then use it as your scanning switch.</string>
+    <string name="info_prompt_ss_touchscreen_switch">When ON, the touchscreen area at the bottom of the screen acts as a virtual switch, providing switch-style input without requiring any external hardware. The Touchscreen Switch can operate in Single- or Two-Switch mode. When enabled, other settings control the size and behavior of the Touchscreen Switch.</string>
+    <string name="info_prompt_ss_scan_layout_size">Choose between Large (bigger keys, easier to read) and Small (more compact, leaves more room for other content to be displayed above on the screen).</string>
+    <string name="info_prompt_ss_scan_step_delay">The number of seconds that the scanning highlight stays on each key before the scan moves on to the next key. Decrease for faster scanning; increase if you need more time to react.</string>
+    <string name="info_prompt_ss_initial_delay">Extra time (in seconds) added to the first scan step after you press the switch or when the scanning process re-starts. This allows you more time to release the switch and have enough time to press the switch to select the first key when the next scan actually starts. Set to OFF (0) for no extra delay.</string>
+    <string name="info_prompt_ss_beep">When ON, a short beep sounds each time the scan highlight moves to the next key. Provides auditory tracking of scanning progress that can help support visual tracking of the progress of the scan.</string>
+    <string name="info_prompt_ss_skip_invalid">When ON, the scanner automatically skips over keys that have no valid next-letters highlighted on the key. Speeds up scanning by skipping over useless keys. This also makes the scan less predictable, so you may want to turn ON the next feature \"Show Next Key to be Scanned\".</string>
+    <string name="info_prompt_ss_show_next_key">When \"Skip Keys with No Valid Next-Letters\" is ON, the progress of the scan becomes less predictable. When \"Show Next Key to be Scanned\" is ON, then whenever one or more keys in the current scan cycle will be skipped, the next key that will be highlighted for selection is shown first with a pale yellow highlight, giving you an advance indication that the key will be scanned next (highlighted in bright yellow) to help you prepare to close the switch when it is actually highlighted.</string>
+    <string name="info_prompt_ss_auto_repeat_mode">When you close the switch during a scan, it immediately activates the currently highlighted key. When \"Key Activation Auto-Repeat Mode\" is ON, you can continue to hold the switch closed to automatically repeat activations of that key at the Auto-Repeat Delay Time interval (below). When the word you are spelling has two or more letters in a row that are on the same key, this can be much faster than releasing the switch and waiting to scan from the start all the way back to the same key again and then close the switch a second time. If holding the switch closed and waiting to release it at the right time is not difficult, this is highly recommended since it saves significant time for roughly 17% of the letters you type.</string>
+    <string name="info_prompt_ss_auto_repeat_delay">The number of seconds between each repeated key activation when the switch is held down in Key Activation Auto-Repeat Mode. In most cases, it will likely work well to set this to the same time interval as the Scan Step Delay Time.</string>
+    <string name="info_prompt_ss_select_triggers_scan">When ON, pressing the switch to activate the Select key automatically starts a scan of the words shown in the current Selection List. Turning this feature ON means that Selecting a word will ALWAYS require two separate switch closures: once to activate the Select key, and then a second time to Select the desired word when it is scanned in the Selection list. For most people, this will be LESS efficient, but this feature may be worth exploring if: (a) Auto-Repeat Mode is not a viable option for you (in that case, simply holding the switch closed on the Select key achieves the same thing but more efficiently); (b) the Scan Step Delay needs to be rather long, so typing additional letters of a word to shorten the Selection List is time-consuming; and (c) you are able to keep an eye on the Selection List as it changes and notice when your word appears (potentially lower in the list).</string>
+    <string name="info_prompt_ss_scan_repeat_count">When scanning continues but no key is Selected, this is the number of times the scanning will cycle through all of the keys before automatically stopping. Set to 0 for \"infinite\" scanning (scanning only stops when you press the switch to activate a key, and then it re-starts). Reduce the number of repeat cycles if you find the repeated cycling distracting. Once scanning stops, just press the switch once to re-start scanning.</string>
+    <string name="info_prompt_ss_debounce">This setting enables the system to ignore rapid repeated switch activations within a short time window. Increase this time if your device registers double-taps or multiple presses when you are simply trying to do a single closure of the switch. The default is 120 ms.</string>
+
+    <!-- INFO PROMPTs — Set Up Two-Switch Selection page -->
+    <string name="info_prompt_ts_assign_switch">If you want to use a Bluetooth switch, make sure that you have paired it with your Android device as a \"Connected Device\" in the system settings. If you want to use one or more of the switches that can be set up in HeadBoard (either a Head Movement switch or a Facial Gesture), then you will need to have configured and then enabled the switch(es) below. Then press the \"Activate (Red or Green) Switch\" button to enter switch assignment mode, and either press a physical switch or perform the HeadBoard action to trigger you want to use. JustType will record which switch you triggered and then use it as your scanning switch.</string>
+    <string name="info_prompt_ts_touchscreen_switch">When ON, the touchscreen area at the bottom of the screen acts as a virtual switch, providing switch-style input without requiring any external hardware. The Touchscreen Switch can operate in Single- or Two-Switch mode. When enabled, other settings control the size and behavior of the Touchscreen Switch.</string>
+    <string name="info_prompt_ts_auto_repeat_switch">When ON, holding either the Red or the Green switch causes repeated activations of that switch at the Auto-Repeat Switch Delay Time interval. Useful when switches are easier to hold closed (and release) than it is to press the same switch repeatedly. For example, activating the Select Key is done with three activations in a row of the Green Switch. With Auto-Repeat Switch Activations, this can be done by just holding the Green Switch closed for the time required. Note: When both Auto-Repeat Switch Activation and Auto-Repeat Key Activation are turned ON, then once a three-switch sequence of switch activations is complete, the first key activation is triggered, and continuing to hold the switch closed will generate repeated key activations.</string>
+    <string name="info_prompt_ts_auto_repeat_switch_delay">The number of seconds between each repeated switch activation when a switch is held down in Auto-Repeat Switch Activation mode.</string>
+    <string name="info_prompt_ts_auto_repeat_key">When ON, the third switch closure of each three-switch sequence can be held closed to automatically repeat activation of the key just selected. Speeds up typing for experienced users.</string>
+    <string name="info_prompt_ts_auto_repeat_key_delay">The number of seconds between each repeated key activation when Auto-Repeat Key Activation mode is ON and the third switch closure is held closed.</string>
+    <string name="info_prompt_ts_beep">When ON, a short beep sounds each time a switch is closed. Provides auditory confirmation that each switch closure was detected.</string>
+    <string name="info_prompt_ts_show_color_band">When ON, a colored band with a sequence of three green or red segments is displayed below each key, showing the sequence of switch activations that activates that key. This helps to memorize the sequence for each key and speed up input, since you can plan the sequence of switch activations without waiting to see how the key highlight colors actually change.</string>
+    <string name="info_prompt_ts_reset_delay">Each key activation using Two-Switch Selection requires a sequence of three consecutive switch activations. There may be times when you start to enter a switch sequence to activate a key but turn your attention to something else before all three switch activations are entered. When you come back to typing, this may be confusing, or you may simply want to type something different at that time. When the \"Two-Switch Selection Reset Delay\" is set to something other than 0 (which is \"OFF\"), then if you pause in entering a switch sequence for longer than the Reset Delay, the unfinished switch sequence will be canceled and any red and green highlighting will disappear. When you are ready to resume typing, press either switch and the red and green highlighting will be restored to the keys so that you can start a new switch sequence and type the next key.</string>
+    <string name="info_prompt_ts_stuck_switch">In case the system fails to detect when a switch is released, this is the number of seconds that the system will wait until deciding to treat what seems to be a continuously closed switch as a \"stuck switch\" and just ignore it. This prevents \"runaway input\" if a switch malfunctions or is accidentally held closed. Set this time higher if it triggers when you are intentionally holding a switch for long periods.</string>
+
+    <!-- INFO PROMPTs — Set Up Touchscreen Switch page -->
+    <string name="info_prompt_section_tcs_how_works">Touchscreen Switch allows you to use the lower portion of the screen as a switch input. When used with Single-Switch Scanning, the entire width of the display is used for a single switch that can be tapped anywhere in the green area shown. When used with Two-Switch Selection, the left half of the display is used for the Green switch, and the right half is used for the Red switch.</string>
+    <string name="info_prompt_tcs_switch_mode">To create a single switch, choose Single-Switch (a single, green on-screen touch area is defined at the bottom of the touchscreen, extending across the entire width of the screen). This switch can be used for Single-Switch Scanning or as a Selection Switch for Head-Tracking or Joystick input. To create two separate switches, choose Two-Switch (two adjacent on-screen touch areas are defined at the bottom of the touchscreen, extending across the entire width of the screen, split into left and right halves that function as the Green and Red switches for Two-Switch Selection).</string>
+    <string name="info_prompt_tcs_switch_height">The Touchscreen Switch is always placed at the bottom of the screen to make it easy to activate the switch(es) without unintentionally activating something else on the screen. It also occupies the entire width of the screen. This setting lets you define how tall the touchscreen switch area is. The height is set relative to the height of each row of keys on the JustType keyboard, so setting the height to 1 makes it as tall as the bottom row of the keyboard, and 3 makes it as tall as all three rows. You can set it to anything from 0.5 to 4.0, using decimal values to get exactly the height that works best.</string>
+    <string name="info_prompt_tcs_flash">When ON, the touchscreen switch area briefly flashes when tapped, providing visual confirmation that the touch was registered and the switch was activated.</string>
+    <string name="info_prompt_tcs_beep">When ON, a short beep sounds when the touchscreen switch area is tapped, providing auditory confirmation that the touch was registered and the switch was activated.</string>
+    <string name="info_prompt_tcs_debounce">This setting enables the system to ignore rapid repeated switch activations within a short time window. Increase this time if your device registers double-taps or multiple presses when you are simply trying to do a single closure of the switch. The default is 120 ms.</string>
+    <string name="info_prompt_tcs_overlay_mode">When Overlay Mode is ON, the Touchscreen Switches do not take up any screen space, they are shown as a translucent overlay, beneath which the entire screen is still visible. The JustType Keyboard appears in its usual place at the bottom of the screen. The touchscreen switches still capture all touch events in the area occupied by the switch overlay, so whatever is beneath the touchscreen switch area can be seen but will not respond to touches (which are captured by the Overlay switch area). Even if you do not intentionally turn Overlay Mode ON, it will be automatically turned ON if the height of the combined touchscreen switches and JustType keyboard area (including the Key History display, if shown) extends higher than two-thirds of the total available screen height.</string>
+    <string name="info_prompt_tcs_overlay_timeout">The number of seconds that the Touchscreen Switch overlay remains visible after being displayed when no switch activations are received. The overlay shows the Touchscreen Switch areas on screen. After the timeout, it becomes fully transparent so the switch areas are no longer visible, but the Touchscreen Switch will still remain active.</string>
+
+    <!-- INFO PROMPTs — Direct Selection / Directional Selection pages -->
+    <string name="info_prompt_ds_debounce">This setting enables the system to ignore rapid repeated key activations within a short time window. Increase this time if your device registers double-taps or multiple presses on a key when you are simply trying to tap it once. The default is 120 ms.</string>
+    <string name="info_prompt_ds_auto_repeat">When ON, holding your finger on a movement or scroll key of the navigation keyboard automatically repeats that key at the Auto-Repeat Delay Time interval (below). This can be much faster than tapping the same key repeatedly, for example when moving the selection across several elements or scrolling through a long list. Keys that perform one-time actions (like Tap or Home) never repeat.</string>
+    <string name="info_prompt_ds_auto_repeat_delay">The number of seconds between each repeated key activation while your finger is held on a repeatable key of the navigation keyboard.</string>
+    <string name="info_prompt_dirsel_debounce">This setting enables the system to ignore rapid repeated screen swipes within a short time window. Increase this time if a single swipe gesture is registering as multiple inputs. The default is 120 ms.</string>
+    <string name="info_prompt_dirsel_swipe_sensitivity">The minimum distance that a screen swipe is required to cover in order to register as a swipe. Decrease to make swipes easier to trigger with smaller movements; increase to prevent accidental swipes. This value is set by adjusting the slider setting so that the length of the slider setting on the screen matches to the desired minimum swipe length.</string>
+
+    <!-- INFO PROMPTs — Vocabulary Management page -->
+    <string name="info_prompt_vm_include_dict">When ON, the words contained in the built-in JustType word dictionary are included in the words that JustType can spell. Turn this OFF only if you want to limit the words that can be generated to only those contained in selected vocabulary lists (and/or Custom Words).</string>
+    <string name="info_prompt_vm_include_custom">When ON, the words that you have added manually (via the Add New Word function on the Navigation page) are included in the words that JustType can spell.</string>
+    <string name="info_prompt_vm_include_phrases">When ON, the Selection List will also include multi-word abbreviation/phrase pairs that you have added manually to the dictionary (via the Add New Phrase function on the Navigation page) when you type the associated abbreviation.</string>
+    <string name="info_prompt_vm_restrict_uncommon">When ON, the following features are enabled to restrict the words that JustType displays or generates to words that are more common.</string>
+    <string name="info_prompt_vm_min_freq_next">When ON, next-letter hints are no longer shown for words below a minimum frequency threshold. Higher values show hints only for more-common words, reducing clutter so that the hints shown will stand out more.</string>
+    <string name="info_prompt_vm_min_freq_selection">When ON, JustType database words below a minimum frequency threshold are excluded from the Selection List. This can be useful to limit the number of rare or obscure words that show up in the Selection List in order to emphasize more-often-used vocabulary, or to restrict the list to more common words when learning how to spell.</string>
+    <string name="info_prompt_vm_show_excluded_at_end">When ON, words that were filtered out by the frequency filter are still shown at the end of the selection list (after all qualifying words). This allows you to still access less common words, but without having them clutter the top of the list.</string>
+    <string name="info_prompt_vm_enable_accent">When ON, this enables JustType to show a second type of \"Accented\" Next-Letter Hints for selected groups of words. (Next-Letter Hints are described in the \"JustType Display\" settings.) \"Accented\" Next-Letter Hints are displayed by showing a letter on a key in a bold, DARK RED font so that they stand out from \"ordinary\" Next-Letter Hints. The following settings enable you define the specific groups of words that will be displayed with Accented Next-Letter Hints so that they naturally draw attention when typing with JustType. When someone is trying to learn new vocabulary, this can help by making the Next-Letter Hints for those words really stand out.</string>
+    <string name="info_prompt_vm_accent_use_count">The fewer the number of words shown with Accented Hints, the more the Accented Hints will stand out. The purpose of this setting is to help keep Accented Hints as effective as possible by turning it off for words that someone already \"knows.\" JustType keeps track of how many times a word has been spelled by typing it in with JustType. This setting assumes that the spelling of that word is likely already \"known\" once that word has been typed in a certain number of times. If that is true, Accented Hints would no longer be needed for that word. This setting lets you choose a number \"N\" where once a word has been spelled \"N times\" then Accented Hints are turned off for that word. If N is set to 0, this feature is disabled, meaning that Accented Hints will still be shown for all words in selected vocabularies, no matter how many times they have been spelled.</string>
+    <string name="info_prompt_vm_min_freq_accent">When set to a value above the maximum frequency class (slider all the way to the right), this feature is OFF. When set to a frequency class, Accented Hints will be shown ONLY for Main Database words that are at least that frequent (or higher).</string>
+    <string name="info_prompt_vm_max_freq_accent">When set to 0, this feature is OFF (disabled). When set to a higher frequency class (a number from 1 to 14), only lower-frequency words will be displayed with Accented Hints when typed. Combining this with the \"Minimum Frequency for Accented Hints\" allows you to limit Accented Hints first to very common words, and then as those are learned, limit Accented Hints to limited groups of lower frequency words (even just one frequency class at a time). The lower the frequency class, the more words it will contain.</string>
+    <string name="info_prompt_vm_accent_use_count_main">The fewer the number of words shown with Accented Hints, the more the Accented Hints will stand out. The purpose of this setting is to help keep Accented Hints as effective as possible by turning it off for words that someone already \"knows.\" JustType keeps track of how many times a word has been spelled by typing it in with JustType. This setting assumes that the spelling of a word is likely already \"known\" once that word has been typed in a certain number of times. If that is true, Accented Hints would no longer be needed for that word. This setting lets you choose a number \"N\" where once a word has been spelled \"N times\" then Accented Hints are turned off for that word. If N is set to 0, this feature is disabled, meaning that Accented Hints will still be shown for all words in enabled frequency classes, no matter how many times they have been spelled.</string>
+
+    <!-- INFO PROMPTs — Select Active Vocabularies page -->
+    <string name="info_prompt_sav_promote_imported">One of the features of JustType is designed to support learning literacy skills. One way to help with this is to be able to specify specific lists of words so that JustType can make them easier to enter. This is done by importing files that contain a list of words, and that defines an \"Imported Vocabulary\" that is identified by the name of the file. Then any number of these Imported Vocabulary sets can be Enabled (or disabled), both for whether the word shows up when typed and separately, whether Accented Hints are shown when it is typed. Words from the JustType Database (even words not contained in any Imported Vocabulary) can also be Enabled (or disabled). When \"Promote Words from Active Imported Vocabularies\" is turned ON, words contained in Imported Vocabulary lists (that are enabled) receive a ranking boost, which makes them appear higher in the Selection List relative to ordinary JustType Main Database Words.</string>
+
+    <!-- INFO PROMPTs — Set Up Mouse Joystick page -->
+    <string name="info_prompt_mj_resting_zone">The relative size of the center region where mouse movement has no effect — where you can rest without worrying about accidentally activating a key. A larger Resting Zone requires more mouse movement away from the center before the surrounding keys start to respond. Increase if keys activate when you are simply resting. The boundary of each Zone is set as a fraction between 0.0 and 1.0, with 0.0 at the center of the keyboard and 1.0 at the very edge.</string>
+    <string name="info_prompt_mj_active_zone">The relative amount of mouse movement at which a key becomes armed for activation. When you enter the Active Zone for a key, the key will turn green. Move back toward the center to activate it. Decreasing the Active Zone makes keys activate with less mouse movement, but may increase the chance of accidental activation.</string>
+    <string name="info_prompt_mj_corner_weighting">Adjusts the relative sensitivity of diagonal/corner keys compared to the straight up/down/left/right keys. Values above 1.0 make corner keys easier to reach (larger targets). Values below 1.0 do the opposite and make the cardinal directions (up, down, left, right) become bigger targets.</string>
+    <string name="info_prompt_mj_sensitivity">Controls how much mouse movement is needed to move the joystick cursor from the center to the edge of the keyboard. Lower values (fewer dp) make the joystick more sensitive — small mouse movements produce large cursor movements. Higher values (more dp) require larger mouse movements to reach the edges.</string>
+    <string name="info_prompt_mj_exit_delay">How long (in milliseconds) you must hold the mouse pushed UP to release the joystick and restore the cursor. A mouse-button press releases it immediately at any time. Increase if you find yourself accidentally exiting; decrease for a faster escape.</string>
+    <string name="info_prompt_mj_reengage_hysteresis">How long after a voluntary release (mouse button press or UP-hold exit) before the joystick will recapture the mouse on hover. Prevents the joystick from immediately grabbing the cursor back when you intended to use it. Set to 0 to recapture instantly.</string>
+
+    <!-- INFO PROMPTs — Backup &amp; Restore page -->
+    <string name="info_prompt_page_backup_simple">You can completely backup JustType, including everything you have added or modified: Vocabulary Modules, Custom Words, Abbreviated Phrases, all of your settings, and all of the modifications that are made to the Main JustType Database to reflect how your individual use of JustType. All of the data is written to a folder that you select — either on your device or in a Google Drive folder that you can access. Then later, if you need to, you can use the files saved in the folder to restore JustType, or set JustType up exactly the same way on a different device.\n\nTo create a backup (or update an existing one to reflect additional changes):\n(1) Press the \"CREATE BACKUP NOW\" button. If you have already backed up JustType before, this will update that backup to include all the changes that may have happened since the last time JustType was backed up.\n(2) If you have not created a backup before, the \"CREATE BACKUP NOW\" button will take you to a standard Android dialog where you can select the folder to store the backup. Navigate to the folder and press the \"Use this folder\" button. If/when a prompt appears asking for permission to \"Allow JustType to access files in JustType backups?\", press \"Allow\".\n(3) You will return to the previous screen, which will show the selected folder. In the future, you will also see the date and time of the last backup created in the folder.\n(4) Press the \"CREATE BACKUP NOW\" button again to create a complete backup in the selected folder. This will automatically be the backup that will be used if you later want to restore JustType.</string>
+    <string name="info_prompt_br_restore_simple">If something has happened to your device that has, for example, forced you to re-install JustType, you may want to restore your JustType data from a previous back-up. Please be aware, if you haven\'t lost your data and you do this, you will lose any changes in your data since the backup was created. But if you need to restore your data from a previous backup:\n(1) Press the \"RESTORE FROM BACKUP\" button. (It will be greyed out if you haven\'t created a backup yet.)\n(2) A prompt will pop up, asking \"Restore backup? This will overwrite current data. A restart may be needed to reload data.\" As long as you are sure you want to do this, press \"RESTORE\".</string>
+    <string name="info_prompt_br_use_advanced">When you turn \"Use Advanced Backup &amp; Restore\" ON, you are able to create and load different back-ups of JustType that may be used on different devices. This can be helpful if, for example, you are a teacher or technical support person, especially since these backups can be created on a shared Google Drive. This means you can back up someone\'s device to a shared drive, load that backup into your device and edit it (for example by creating and adding new Vocabulary Modules, Custom Words, Abbreviated Phrases or adjusted Settings), and then save it and reload the edited version from the individual\'s device.\n\nIf you are just using JustType for yourself, it is probably best to just leave the \"Advanced\" mode turned OFF. Then you will always backup to the same location, and if needed, restore from the latest backup.</string>
+
+    <!-- Spoken feedback (TTS) — function-key names -->
+    <string name="speech_select">Select</string>
+    <string name="speech_delete">Delete</string>
+    <string name="speech_space">Space</string>
+    <string name="speech_number_mode">Number Mode</string>
+    <string name="speech_zero_through_four">0 through 4</string>
+    <string name="speech_five_through_nine">5 through 9</string>
+
+    <!-- Spoken feedback (TTS) — punctuation names -->
+    <string name="speech_punct_exclamation">exclamation point</string>
+    <string name="speech_punct_question">question mark</string>
+    <string name="speech_punct_period">period</string>
+    <string name="speech_punct_comma">comma</string>
+    <string name="speech_punct_semicolon">semicolon</string>
+    <string name="speech_punct_colon">colon</string>
+    <string name="speech_punct_apostrophe">apostrophe</string>
+    <string name="speech_punct_double_quote">double quote</string>
+    <string name="speech_punct_hyphen">hyphen</string>
+    <string name="speech_punct_underscore">underscore</string>
+    <string name="speech_punct_slash">slash</string>
+    <string name="speech_punct_backslash">backslash</string>
+    <string name="speech_punct_left_paren">left parenthesis</string>
+    <string name="speech_punct_right_paren">right parenthesis</string>
+    <string name="speech_punct_left_bracket">left bracket</string>
+    <string name="speech_punct_right_bracket">right bracket</string>
+    <string name="speech_punct_left_brace">left brace</string>
+    <string name="speech_punct_right_brace">right brace</string>
+    <string name="speech_punct_at_sign">at sign</string>
+    <string name="speech_punct_hash">hash</string>
+    <string name="speech_punct_dollar">dollar sign</string>
+    <string name="speech_punct_percent">percent</string>
+    <string name="speech_punct_caret">caret</string>
+    <string name="speech_punct_ampersand">ampersand</string>
+    <string name="speech_punct_asterisk">asterisk</string>
+    <string name="speech_punct_plus">plus</string>
+    <string name="speech_punct_equals">equals</string>
+    <string name="speech_punct_less_than">less than</string>
+    <string name="speech_punct_greater_than">greater than</string>
+    <string name="speech_punct_backtick">backtick</string>
+    <string name="speech_punct_tilde">tilde</string>
+    <string name="speech_punct_pipe">pipe</string>
+
+
+    <!-- Languages screen (language-pack downloads) -->
+    <string name="languages_heading">Languages</string>
+    <string name="languages_offline">You\'re offline. Installed languages still work; connect to download more.</string>
+    <string name="languages_fetch_failed">Couldn\'t reach the language server. Showing what\'s on this device.</string>
+    <string name="languages_update_app">A newer version of JustType is needed to download languages.</string>
+    <string name="languages_state_bundled">Built in</string>
+    <string name="languages_state_installed">Installed</string>
+    <string name="languages_state_downloading">Downloading…</string>
+    <string name="languages_state_downloading_pct">Downloading… %d%%</string>
+    <string name="languages_state_installing">Installing…</string>
+    <string name="languages_state_size">Download (%s)</string>
+    <string name="languages_state_unavailable">Not available</string>
+    <string name="languages_action_download">DOWNLOAD</string>
+    <string name="languages_action_update">UPDATE</string>
+    <string name="languages_action_remove">REMOVE</string>
+    <string name="languages_action_cancel">CANCEL</string>
+    <string name="languages_download_title">JustType language: %s</string>
+    <string name="languages_download_failed">Download failed: %s</string>
+    <string name="languages_no_space">Not enough storage space to install this language.</string>
+    <string name="languages_verify_failed">The downloaded file was damaged. Please try again.</string>
+    <string name="languages_install_io_error">Couldn\'t install the language. Please try again.</string>
+    <string name="languages_installed_toast">%s installed</string>
+    <string name="languages_update_confirm_title">Update %s?</string>
+    <string name="languages_update_confirm_message">Updating replaces the %s word database. Words you\'ve added stay, but learned word usage for this language is reset.</string>
+    <string name="languages_remove_confirm_title">Remove %s?</string>
+    <string name="languages_remove_confirm_message">This deletes the %s word database from this device, including its learned word usage. You can download it again later.</string>
+
+    <string name="toast_saved">Saved</string>
+    <string name="dev_hint_langpack_manifest_url">Langpack manifest URL (blank = default)</string>
+
+    <string name="sr_main_get_more_languages">Get More Languages…</string>
+    <string name="sr_main_get_more_languages_description">Download additional typing languages to this device.</string>
+
+    <string name="sr_main_speech_voice">Personal Voice</string>
+    <string name="sr_main_speech_voice_desc">Pick the voice used to speak the current typing language.</string>
+    <string name="settings_ctrl_voice_current">CURRENT</string>
+
+    <string name="sr_main_voice_for_ui_language">UI Feedback Voice</string>
+    <string name="sr_main_voice_for_ui_language_desc">The device\'s voice: used for spoken prompts, key names, and other announcements addressed to you.</string>
+
+    <string name="languages_state_loading">Loading languages…</string>
+    <string name="languages_remove_confirm_keyboard">Press REMOVE again to remove %1$s and its learned word usage</string>
+    <string name="languages_removed_announce">%1$s removed</string>
+    <string name="languages_download_started_announce">Downloading %1$s</string>
+
+    <string name="languages_action_select_voice">SELECT VOICE</string>
+
+</resources>

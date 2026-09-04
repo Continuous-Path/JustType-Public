@@ -1,0 +1,584 @@
+JustType & HeadBoard — Complete Change Summary Since Commit ab4915d
+====================================================================
+Generated: March 22, 2026
+
+This document covers all committed changes starting from commit ab4915d
+(February 24, 2026) through the present (March 22, 2026).
+
+
+========================================================================
+JUSTTYPE CHANGES
+========================================================================
+
+The changes are organized into functional areas for easier review.
+
+
+------------------------------------------------------------------------
+A. ABBREVIATION, DOMAIN, AND EXTENSION SUPPORT (Feb 24)
+------------------------------------------------------------------------
+
+1. Add abbreviation, domain, and extension support for ambiguous typing (ab4915d)
+   Date: Feb 24
+
+   - Added period to ambiguous key mappings (optimized key 1, alphabetic key 2)
+   - Registered new POS tags: ABP, ABPS, DOM, TO (Penn Treebank); added TX caseType
+   - Build process generates period variants for AB/ABP/ABPS/EXT entries
+   - ABPS words auto-shift the next word after finalization
+   - DOM/EXT entries suppress leading auto-space via candidate flag
+   - Sentence boundary detection skips abbreviation/domain periods using
+     DB-backed abbreviation and domain sets in WLD
+   - Fixed autospace after periods: period now triggers leading autospace
+     (suppression for DOM/EXT handled separately by preview-text check)
+   - Added 29 EXT entries (.com, .org, etc.) and 24 DOM entries to vocabulary
+
+2. Fix sentence boundary detection to be abbreviation-aware and respect paragraphs (c1e3ab8)
+   Date: Feb 24
+
+   Replaced extractLastSentenceFromEditor and shouldSpeakSentence with
+   implementations that use isSentenceEnderAt (abbreviation/domain-aware)
+   and treat line breaks as implicit sentence boundaries. Removed dead
+   isEosOrLineBreak helper. Simplified speakLastSentence to reuse
+   findSentenceStart/findSentenceEnd.
+
+3. Fix EXT entries overwriting common words and correct autospace during selection cycling (bdfe209)
+   Date: Mar 1
+
+   Stopped generating non-period EXT variants (e.g. "us" from ".us") that overwrote
+   high-frequency PRP words via INSERT OR REPLACE. Autospace suppression now tracks
+   the currently selected candidate rather than always checking the top candidate,
+   so cycling between suppressing and non-suppressing entries correctly toggles the
+   leading autospace.
+
+4. Improve sentence boundary detection for decimal numbers and parentheticals (5410771)
+   Date: Mar 1
+
+   Periods must now be followed by whitespace, end-of-text, or another sentence
+   ender to be treated as sentence-terminal, preventing "9.5" from being split.
+   Sentence-ending punctuation inside matched parentheses is no longer treated
+   as a sentence boundary.
+
+
+------------------------------------------------------------------------
+B. AUTOSPACE AND FIELD TYPE DETECTION (Feb 28 - Mar 1)
+------------------------------------------------------------------------
+
+5. Suppress autospace for URL, email, password, phone, and numeric fields (77b3e8b)
+   Date: Feb 28
+
+   Automatically detects field types where spaces are inappropriate and
+   disables autospace generation. Covers URI, email, password (all variants),
+   phone, number, datetime, filter, and no-suggestions fields.
+
+6. Add numeric mode autospace and improve numeric punctuation page display (cd1987b)
+   Date: Mar 1
+
+   - Inserts leading autospace before first numeric character in normal text fields
+   - Fixed center label for NumbersPunct pages to show "Numeric / Punctuation"
+   - Switched grid-labeled buttons from global minimum scale to per-cell scaling
+   - Allowed single-line labels (3-6 chars) and multi-line labels to scale up
+   - Changed Numbers2 key 7 label to three-line "1 - 5 / (OR / <DONE>)"
+
+
+------------------------------------------------------------------------
+C. USER GUIDE AND VIDEO SCRIPT (Mar 1 - Mar 6)
+------------------------------------------------------------------------
+
+7. Create JustType Basic User Guide and Intro Video Script (aa22780)
+   Date: Mar 1
+
+   Version 0.1 of a JustType User Guide and version 0.0.1 of an
+   introductory video script.
+
+8. First draft of User Guide and Video Script (e9d1ea4)
+   Date: Mar 6
+
+   First complete draft of User Guide and Video Script.
+
+9. Update .gitignore (b58f302)
+   Date: Mar 6
+
+
+------------------------------------------------------------------------
+D. HEAD TRACKING PERFORMANCE AND RELIABILITY (Mar 6 - Mar 12)
+------------------------------------------------------------------------
+
+10. Optimize head tracking performance: cache bitmaps/hints, skip redundant highlight renders (ea7ee0f)
+    Date: Mar 6
+
+    - Added JT_PERF timing instrumentation for diagnosing activation latency
+    - Cached root letter hints (keyed on vocab mask config) to avoid repeated trie lookups
+    - Cached scaled selection list bitmaps (keyed on page name)
+    - Added early-return guards to skip redundant drawable loading and view invalidation
+    - Began octant lock relaxation in HeadTrackingState
+
+11. Fix activation wobble bug and reset zone lock clearing (4043f40)
+    Date: Mar 6
+
+    - Removed lateral disarm from ACTIVATION zone: once a key is armed (pale green),
+      retreating MUST activate it regardless of cursor wobble
+    - Added RESET-from-ACTIVATION/EXIT handler that fully clears all lock state
+    - Removed all JT_PERF instrumentation
+    - Removed unused secondary highlight infrastructure
+
+12. Head tracking responsiveness in JustType (eaad245)
+    Date: Mar 7
+
+    Suppressed post-activation highlights, made buttonPressed() async via
+    mainExecutor.execute{}, and added HT_DIAG diagnostic logging.
+
+13. Restore DARK_GREEN highlight, decouple HT_DIAG, cache prefs (490fc43)
+    Date: Mar 8
+
+    - Restored DARK_GREEN highlighting after activation fires
+    - Decoupled HT_DIAG diagnostic logging from debug overlay toggle
+    - Cached SharedPreferences values to eliminate ~6 reads per frame (~60 fps)
+
+14. Move head tracking state machine to background thread (ce7598a)
+    Date: Mar 8
+
+    Architecture change: BroadcastReceiver stores latest coordinates in @Volatile
+    vars. A background HandlerThread polls at ~30fps, runs HeadTrackingState.process()
+    off main thread, and posts coalesced UI updates.
+
+15. Process every head tracking frame to prevent missed activations (7a295bb)
+    Date: Mar 8
+
+    Switched from polling (~30fps sampling) to per-frame processing: each
+    BroadcastReceiver coordinate update is posted directly to the background
+    HandlerThread. The state machine now sees EVERY frame (~60fps from HeadBoard).
+
+16. Abort preceding keystroke processing when next key arrives (e790ed7)
+    Date: Mar 8
+
+    When multiple keys activate in rapid succession, skip expensive wldSelection/
+    updateUi for intermediate keystrokes — only the last key in a burst does full
+    processing (3ms vs 200ms per intermediate key). Uses ConcurrentLinkedQueue with
+    live shouldAbort lambda.
+
+17. Fix Select key's updateUi being skipped by abort check (48b24e7)
+    Date: Mar 8
+
+    The pre-updateUi abort check lacked the !isSelectKey guard. When Select was
+    processed and another key was queued, the KF_Select handler ran but updateUi
+    was skipped.
+
+18. Update Head-Tracking settings defaults (0bd487c)
+    Date: Mar 8
+
+19. Update Active Zone default from 0.45 to 0.37 (6fdd91e)
+    Date: Mar 8
+
+    Lower activation zone threshold for easier key activation with head tracking.
+
+20. Move BroadcastReceiver to background HandlerThread with mid-computation highlights (bba1904)
+    Date: Mar 8
+
+    Registered ExternalInputReceiver on the background HandlerThread so broadcast
+    receipt is never blocked by main thread contention. Added applyPendingHighlight
+    callback at abort checkpoints for real-time cursor tracking during long keystroke
+    processing.
+
+21. Move head tracking word search off main thread for responsive UI (8723be0)
+    Date: Mar 12
+
+    - Moved wldSelection/BFS to dedicated WLDWorker HandlerThread
+    - Deduplicated HeadBoard broadcasts by gating on newDataAvailable
+    - Added MIN_PROCESS_JUSTTYPE (45ms/~22fps) to reduce MediaPipe frame rate
+    - Added E2E latency diagnostics via frameTs broadcast extra
+
+22. Fix key activation firing during head tracking pause (c8adada)
+    Date: Mar 12
+
+    Guarded activation path in processHeadTrackingFrame() with htPaused and
+    htResumeGrace checks.
+
+
+------------------------------------------------------------------------
+E. UNDO AND PULL-IN FIXES (Mar 9)
+------------------------------------------------------------------------
+
+23. Fix UnDo pull-in duplication and tap-to-pull-in loop guard (96d6dd2)
+    Date: Mar 9
+
+    Fixed redundant wldSelection/updateUi after runPullInFlow that caused word
+    duplication (e.g. "so |" becoming "so so|"). Added skipPostProcessingAfterPullIn
+    flag. Added 2000ms timeout to the pull-in loop guard.
+
+24. Remove "UnDo automatically deletes autospaces" feature (5695359)
+    Date: Mar 9
+
+    Removed the feature, UI toggle, and all code branches (Contexts 4 and 6)
+    that depended on autoDeleteSpace being ON. Simplified Contexts 5 and 7.
+
+25. Fix cursor relocation bugs when auto-select word is OFF (a14ef4c)
+    Date: Mar 9
+
+    Three fixes:
+    - processSelectionChange haveComposing guard now properly resets state
+    - Fixed ExtractedText.startOffset coordinate bug in canPullInAtCursor
+    - Wrapped setSelection+setComposingText in batch edit for atomicity
+
+26. Clear undoStack in resetJTUI to prevent stale state restoration (3ac44c6)
+    Date: Mar 9
+
+    Pressing UnDo after tapping elsewhere popped stale pull-in state and inserted
+    the old word at the new cursor position. Now resetJTUI clears the undoStack.
+
+27. Fix UnDo pull-in word duplication with delete-and-replay approach (8ebeb47)
+    Date: Mar 9
+
+    Replaced two-phase composing strategy with delete-and-replay: (1) delete word,
+    (2) replay key sequence with UI suppressed, (3) let normal pipeline re-insert.
+    Eliminates race condition causing "workwork" duplication.
+
+28. Fix stale onUpdateSelection clearing tap-triggered pull-in (f66be16)
+    Date: Mar 9
+
+    Deferred isPullInMode restoration via mainHandler.post so stale callbacks are
+    blocked during composing pipeline setup. Added 300ms time guard in
+    processSelectionChange Scenario B.
+
+
+------------------------------------------------------------------------
+F. CUSTOM WORDS AND TEXT EDITING (Mar 9 - Mar 10)
+------------------------------------------------------------------------
+
+29. Rename setting to "Auto-load word at cursor" (1297c7d)
+    Date: Mar 9
+
+30. Fix pull-in for words containing non-alphabetic characters (41859f6)
+    Date: Mar 9
+
+    Two changes to handle words like "what's", "cast-iron", "Mr.":
+    - canPullInAtCursor: right extension now computes three boundaries
+    - processSelectionChange Scenario C: replaced ~120 lines of inline word detection
+
+31. Retain casing when adding custom words to database (cf6961b)
+    Date: Mar 9
+
+    Custom words now store the correct caseType based on the word's casing:
+    lowercase -> LF, UPPERCASE -> AC, Title Case -> TF, mixed case -> OC.
+
+32. Add autospace before ADD NEW WORD and auto-shift after ENTER (5e84d9b)
+    Date: Mar 9
+
+    - ADD NEW WORD: uses KF_SpaceIfNeededMulti for proper autospace
+    - ENTER key: defers shift state update so key labels show capitalized letters
+
+33. Implement PAGE UP / PAGE DOWN on Functions page 2 (b203578)
+    Date: Mar 9
+
+    Sends KEYCODE_PAGE_UP/PAGE_DOWN key events. Renamed labels from
+    SCROLL UP/DOWN to PAGE UP/DOWN.
+
+34. Add Bookmark Mode to cursor movement mode cycle (90fcec7)
+    Date: Mar 9
+
+    Fourth mode in the Edit Mode cycle (CHAR/LINE -> WORD/SENTENCE ->
+    PARA/PAGE -> BOOKMARK). Users can set two bookmarks (A and B) and
+    jump between them for navigating large documents.
+
+35. Fix sentence cursor movement getting stuck at line breaks (822490e)
+    Date: Mar 10
+
+    Rewrote findSentenceStart and findSentenceEnd to correctly navigate across
+    line breaks.
+
+36. Support text selection with Jump to Mark in bookmark mode (71ecbe5)
+    Date: Mar 10
+
+    When Select Text mode is active, Jump to Mark A/B creates or extends a text
+    selection from the anchor to the bookmark location.
+
+37. Preserve case for custom words and abbreviation phrases (ac2cf14)
+    Date: Mar 10
+
+    Custom words with mixed case (e.g. "iOS") were being lowercased. Fixed by using
+    WordCaseForm.ORIGINAL directly, adding forcedCaseForm to phrase entries, and
+    skipping shift/capitalize overrides for entries with preserveOriginalCase.
+
+
+------------------------------------------------------------------------
+G. SETTINGS MODE — KEYBOARD-DRIVEN SETTINGS (Mar 12 - Mar 14)
+------------------------------------------------------------------------
+
+38. Make JT Settings available through Navigation layout (03c9c0a)
+    Date: Mar 12
+
+    Introduced Settings layout to enable direct control of JT settings from
+    the keyboard.
+
+39. Refine Settings Mode overlay: full-screen display, descriptions, and fixes (7f3d730)
+    Date: Mar 13
+
+    - Dismiss stale Settings Mode overlay on startup and when keyboard is hidden
+    - Expand display to fill screen above keyboard, hiding text field
+    - Increase font sizes and show description sub-text for settings
+    - Add InfoText type for explanatory content (How it Works, Tips sections)
+    - Add explanatory text to Direct Selection, Directional Selection, Touch Switch pages
+    - Fix debounce labels and default values from 0 to 120ms
+    - Gate Settings Mode speech on "Speak Selected Key" preference
+
+40. Make SettingsRegistry the single source of truth for setting defaults (79ac5d8)
+    Date: Mar 13
+
+    Added SettingsRegistry.ensureDefaults() that writes defaults for all
+    registry-defined settings to SharedPreferences.
+
+
+------------------------------------------------------------------------
+H. INTERNATIONALIZATION (Mar 13 - Mar 14)
+------------------------------------------------------------------------
+
+41. Phase 1: Extract layout XML hardcoded strings to string resources (701eddd)
+    Date: Mar 13
+
+    Moved ~200 hardcoded android:text and android:contentDescription attributes
+    from 21 layout XML files into res/values/strings.xml.
+
+42. Phase 2: Extract Activity Toast and programmatic strings to resources (66a2867)
+    Date: Mar 13
+
+    Replaced hardcoded Toast messages, AlertDialog text, and setText() calls across
+    8 Activity/helper files. Added ~60 new string resources.
+
+43. Phase 3: Extract JTUI button labels to string resources (18af742)
+    Date: Mar 13
+
+    Replaced ~54 hardcoded button labels in JTUI.definePages() and renderKeyLabels().
+
+44. Phase 4: Extract KeyboardSettingsController strings to resources (08a2058)
+    Date: Mar 13
+
+    Replaced ~40 hardcoded key labels, speech strings, and status messages.
+    Converted SliderStepSize.label to displayLabel(context) method.
+
+45. Phase 5: Convert SettingsRegistry to Context-aware singleton (9282bb3)
+    Date: Mar 13
+
+    Refactored SettingsRegistry from object to class with lazy singleton.
+    Extracted ~153 hardcoded label, description, InfoText, and format strings.
+
+46. Phase 6: Final sweep — extract remaining hardcoded strings (135db1a)
+    Date: Mar 13
+
+    Fixed 11 remaining user-facing strings in JustTypeIME, SelectActiveVocabulariesActivity,
+    and ExportVocabUsageActivity.
+
+47. Phase 7: Add Spanish and Swahili translation files (ecf5bd5)
+    Date: Mar 13
+
+    Created complete locale-specific string resource files for Spanish (values-es)
+    and Swahili (values-sw) with all 715 string entries translated.
+
+
+------------------------------------------------------------------------
+I. LANGUAGE SETTINGS AND LOCALE SWITCHING (Mar 14)
+------------------------------------------------------------------------
+
+48. Add in-app language settings for UI language and typing language (5168d08)
+    Date: Mar 14
+
+    Two independent language controls: UI Language picker (System Default, English,
+    Espanol, Kiswahili) and Typing Language picker (English only for now).
+    Key changes:
+    - LocaleHelper utility wraps Context with chosen locale
+    - All 17 Activities + JustTypeIME override attachBaseContext
+    - SettingsRegistry gains reinitialize() for runtime locale switching
+    - Android 13+ locales_config.xml for system per-app language integration
+
+49. Fix language switching bugs, add Settings Mode Easter egg and SubPage styling (0dabb68)
+    Date: Mar 14
+
+    - Spanish: Replaced "Leer" (to read) with "Hablar" (to speak) in ~21 strings
+    - Fixed keyboard labels not updating on language change
+    - Hidden Developer Settings behind Easter egg (DOWN-UP-DOWN-UP-DOWN)
+    - Made SubPage items visually distinct with light cyan color and arrow
+
+50. Fix Settings Mode exiting to Main page on UI language change (f3ed53f)
+    Date: Mar 14
+
+    Skip page reset during language change when in Settings Mode; refresh
+    overlay display with updated locale labels instead.
+
+51. Fix Spanish translation: VARIOS -> MULTIPLES for multi-symbol button (c732402)
+    Date: Mar 14
+
+52. Fix Swahili translation: Soma (read) -> Sema (speak) for speech settings (ca0ba17)
+    Date: Mar 14
+
+53. Fix blank keyboard after language change in Settings Mode (94257ff)
+    Date: Mar 14
+
+    Skip forceUpdateUi() when in Settings Mode since the settings controller
+    already refreshes the display.
+
+54. Fix Settings Mode key labels not updating to new locale on language change (2fbcca3)
+    Date: Mar 14
+
+    Made the controller's context mutable and pass the new locale context through
+    refreshDisplay().
+
+
+------------------------------------------------------------------------
+J. LIVE INPUT METHOD SWITCHING (Mar 20)
+------------------------------------------------------------------------
+
+55. Enable live input method switching without app restart (3fb03de)
+    Date: Mar 20
+
+    Fixed the dual SharedPreferences listener issue where the onCreateInputView()
+    listener silently replaced the onCreate() listener. Changes:
+    - Delegate input method keys to handleCriticalSettingChange()
+    - Recreate input view when primary input method changes
+    - Add onResume() to InputMethodsActivity for preference sync
+    - Request overlay permission on first launch
+
+56. Fix Settings Mode input method changes not taking effect (2aa2a35)
+    Date: Mar 20
+
+    The onApplySettingImmediate callback in JTUI was empty. Added onSettingsApply
+    callback wired to loadAndApplyPreferences(). Guard handleCriticalSettingChange()
+    during Settings Mode.
+
+57. Fix crash when SettingsActivity launches before IME service (8b0452a)
+    Date: Mar 20
+
+    SettingsRegistry.get() threw IllegalStateException because singleton was only
+    initialized in JustTypeIME.onCreate(). Now initialized in SettingsActivity too.
+
+
+------------------------------------------------------------------------
+K. SCAN LAYOUT AND SELECT KEY FIXES (Mar 20)
+------------------------------------------------------------------------
+
+58. Fix Settings Mode button labels not updating for scan layout (01b0e72)
+    Date: Mar 20
+
+    updateSettingsKeyLabels() and updateSettingsCenterText() now check useScanLayout
+    and update the correct UI elements.
+
+59. Apply all pending settings at once; fix Select key word overlap (24f1f57)
+    Date: Mar 20
+
+    - handleApply() now iterates all pendingValues entries
+    - Gap between "SELECT" and candidate word now scales with font size (8-18%)
+
+60-62. Lock SELECT label size series (5f821f5, a32385a, 9b11deb)
+    Date: Mar 20
+
+    Three commits to fully stabilize the "SELECT" label on the Select key:
+    - SELECT label sized from 8-char reference word, never varies
+    - Gap computed once from reference, held constant
+    - Only the candidate word's font size varies with word length
+
+63. Skip critical pref handling during Settings Mode to prevent back-out (ed3aa0f)
+    Date: Mar 20
+
+    Both prefs listeners skip all handling while Settings Mode is active, preventing
+    cascading layout switches that disrupted navigation state.
+
+
+------------------------------------------------------------------------
+L. SWITCH ASSIGNMENT AND HEAD TRACKING INTEGRATION (Mar 21 - Mar 22)
+------------------------------------------------------------------------
+
+64. Add switch assignment to keyboard Settings Mode; settings parity fixes (ea79a83)
+    Date: Mar 21
+
+    - New KeyCapture SettingsDef type and KEY_CAPTURE mode for assigning switches
+      from within keyboard Settings Mode
+    - System Setup activities now accept any key code (not just 1/2/3)
+    - Added "Extra Blank Line on Enter" toggle to system SettingsActivity
+    - Moved "Exact Case Pull-in" to Developer page
+    - String resources in English, Spanish, and Swahili
+
+65. Auto-enable/disable HeadBoard when head tracking is selected (be4f318)
+    Date: Mar 21
+
+    JustType queries HeadBoard's state via REQUEST_SERVICE_STATE and enables it
+    if needed. Only disables HeadBoard on deselection if JustType was the one
+    that enabled it.
+
+66. Fix head tracking not working when enabled via keyboard Settings Mode (7d2d4e0)
+    Date: Mar 22
+
+    Three places read KEY_INPUT_METHOD (legacy key) instead of
+    KEY_INPUT_METHOD_PRIMARY. Also recreates keyboard layout on Settings Mode exit.
+
+
+------------------------------------------------------------------------
+M. INPUT METHOD MUTUAL EXCLUSION AND PROMPTS (Mar 22)
+------------------------------------------------------------------------
+
+67. Filter method setup pages by enabled state; mutual exclusion (0e15e41)
+    Date: Mar 22
+
+    - Method Setup sub-pages only visible when their input method is enabled
+    - Direct Selection and Directional Selection are mutually exclusive
+
+68. Prevent disabling both Direct and Directional Selection (2f3ab6c)
+    Date: Mar 22
+
+    At least one must remain enabled when Primary Input Method is NONE.
+    Blocked with message: "Cannot disable -- set a Primary Input Method first."
+
+69. Display all settings prompts visually; add Speak Prompts Aloud setting (64dbf2e)
+    Date: Mar 22
+
+    - All 13 spoken prompts now also displayed in the orange banner
+    - New "Speak Prompts Aloud" setting (defaults ON) in Feedback section
+    - When OFF, prompts are only displayed visually, not spoken
+
+
+========================================================================
+HEADBOARD CHANGES
+========================================================================
+
+Two commits during this period, both related to JustType broadcast optimization:
+
+1. Add newDataAvailable flag, keep unconditional broadcast rate (ed0d792)
+   Date: Mar 8
+
+   Added volatile newDataAvailable flag to FaceLandmarkerHelper for future use
+   in frame-rate diagnostics. Kept unconditional broadcast on every tick --
+   Android drops ~50% of ordered broadcasts, so 60fps sending yields ~30fps
+   received, which the JustType state machine needs for reliable zone transition
+   detection.
+
+2. Optimize JustType broadcast rate and add E2E latency diagnostics (b8b0b60)
+   Date: Mar 12
+
+   - Gated JustType joystick broadcasts on newDataAvailable flag to eliminate
+     ~30 stale duplicate broadcasts per second
+   - Added MIN_PROCESS_JUSTTYPE (45ms/~22fps) to reduce MediaPipe frame rate
+     when in JustType joystick mode (cursor mode unchanged at 33fps)
+   - Included frame timestamp in JustType broadcasts for end-to-end latency
+     measurement
+
+
+========================================================================
+SUMMARY STATISTICS
+========================================================================
+
+JustType:  69 commits (ab4915d through 64dbf2e)
+HeadBoard:  2 commits (ed0d792, b8b0b60)
+
+Date range: February 24 - March 22, 2026
+
+Major feature areas:
+  - Abbreviation/domain/extension support for ambiguous typing
+  - Autospace intelligence (field type detection, numeric mode)
+  - Head tracking performance (background thread, frame-level processing,
+    abort-and-resume, mid-computation highlights)
+  - UnDo/pull-in reliability (5 bug fixes for duplication and stale state)
+  - Bookmark mode for cursor navigation
+  - Custom word casing preservation
+  - Keyboard-driven Settings Mode (full settings control without touchscreen)
+  - Complete internationalization (715 strings, Spanish + Swahili translations)
+  - In-app language switching (UI language + typing language)
+  - Live input method switching (no restart required)
+  - Switch assignment from keyboard Settings Mode
+  - HeadBoard auto-enable/disable integration
+  - Input method mutual exclusion and safety guards
+  - Visual prompts with optional TTS (accessibility)

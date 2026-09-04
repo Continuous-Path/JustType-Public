@@ -1,0 +1,95 @@
+# Android
+
+## Gradle files
+.gradle/
+build/
+.kotlin/
+
+## Local configuration file (sdk path, etc)
+local.properties
+
+## Log files
+*.log
+
+## Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+*.apk
+output-metadata.json
+
+## Eclipse / JDT language-server generated files
+.project
+.settings/
+.classpath
+app/.project
+app/.settings/
+app/.classpath
+
+## Android Profiling
+*.hprof
+
+## Google Services (e.g. APIs or Firebase)
+google-services.json
+
+## IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+## Keystore files
+*.jks
+*.keystore
+keystore.properties
+
+# MacOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv
+.env
+.virtualenv
+
+# Agents
+gemini.md
+claude.md
+.cursor/
+# Ignore all .claude/ contents by default — machine-specific Claude state.
+# Then un-ignore the project tooling we want to share (hooks, slash commands).
+.claude/*
+!.claude/hooks/
+!.claude/commands/
+!.claude/settings.json
+.aiignore
+.geminiignore
+
+# Obsidian
+.obsidian/
+
+# Misc
+.misc/
+.gitignore_local
+app/src/main/assets/databases/*.db
+app/src/debug/assets/databases/*.db
+gradle-user-home/
+scripts/
+.local/
+test_out.txt
+
+# Cliff
+ignore/
+tools/gesture-icons-preview/
+
+docs/Phase1SettingsWork.md
+SETTINGS_INFO_PROMPTS.Kirk Edits.txt
+SETTINGS_INFO_PROMPTS.Save Edits.docx
+/settings_bug_backup_dump
+
+# Langpack publishing output (upload to GitHub Release / Foundation server)
+dist/
+.jt-learned/

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <title>Layer 1 to 2</title>
+  <style>:root {
+  --line: #17212b;
+  --accent: #006d77;
+  --transform: #c2410c;
+}
+.stroke {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.thin {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.clock {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.fill {
+  fill: var(--line);
+}
+.soft {
+  fill: #e5e9ee;
+  stroke: #8b98a5;
+  stroke-width: 2.8;
+}
+.ghost {
+  fill: #eef1f4;
+  stroke: #a6b0ba;
+  stroke-width: 3;
+  opacity: 0.65;
+}
+.accent {
+  stroke: var(--accent);
+}
+.accent-fill {
+  fill: var(--accent);
+}
+.transform {
+  stroke: var(--transform);
+}
+.transform-fill {
+  fill: var(--transform);
+}
+.gridline {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.gridline-accent {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mini-text {
+  font-size: 15px;
+  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  fill: var(--line);
+  text-anchor: middle;
+}
+.tiny-text {
+  font-size: 11px;
+  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  fill: var(--line);
+  text-anchor: middle;
+}
+.tiny-text.accent-fill {
+  fill: var(--accent);
+}
+</style>
+          <rect class="thin" x="8" y="11" width="24" height="24" rx="3"></rect>
+          <path class="gridline" d="M16 11 V35 M24 11 V35 M8 19 H32 M8 27 H32"></path>
+          <rect class="thin accent" x="40" y="34" width="24" height="24" rx="3"></rect>
+          <path class="gridline-accent" d="M48 34 V58 M56 34 V58 M40 42 H64 M40 50 H64"></path>
+          <path class="thin accent" d="M32 15 C53 15 58 18 58 34"></path>
+          <path class="fill accent-fill" d="M58 34 L52 25 L64 25 Z"></path>
+          <text class="tiny-text" x="20" y="48">1</text>
+          <text class="tiny-text accent-fill" x="52" y="70">2</text>
+        </svg>

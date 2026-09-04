@@ -1,0 +1,273 @@
+{
+ "symbol_hierarchy": [
+  {
+   "k": "branch",
+   "label": "Punctuation",
+   "children": [
+    { "k": "leaf", "char": ".", "tier": "primary" },
+    { "k": "leaf", "char": ",", "tier": "primary" },
+    { "k": "leaf", "char": "?", "tier": "primary" },
+    { "k": "leaf", "char": "!", "tier": "primary" },
+    { "k": "leaf", "char": ":", "tier": "primary" },
+    { "k": "leaf", "char": ";", "tier": "primary" },
+    { "k": "leaf", "char": "-", "tier": "primary_alt" },
+    { "k": "leaf", "char": "–", "tier": "primary_alt" },
+    { "k": "leaf", "char": "—", "tier": "primary_alt" },
+    { "k": "leaf", "char": "…", "tier": "primary_alt" },
+    { "k": "leaf", "char": "¿", "tier": "primary_alt" },
+    { "k": "leaf", "char": "¡", "tier": "primary_alt" },
+    { "k": "leaf", "char": "·", "tier": "uncommon" },
+    { "k": "leaf", "char": "‐", "tier": "uncommon" },
+    { "k": "leaf", "char": "―", "tier": "uncommon" },
+    { "k": "leaf", "char": "‥", "tier": "uncommon" },
+    { "k": "leaf", "char": "⋯", "tier": "uncommon" },
+    { "k": "leaf", "char": "⁝", "tier": "uncommon" },
+    { "k": "leaf", "char": "‽", "tier": "uncommon" },
+    { "k": "leaf", "char": "⸘", "tier": "uncommon" },
+    { "k": "leaf", "char": "‼", "tier": "uncommon" },
+    { "k": "leaf", "char": "⁉", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Brackets",
+   "children": [
+    { "k": "leaf", "char": "(", "tier": "primary" },
+    { "k": "leaf", "char": ")", "tier": "primary" },
+    { "k": "leaf", "char": "[", "tier": "primary" },
+    { "k": "leaf", "char": "]", "tier": "primary" },
+    { "k": "leaf", "char": "{", "tier": "primary" },
+    { "k": "leaf", "char": "}", "tier": "primary" },
+    { "k": "leaf", "char": "⟨", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⟩", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⟦", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⟧", "tier": "primary_alt" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Quotes",
+   "children": [
+    { "k": "leaf", "char": "\"", "tier": "primary" },
+    { "k": "leaf", "char": "'", "tier": "primary" },
+    { "k": "leaf", "char": "“", "tier": "primary" },
+    { "k": "leaf", "char": "”", "tier": "primary" },
+    { "k": "leaf", "char": "‘", "tier": "primary" },
+    { "k": "leaf", "char": "’", "tier": "primary" },
+    { "k": "leaf", "char": "«", "tier": "primary_alt" },
+    { "k": "leaf", "char": "»", "tier": "primary_alt" },
+    { "k": "leaf", "char": "‹", "tier": "primary_alt" },
+    { "k": "leaf", "char": "›", "tier": "primary_alt" },
+    { "k": "leaf", "char": "„", "tier": "primary_alt" },
+    { "k": "leaf", "char": "‟", "tier": "primary_alt" },
+    { "k": "leaf", "char": "‚", "tier": "uncommon" },
+    { "k": "leaf", "char": "‛", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Currency",
+   "children": [
+    { "k": "leaf", "char": "$", "tier": "primary" },
+    { "k": "leaf", "char": "€", "tier": "primary" },
+    { "k": "leaf", "char": "£", "tier": "primary" },
+    { "k": "leaf", "char": "¥", "tier": "primary" },
+    { "k": "leaf", "char": "₹", "tier": "primary" },
+    { "k": "leaf", "char": "₩", "tier": "primary" },
+    { "k": "leaf", "char": "¢", "tier": "primary_alt" },
+    { "k": "leaf", "char": "₽", "tier": "primary_alt" },
+    { "k": "leaf", "char": "฿", "tier": "primary_alt" },
+    { "k": "leaf", "char": "₱", "tier": "primary_alt" },
+    { "k": "leaf", "char": "₺", "tier": "primary_alt" },
+    { "k": "leaf", "char": "₪", "tier": "primary_alt" },
+    { "k": "leaf", "char": "₴", "tier": "uncommon" },
+    { "k": "leaf", "char": "₦", "tier": "uncommon" },
+    { "k": "leaf", "char": "₫", "tier": "uncommon" },
+    { "k": "leaf", "char": "₨", "tier": "uncommon" },
+    { "k": "leaf", "char": "¤", "tier": "uncommon" },
+    { "k": "leaf", "char": "₡", "tier": "uncommon" },
+    { "k": "leaf", "char": "₮", "tier": "uncommon" },
+    { "k": "leaf", "char": "₭", "tier": "uncommon" },
+    { "k": "leaf", "char": "₵", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Math",
+   "children": [
+    { "k": "leaf", "char": "+", "tier": "primary" },
+    { "k": "leaf", "char": "−", "tier": "primary" },
+    { "k": "leaf", "char": "×", "tier": "primary" },
+    { "k": "leaf", "char": "÷", "tier": "primary" },
+    { "k": "leaf", "char": "=", "tier": "primary" },
+    { "k": "leaf", "char": "%", "tier": "primary" },
+    { "k": "leaf", "char": "<", "tier": "primary_alt" },
+    { "k": "leaf", "char": ">", "tier": "primary_alt" },
+    { "k": "leaf", "char": "≤", "tier": "primary_alt" },
+    { "k": "leaf", "char": "≥", "tier": "primary_alt" },
+    { "k": "leaf", "char": "≠", "tier": "primary_alt" },
+    { "k": "leaf", "char": "≈", "tier": "primary_alt" },
+    { "k": "leaf", "char": "±", "tier": "uncommon" },
+    { "k": "leaf", "char": "∓", "tier": "uncommon" },
+    { "k": "leaf", "char": "≡", "tier": "uncommon" },
+    { "k": "leaf", "char": "≅", "tier": "uncommon" },
+    { "k": "leaf", "char": "≜", "tier": "uncommon" },
+    { "k": "leaf", "char": "√", "tier": "uncommon" },
+    { "k": "leaf", "char": "≪", "tier": "uncommon" },
+    { "k": "leaf", "char": "≫", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Signs",
+   "children": [
+    { "k": "leaf", "char": "@", "tier": "primary" },
+    { "k": "leaf", "char": "#", "tier": "primary" },
+    { "k": "leaf", "char": "&", "tier": "primary" },
+    { "k": "leaf", "char": "*", "tier": "primary" },
+    { "k": "leaf", "char": "/", "tier": "primary" },
+    { "k": "leaf", "char": "\\", "tier": "primary" },
+    { "k": "leaf", "char": "~", "tier": "primary_alt" },
+    { "k": "leaf", "char": "˜", "tier": "primary_alt" },
+    { "k": "leaf", "char": "^", "tier": "primary_alt" },
+    { "k": "leaf", "char": "`", "tier": "primary_alt" },
+    { "k": "leaf", "char": "´", "tier": "primary_alt" },
+    { "k": "leaf", "char": "¨", "tier": "primary_alt" },
+    { "k": "leaf", "char": "_", "tier": "uncommon" },
+    { "k": "leaf", "char": "|", "tier": "uncommon" },
+    { "k": "leaf", "char": "¦", "tier": "uncommon" },
+    { "k": "leaf", "char": "‖", "tier": "uncommon" },
+    { "k": "leaf", "char": "⅋", "tier": "uncommon" },
+    { "k": "leaf", "char": "♯", "tier": "uncommon" },
+    { "k": "leaf", "char": "∗", "tier": "uncommon" },
+    { "k": "leaf", "char": "⁂", "tier": "uncommon" },
+    { "k": "leaf", "char": "℅", "tier": "uncommon" },
+    { "k": "leaf", "char": "℀", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Fractions",
+   "children": [
+    { "k": "leaf", "char": "½", "tier": "primary" },
+    { "k": "leaf", "char": "¼", "tier": "primary" },
+    { "k": "leaf", "char": "¾", "tier": "primary" },
+    { "k": "leaf", "char": "⅓", "tier": "primary" },
+    { "k": "leaf", "char": "⅔", "tier": "primary" },
+    { "k": "leaf", "char": "⅕", "tier": "primary" },
+    { "k": "leaf", "char": "⅛", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⅜", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⅝", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⅞", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⅙", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⅚", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⅐", "tier": "uncommon" },
+    { "k": "leaf", "char": "⅑", "tier": "uncommon" },
+    { "k": "leaf", "char": "⅒", "tier": "uncommon" },
+    { "k": "leaf", "char": "↉", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Superscripts & units",
+   "children": [
+    { "k": "leaf", "char": "°", "tier": "primary" },
+    { "k": "leaf", "char": "℃", "tier": "primary" },
+    { "k": "leaf", "char": "℉", "tier": "primary" },
+    { "k": "leaf", "char": "′", "tier": "primary" },
+    { "k": "leaf", "char": "″", "tier": "primary" },
+    { "k": "leaf", "char": "µ", "tier": "primary" },
+    { "k": "leaf", "char": "¹", "tier": "primary_alt" },
+    { "k": "leaf", "char": "²", "tier": "primary_alt" },
+    { "k": "leaf", "char": "³", "tier": "primary_alt" },
+    { "k": "leaf", "char": "ⁿ", "tier": "primary_alt" },
+    { "k": "leaf", "char": "º", "tier": "primary_alt" },
+    { "k": "leaf", "char": "ª", "tier": "primary_alt" },
+    { "k": "leaf", "char": "ℓ", "tier": "uncommon" },
+    { "k": "leaf", "char": "‰", "tier": "uncommon" },
+    { "k": "leaf", "char": "Ω", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Arrows",
+   "children": [
+    { "k": "leaf", "char": "→", "tier": "primary" },
+    { "k": "leaf", "char": "←", "tier": "primary" },
+    { "k": "leaf", "char": "↑", "tier": "primary" },
+    { "k": "leaf", "char": "↓", "tier": "primary" },
+    { "k": "leaf", "char": "↔", "tier": "primary" },
+    { "k": "leaf", "char": "↕", "tier": "primary" },
+    { "k": "leaf", "char": "⇒", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⇐", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⇔", "tier": "primary_alt" },
+    { "k": "leaf", "char": "↩", "tier": "primary_alt" },
+    { "k": "leaf", "char": "↪", "tier": "primary_alt" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Shapes",
+   "children": [
+    { "k": "leaf", "char": "•", "tier": "primary" },
+    { "k": "leaf", "char": "◦", "tier": "primary" },
+    { "k": "leaf", "char": "‣", "tier": "primary" },
+    { "k": "leaf", "char": "⁃", "tier": "primary" },
+    { "k": "leaf", "char": "●", "tier": "primary" },
+    { "k": "leaf", "char": "○", "tier": "primary" },
+    { "k": "leaf", "char": "■", "tier": "primary_alt" },
+    { "k": "leaf", "char": "□", "tier": "primary_alt" },
+    { "k": "leaf", "char": "▲", "tier": "primary_alt" },
+    { "k": "leaf", "char": "▼", "tier": "primary_alt" },
+    { "k": "leaf", "char": "△", "tier": "primary_alt" },
+    { "k": "leaf", "char": "▽", "tier": "primary_alt" },
+    { "k": "leaf", "char": "◆", "tier": "uncommon" },
+    { "k": "leaf", "char": "◇", "tier": "uncommon" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Marks",
+   "children": [
+    { "k": "leaf", "char": "©", "tier": "primary" },
+    { "k": "leaf", "char": "™", "tier": "primary" },
+    { "k": "leaf", "char": "®", "tier": "primary" },
+    { "k": "leaf", "char": "℗", "tier": "primary" },
+    { "k": "leaf", "char": "℠", "tier": "primary" },
+    { "k": "leaf", "char": "§", "tier": "primary" },
+    { "k": "leaf", "char": "¶", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⁋", "tier": "primary_alt" },
+    { "k": "leaf", "char": "№", "tier": "primary_alt" },
+    { "k": "leaf", "char": "†", "tier": "primary_alt" },
+    { "k": "leaf", "char": "‡", "tier": "primary_alt" },
+    { "k": "leaf", "char": "※", "tier": "primary_alt" }
+   ]
+  },
+  {
+   "k": "branch",
+   "label": "Science",
+   "children": [
+    { "k": "leaf", "char": "π", "tier": "primary" },
+    { "k": "leaf", "char": "∞", "tier": "primary" },
+    { "k": "leaf", "char": "∑", "tier": "primary" },
+    { "k": "leaf", "char": "∏", "tier": "primary" },
+    { "k": "leaf", "char": "∫", "tier": "primary" },
+    { "k": "leaf", "char": "∂", "tier": "primary" },
+    { "k": "leaf", "char": "∆", "tier": "primary_alt" },
+    { "k": "leaf", "char": "∝", "tier": "primary_alt" },
+    { "k": "leaf", "char": "∈", "tier": "primary_alt" },
+    { "k": "leaf", "char": "∉", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⊂", "tier": "primary_alt" },
+    { "k": "leaf", "char": "⊃", "tier": "primary_alt" },
+    { "k": "leaf", "char": "∩", "tier": "uncommon" }
+   ]
+  }
+ ],
+ "tiers": [
+  "primary",
+  "primary_alt",
+  "uncommon"
+ ],
+ "render_rule": "ALL SYMBOLS MODE renders this tree at the UNCOMMON setting (every leaf visible); category depth and intra-category page order encode rarity. Each top entry is a category branch whose children are direct, frequency-ordered leaves shown 6 per page (Key 6 = PAGE N pages forward, wrapping via RETURN TO PAGE 1). Closely-related symbols (bracket/quote pairs, +/- families, arrow opposites, degree family, etc.) are kept within the same page of 6. The per-leaf tier is an advisory frequency hint aligned to the page (page 1 = primary, page 2 = primary_alt, page 3+ = uncommon); it drives ordering, not visibility. Emit precomposed NFC verbatim.",
+ "categories_paged": true
+}

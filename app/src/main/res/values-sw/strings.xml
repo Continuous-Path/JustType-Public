@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ime_name">Kibodi ya JustType</string>
+    <string name="justtype_settings_shortcut_label">Mipangilio ya JustType</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Mipangilio ya JustType</string>
+    <string name="format_phrase_delay_disabled">IMEZIMWA</string>
+    <string name="format_phrase_delay_sec">%.1f sek</string>
+    <string name="format_keyboard_size_percent">%.0f%%</string>
+    <string name="format_key_history_height_dp">%.0fdp</string>
+    
+    <!-- Input Methods Activity -->
+    <string name="setup_directional_selection">Weka Uchaguzi wa Mwelekeo</string>
+    <string name="setup_direct_selection">Weka Uchaguzi wa Moja kwa Moja</string>
+    <string name="setup_touch_screen_switch">Weka Swichi ya Skrini ya Kugusa</string>
+    <string name="setup_joystick">Weka Kijiti cha Kudhibiti</string>
+    <string name="setup_single_switch_scanning">Weka Utafutaji wa Swichi Moja</string>
+    <string name="setup_two_switch_selection">Weka Uchaguzi wa Swichi Mbili</string>
+    <string name="setup_head_tracking">Weka Ufuatiliaji wa Kichwa</string>
+    <string name="setup_mouse_joystick">Weka Kijiti cha Kipanya</string>
+    <string name="format_timeout_sec">%d sek</string>
+    
+    <!-- Developer Settings Activity -->
+    <string name="toast_db_reset_success">Hifadhidata ya maneno imewekwa upya. Itaanzishwa tena inapotumika.</string>
+    <string name="toast_reset_failed">Kuweka upya kumeshindikana: %s</string>
+    <string name="toast_enter_name">Ingiza jina.</string>
+    <string name="toast_no_database_to_save">Hakuna hifadhidata ya kuhifadhi bado.</string>
+    <string name="toast_saved_as_db">Imehifadhiwa kama %s.db</string>
+    <string name="toast_save_failed">Kuhifadhi kumeshindikana: %s</string>
+    <string name="toast_no_file_named">Hakuna faili inayoitwa %s.db</string>
+    <string name="toast_loaded_db">Imepakia %s.db. Fungua tena skrini ya programu kutumia.</string>
+    <string name="toast_load_failed">Kupakia kumeshindikana: %s</string>
+    <string name="toast_debug_log_path">debug.log: %s</string>
+    <string name="toast_debug_log_cleared">debug.log imefutwa</string>
+    <string name="toast_failed_to_clear">Imeshindikana kufuta: %s</string>
+    <string name="toast_debug_logging_enabled">Urekodi wa hitilafu umewashwa</string>
+    <string name="toast_debug_logging_disabled">Urekodi wa hitilafu umezimwa</string>
+    
+    <!-- Two-Switch Setup Activity -->
+    <string name="touch_switch_active_left">Swichi ya skrini ya kugusa inafanya kazi (upande wa kushoto)</string>
+    <string name="waiting_for_red_switch">Inasubiri Swichi Nyekundu\u2026</string>
+    <string name="touch_switch_active_right">Swichi ya skrini ya kugusa inafanya kazi (upande wa kulia)</string>
+    <string name="waiting_for_green_switch">Inasubiri Swichi ya Kijani\u2026</string>
+    <string name="red_switch_touch_screen">Swichi Nyekundu = Skrini ya Kugusa (Kushoto)</string>
+    <string name="green_switch_touch_screen">Swichi ya Kijani = Skrini ya Kugusa (Kulia)</string>
+    <string name="red_switch_label">Swichi Nyekundu = %s</string>
+    <string name="green_switch_label">Swichi ya Kijani = %s</string>
+    <string name="switch_1">Swichi 1</string>
+    <string name="switch_2">Swichi 2</string>
+    <string name="switch_3">Swichi 3</string>
+    <string name="switch_undefined">HAIJAFAFANULIWA</string>
+    <string name="format_highlight_timeout_disabled">Imezimwa (0s)</string>
+    <string name="format_highlight_timeout_sec">%ds</string>
+    <string name="format_delay_sec">%.2f s</string>
+    
+    <!-- Single Switch Setup Activity -->
+    <string name="touch_screen_switch_active">Swichi ya skrini ya kugusa inafanya kazi</string>
+    <string name="waiting_for_scanning_switch">Inasubiri swichi ya utafutaji\u2026</string>
+    <string name="switch_configured_as">Swichi imewekwa kama: %s</string>
+    <string name="numpad_1">Numpad 1</string>
+    <string name="numpad_2">Numpad 2</string>
+    <string name="numpad_3">Numpad 3</string>
+    <string name="scanning_switch_not_configured">Swichi ya utafutaji haijawekwa</string>
+    <string name="keycode_label">Keycode %d</string>
+    <string name="touch_screen">Skrini ya Kugusa</string>
+    <string name="format_debounce_off">ZIMA</string>
+    <string name="format_debounce_ms">%d ms</string>
+    <string name="touch_screen_switch_mode_label">Mpangilio wa mwambaa wa swichi</string>
+    <string name="touch_screen_switch_mode_single">Swichi moja (mwambaa mmoja wa kijani)</string>
+    <string name="touch_screen_switch_mode_two">Swichi mbili (kijani kushoto, nyekundu kulia)</string>
+    <string name="touch_screen_switch_flash">Mulika mwambaa wa swichi unapowashwa</string>
+    <string name="touch_screen_switch_beep">Piga beep swichi inapowashwa</string>
+    
+    <!-- Directional Selection Setup Activity -->
+    <string name="format_swipe_distance_dp">%d dp</string>
+    
+    <!-- Joystick / Head Tracking Setup Activity -->
+    <string name="format_decimal_two">%.2f</string>
+    <string name="format_percent">%d%%</string>
+    <string name="format_exit_delay_sec">%.1fs</string>
+
+    <!-- Edit Mode Pages -->
+    <string name="edit_key_select_text">CHAGUA\nMANDISHI</string>
+    <string name="edit_key_selecting_text">(INACHAGUA\nMANDISHI)</string>
+    <string name="edit_key_cut_copy_paste_shift">KATA /\nNAKILI /\nBANDIKA /\nHERUFI \u27F3 </string>
+    <string name="edit_key_mode_character_line">HERUFI /\nMSTARI\n\u27F3</string>
+    <string name="edit_key_mode_word_sentence">NENO /\nSENTENSI\n\u27F3</string>
+    <string name="edit_key_mode_paragraph_page">AYA /\nUKURASA\n\u27F3</string>
+    <string name="edit_key_back_to_main">RUDI\nKUU</string>
+    <string name="edit_key_cut">KATA</string>
+    <string name="edit_key_copy">NAKILI</string>
+    <string name="edit_key_paste">BANDIKA</string>
+    <string name="edit_key_undo">TENDUA</string>
+    <string name="edit_key_adjust_case">BADILI\nHERUFI\nMODI</string>
+    <string name="edit_key_back_to_cursor">RUDI\nKISHALE\nMODI</string>
+    <string name="edit_key_speak_selection">SOMA\nILIYO-\nCHAGULIWA</string>
+    <string name="edit_key_speak_sentence">SOMA\nSENTENSI</string>
+    <string name="edit_center_character_line">MODI KISHALE:\nHERUFI / MSTARI</string>
+    <string name="edit_center_word_sentence">MODI KISHALE:\nNENO / SENTENSI</string>
+    <string name="edit_center_paragraph_page">MODI KISHALE:\nAYA / UKURASA</string>
+    <string name="edit_center_clipboard">UBAO WA KUNAKILI</string>
+    <string name="edit_key_case_to_title">neno\n\u2193\nNeno</string>
+    <string name="edit_key_case_to_upper">neno\n\u2193\nNENO</string>
+    <string name="edit_key_case_to_lower">Neno\n\u2193\nneno</string>
+    <string name="edit_key_undo_delete">TENDUA /\nFUTA</string>
+    <string name="edit_key_case_to_sentence">TUMIA\nSentensi\nherufi\u2026</string>
+    <string name="edit_key_edit_word">HARIRI\nNENO</string>
+    <string name="edit_center_adjust_case">BADILI HERUFI</string>
+    <string name="top_left">Juu-Kushoto</string>
+    <string name="top">Juu</string>
+    <string name="top_right">Juu-Kulia</string>
+    <string name="left">Kushoto</string>
+    <string name="right">Kulia</string>
+    <string name="bottom_left">Chini-Kushoto</string>
+    <string name="bottom">Chini</string>
+    <string name="bottom_right">Chini-Kulia</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 1: Internationalization string resources                -->
+    <!-- ============================================================ -->
+
+    <!-- Shared strings (reused across multiple screens) -->
+    <string name="content_desc_back">Rudi</string>
+    <string name="content_desc_key_history">Orodha ya Historia ya Vitufe</string>
+    <string name="heading_settings">Mipangilio</string>
+    <string name="no_file_selected">Hakuna faili iliyochaguliwa</string>
+    <string name="no_folder_selected">Hakuna folda iliyochaguliwa</string>
+    <string name="hint_vocab_name">Jina la msamiati</string>
+    <string name="label_use_touch_screen_switch">Tumia Swichi ya Skrini ya Kugusa</string>
+    <string name="label_corner_bias">Upendeleo wa Kona (0.50 – 2.00)</string>
+    <string name="label_dead_zone_min">0.10</string>
+    <string name="label_cancel">Ghairi</string>
+    <string name="label_done">Tayari</string>
+    <string name="label_import">Ingiza</string>
+    <string name="label_save">Hifadhi</string>
+    <string name="label_load">Pakia</string>
+
+    <!-- activity_settings.xml -->
+    <string name="settings_ime_warning">JustType haijachaguliwa kama kibodi yako kwa sasa. Tafadhali iwashe katika mipangilio ya mfumo.</string>
+    <string name="settings_open_keyboard_settings">Fungua Mipangilio ya Kibodi</string>
+    <!-- Language settings -->
+    <string name="settings_heading_language">Lugha</string>
+    <string name="settings_language_system_default">Chaguo-msingi la Mfumo</string>
+    <string name="settings_heading_typing_language">Lugha ya Kuandika</string>
+    <string name="settings_typing_language_desc">Hifadhidata ya maneno inayotumika kwa utabiri. Lugha zaidi zinakuja hivi karibuni.</string>
+    <string name="sr_main_ui_language">Lugha ya Kiolesura</string>
+    <string name="sr_main_typing_language">Lugha ya Kuandika</string>
+
+    <string name="settings_input_methods">Njia za Kuingiza</string>
+    <string name="settings_vocabulary_management">Usimamizi wa Msamiati</string>
+    <string name="settings_backup_restore">Hifadhi Rudufu &amp; Rejesha</string>
+    <string name="settings_heading_keyboard">Kibodi ya JustType</string>
+    <string name="settings_letter_arrangement">Mpangilio wa Herufi</string>
+    <string name="settings_layout_alpha">Mpangilio wa Herufi kwa Alfabeti</string>
+    <string name="settings_layout_opt">Mpangilio wa Herufi Bora (ufanisi zaidi)</string>
+    <string name="settings_keyboard_size">Ukubwa wa kibodi (40% – 95% ya upana)</string>
+    <string name="settings_keyboard_size_min">40%</string>
+    <string name="settings_heading_speech">Matokeo ya Sauti</string>
+    <string name="settings_speech_on_label">Sauti ikiwashwa:</string>
+    <string name="settings_speak_output_word">Sema Kila Neno la Matokeo</string>
+    <string name="settings_speak_output_phrase">Sema kila kishazi cha matokeo</string>
+    <string name="settings_speak_completed_sentence">Sema Kila Sentensi Iliyokamilika</string>
+    <string name="settings_speak_sentence_hint">Sema sentensi unapoongeza  .  !  au  ?</string>
+    <string name="settings_speak_punct_names">Sema Jina la Alama za Uandishi</string>
+    <string name="settings_phrase_auto_output">Kuchelewa kwa juu kusema maandishi yaliyochaguliwa (0 - 5.0 sek.)</string>
+    <string name="settings_heading_display">Onyesho la JustType</string>
+    <string name="settings_next_letter_hints">Washa Vidokezo vya Kawaida vya Herufi-Inayofuata</string>
+    <string name="settings_next_letter_hints_desc">Onyesha vidokezo vya herufi-inayofuata wakati wa kuandika</string>
+    <string name="settings_show_buttons_pressed">Onyesha Historia ya Mibonyezo</string>
+    <string name="settings_key_history_height">Urefu wa juu wa historia ya vitufe</string>
+    <string name="settings_shrink_to_fit">Punguza ili kutoshea</string>
+    <string name="settings_shrink_to_fit_desc">Punguza vitufe vinavyoonyeshwa katika historia ya vitufe kuonyesha mfuatano mzima</string>
+    <string name="settings_heading_selection_list">Orodha ya Uchaguzi</string>
+    <string name="settings_auto_load_word">Pakia neno kiotomatiki kwenye kishale</string>
+    <string name="settings_case_type_variants">Ongeza Kiotomatiki Aina za Maneno yenye Herufi Kubwa kwenye Orodha ya Uchaguzi</string>
+    <string name="settings_case_type_deferred">Subiri Hadi Neno Lichaguliwe Kuongeza Aina za Herufi Kubwa</string>
+    <string name="settings_case_type_delay">Kuchelewa kwa Kuongeza Aina za Herufi Kubwa (IMEZIMWA)</string>
+    <string name="settings_show_abbrev">Onyesha ufupisho katika Orodha ya Uchaguzi</string>
+    <string name="settings_show_phrase">Onyesha kishazi kilichopanuliwa katika Orodha ya Uchaguzi</string>
+    <string name="settings_developer">Mipangilio ya Msanidi</string>
+
+    <!-- activity_input_methods.xml -->
+    <string name="input_methods_title">Njia za Kuingiza</string>
+    <string name="input_methods_touch_heading">Njia za Kuingiza kwa Skrini ya Kugusa</string>
+    <string name="input_methods_direct_selection">Uchaguzi wa Moja kwa Moja</string>
+    <string name="input_methods_directional_selection">Uchaguzi wa Mwelekeo</string>
+    <string name="input_methods_touch_screen_switch">Swichi ya Skrini ya Kugusa</string>
+    <!-- "Adaptive Input Methods" per spec; resource id retains the legacy
+         "_other_" name to avoid breaking sibling locale files. -->
+    <string name="input_methods_other_heading">Njia za Kuingiza Zinazoendana</string>
+    <string name="input_methods_head_tracking">Ufuatiliaji wa Kichwa</string>
+    <string name="input_methods_head_tracking_hint">(inahitaji programu ya HeadBoard)</string>
+    <string name="input_methods_joystick">Kijiti cha Kudhibiti</string>
+    <string name="input_methods_mouse_joystick">Kijiti cha Kipanya</string>
+    <string name="input_methods_single_switch">Utafutaji wa Swichi Moja</string>
+    <string name="input_methods_two_switch">Uchaguzi wa Swichi Mbili</string>
+    <string name="input_methods_heading_auditory">Maoni ya Sauti</string>
+    <string name="input_methods_beep_key">Piga beep kitufe kinapobonyezwa</string>
+    <string name="input_methods_error_beep">Beep Wakati Kibonyezo Hakina Athari (Beep ya Hitilafu)</string>
+    <string name="input_methods_speak_key">Sema kila kitufe kilichochaguliwa</string>
+    <string name="input_methods_speak_key_desc">Sema jina la kitufe kinapobonyezwa</string>
+    <string name="input_methods_speak_punct">Sema alama za uandishi</string>
+    <string name="input_methods_speak_punct_desc">Jumuisha alama za uandishi wakati wa kusema jina la kitufe chenye utata</string>
+    <string name="input_methods_speak_word">Sema kila neno lililochaguliwa</string>
+    <string name="input_methods_speak_word_desc">Sema neno linapoangaziwa na Chagua</string>
+    <string name="input_methods_speak_prompts">Sema maagizo kwa sauti</string>
+    <string name="input_methods_heading_visual">Maoni ya Kuona</string>
+    <string name="input_methods_flash_key">Mulika kitufe kinapobonyezwa</string>
+    <string name="input_methods_heading_touch_overlay">Kiwekeo cha Kugusa</string>
+    <string name="input_methods_touch_timeout">Muda wa kugusa kuficha kibodi (2 - 10 sek.)</string>
+    <string name="input_methods_touch_timeout_min">2s</string>
+
+    <!-- activity_developer_settings.xml -->
+    <string name="dev_title">Mipangilio ya Msanidi</string>
+    <string name="dev_intro">Chaguo za msanidi zitaonekana hapa.</string>
+    <string name="dev_heading_search">Vigezo vya Utafutaji</string>
+    <string name="dev_basic_search_depth">Kina cha Utafutaji wa Msingi (3–10)</string>
+    <string name="dev_search_expansion_depth">Kina cha Upanuzi wa Utafutaji (0–10)</string>
+    <string name="dev_min_qualifying_candidates">Wagombea wa Chini Wanaostahili (5–1000)</string>
+    <string name="dev_max_examined_nodes">Nodi za Juu Zilizochunguzwa (50–10000)</string>
+    <string name="dev_ignore_men_limit">Puuza kikomo cha Nodi za Juu Zilizochunguzwa</string>
+    <string name="dev_reset_lang_db">Rejesha Hifadhidata ya Lugha kwa Chaguo-msingi</string>
+    <string name="dev_hint_db_name">jina la hifadhidata</string>
+    <string name="dev_heading_weights">Uzito</string>
+    <string name="dev_sls_partition">Sera ya mgawanyo wa orodha (Vitalu / Bandika FTS / Changanya)</string>
+    <string name="dev_sls_tone_promoted">Pandisha maneno yanayosubiri toni</string>
+    <string name="dev_select_behavior_mode">Tabia ya uteuzi (ngazi ya kupandisha FTS inayojirekebisha)</string>
+    <string name="dev_select_behavior_stats">Onyesha takwimu za tabia ya uteuzi</string>
+    <string name="dev_select_behavior_stats_empty">Hakuna vipindi vya kubonyeza Chagua vilivyorekodiwa bado.</string>
+    <string name="dev_show_sort_metric">Onyesha sortMetric</string>
+    <string name="dev_heading_ime_debug">IME Debug / Timing</string>
+    <string name="dev_show_edit_ops">Onyesha shughuli za kuhariri</string>
+    <string name="dev_debug_log_categories">Makundi ya kumbukumbu za utatuzi</string>
+    <string name="dev_cat_lifecycle">Lifecycle / UI</string>
+    <string name="dev_cat_undo">Undo flow</string>
+    <string name="dev_cat_pull_in">Pull-in flow</string>
+    <string name="dev_cat_ambig">Ambiguous buffer</string>
+    <string name="dev_cat_selection">Selection / cursor sync</string>
+    <string name="dev_cat_input">InputConnection ops</string>
+    <string name="dev_cat_word_db">Word database</string>
+    <string name="dev_cat_text_edit">Text editing</string>
+    <string name="dev_cat_shift">Shift state</string>
+    <string name="dev_enable_debug_logging">Washa urekodi wa utatuzi</string>
+    <string name="dev_enter_extra_blank_line">Kitufe cha ENTER kinaingiza mstari tupu wa ziada</string>
+    <string name="dev_exact_case_pull_in">Hitaji mechi kamili ya herufi kuvuta maneno</string>
+    <string name="dev_head_tracking_debug_overlay">Kiwekeo cha utatuzi wa ufuatiliaji wa kichwa</string>
+    <string name="dev_head_tracking_diag_logs">Kumbukumbu za uchunguzi za ufuatiliaji wa kichwa</string>
+    <string name="dev_head_tracking_rearm_in_feedback">Rejesha katika Eneo la Maoni</string>
+    <string name="dev_toggle_debug_logging">Badilisha urekodi wa utatuzi</string>
+    <string name="dev_show_log_path">Onyesha njia ya debug.log</string>
+    <string name="dev_clear_log">Futa debug.log</string>
+    <string name="dev_freq_add_weight">FreqAddWeight (0.00–2.00)</string>
+    <string name="dev_freq_mult_weight">FreqMultWeight (1.00–2.00)</string>
+    <string name="dev_seq_add_weight">SeqAddWeight (0.00–50.00)</string>
+    <string name="dev_seq_mult_weight">SeqMultWeight (1.00–8.00)</string>
+    <string name="dev_use_add_weight">UseAddWeight (0.00–6.00)</string>
+    <string name="dev_use_mult_weight">UseMultWeight (1.00–2.00)</string>
+    <string name="dev_recency_add_weight">RecencyAddWeight (0.00–4.00)</string>
+    <string name="dev_recency_mult_weight">RecencyMultWeight (1.00–2.00)</string>
+    <string name="dev_case_switch_margin">Matumizi mfululizo yanayohitajika kubadilisha aina ya herufi inayopendekezwa (1–8)</string>
+
+    <!-- activity_setup_direct_selection.xml -->
+    <string name="setup_ds_title">Weka Uchaguzi wa Moja kwa Moja</string>
+    <string name="setup_ds_how_it_works">Jinsi Uchaguzi wa Moja kwa Moja Unavyofanya Kazi</string>
+    <string name="setup_ds_explanation">Uchaguzi wa Moja kwa Moja ni njia rahisi zaidi ya kuingiza kwa kugusa. Bonyeza moja kwa moja kitufe chochote kukichagua.</string>
+    <string name="setup_ds_explanation2">Modi hii inafanya kazi vizuri zaidi unapoweza kuonyesha na kubonyeza skrini kwa usahihi. Kila kubonyeza kitufe kutachagua kitufe hicho mara moja.</string>
+    <string name="setup_ds_tips">Vidokezo</string>
+    <string name="setup_ds_tips_text">\u2022 Bonyeza mara moja kitufe kukichagua\n\u2022 Tumia mpangilio wa ukubwa wa kibodi kurekebisha ukubwa wa vitufe\n\u2022 Ukipata ugumu na kubonyeza kwa usahihi, fikiria kujaribu Uchaguzi wa Mwelekeo badala yake</string>
+    <string name="setup_ds_touch_debounce">Debounce ya Kugusa / Kupumzika</string>
+    <string name="setup_ds_debounce_desc">Puuza kubonyeza haraka kunakorudiwa ndani ya muda huu</string>
+
+    <!-- activity_setup_directional_selection.xml -->
+    <string name="setup_dir_title">Weka Uchaguzi wa Mwelekeo</string>
+    <string name="setup_dir_how_it_works">Jinsi Uchaguzi wa Mwelekeo Unavyofanya Kazi</string>
+    <string name="setup_dir_explanation">Uchaguzi wa Mwelekeo hutumia ishara za kupapasa kuendesha kibodi. Papasa katika mwelekeo wowote kati ya 8 kuchagua kitufe kinacholingana kwenye kitufe kinachoangaziwa.</string>
+    <string name="setup_dir_8_directions">Mwelekeo 8 wa Kupapasa</string>
+    <string name="setup_dir_arrows">↖  ↑  ↗\n←  \u2022  →\n↙  ↓  ↘</string>
+    <string name="setup_dir_swipe_desc">Papasa kutoka mahali popote kwenye skrini kuelekea mwelekeo wa kitufe unachotaka kuchagua.</string>
+    <string name="setup_dir_swipe_sensitivity">Unyeti wa Kupapasa</string>
+    <string name="setup_dir_swipe_distance_desc">Umbali wa chini unaohitajika kusajili kupapasa</string>
+    <string name="setup_dir_touch_timeout">Muda wa Kugusa</string>
+    <string name="setup_dir_touch_timeout_desc">Shikilia kugusa kwa muda huu ili kufunga kibodi</string>
+    <string name="setup_dir_swipe_debounce">Debounce ya Kupapasa / Kupumzika</string>
+    <string name="setup_dir_debounce_desc">Puuza kupapasa haraka kunakorudiwa ndani ya muda huu</string>
+
+    <!-- activity_setup_touch_screen_switch.xml -->
+    <string name="setup_tss_title">Weka Swichi ya Skrini ya Kugusa</string>
+    <string name="setup_tss_how_it_works">Jinsi Swichi ya Skrini ya Kugusa Inavyofanya Kazi</string>
+    <string name="setup_tss_explanation">Swichi ya Skrini ya Kugusa inagawa skrini katika sehemu mbili zinazofanya kazi kama pembejeo za swichi. Tumia hii na modi za Utafutaji wa Swichi Moja au Uchaguzi wa Swichi Mbili.</string>
+    <string name="setup_tss_left_label">KUSHOTO\n(Swichi 1 / Kijani)</string>
+    <string name="setup_tss_right_label">KULIA\n(Swichi 2 / Nyekundu)</string>
+    <string name="setup_tss_usage_tips">\u2022 Kwa Utafutaji wa Swichi Moja: Bonyeza popote kwenye skrini\n\u2022 Kwa Uchaguzi wa Swichi Mbili: Bonyeza upande wa kushoto kwa swichi Nyekundu, upande wa kulia kwa swichi ya Kijani</string>
+    <string name="setup_tss_touch_debounce">Debounce ya Kugusa / Kupumzika</string>
+    <string name="setup_tss_debounce_desc">Puuza kugusa haraka kunakorudiwa ndani ya muda huu</string>
+    <string name="setup_tss_note">Kumbuka: Mpangilio huu huathiri tu pembejeo ya swichi ya skrini ya kugusa. Debounce ya swichi halisi inawekwa tofauti katika mipangilio ya Utafutaji wa Swichi Moja au Uchaguzi wa Swichi Mbili.</string>
+
+    <!-- activity_setup_single_switch.xml -->
+    <string name="setup_ss_title">Weka Utafutaji wa Swichi Moja</string>
+    <string name="setup_ss_activate_switch">WASHA SWICHI YA UTAFUTAJI</string>
+    <string name="setup_ss_scanning_layout_size">Ukubwa wa mpangilio wa utafutaji</string>
+    <string name="setup_ss_layout_small">Ndogo</string>
+    <string name="setup_ss_layout_large">Kubwa</string>
+    <string name="setup_ss_scan_step_delay">Muda wa Kuchelewa kwa Hatua ya Utafutaji</string>
+    <string name="setup_ss_initial_delay">Ongeza Kuchelewa kwa Ziada kwenye Kitufe cha Kwanza</string>
+    <string name="setup_ss_beep_each_step">Piga beep kwa kila hatua ya utafutaji</string>
+    <string name="setup_ss_skip_keys">Ruka vitufe visivyo na herufi halali</string>
+    <string name="setup_ss_show_next_key">Onyesha kitufe kifuatacho kitakachotafutwa kitufe kitakaporukwa</string>
+    <string name="setup_ss_auto_repeat_mode">Modi ya Kurudia Kiotomatiki</string>
+    <string name="setup_ss_select_triggers_scan">Kuchagua kitufe kunasababisha utafutaji wa orodha ya uchaguzi</string>
+    <string name="setup_ss_repeat_count">Idadi ya mara za kurudia utafutaji bila uchaguzi</string>
+    <string name="setup_ss_physical_debounce">Debounce ya Swichi Halisi</string>
+    <string name="setup_ss_debounce_desc">Puuza kubonyeza haraka kunakorudiwa ndani ya muda huu</string>
+
+    <!-- activity_setup_two_switch.xml -->
+    <string name="setup_ts_title">Weka Uchaguzi wa Swichi Mbili</string>
+    <string name="setup_ts_activate_red">Washa Swichi Nyekundu</string>
+    <string name="setup_ts_activate_green">Washa Swichi ya Kijani</string>
+    <string name="setup_ts_highlight_timeout">Muda wa kuisha wa kuangazia kibodi</string>
+    <string name="setup_ts_show_color_band">Onyesha bendi ya rangi chini ya kitufe</string>
+    <string name="setup_ts_auto_repeat_key">Kurudia Kiotomatiki Uwashaji wa Vitufe</string>
+    <string name="setup_ts_auto_repeat_switch">Kurudia Kiotomatiki Uwashaji wa Swichi</string>
+    <string name="setup_ts_beep_activation">Piga beep swichi inapowashwa</string>
+
+    <!-- activity_setup_head_tracking.xml -->
+    <string name="setup_ht_vertical_sensitivity">Unyeti wa Wima (1.00 – 2.00)</string>
+    <string name="setup_ht_vertical_desc">Inalipa upeo wa asili wa mwendo wa kichwa. Thamani za juu zinafanya mwendo wa juu/chini kuwa rahisi.</string>
+    <string name="setup_ht_response_curve">Mkunjo wa Majibu (0.50 – 1.50)</string>
+    <string name="setup_ht_response_desc">Thamani chini ya 1.0 zinafanya mwendo mdogo ujibu zaidi. Thamani juu ya 1.0 zinahitaji mwendo zaidi karibu na kituo.</string>
+    <string name="setup_ht_section_zone_thresholds">Vizingiti vya Eneo</string>
+    <string name="setup_ht_section_tuning_feedback">Urekebishaji na Maoni</string>
+    <string name="setup_ht_dead_zone">Eneo la Kupumzika (0.10 - 0.50)</string>
+    <string name="setup_ht_active_zone">Eneo Amilifu (Eneo la Kupumzika &lt; Eneo Amilifu &lt; Eneo la Kutoka)</string>
+    <string name="setup_ht_exit_zone">Exit Zone (Active Zone &lt; Exit Zone &lt; 1.0)</string>
+    <string name="setup_ht_key_activation">Kizingiti cha Uwashaji wa Kitufe (0% – 100%)</string>
+    <string name="setup_ht_key_activation_desc">Umbali wa kichwa chako kurudi katikati ili kuwasha kitufe. 0% => Washa mara tu unapoanza kurudi; 100% => Washa ukirudi mbali ambapo kitufe si kijani tena.</string>
+    <string name="setup_ht_key_activation_min">0%</string>
+    <string name="setup_ht_aim_tolerance">Uvumilivu wa Lengo (0% – 100%)</string>
+    <string name="setup_ht_aim_tolerance_desc">Ni kiasi gani kishale kinaweza kupita ukingo wa asili wa kitufe kabla ya ishara ya Sahihisha kuhamisha mwangaza kwa kitufe kifuatacho. 0% => Sahihisha huwashwa hasa kwenye ukingo (nyeti zaidi); 100% => kishale lazima kifikie katikati ya kitufe jirani (nyeti kidogo).</string>
+    <string name="setup_ht_aim_tolerance_min">0%</string>
+    <string name="setup_ht_exit_delay">Kuchelewa kwa Kutoka/Kusitisha Kibodi (2 – 5 sek)</string>
+    <string name="setup_ht_exit_delay_desc">Muda kishale kinapaswa kukaa katika eneo la kutoka kabla ya kusababisha kutoka au kusitisha.</string>
+    <string name="setup_ht_exit_delay_min">2s</string>
+
+    <string name="setup_ht_restart_timer">Muda wa Kuanza Tena (0.5 – 3 sek)</string>
+    <string name="setup_ht_restart_timer_desc">Baada ya Kusitisha au Kutoka, uwashaji wa vitufe umezimwa kwa muda kwa kipindi hiki wakati wa kuingia tena kwenye kibodi.</string>
+    <string name="setup_ht_restart_timer_min">0.5s</string>
+    <string name="info_prompt_ht_restart_timer">Baada ya Kusitisha au Kutoka kwenye kibodi, huu ndio muda ambao uwashaji wa vitufe umezimwa kwa muda unapoingia tena. Kuchelewa huku huzuia uwashaji usiokusudiwa kutokana na mtetemo wa kishale wakati wa kuingia tena. Wakati kipima saa kinahesabu chini, mraba wa bluu wa katikati unamulika kama ukumbusho wa kuona kurudisha kishale chako katikati — hiyo ndiyo nafasi bora ya kuanza kuchagua kitufe chako kifuatacho.</string>
+    <!-- activity_setup_joystick.xml -->
+    <string name="setup_joy_title">Weka Kijiti cha Kudhibiti</string>
+    <string name="setup_joy_dead_zone">Eneo la Kupumzika (0.10 – 0.80)</string>
+    <string name="setup_joy_active_zone">Eneo Amilifu (Eneo la Kupumzika &lt; Eneo Amilifu &lt; 1.00)</string>
+
+    <string name="setup_mj_title">Weka Kijiti cha Kipanya</string>
+    <string name="setup_mj_dead_zone">Eneo la Kupumzika (0.05 – 0.80)</string>
+    <string name="setup_mj_active_zone">Eneo Amilifu (Eneo la Kupumzika &lt; Eneo Amilifu &lt; 0.90)</string>
+    <string name="setup_mj_corner_bias">Uzito wa Kona (0.50 – 2.00)</string>
+    <string name="setup_mj_sensitivity">Unyeti wa Kipanya (20 – 300 dp)</string>
+    <string name="reset_to_defaults">Rejesha Maadili Chaguomsingi</string>
+    <!-- activity_backup_restore.xml -->
+    <string name="backup_heading">Hifadhi Rudufu &amp; Rejesha</string>
+    <string name="backup_intro">Chagua folda ya kuhifadhi faili zako za hifadhi rudufu. Tumia Hifadhi Rudufu kuhifadhi data yako, au Rejesha kuipakia tena baadaye.</string>
+    <string name="backup_choose_folder">Chagua Folda ya Hifadhi Rudufu</string>
+    <string name="backup_last_run">Hifadhi rudufu ya mwisho: hakuna</string>
+    <string name="backup_create_now">Unda Hifadhi Rudufu Sasa</string>
+    <string name="backup_restore_now">Rejesha kutoka Hifadhi Rudufu</string>
+
+    <!-- activity_vocabulary_management.xml -->
+    <string name="vocab_mgmt_title">Usimamizi wa Msamiati</string>
+    <string name="vocab_mgmt_accent_heading">Vidokezo vya Herufi-Inayofuata</string>
+    <string name="vocab_mgmt_accent_enable">Washa Utabiri wa Herufi-Inayofuata wenye Alama</string>
+    <string name="vocab_mgmt_accent_total">Jumla ya maneno yanayotumika yanayoonyeshwa na Utabiri wenye Alama: 0</string>
+    <string name="vocab_mgmt_accent_use_count">ZIMA Vidokezo vyenye Alama kwa Maneno ya Msamiati Yaliyoandikwa Zaidi ya Mara __</string>
+    <string name="vocab_mgmt_accent_use_count_jt">ZIMA Vidokezo vyenye Alama kwa Maneno ya JustType Yaliyoandikwa Zaidi ya Mara __</string>
+    <string name="vocab_mgmt_main_modules">Moduli Kuu za Msamiati</string>
+    <string name="vocab_mgmt_col_module_name">Jina la Moduli</string>
+    <string name="vocab_mgmt_col_active_word_count">Idadi ya\nManeno\nYanayotumika</string>
+    <string name="vocab_mgmt_col_enable_module">Washa\nModuli</string>
+    <string name="vocab_mgmt_col_show_accented">Onyesha\nUtabiri\nwenye Alama</string>
+    <string name="vocab_mgmt_col_accented_word_count">Idadi ya\nManeno yenye\nAlama</string>
+    <string name="vocab_mgmt_justtype_db_words">Maneno ya Hifadhidata ya JustType</string>
+    <string name="vocab_mgmt_custom_words">Maneno ya Kibinafsi</string>
+    <string name="vocab_mgmt_abbrev_phrases">Vishazi Vilivyofupishwa</string>
+    <string name="vocab_mgmt_section_select_active">Chagua Msamiati Unaotumika</string>
+    <string name="vocab_mgmt_section_manage_imported">Simamia Maneno ya Moduli za Msamiati Yaliyoingizwa</string>
+    <string name="vocab_mgmt_filter_heading">Simamia Maneno ya Hifadhidata ya JustType</string>
+    <string name="vocab_mgmt_enable_freq_filter">Washa Uchujaji wa Masafa</string>
+    <string name="vocab_mgmt_min_freq_include">Masafa ya Chini kwa Maneno Yanayoruhusiwa katika Orodha ya Uchaguzi (Mwisho wa Orodha)</string>
+    <string name="vocab_mgmt_display_excluded">Onyesha maneno yaliyotengwa mwishoni mwa Orodha</string>
+    <string name="vocab_mgmt_min_freq_accent">Masafa ya Chini kuonyesha Vidokezo vyenye Alama kwa Maneno ya JustType</string>
+    <string name="vocab_mgmt_max_freq_accent">Masafa ya Juu kuonyesha Vidokezo vyenye Alama kwa Maneno ya JustType</string>
+    <string name="vocab_mgmt_select_active">Chagua Msamiati Unaotumika</string>
+    <string name="vocab_mgmt_manage_vocabs">Simamia Msamiati (Ingiza / Hamisha / Unganisha / Futa)</string>
+
+    <!-- activity_manage_vocabularies.xml -->
+    <string name="manage_vocab_title">Ingiza / Hamisha / Unganisha / Futa Msamiati</string>
+    <string name="manage_vocab_col_export">Hamisha\nMsamiati</string>
+    <string name="manage_vocab_choose_file">Chagua Faili ya Kuingiza</string>
+    <string name="manage_vocab_no_slots">Unganisha au Futa msamiati ili kuingiza Faili mpya ya Msamiati.</string>
+    <string name="manage_vocab_import_selected">Ingiza Faili Iliyochaguliwa</string>
+    <string name="manage_vocab_merge_delete_heading">Chagua Msamiati wa Kuunganisha, Kufuta au Kuhamisha</string>
+    <string name="manage_vocab_col_name">Jina la\nMsamiati</string>
+    <string name="manage_vocab_col_date">Tarehe\nIliyoongezwa</string>
+    <string name="manage_vocab_col_word_count">Idadi ya\nManeno</string>
+    <string name="manage_vocab_col_merge_from">Unganisha\nKutoka</string>
+    <string name="manage_vocab_col_merge_into">Unganisha\nKwenye</string>
+    <string name="manage_vocab_col_delete">Futa\nMsamiati</string>
+    <string name="manage_vocab_merge">Unganisha Msamiati Uliochaguliwa</string>
+    <string name="manage_vocab_delete">Futa Msamiati Uliochaguliwa</string>
+
+    <!-- activity_vocabulary_import.xml -->
+    <string name="vocab_import_title">Ingiza Msamiati</string>
+    <string name="vocab_import_choose_file">Chagua faili</string>
+    <string name="vocab_import_modules_heading">Moduli za Msamiati</string>
+
+    <!-- activity_select_active_vocabularies.xml -->
+    <string name="select_vocab_title">Chagua Msamiati Unaotumika</string>
+    <string name="select_vocab_promote_imported">Pandisha maneno kutoka msamiati ulioingizwa unaotumika</string>
+    <string name="select_vocab_col_module_name">Jina la Moduli\nya Msamiati</string>
+    <string name="select_vocab_col_active_count">Idadi ya\nManeno\nYanayotumika</string>
+    <string name="select_vocab_col_date">Tarehe\nIliyoongezwa</string>
+    <string name="select_vocab_col_enable">Washa\nModuli</string>
+    <string name="select_vocab_col_show_accented">Onyesha\nUtabiri\nwenye Alama</string>
+    <string name="select_vocab_col_accented_count">Idadi ya\nManeno yenye\nAlama</string>
+    <string name="select_vocab_export_heading">Hamisha Matumizi kwa Msamiati Uliochaguliwa</string>
+    <string name="select_vocab_export_desc">Hamisha Maneno Yanayotumika ambayo yameandikwa:</string>
+    <string name="select_vocab_export_never">Kamwe</string>
+    <string name="select_vocab_export_once">Angalau Mara Moja</string>
+    <string name="select_vocab_export_at_least">Angalau Mara __</string>
+    <string name="select_vocab_export_all">Maneno Yote</string>
+    <string name="select_vocab_export_button">Hamisha Data ya Matumizi kwa Maneno Yanayotumika katika Msamiati Uliochaguliwa</string>
+
+    <!-- activity_export_vocab_usage.xml -->
+    <string name="export_vocab_title">Hamisha Matumizi ya Msamiati</string>
+    <string name="export_vocab_intro">Chagua folda ya kuhifadhi faili ya kuhamisha.</string>
+    <string name="export_vocab_choose_folder">Chagua Folda ya Kuhamisha</string>
+    <string name="export_vocab_file_name_label">Jina la faili ya kuhamisha</string>
+    <string name="export_vocab_hint_file_name">jina la faili ya kuhamisha</string>
+    <string name="export_vocab_export_now">Hamisha Data ya Matumizi</string>
+
+    <!-- include_phrase_overlay.xml -->
+    <string name="phrase_overlay_title">Ongeza Kishazi Kipya</string>
+    <string name="phrase_overlay_prompt">Andika kishazi, kisha bonyeza TAYARI.</string>
+    <string name="phrase_overlay_abbrev_label">Ufupisho (Uandishi wa Vitufe Viwili):</string>
+
+    <!-- activity_phrase_overlay.xml -->
+    <string name="phrase_overlay_instructions">Tumia kibodi kuingiza kishazi na ufupisho.</string>
+    <string name="phrase_overlay_phrase_label">Kishazi (bonyeza \"TAYARI NA KISHAZI\" katika mpangilio wa Kitendo ukimaliza):</string>
+    <string name="phrase_overlay_abbrev_full_label">Ufupisho (bonyeza \"TAYARI\" katika mpangilio wa Uandishi wa Vitufe Viwili ukimaliza - acha ufupisho tupu ili Kughairi):</string>
+
+    <!-- include_scan_layout.xml -->
+    <string name="scan_center_label">Katikati</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 2: Toast / programmatic string resources               -->
+    <!-- ============================================================ -->
+
+    <!-- BackupRestoreActivity -->
+    <string name="toast_choose_backup_folder">Chagua folda ya hifadhi rudufu kwanza.</string>
+    <string name="toast_backup_completed">Hifadhi rudufu imekamilika.</string>
+    <string name="toast_backup_failed">Hifadhi rudufu imeshindikana.</string>
+    <string name="toast_restore_completed">Kurejesha kumekamilika.</string>
+    <string name="toast_restore_failed">Kurejesha kumeshindikana.</string>
+    <string name="backup_last_run_format">Hifadhi rudufu ya mwisho: %s</string>
+    <string name="backup_last_run_none">Hifadhi rudufu ya mwisho: hakuna</string>
+    <string name="backup_status_no_backup">Hakuna hifadhi rudufu iliyopatikana katika folda iliyochaguliwa.</string>
+    <string name="backup_status_incompatible">Muundo wa hifadhi rudufu hauendani na toleo hili.</string>
+    <string name="dialog_restore_title">Rejesha hifadhi rudufu?</string>
+    <string name="dialog_restore_message">Hii itaandika juu ya data ya sasa. Kuanzisha upya kunaweza kuhitajika kupakia data tena.</string>
+    <string name="dialog_restore_button">Rejesha</string>
+    <string name="dialog_restore_previous_title">Rejesha data ya awali?</string>
+    <string name="dialog_restore_previous_message">Hifadhi rudufu inayoendana imepatikana. Rejesha sasa?</string>
+    <string name="dialog_later_button">Baadaye</string>
+
+    <!-- ExportVocabUsageActivity -->
+    <string name="toast_choose_export_folder">Chagua folda ya kuhamisha kwanza.</string>
+    <string name="toast_export_completed">Kuhamisha kumekamilika.</string>
+    <string name="toast_export_failed">Kuhamisha kumeshindikana.</string>
+
+    <!-- ManageVocabulariesActivity -->
+    <string name="toast_choose_file_first">Chagua faili kwanza.</string>
+    <string name="toast_enter_vocab_name">Ingiza jina la msamiati.</string>
+    <string name="toast_no_available_slot">Hakuna nafasi ya kuingiza.</string>
+    <string name="toast_imported_vocab">Imeingizwa \"%1$s\" (nafasi %2$d).</string>
+    <string name="toast_merge_target_conflict">Lengo la kuunganisha haliwezi kuwa katika Unganisha Kutoka.</string>
+    <string name="toast_merged_vocabs">Msamiati %d umeunganishwa.</string>
+    <string name="toast_deleted_vocabs">Msamiati %d umefutwa.</string>
+    <string name="dialog_rename_merge_target">Badilisha Jina la Lengo la Kuunganisha</string>
+    <string name="dialog_rename_merge_message">Hariri jina la msamiati wa Unganisha Kwenye:</string>
+    <string name="dialog_confirm_delete_title">Thibitisha kufuta</string>
+    <string name="dialog_confirm_delete_message">Futa %s? Hii haiwezi kutenduliwa.</string>
+    <string name="dialog_confirm_delete_single">msamiati 1</string>
+    <string name="dialog_confirm_delete_plural">msamiati %d</string>
+    <string name="dialog_delete_button">Futa</string>
+    <string name="label_past_vocabularies">(Msamiati wa Awali)</string>
+    <string name="label_not_applicable">H/T</string>
+    <string name="label_em_dash">\u2014</string>
+    <string name="label_unknown">Haijulikani</string>
+
+    <!-- VocabularyImportActivity -->
+    <string name="toast_selected_vocab_not_found">Msamiati uliochaguliwa haujapatikana.</string>
+    <string name="toast_no_slot_to_replace">Hakuna nafasi ya kubadilisha.</string>
+    <string name="toast_no_merge_target">Hakuna lengo la kuunganisha.</string>
+    <string name="toast_removed_words">Maneno %d yameondolewa.</string>
+    <string name="toast_could_not_write_word_list">Haiwezekani kuandika orodha ya maneno: chanzo si hati.</string>
+    <string name="toast_could_not_locate_parent">Haiwezekani kupata folda kuu ya orodha ya maneno.</string>
+    <string name="toast_unable_create_word_list">Haiwezekani kuunda faili ya orodha ya maneno.</string>
+    <string name="toast_failed_writing_word_list">Kuandika orodha ya maneno kumeshindikana: %s</string>
+    <string name="label_shared_text">Maandishi yaliyoshirikiwa</string>
+    <string name="label_shared_vocabulary">Msamiati Ulioshirikiwa</string>
+    <string name="dialog_all_slots_used">Nafasi zote za Msamiati zimetumika</string>
+    <string name="dialog_replace_button">Badilisha</string>
+    <string name="dialog_replace_vocab_title">Badilisha Msamiati %d</string>
+    <string name="dialog_replace_vocab_message">Unataka kufuta \"%s\" au kuiunganisha na msamiati mwingine?</string>
+    <string name="dialog_merge_button">Unganisha</string>
+    <string name="dialog_select_merge_target">Chagua lengo la kuunganisha</string>
+
+    <!-- SelectActiveVocabulariesActivity -->
+    <string name="toast_no_vocabs_to_export">Hakuna msamiati uliochaguliwa wa kuhamisha. Angalia safuwima ya \"Hamisha Msamiati\" katika safu moja au zaidi.</string>
+    <string name="format_at_least_times">Angalau Mara %s</string>
+    <string name="label_disabled">IMEZIMWA</string>
+    <string name="export_button_with_accent">Hamisha Data ya Matumizi kwa Maneno Yanayotumika katika Msamiati Uliochaguliwa (vichujio vya alama vinatumika)</string>
+    <string name="dialog_continue_export_title">Endelea kuhamisha?</string>
+    <string name="dialog_continue_export_message">Uhamisho huu utajumuisha takriban maneno %d. Unaweza kurudi na kurekebisha uchaguzi wa safuwima ya Hamisha au kichujio cha Idadi ya Matumizi ili kuhamisha maneno machache. Bado unataka kuendelea?</string>
+    <string name="dialog_continue_button">Endelea</string>
+
+    <!-- SettingsActivity -->
+    <string name="format_casetype_delay_disabled">Kuchelewa kwa Kuongeza Aina za Herufi Kubwa (IMEZIMWA)</string>
+    <string name="format_casetype_delay_sec">Kuchelewa kwa Kuongeza Aina za Herufi Kubwa: sekunde %.1f</string>
+
+    <!-- VocabularyManagementActivity -->
+    <string name="format_freq_off">ZIMA</string>
+    <string name="format_freq_no_minimum">HAKUNA KIWANGO CHA CHINI</string>
+    <string name="format_freq_no_maximum">HAKUNA KIWANGO CHA JUU</string>
+    <string name="format_freq_below_list_cutoff">%s (CHINI YA MWISHO WA ORODHA)</string>
+    <string name="format_accent_usecount_disabled">IMEZIMWA</string>
+    <string name="format_accent_total">Jumla ya maneno yanayotumika yanayoonyeshwa na Utabiri wenye Alama: %d</string>
+    <string name="format_accent_usecount_title">ZIMA Vidokezo vyenye Alama kwa Maneno ya Msamiati Yaliyoandikwa Zaidi ya Mara %s</string>
+    <string name="format_accent_usecount_title_jt">ZIMA Vidokezo vyenye Alama kwa Maneno ya JustType Yaliyoandikwa Zaidi ya Mara %s</string>
+    <!-- Phase 3D: cleaner title text when the use-count slider is at 0 (OFF),
+         replacing the awkward "Spelled More Than DISABLED Times" rendering. -->
+    <string name="format_accent_usecount_title_off">Vidokezo vyenye Alama vimewashwa kwa maneno yote katika Msamiati uliochaguliwa</string>
+    <string name="format_accent_usecount_title_off_jt">Vidokezo vyenye Alama vimewashwa kwa Maneno yote ya JustType</string>
+    <string name="toast_accent_range_error">Thamani ya juu lazima iwe kubwa au sawa na Thamani ya chini</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 3: JTUI button label string resources                  -->
+    <!-- ============================================================ -->
+
+    <!-- Main page button labels -->
+    <string name="jtui_btn_undo_delete">TENDUA /\nFUTA</string>
+    <string name="jtui_btn_select">CHAGUA</string>
+
+    <!-- Symbol page labels -->
+    <string name="jtui_btn_type_multiple_symbols">ANDIKA\nALAMA\nNYINGI</string>
+    <string name="jtui_btn_back_to_main">RUDI\nKUU</string>
+    <string name="jtui_btn_symbol_pg_2">ALAMA\nUK. 2</string>
+    <string name="jtui_btn_space">&lt;NAFASI&gt;</string>
+    <string name="jtui_btn_back">RUDI</string>
+    <string name="jtui_btn_symbol_pg_3">ALAMA\nUK. 3</string>
+    <string name="jtui_btn_all_symbols_mode">MODI\nALAMA\nZOTE</string>
+    <string name="jtui_btn_cancel">GHAIRI</string>
+
+    <!-- Multi-symbol page labels -->
+    <string name="jtui_btn_multi_symbols_pg_2">ALAMA\nNYINGI\nUK. 2</string>
+    <string name="jtui_btn_multi_symbols_pg_3">ALAMA\nNYINGI\nUK. 3</string>
+
+    <!-- Number page labels -->
+    <string name="jtui_btn_delete">FUTA</string>
+    <string name="jtui_btn_done">&lt;TAYARI&gt;</string>
+    <string name="jtui_btn_numbers_6_0">6 - 0\n+-./,</string>
+    <string name="jtui_btn_numbers_punct">+-./,</string>
+    <string name="jtui_btn_numbers_1_5">1 - 5\n(AU\n&lt;TAYARI&gt;)</string>
+    <string name="jtui_btn_cancel_paren">(GHAIRI)</string>
+    <string name="jtui_btn_shift">SHIFT</string>
+
+    <!-- Function page labels -->
+    <string name="jtui_btn_delete_word">FUTA\nNENO</string>
+    <string name="jtui_btn_done_with_phrase">TAYARI NA\nKISHAZI</string>
+    <string name="jtui_btn_caps_lock_on_off_spaced">HERUFI\nKUBWA\nWASHA / ZIMA</string>
+    <string name="jtui_btn_enter">ENTER</string>
+    <string name="jtui_btn_function_pg_1">KITENDO\nUK. 1</string>
+    <string name="jtui_btn_cancel_phrase">GHAIRI\nKISHAZI</string>
+    <string name="jtui_btn_caps_lock_on_off">HERUFI\nKUBWA\nWASHA/ZIMA</string>
+    <string name="jtui_btn_phrase_entry_functions">VITENDO\nVYA\nKISHAZI</string>
+    <string name="jtui_btn_speech_on_off">SAUTI\nWASHA/ZIMA</string>
+    <string name="jtui_btn_speak_sentence">SOMA\nSENTENSI</string>
+    <string name="jtui_btn_function_pg_2">KITENDO\nUK. 2</string>
+    <string name="jtui_btn_speak_last_selection">SOMA\n(MWISHO)\nUCHAGUZI</string>
+    <string name="jtui_btn_page_up">UKURASA\nJUU</string>
+    <string name="jtui_btn_delete_char">FUTA\nHERUFI</string>
+    <string name="jtui_btn_page_down">UKURASA\nCHINI</string>
+    <string name="jtui_btn_speak_next_sentence">SOMA\nSENTENSI\nIFUATAYO</string>
+
+    <!-- Navigation page labels -->
+    <string name="jtui_btn_nav_back">&lt;\nRUDI</string>
+    <string name="jtui_btn_add_new_word">ONGEZA\nNENO</string>
+    <string name="jtui_btn_add_new_phrase">ONGEZA\nKISHAZI</string>
+    <string name="jtui_btn_settings">MIPAN-\nGILIO</string>
+    <string name="jtui_btn_edit_mode">MODI YA\nKUHARIRI</string>
+    <string name="jtui_btn_menu">|||\nMENYU</string>
+    <string name="jtui_btn_123_mode">123\nMODI</string>
+
+    <!-- Edit mode bookmark labels -->
+    <string name="jtui_btn_jump_to_mark_a">RUKA\nALAMA A</string>
+    <string name="jtui_btn_set_mark_a">WEKA\nALAMA A</string>
+    <string name="jtui_btn_set_mark_b">WEKA\nALAMA B</string>
+    <string name="jtui_btn_jump_to_mark_b">RUKA\nALAMA B</string>
+    <string name="jtui_btn_back_to_edit">RUDI\nKUHARIRI</string>
+
+    <!-- renderKeyLabels dynamic labels -->
+    <string name="jtui_label_bookmark_mode">MODI YA\nALAMA\n\u27F3</string>
+    <string name="jtui_label_speech">SAUTI</string>
+    <string name="jtui_label_caps_lock">HERUFI\nKUBWA</string>
+    <string name="jtui_label_on">WASHA</string>
+    <string name="jtui_label_off">ZIMA</string>
+    <string name="jtui_label_on_active">[WASHA]</string>
+    <string name="jtui_label_off_active">[ZIMA]</string>
+
+    <!-- editModeArrowLabel cursor unit labels -->
+    <string name="jtui_unit_line">MSTARI</string>
+    <string name="jtui_unit_char">HERUFI</string>
+    <string name="jtui_unit_sentence">SENTENSI</string>
+    <string name="jtui_unit_word">NENO</string>
+    <string name="jtui_unit_page">UKURASA</string>
+    <string name="jtui_unit_para">AYA</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 4: KeyboardSettingsController string resources          -->
+    <!-- ============================================================ -->
+
+    <!-- SliderStepSize enum labels -->
+    <string name="settings_ctrl_step_one_notch">kiwango 1</string>
+    <string name="settings_ctrl_step_five_percent">5%</string>
+    <string name="settings_ctrl_step_ten_percent">10%</string>
+
+    <!-- Page nav key action labels -->
+    <string name="settings_ctrl_revert">REJESHA</string>
+    <string name="settings_ctrl_revert_to">REJESHA\nKWA\n%s</string>
+    <string name="settings_ctrl_apply">TUMIA</string>
+    <string name="settings_ctrl_confirm_seconds">THIBI-\nTISHA\n%ds</string>
+    <string name="settings_ctrl_confirm_change_seconds">THIBI-\nTISHA\n%ds</string>
+    <string name="settings_ctrl_turn_off">ZIMA</string>
+    <string name="settings_ctrl_turn_on">WASHA</string>
+    <string name="settings_ctrl_adjust">REKEBISHA</string>
+    <string name="settings_ctrl_next">IFUATAYO</string>
+    <string name="settings_ctrl_open">FUNGUA</string>
+    <string name="settings_ctrl_up">↑ JUU</string>
+    <string name="settings_ctrl_left">← SHOTO</string>
+    <string name="settings_ctrl_right">KULIA →</string>
+    <string name="settings_ctrl_down">↓ CHINI</string>
+    <string name="settings_ctrl_back">RUDI</string>
+
+    <!-- Slider page key labels -->
+    <string name="settings_ctrl_dec">← PUNG</string>
+    <string name="settings_ctrl_inc">ONGZ →</string>
+    <string name="settings_ctrl_apply_and_exit">TUMIA &amp;\nTOKA</string>
+    <string name="settings_ctrl_test">JARIBIO</string>
+    <string name="settings_ctrl_test_time">JARIBIO\nMUDA:\n%d sek</string>
+    <string name="settings_ctrl_step_label">HATUA:\n%s</string>
+
+    <!-- Speech/status strings -->
+    <string name="settings_ctrl_applied">Imetumika</string>
+    <string name="settings_ctrl_reverted">Imerejeshwa</string>
+    <string name="settings_ctrl_test_complete">Jaribio limekamilika</string>
+    <string name="settings_ctrl_auto_reverted">Imerejeshwa kiotomatiki</string>
+    <string name="settings_ctrl_change_confirmed">Mabadiliko yamethibitishwa</string>
+    <string name="settings_ctrl_testing_for_seconds">Inajaribu kwa sekunde %d</string>
+    <string name="settings_ctrl_step_speech">Hatua: %s</string>
+    <string name="settings_ctrl_seconds_speech">sekunde %d</string>
+
+    <!-- Key capture (switch assignment) -->
+    <string name="sr_key_capture_prompt">Bonyeza swichi sasa…</string>
+    <string name="sr_key_capture_assigned">Imewekwa: %s</string>
+    <string name="sr_key_capture_not_assigned">Haijawekwa</string>
+    <string name="sr_key_capture_assign">TEUA</string>
+
+    <!-- Settings renderer (4.3) -->
+
+    <!-- Display text -->
+    <string name="settings_ctrl_on">WASHA</string>
+    <string name="settings_ctrl_off">ZIMA</string>
+    <string name="settings_ctrl_on_speech">washa</string>
+    <string name="settings_ctrl_off_speech">zima</string>
+    <string name="settings_ctrl_settings_fallback">Mipangilio</string>
+    <string name="settings_ctrl_adjust_title">Rekebisha: %s</string>
+
+    <!-- Auto-revert display -->
+    <string name="settings_ctrl_keep_change_revert">Weka mabadiliko?\nInarejeshwa %ds</string>
+
+    <!-- Test mode display -->
+    <string name="settings_ctrl_test_mode">Modi ya Jaribio</string>
+    <string name="settings_ctrl_test_mode_fallback">Jaribio</string>
+    <string name="settings_ctrl_press_any_key">Bonyeza kitufe chochote kujaribu</string>
+    <string name="settings_ctrl_test_mode_center">MODI YA JARIBIO\n%s\nBonyeza vitufe kujaribu</string>
+    <string name="settings_ctrl_testing_title">Inajaribu: %s</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 5: SettingsRegistry string resources                    -->
+    <!-- ============================================================ -->
+
+    <!-- Format strings used in SettingsRegistry formatValue lambdas -->
+    <string name="sr_format_off">ZIMA</string>
+    <string name="sr_format_ms">%d ms</string>
+    <string name="sr_format_sec">%d sek</string>
+    <string name="sr_format_sec_float">%.1f sek</string>
+    <string name="sr_format_sec_float2">%.2f sek</string>
+    <string name="sr_format_percent">%d%%</string>
+    <string name="sr_format_dp_float">%.0f dp</string>
+    <string name="sr_format_dp_int">%d dp</string>
+    <string name="sr_format_decimal2">%.2f</string>
+    <string name="sr_format_decimal1">%.1f</string>
+    <string name="sr_format_infinite">Pasipo Kikomo</string>
+
+    <!-- Page titles -->
+    <string name="sr_page_main">Mipangilio</string>
+    <string name="sr_page_input_methods">Njia za Kuingiza</string>
+    <string name="sr_page_head_tracking">Ufuatiliaji wa Kichwa</string>
+    <string name="sr_page_joystick">Kijiti cha Kudhibiti</string>
+    <string name="sr_page_mouse_joystick">Kijiti cha Kipanya</string>
+    <string name="sr_page_single_switch">Swichi Moja</string>
+    <string name="sr_page_two_switch">Swichi Mbili</string>
+    <string name="sr_page_touch_switch">Swichi ya Skrini ya Kugusa</string>
+    <string name="sr_page_direct_selection">Uchaguzi wa Moja kwa Moja</string>
+    <string name="sr_page_directional_selection">Uchaguzi wa Mwelekeo</string>
+    <string name="sr_page_vocabulary">Msamiati</string>
+    <string name="sr_page_backup_info">Hifadhi Rudufu &amp; Rejesha</string>
+    <string name="sr_page_developer">Msanidi</string>
+
+    <!-- Choice option display names -->
+    <string name="sr_opt_optimized">Bora</string>
+    <string name="sr_opt_alphabetical">Alfabeti</string>
+    <string name="sr_opt_none">Hakuna</string>
+    <string name="sr_opt_head_tracking">Ufuatiliaji wa Kichwa</string>
+    <string name="sr_opt_joystick">Kijiti cha Kudhibiti</string>
+    <string name="sr_opt_mouse_joystick">Kijiti cha Kipanya</string>
+    <string name="sr_opt_single_switch">Swichi Moja</string>
+    <string name="sr_opt_two_switch">Swichi Mbili</string>
+    <string name="sr_opt_large">Kubwa</string>
+    <string name="sr_opt_small">Ndogo</string>
+    <string name="sr_opt_single">Moja</string>
+    <string name="sr_opt_two">Mbili</string>
+
+    <!-- Main page: navigation links -->
+    <string name="sr_main_nav_input_methods">Njia za Kuingiza</string>
+    <string name="sr_main_nav_vocabulary">Usimamizi wa Msamiati</string>
+    <string name="sr_main_nav_backup">Hifadhi Rudufu &amp; Rejesha</string>
+    <string name="sr_main_nav_backup_desc">Tumia mipangilio ya skrini ya kugusa kwa shughuli za faili</string>
+    <string name="sr_main_nav_developer">Mipangilio ya Msanidi</string>
+
+    <!-- Main page: Keyboard section -->
+    <string name="sr_main_sec_keyboard">Kibodi</string>
+    <string name="sr_main_letter_arrangement">Mpangilio wa Herufi</string>
+    <string name="sr_main_keyboard_size">Ukubwa wa Kibodi</string>
+    <string name="sr_main_extra_blank_line">Mstari Tupu wa Ziada kwa Enter</string>
+
+    <!-- Main page: Speech Output section -->
+    <string name="sr_main_sec_speech">Matokeo ya Sauti</string>
+    <string name="sr_main_speak_output_word">Sema Neno la Matokeo</string>
+    <string name="sr_main_speak_output_phrase">Sema Kishazi cha Matokeo</string>
+    <string name="sr_main_speak_output_sentence">Sema Sentensi ya Matokeo</string>
+    <string name="sr_main_speak_punct_names">Sema Majina ya Alama za Uandishi</string>
+    <string name="sr_main_speaking_indicator_icon">Ikoni ya Kiashiria cha Kusema</string>
+    <string name="sr_opt_indicator_outlined">Mchoro wa mstari</string>
+    <string name="sr_opt_indicator_wave">Wimbi la sauti</string>
+    <string name="sr_main_phrase_speak_delay">Kuchelewa kwa Kusema Kishazi</string>
+    <string name="sr_main_phrase_speak_delay_desc">Kuchelewa kwa juu kabla ya kusema maandishi yaliyochaguliwa</string>
+
+    <!-- Main page: JustType Display section -->
+    <string name="sr_main_sec_display">Onyesho la JustType</string>
+    <string name="sr_main_next_letter_hints">Vidokezo vya Herufi-Inayofuata</string>
+    <string name="sr_main_show_key_history">Onyesha Historia ya Vitufe</string>
+    <string name="sr_main_key_history_height">Urefu wa Historia ya Vitufe</string>
+    <string name="sr_main_shrink_key_history">Punguza Historia ya Vitufe Kutoshea</string>
+
+    <!-- Main page: Selection List section -->
+    <string name="sr_main_sec_selection">Orodha ya Uchaguzi</string>
+    <string name="sr_main_auto_restore_selection">Rejesha Uchaguzi Kiotomatiki kwenye Kishale</string>
+    <string name="sr_main_exact_case_pull_in">Mechi Kamili ya Herufi kwa Kuvuta</string>
+    <string name="sr_main_show_case_type_variants">Ongeza Kiotomatiki Aina za Maneno yenye Herufi Kubwa kwenye Orodha ya Uchaguzi</string>
+    <string name="sr_main_deferred_case_expansion">Subiri Hadi Neno Lichaguliwe Kuongeza Aina za Herufi Kubwa</string>
+    <string name="sr_main_case_expansion_delay">Kuchelewa kwa Kuongeza Aina za Herufi Kubwa</string>
+    <string name="sr_main_show_abbrev_in_selection">Onyesha Ufupisho katika Uchaguzi</string>
+    <string name="sr_main_show_phrase_in_selection">Onyesha Kishazi katika Uchaguzi</string>
+
+    <!-- Input Methods page -->
+    <string name="sr_input_methods_sec_primary">Njia ya Kuingiza Inayoendana</string>
+    <string name="sr_input_methods_primary_method">Njia ya Kuingiza Inayoendana</string>
+    <string name="sr_input_methods_direct_selection">Uchaguzi wa Moja kwa Moja (Kugusa)</string>
+    <string name="sr_input_methods_directional_selection">Uchaguzi wa Mwelekeo</string>
+    <string name="sr_input_methods_touch_screen_switch">Swichi ya Skrini ya Kugusa</string>
+    <string name="sr_input_methods_sec_method_setup">Mpangilio wa Njia</string>
+    <string name="sr_input_methods_nav_head_tracking">Mipangilio ya Ufuatiliaji wa Kichwa</string>
+    <string name="sr_input_methods_nav_joystick">Mipangilio ya Kijiti cha Kudhibiti</string>
+    <string name="sr_input_methods_nav_mouse_joystick">Mipangilio ya Kijiti cha Kipanya</string>
+    <string name="sr_input_methods_nav_single_switch">Mipangilio ya Swichi Moja</string>
+    <string name="sr_input_methods_nav_two_switch">Mipangilio ya Swichi Mbili</string>
+    <string name="sr_input_methods_nav_touch_switch">Mipangilio ya Swichi ya Skrini ya Kugusa</string>
+    <string name="sr_input_methods_nav_direct_sel">Mipangilio ya Uchaguzi wa Moja kwa Moja</string>
+    <string name="sr_input_methods_nav_directional_sel">Mipangilio ya Uchaguzi wa Mwelekeo</string>
+    <string name="sr_input_methods_cannot_disable_both">Haiwezi kuzimwa — weka Njia Kuu ya Kuingiza kwanza</string>
+    <string name="sr_input_methods_sec_feedback">Maoni</string>
+    <string name="sr_input_methods_flash_key">Mulika Kitufe Kinapochaguliwa</string>
+    <string name="sr_input_methods_beep_key">Beep Kitufe Kinapochaguliwa</string>
+    <string name="sr_input_methods_speak_selected_word">Sema Neno Lililochaguliwa</string>
+    <string name="sr_input_methods_speak_selected_key">Sema Kitufe Kilichochaguliwa</string>
+    <string name="sr_input_methods_speak_punctuation">Sema Alama za Uandishi</string>
+    <string name="sr_input_methods_speak_prompts">Sema Maagizo kwa Sauti</string>
+
+    <!-- Head Tracking page -->
+    <string name="sr_head_tracking_sec_zones">Vizingiti vya Eneo</string>
+    <string name="sr_head_tracking_dead_zone">Eneo la Kupumzika</string>
+    <string name="sr_head_tracking_active_zone">Active Zone</string>
+    <string name="sr_head_tracking_exit_zone">Exit Zone</string>
+    <string name="sr_head_tracking_activation_threshold">Kizingiti cha Uwashaji</string>
+    <string name="sr_head_tracking_aim_tolerance">Uvumilivu wa Lengo</string>
+    <string name="sr_head_tracking_exit_delay">Kuchelewa kwa Kutoka</string>
+    <string name="sr_head_tracking_restart_delay">Muda wa Kuanza Tena</string>
+    <string name="sr_head_tracking_sec_tuning">Urekebishaji</string>
+    <string name="sr_head_tracking_vertical_sensitivity">Unyeti wa Wima</string>
+    <string name="sr_head_tracking_response_curve">Mkunjo wa Majibu</string>
+    <string name="sr_head_tracking_corner_bias">Upendeleo wa Kona</string>
+    <string name="sr_head_tracking_debug_overlay">Kiwekeo cha Utatuzi</string>
+
+    <string name="sr_head_tracking_diag_logs">Kumbukumbu za Uchunguzi</string>
+    <string name="sr_head_tracking_rearm_in_feedback">Rejesha katika Eneo la Maoni</string>
+    <!-- Joystick page -->
+    <string name="sr_joystick_dead_zone">Eneo la Kupumzika</string>
+    <string name="sr_joystick_active_zone">Active Zone</string>
+    <string name="sr_joystick_corner_bias">Upendeleo wa Kona</string>
+
+    <string name="sr_mouse_joystick_dead_zone">Eneo la Kupumzika</string>
+    <string name="sr_mouse_joystick_active_zone">Eneo Amilifu</string>
+    <string name="sr_mouse_joystick_corner_bias">Uzito wa Kona</string>
+    <string name="sr_mouse_joystick_sensitivity">Unyeti wa Kipanya</string>
+    <string name="sr_mouse_joystick_barrier_height">Urefu wa Kizuizi</string>
+    <!-- Navigation Mode -->
+    <string name="sr_nav_live_drag">Kuburuta Moja kwa Moja</string>
+    <string name="info_prompt_nav_live_drag">Ikiwashwa, KUBURUTA hushikilia lengo na kulisogeza papo hapo unapobonyeza vishale, na kuliachia pale linapofika. Ikizimwa, kwanza unalenga kwa kishale kisha usogezaji hutokea mara moja unapobonyeza ACHIA.</string>
+    <!-- Single Switch page -->
+    <string name="sr_single_switch_debounce">Debounce ya Swichi / Kupumzika</string>
+    <string name="sr_single_switch_debounce_desc">Puuza uwashaji wa swichi unaorudiwa haraka ndani ya muda huu (chaguo-msingi 120 ms)</string>
+    <string name="sr_single_switch_scan_step_delay">Kuchelewa kwa Hatua ya Utafutaji</string>
+    <string name="sr_single_switch_initial_delay">Ongezeko la Kuchelewa kwa Mwanzo</string>
+    <string name="sr_single_switch_scan_repeat_count">Idadi ya Kurudia Utafutaji</string>
+    <string name="sr_single_switch_skip_no_valid">Ruka Vitufe Visivyo na Chaguo Halali</string>
+    <string name="sr_single_switch_show_next_key">Onyesha Kitufe Kifuatacho</string>
+    <string name="sr_single_switch_auto_repeat_mode">Modi ya Kurudia Kiotomatiki</string>
+    <string name="sr_single_switch_auto_repeat_delay">Kuchelewa kwa Kurudia Kiotomatiki</string>
+    <string name="sr_single_switch_select_triggers_scan">Kuchagua Kitufe Kunasababisha Utafutaji</string>
+    <string name="sr_single_switch_beep_each_step">Beep kwa Kila Hatua ya Utafutaji</string>
+    <string name="sr_single_switch_scan_layout_size">Ukubwa wa Mpangilio wa Utafutaji</string>
+    <string name="sr_single_switch_highlight_timeout">Muda wa Kuisha wa Kuangazia</string>
+    <string name="sr_single_switch_assign_switch">Teua Swichi</string>
+
+    <!-- Two Switch page -->
+    <string name="sr_two_switch_assign_red">Teua Swichi Nyekundu</string>
+    <string name="sr_two_switch_assign_green">Teua Swichi ya Kijani</string>
+    <string name="sr_two_switch_auto_repeat_mode">Modi ya Kurudia Kiotomatiki</string>
+    <string name="sr_two_switch_auto_repeat_delay">Kuchelewa kwa Kurudia Kiotomatiki</string>
+    <string name="sr_two_switch_repeat_activations">Uwashaji Unaorudiwa</string>
+    <string name="sr_two_switch_repeat_activation_delay">Kuchelewa kwa Uwashaji Unaorudiwa</string>
+    <string name="sr_two_switch_beep_activation">Beep ya Uwashaji</string>
+    <string name="sr_two_switch_show_band">Onyesha Bendi ya Rangi</string>
+    <string name="sr_two_switch_stuck_timeout">Muda wa Kuisha wa Swichi Iliyokwama</string>
+
+    <!-- Touchscreen Switch page -->
+    <string name="sr_touch_switch_sec_how">Jinsi Swichi ya Skrini ya Kugusa Inavyofanya Kazi</string>
+    <string name="sr_touch_switch_info_1">Swichi ya Skrini ya Kugusa inagawa skrini katika sehemu mbili zinazofanya kazi kama pembejeo za swichi. Tumia hii na modi za Utafutaji wa Swichi Moja au Uchaguzi wa Swichi Mbili.</string>
+    <string name="sr_touch_switch_info_2">\u2022 Kwa Utafutaji wa Swichi Moja: Bonyeza popote kwenye skrini\n\u2022 Kwa Uchaguzi wa Swichi Mbili: Bonyeza upande wa kushoto kwa swichi Nyekundu, upande wa kulia kwa swichi ya Kijani</string>
+    <string name="sr_touch_switch_sec_settings">Mipangilio</string>
+    <string name="sr_touch_switch_mode">Modi ya Swichi</string>
+    <string name="sr_touch_switch_debounce">Debounce ya Kugusa / Kupumzika</string>
+    <string name="sr_touch_switch_debounce_desc">Puuza kugusa kunakorudiwa haraka ndani ya muda huu (chaguo-msingi 120 ms)</string>
+    <string name="sr_touch_switch_overlay_timeout">Muda wa Kuisha wa Kiwekeo</string>
+    <string name="sr_touch_switch_flash">Mulika Kinapochaguliwa</string>
+    <string name="sr_touch_switch_beep">Beep Kinapochaguliwa</string>
+    <string name="sr_touch_switch_button_height">Urefu wa Kitufe</string>
+    <string name="sr_touch_switch_overlay_opacity">Uwazi wa Kitufe</string>
+    <string name="sr_touch_switch_overlay_mode">Hali ya Mfuniko</string>
+    <string name="sr_touch_switch_overlay_mode_desc">Inapowashwa, skrini nzima inatumika kwa pembejeo ya swichi. Inapozimwa, eneo la kitufe peke yake ni amilifu.</string>
+    <string name="setup_tss_button_height">Urefu wa Swichi ya Skrini ya Kugusa</string>
+    <string name="setup_tss_button_height_desc">Urefu wa vitufe vya swichi kama asilimia ya urefu wa skrini</string>
+    <string name="setup_tss_overlay_opacity">Uwazi wa Kitufe</string>
+    <string name="setup_tss_overlay_opacity_desc">Uwazi wa vitufe vya swichi</string>
+    <string name="setup_tss_overlay_mode">Hali ya Mfuniko</string>
+    <string name="setup_tss_overlay_mode_desc">Inapowashwa, skrini nzima inatumika kwa pembejeo ya swichi. Inapozimwa, eneo la kitufe peke yake ni amilifu (huwashwa kiotomatiki ikiwa kibodi na vitufe vinazidi 2/3 ya urefu wa skrini).</string>
+    <string name="format_tss_button_height_percent">%d%%</string>
+
+    <!-- Direct Selection page -->
+    <string name="sr_direct_selection_sec_how">Jinsi Uchaguzi wa Moja kwa Moja Unavyofanya Kazi</string>
+    <string name="sr_direct_selection_info_1">Uchaguzi wa Moja kwa Moja ni njia rahisi zaidi ya kuingiza kwa kugusa. Bonyeza moja kwa moja kitufe chochote kukichagua.</string>
+    <string name="sr_direct_selection_info_2">Modi hii inafanya kazi vizuri zaidi unapoweza kuonyesha na kubonyeza skrini kwa usahihi. Kila kubonyeza kitufe kutachagua kitufe hicho mara moja.</string>
+    <string name="sr_direct_selection_sec_tips">Vidokezo</string>
+    <string name="sr_direct_selection_info_tips">\u2022 Bonyeza mara moja kitufe kukichagua\n\u2022 Tumia mpangilio wa ukubwa wa kibodi kurekebisha ukubwa wa vitufe\n\u2022 Ukipata ugumu na kubonyeza kwa usahihi, fikiria kujaribu Uchaguzi wa Mwelekeo badala yake</string>
+    <string name="sr_direct_selection_sec_settings">Mipangilio</string>
+    <string name="sr_direct_selection_debounce">Debounce ya Kugusa / Kupumzika</string>
+    <string name="sr_direct_selection_debounce_desc">Puuza kubonyeza haraka kunakorudiwa ndani ya muda huu (chaguo-msingi 120 ms)</string>
+
+    <!-- Directional Selection page -->
+    <string name="sr_directional_selection_sec_how">Jinsi Uchaguzi wa Mwelekeo Unavyofanya Kazi</string>
+    <string name="sr_directional_selection_info_1">Uchaguzi wa Mwelekeo hutumia ishara za kupapasa kuendesha kibodi. Papasa katika mwelekeo wowote kati ya 8 kuchagua kitufe kinacholingana kwenye kitufe kinachoangaziwa.</string>
+    <string name="sr_directional_selection_info_2">Papasa kutoka mahali popote kwenye skrini kuelekea mwelekeo wa kitufe unachotaka kuchagua.</string>
+    <string name="sr_directional_selection_sec_settings">Mipangilio</string>
+    <string name="sr_directional_selection_debounce">Debounce ya Kupapasa / Kupumzika</string>
+    <string name="sr_directional_selection_debounce_desc">Puuza kupapasa kunakorudiwa haraka ndani ya muda huu (chaguo-msingi 120 ms)</string>
+    <string name="sr_directional_selection_swipe_sensitivity">Unyeti wa Kupapasa</string>
+    <string name="sr_directional_selection_swipe_sensitivity_desc">Umbali wa chini unaohitajika kusajili kupapasa</string>
+
+    <!-- Vocabulary page -->
+    <string name="sr_vocabulary_sec_sources">Vyanzo vya Msamiati</string>
+    <string name="sr_vocabulary_include_justtype">Jumuisha Kamusi ya JustType</string>
+    <string name="sr_vocabulary_include_custom_words">Jumuisha Maneno ya Kibinafsi</string>
+    <string name="sr_vocabulary_include_phrases">Jumuisha Vishazi</string>
+    <string name="sr_vocabulary_promote_imported">Pandisha Maneno Yaliyoingizwa</string>
+    <string name="sr_vocabulary_sec_filter">Kichujio cha Masafa</string>
+    <string name="sr_vocabulary_enable_freq_filter">Washa Kichujio cha Masafa</string>
+<!-- Phase 3D: sr_vocabulary_min_freq_next_letter removed (orphan key). -->
+    <string name="sr_vocabulary_min_freq_selection">Masafa ya Chini (Uchaguzi)</string>
+    <string name="sr_vocabulary_show_excluded">Onyesha Yaliyotengwa Mwishoni</string>
+    <string name="sr_vocabulary_sec_accent">Moduli ya Alama</string>
+    <string name="sr_vocabulary_enable_accent">Washa Moduli ya Alama</string>
+    <string name="sr_vocabulary_accent_min_freq">Masafa ya Chini ya Alama</string>
+    <string name="sr_vocabulary_accent_max_freq">Masafa ya Juu ya Alama</string>
+    <string name="sr_vocabulary_accent_max_use_count">Idadi ya Juu ya Matumizi ya Alama</string>
+    <string name="sr_vocabulary_accent_max_use_jt">Matumizi ya Juu ya Alama (JT)</string>
+
+    <!-- Backup Info page -->
+    <string name="sr_backup_sec_info">Hifadhi Rudufu &amp; Rejesha</string>
+    <string name="sr_backup_sec_note">Tumia mipangilio ya skrini ya kugusa kwa shughuli za hifadhi rudufu na kurejesha</string>
+
+    <!-- Developer page -->
+    <string name="sr_developer_sec_sort">Uzito wa Kupanga</string>
+    <string name="sr_developer_freq_add_weight">Freq Add Weight</string>
+    <string name="sr_developer_freq_mult_weight">Freq Mult Weight</string>
+    <string name="sr_developer_seq_add_weight">Seq Add Weight</string>
+    <string name="sr_developer_seq_mult_weight">Seq Mult Weight</string>
+    <string name="sr_developer_use_add_weight">Use Add Weight</string>
+    <string name="sr_developer_use_mult_weight">Use Mult Weight</string>
+    <string name="sr_developer_recency_add_weight">Recency Add Weight</string>
+    <string name="sr_developer_recency_mult_weight">Recency Mult Weight</string>
+    <string name="sr_developer_sls_partition">Sera ya Mgawanyo wa Orodha</string>
+    <string name="sr_developer_sls_partition_blocks">Vitalu</string>
+    <string name="sr_developer_sls_partition_pin">Bandika FTS</string>
+    <string name="sr_developer_sls_partition_interleave">Changanya</string>
+    <string name="info_prompt_sls_partition">Jinsi orodha ya uteuzi inavyopangwa. Vitalu (chaguo-msingi): maneno yaliyoandikwa kikamilifu huja kwanza, kisha ukamilishaji. Bandika FTS: neno bora lililoandikwa kikamilifu hubaki nafasi ya 1, mengine yote hupangwa kwa kipimo. Changanya: orodha nzima hupangwa kwa kipimo. Maneno yaliyoandikwa kikamilifu huorodheshwa daima chini ya kila sera.</string>
+    <string name="sr_developer_sls_tone_promoted">Pandisha Maneno Yanayosubiri Toni</string>
+    <string name="info_prompt_sls_tone_promoted">Ikiwashwa (chaguo-msingi), maneno yenye herufi zote zimeandikwa na kibonyezo cha toni pekee kimebaki yanahakikishiwa nafasi juu ya ukamilishaji usiokamilika wa herufi. Ikizimwa yanashindana kwa kipimo kama ukamilishaji mwingine wowote. Inaathiri lugha zenye kibonyezo cha toni pekee.</string>
+    <string name="sr_developer_select_behavior">Hali ya Tabia ya Uteuzi</string>
+    <string name="sr_developer_select_behavior_observe">Angalia tu</string>
+    <string name="sr_developer_select_behavior_force_page1">Lazimisha Ukurasa 1</string>
+    <string name="sr_developer_select_behavior_force_head">Lazimisha Kichwa</string>
+    <string name="sr_developer_select_behavior_adaptive">Inayojirekebisha</string>
+    <string name="info_prompt_select_behavior">Ngazi ya kupandisha maneno yaliyoandikwa kikamilifu (FTS). Angalia tu (chaguo-msingi): rekodi mifumo ya kubonyeza Chagua pekee, hakuna mabadiliko ya tabia. Lazimisha Ukurasa 1 / Lazimisha Kichwa: unapobonyeza Chagua bila ishara ya uhakika, maneno yaliyoandikwa kikamilifu yaliyo chini ya kichwa hupandishwa hadi ukurasa wa 1 au kichwani. Inayojirekebisha: imehifadhiwa — huangalia tu hadi mfumo wa kiotomatiki utakapowasilishwa.</string>
+    <string name="sr_developer_sec_search">Vigezo vya Utafutaji</string>
+    <string name="sr_developer_beam_search_depth">Kina cha Beam Search</string>
+    <string name="sr_developer_subseq_edit_distance">Umbali wa Kuhariri wa Mfuatano</string>
+    <string name="sr_developer_max_queue_candidates">Wagombea wa Juu wa Foleni</string>
+    <string name="sr_developer_max_examined_nodes">Nodi za Juu Zilizochunguzwa</string>
+    <string name="sr_developer_ignore_max_examined">Puuza Nodi za Juu Zilizochunguzwa</string>
+    <string name="sr_developer_case_switch_margin">Kingo ya Kubadili Herufi</string>
+    <string name="sr_developer_sec_behavior">Tabia</string>
+    <string name="sr_developer_sec_debug">Utatuzi</string>
+    <string name="sr_developer_enable_debug_log">Washa Kumbukumbu ya Utatuzi</string>
+    <string name="sr_developer_show_sort_metric">Onyesha Kipimo cha Kupanga</string>
+    <string name="sr_developer_show_edit_ops">Onyesha Shughuli za Kuhariri</string>
+
+    <!-- Head tracking paused overlay -->
+    <string name="head_tracking_paused">UFUATILIAJI\nWA KICHWA\nUMESIMAMISHWA</string>
+
+    <!-- Vocabulary system module labels (SelectActiveVocabulariesActivity) -->
+    <string name="vocab_module_justtype_main">Hifadhidata Kuu ya JustType</string>
+    <string name="vocab_module_custom_words">Maneno ya Kibinafsi ya Mtumiaji</string>
+    <string name="vocab_module_phrases">Ufupisho/Vishazi</string>
+    <string name="vocab_module_past_vocabs">(Msamiati wa Awali)</string>
+
+    <!-- Vocabulary export module names -->
+    <string name="export_module_justtype">Hifadhidata ya JustType</string>
+    <string name="export_module_custom">Maneno ya Kibinafsi</string>
+    <string name="export_module_phrases">Vishazi Vilivyofupishwa</string>
+
+    <!-- Export file headers (ExportVocabUsageActivity) -->
+    <string name="export_header_usage_counts">Idadi ya Matumizi ya Msamiati wa %s:\n</string>
+    <string name="export_header_freq_class">Maneno ya Hifadhidata Kuu ya JustType katika Daraja la Masafa %d\n</string>
+    <string name="export_header_words_spelled">Maneno yaliyoandikwa mara %d\n</string>
+
+    <string name="accessible_prompt_dismiss_hint">Bonyeza UnDo kufunga ujumbe huu</string>
+    <!-- Overlay permission dialog (first-run) -->
+    <string name="overlay_permission_title">Ruhusa Inahitajika</string>
+    <string name="overlay_permission_message">JustType inahitaji ruhusa ya kuonyesha juu ya programu nyingine. Hii inawezesha njia za kuingiza za hali ya juu kama Uchaguzi wa Mwelekeo. Unaweza kutoa ruhusa hii sasa au baadaye katika mipangilio ya mfumo.</string>
+    <string name="overlay_permission_grant">Toa Ruhusa</string>
+    <string name="overlay_permission_later">Baadaye</string>
+
+    <!-- Info-icon mechanism (Phase 3B) -->
+    <string name="info_icon_content_description">Onyesha msaada kwa mpangilio huu</string>
+
+    <!-- Letter Arrangement confirmation dialog (Phase 3D) -->
+    <string name="letter_arrangement_confirm_title">Badilisha Mpangilio wa Herufi?</string>
+    <string name="letter_arrangement_confirm_message">Hii itabadilisha jinsi herufi zilivyopangwa kwenye kibodi yako, na kwa hakika itahitaji muda kuzoea. Ungependa kujaribu kwa muda?</string>
+    <string name="letter_arrangement_confirm_yes">Ndiyo, jaribu</string>
+    <string name="letter_arrangement_confirm_no">Ghairi</string>
+
+    <!-- INFO PROMPTs — JustType Settings page -->
+    <string name="info_prompt_ui_language">Inadhibiti lugha inayotumika kwa lebo zote za vitufe kwenye skrini, menyu, maandishi ya msaada, na ujumbe. Chagua Chaguo-msingi la Mfumo kufuata lugha ya kifaa chako, au chagua lugha maalum.</string>
+    <string name="info_prompt_typing_language">Huchagua ni hifadhidata ipi ya maneno inayotumika kuandika maneno na kibodi ya JustType. Kwa sasa Kiingereza pekee kinapatikana.</string>
+    <string name="info_prompt_letter_arrangement">Chagua kati ya Bora (herufi zimepangwa kwa masafa kwa uandishi wa haraka) na Alfabeti (herufi katika mpangilio wa A-Z kwa muonekano wa kawaida zaidi). Mpangilio Bora ni wa ufanisi zaidi, unahitaji mibonyezo michache, na unapendekezwa kwa watu wengi. Kubadilisha hii kunaweza kutenduliwa na kunaweza kujaribiwa kabla ya kuthibitisha.</string>
+    <string name="info_prompt_keyboard_size">Huweka urefu wa kibodi ya JustType kama asilimia ya skrini. Ongeza kwa vitufe vikubwa zaidi, rahisi kusoma; punguza kuacha nafasi zaidi kwa eneo la maandishi juu.</string>
+    <string name="info_prompt_extra_blank_line">Inapowashwa, kubonyeza Enter kunaingiza mistari miwili ya kurudi badala ya mmoja, na kuunda mstari tupu unaoonekana kati ya aya. Inafaa kwa kuandika barua pepe au hati zenye nafasi ya aya.</string>
+    <string name="info_prompt_speak_output_word">Inapowashwa, kila neno linasemwa kwa sauti mara linapokamilika — baada ya kulichagua na mara tu unapoandika kitufe cha kwanza cha neno linalofuata (au Kuchelewa kwa Kusema-Kiotomatiki kumewashwa na kuisha muda). Hii inasaidia kuthibitisha kwamba neno sahihi lilichaguliwa bila kulazimika kuangalia eneo la maandishi kila wakati.</string>
+    <string name="info_prompt_speak_output_phrase">Inapowashwa, mara kishazi kilichohifadhiwa kinapochaguliwa katika Orodha ya Uchaguzi, kinasemwa kwa sauti baada ya Kuchelewa kwa Kusema-Kiotomatiki kupita. Hii inakuruhusu kusema kishazi kilichohifadhiwa unachokumbuka bila kulazimika kuandika kitufe cha kufuata kwanza.</string>
+    <string name="info_prompt_speak_output_sentence">Inapowashwa, kila sentensi iliyokamilika inasemwa kwa sauti baada ya kukamilishwa kwa kuongeza nukta, alama ya mshangao au alama ya kuuliza. Inakuruhusu kusema kiotomatiki kila sentensi inapokamilika.</string>
+    <string name="info_prompt_speak_punct_names">Inapowashwa, alama za uandishi (nukta, koma, n.k.) zinasemwa kwa jina zinapotolewa. Inafaa kuthibitisha kwamba alama ya uandishi iliyokusudiwa iliandikwa.</string>
+    <string name="info_prompt_speaking_indicator_icon">Huchagua ikoni ndogo inayochezeshwa inayoonyeshwa kwenye kona ya juu kulia ya kibodi wakati maandishi yanasomwa kwa sauti. Ikoni huwawezesha watu walio karibu kuona kwamba JustType inazungumza.</string>
+    <string name="info_prompt_phrase_auto_output">Idadi ya sekunde ambazo JustType itasubiri baada ya neno au kishazi kilichofupishwa kuchaguliwa kabla ya kusema kiotomatiki neno au kishazi kilichochaguliwa. Weka IMEZIMWA (0) kuzima kusema kiotomatiki. Wakati Kuchelewa kwa Kusema-Kiotomatiki kumezimwa, neno au kishazi kilichochaguliwa kitasemwa tu unapoanza kuandika neno linalofuata.</string>
+    <string name="info_prompt_next_letter_hints">Unapoandika neno, JustType inagundua maneno yote yanayowezekana katika hifadhidata yanayolingana na vitufe ulivyobonyeza hadi sasa. JustType pia inaweza kuamua herufi zote zinazokuja zifuatazo katika maneno yoyote ambayo unaweza kuwa unaandika. Wakati \"Vidokezo vya Herufi-Inayofuata\" vimewashwa, JustType \"itaangazia\" kila moja ya herufi hizo kwenye kibodi kwa kuonyesha hizi \"Herufi-Zinazofuata\" kwa fonti nzito, wakati herufi nyingine zote \"zimepauka\". Kuwasha \"Vidokezo vya Herufi-Inayofuata\" kunaweza kukusaidia unapoandika maneno marefu — ikiwa umeingiza mfuatano sahihi wa vitufe hadi sasa, herufi inayofuata ya neno lako itaangaziwa. Ikiwa herufi inayofuata \"imepauka\", labda unahitaji kurudi kidogo na kurekebisha kosa la kuandika (au kuongeza neno jipya ambalo bado halijajumuishwa katika hifadhidata). Wakati herufi ZOTE kwenye kitufe \"zimepauka\", hakitafanya chochote kikibonyezwa (na ikiwa \"Beep ya Hitilafu\" imewashwa, utasikia beep fupi inayoweza kukusaidia kutambua hili).</string>
+    <string name="info_prompt_show_key_history">Inapowashwa, ukanda juu ya kibodi unaonyesha mfuatano wa vitufe ulivyobonyeza kwa neno la sasa. Inakusaidia kufuatilia maendeleo yako na kugundua makosa.</string>
+    <string name="info_prompt_key_history_height">Huweka urefu wa ukanda wa historia ya vitufe juu ya kibodi. Unaweka urefu kama kuzidisha (kutoka 0.25 hadi 1.0) wa urefu wa vitufe kwenye kibodi. Ongeza kwa ukanda mrefu zaidi unaosomeka; punguza kuhifadhi nafasi ya skrini.</string>
+    <string name="info_prompt_key_history_shrink">Inapowashwa, ukanda wa historia ya vitufe unapunguza urefu wake kiotomatiki kwa maneno marefu ili vitufe vyote vilivyobonyezwa vifae kwenye onyesho. Inapozimwa, ukanda hutumia kila wakati urefu kamili uliopangwa, na vitufe vya awali vinatoka kwa kushoto kwa maneno marefu.</string>
+    <string name="info_prompt_auto_load_word">Inapowashwa, kubonyeza neno lililopo katika eneo la maandishi kunalipakia kiotomatiki kwenye orodha ya uchaguzi ili uweze kupitia mbadala, kuongeza neno kwa kuandika herufi za ziada, au kulifupisha kwa kubonyeza kitufe cha UnDo. Inapozimwa, lazima uanze mwenyewe kuhariri maneno yaliyopo kwa kubonyeza kitufe cha Select. Wakati \"Pakia-Kiotomatiki\" imewashwa na Modi ya Kuhariri inatumika kuhamisha kishale kwenye neno, neno litapakiwa kiotomatiki unaporudi kwenye kibodi ya Kuu (kwa kubonyeza \"RUDI KUU\").</string>
+    <string name="info_prompt_case_type_variants">Inapowashwa, orodha ya uchaguzi inajumuisha Aina zozote za Herufi Kubwa za neno zinazopatikana (mfano, \"brown\" kwa rangi, na labda pia \"Brown\" kwa \"Bw. Brown\"). Inapozimwa, ni chaguo-msingi tu cha herufi za neno linaonyeshwa katika orodha, na ni lazima utumie kazi za SHIFT au HERUFI KUBWA kuunda Aina za Herufi Kubwa unapozihitaji.</string>
+    <string name="info_prompt_case_type_deferred">Inapowashwa, Aina za Herufi Kubwa za neno haziongezwi mara moja neno linapochaguliwa — zinaongezwa tu kwa neno lililochaguliwa baada ya \"Kuchelewa kwa Kuongeza Aina za Herufi Kubwa\" kupita. Hii inaweka orodha ya uchaguzi kuwa fupi (maneno machache ya kuruka), wakati bado inafanya aina nyingine zipatikane zinapohitajika.</string>
+    <string name="info_prompt_case_type_delay">Idadi ya sekunde za kusubiri kabla ya kuonyesha Aina za Herufi Kubwa za neno mara linapochaguliwa katika orodha ya uchaguzi. Kuchelewa huku kunatumika tu wakati \"Subiri Hadi Neno Lichaguliwe Kuongeza Aina za Herufi Kubwa\" imewashwa, na neno lililochaguliwa sasa lina Aina moja au zaidi za Herufi Kubwa tofauti. Kuchelewa hii inapowekwa IMEZIMWA (0), Aina za Herufi Kubwa zinazopatikana zinaonyeshwa mara moja (mara tu neno linapochaguliwa).</string>
+    <string name="info_prompt_show_abbrev_in_selection">Inapowashwa, ufupisho unaohusishwa na ingizo la kishazi (mfano, \"CMBL\" kwa \"Call me back later. \") utaonyeshwa katika orodha ya uchaguzi (pamoja na kishazi chenyewe ikiwa \"Onyesha Kishazi katika Uchaguzi\" pia kimewashwa). Inapozimwa, ufupisho wa vishazi haupatikani katika orodha ya uchaguzi.</string>
+    <string name="info_prompt_show_phrase_in_selection">Inapowashwa, vishazi vya maneno mengi vilivyoongezwa na ufupisho unaohusishwa (mfano, kishazi \"Call me back later.\" kinachoweza kufupishwa kama \"CMBL\") vinaonyeshwa katika orodha ya uchaguzi. Inapozimwa, ufupisho pekee unaonyeshwa.</string>
+
+    <!-- INFO PROMPTs — Input Methods page -->
+    <string name="info_prompt_alternative_input_method">Kuna njia nne za kuingiza zinazoendana ambazo zinaweza kutumika kuwasha vitufe, ambazo zinaweza kutumika pamoja na njia yoyote ya skrini ya kugusa inayoweza kutumika. Njia hizi zinazoendana ni pamoja na:\n(1) Ufuatiliaji wa Kichwa (sogeza kishale kulingana na mwendo wa kichwa)\n(2) Kijiti cha Kudhibiti (kinahitaji kijiti cha nje)\n(3) Utafutaji wa Swichi Moja (utafutaji wa mstari wa swichi moja wa vitufe 8)\n(4) Uchaguzi wa Swichi Mbili (mfululizo wa uwashaji tatu wa swichi yoyote kati ya mbili huchagua mara moja kimoja kati ya vitufe 8)\n(5) (Hakuna - tumia tu mojawapo ya njia za skrini ya kugusa, Uchaguzi wa Moja kwa Moja au Uchaguzi wa Mwelekeo).</string>
+    <!-- Per-method INFO PROMPTs for the Adaptive Input Methods section. -->
+    <string name="info_prompt_im_head_tracking">Njia ya kuingiza ya Ufuatiliaji wa Kichwa inahitaji kwamba programu ya \"HeadBoard\" (pia inapatikana kutoka Continuous Path Foundation) iwekwe na kusanidiwa kwenye kifaa chako (fuata tu maagizo unapoweka HeadBoard). Programu ya HeadBoard hutumia kamera ya mbele kufuatilia mwendo wa kichwa chako, na kuhamisha kishale cha kipanya kwenye skrini kulingana nayo. Kishale hiki kinaonekana wakati wowote unapotumia programu yoyote kwenye kifaa chako BADO YA KIBODI YA JUSTTYPE YENYEWE. Wakati kishale kinaingia kwenye kibodi, eneo lake hasa haionyeshwa tena. Hii ni kwa sababu vitufe vinabonyezwa tu kwa kuhamisha kichwa chako katika mwelekeo wa jumla wa kitufe unachotaka kubonyeza. Si lazima uwe sahihi sana — hamisha tu kichwa chako kutoka \"eneo la kupumzika\" (katikati ya kibodi) katika mwelekeo wa kitufe (\"mwelekeo wa dira\" wa kitufe kutoka katikati ya kibodi). Mara tu kitufe kinapogeuka kijani, hamia nyuma kuelekea katikati. Kitufe kitawashwa, na unaweza kuhamia moja kwa moja kwenye kitufe kinachofuata unachotaka kubonyeza. Ukiwasha kitufe kibaya kwa bahati mbaya, nenda tu kwenye kitufe cha \"Undo\" kuondoa mbonyezo huo.</string>
+    <string name="info_prompt_im_joystick">Njia ya kuingiza ya Kijiti cha Kudhibiti inahitaji kwamba utumie kijiti cha Bluetooth cha nje kilichowekwa na kusanidiwa kwenye kifaa chako. JustType itaonyesha kishale cha kipanya kwenye skrini kitakachosogea kulingana na jinsi unavyosogeza kijiti. Kishale hiki kinaonekana wakati wowote unapotumia programu yoyote kwenye kifaa chako BADO YA KIBODI YA JUSTTYPE YENYEWE. Wakati kishale kinaingia kwenye kibodi, eneo lake hasa haionyeshwa tena. Hii ni kwa sababu vitufe vinabonyezwa tu kwa kusogeza kijiti katika mwelekeo wa jumla wa kitufe unachotaka kubonyeza. Si lazima uwe sahihi sana — sogeza tu kutoka \"eneo la kupumzika\" (katikati ya kibodi, ambapo kijiti kiko karibu na nafasi yake ya katikati) katika mwelekeo wa kitufe (\"mwelekeo wa dira\" wa kitufe kutoka katikati ya kibodi). Mara tu kitufe kinapogeuka kijani, sogea nyuma kuelekea katikati. Kitufe kitawashwa, na unaweza kuhamia moja kwa moja kwenye kitufe kinachofuata unachotaka kubonyeza. Ukiwasha kitufe kibaya kwa bahati mbaya, nenda tu kwenye kitufe cha \"Undo\" kuondoa mbonyezo huo.</string>
+    <string name="info_prompt_im_single_switch">Utafutaji wa Swichi Moja unaonyesha kibodi kama safu moja au mbili za mlalo za vitufe ambazo zinatafutwa (zinaangaziwa) kwa mfululizo. Hii inakuruhusu kufunga swichi moja kuwasha kitufe kinachoangaziwa sasa. Kwa sababu kibodi ya JustType ina vitufe vinane tu, ni rahisi na ufanisi zaidi kutafuta tu vitufe vyote kwa mfululizo badala ya kuvipanga katika safu nyingi na kutumia aina fulani ya \"utafutaji wa safu-safuwima\" ambao unaweza kutumika kwenye kibodi yenye vitufe vingi zaidi. Swichi yenyewe inaweza kuwa swichi ya Bluetooth ya nje iliyowekwa na kusanidiwa kwenye kifaa chako. Ikiwa hutumii swichi ya nje, unaweza kuweka \"Swichi ya Skrini ya Kugusa\" ili uweze kutumia chini ya skrini ya kifaa kama swichi yako na kubonyeza tu skrini kufunga swichi.</string>
+    <string name="info_prompt_im_two_switch">Uchaguzi wa Swichi Mbili ni tofauti na njia za utafutaji: hutumia swichi mbili tofauti (swichi ya \"kijani\" na ya \"nyekundu\", ingawa rangi halisi ya swichi haina umuhimu sana), na kuchagua kitufe kunahitaji mfululizo wa mibonyezo mitatu ya swichi kwenye mojawapo ya hizo mbili. Vitufe vinaangaziwa kwa kijani au nyekundu — na unachofanya tu ni kubonyeza swichi inayolingana na rangi ya kitufe unachotaka. Mwanzoni mwa mfululizo, vitufe vinne vinaangaziwa kwa kijani na vingine vinne kwa nyekundu. Tuseme kitufe unachotaka kubonyeza kinaangaziwa kwa kijani wakati huu — basi unaanza kwa kubonyeza swichi ya kijani. Kisha vitufe vinne vilivyokuwa nyekundu vinaacha kuangaziwa, na vitufe viwili vilivyokuwa kijani sasa vinageuka nyekundu. Tena, endelea tu kubonyeza swichi inayolingana na rangi ya mwangaza kwenye kitufe chako. Baada ya mbonyezo wa pili wa swichi, kutakuwa na vitufe viwili tu vilivyobaki — kijani na nyekundu — unajua la kufanya. Mwanzoni, utaona mwangaza unaobadilika unasaidia kukuongoza. Lakini pia kuna mpangilio (\"Onyesha bendi ya rangi chini\") unaoweza kuwasha wakati wowote unapotaka. Hii itaonyesha mstatili chini ya kila kitufe na bendi tatu za rangi, ama kijani au nyekundu. Mfululizo wa kushoto kwenda kulia wa bendi za rangi unaonyesha mfululizo wa swichi unaowasha kitufe hicho. Kisha si lazima uangalie kitufe na kufikiria juu yake: ikiwa bendi inaonyesha kijani kisha nyekundu kisha kijani, bonyeza tu swichi kijani-nyekundu-kijani bila kusubiri, na kitufe kitawashwa.</string>
+    <string name="info_prompt_section_touchscreen_input_methods">DOKEZO: Wakati Uchaguzi wa Mwelekeo (au Swichi ya Skrini ya Kugusa) imewashwa hapa chini, JustType \"itakamata\" matendo yote ya kugusa yanayofanywa kwenye (au sehemu ya) skrini ya kugusa. Wakati hili linatendeka, huwezi kugusa na kuingiliana na vidhibiti vingine vya UI vinavyoweza kuonyeshwa kwenye skrini. Ikiwa wewe au mtu mwingine anahitaji kuendesha kifaa chako na hivyo anahitaji kuweza kuingiliana na skrini, njia rahisi zaidi ni kufungua kibodi ya Vitendo na kuwasha kitendo cha \"FICHA KIBODI\". Wakati kibodi imefichwa, \"ukamatwaji\" huu wa skrini unasitishwa ili mtu aweze kuingiliana kama kawaida na chochote kilichoonyeshwa kwenye skrini. Hii pia inamaanisha kwamba Uchaguzi wa Mwelekeo (au Swichi ya Skrini ya Kugusa) haitafanya kazi tena hadi kibodi ionekane tena. Njia rahisi zaidi ya kurudisha kibodi ni kwa kubonyeza tu eneo la maandishi. Ikiwa kuna haja ya kuingiza maandishi pia wakati Uchaguzi wa Mwelekeo (au Swichi ya Skrini ya Kugusa) imezimwa, kwanza ficha kibodi na kitendo cha \"FICHA KIBODI\", kisha nenda kwenye mipangilio ya mfumo na uzime Uchaguzi wa Mwelekeo (au Swichi ya Skrini ya Kugusa) katika mipangilio ya JustType. Ukimaliza, rudi tu kwenye mipangilio na uwashe Uchaguzi wa Mwelekeo (au Swichi ya Skrini ya Kugusa) tena.</string>
+    <string name="info_prompt_direct_selection">Inapowashwa, unaweza kubonyeza moja kwa moja kila kitufe kukiwasha. Hii ni njia ya kuingiza ya skrini ya kugusa chaguo-msingi. Angalau mojawapo kati ya Uchaguzi wa Moja kwa Moja au Uchaguzi wa Mwelekeo itabaki imewashwa kila wakati ili mwalimu au mtaalamu wa kliniki aweze kuingiliana moja kwa moja na kifaa.</string>
+    <string name="info_prompt_directional_selection">Wakati njia hii imewashwa, vitufe vinaweza kuwashwa kwa kupapasa popote kwenye kibodi na kuchora mwendo katika mojawapo ya mielekeo 8 inayowezekana (kuelekea mojawapo ya alama 8 za dira). Mwendo wa urefu wowote, popote kwenye kibodi, utawasha kitufe kilicho katika mwelekeo huo huo kuhusiana na katikati ya kibodi. Kwa watu wengi, hii inaweza kuwa rahisi na haraka zaidi kuliko kulazimika kubonyeza kwa usahihi kitufe maalum. Angalau mojawapo kati ya Uchaguzi wa Moja kwa Moja au Uchaguzi wa Mwelekeo itabaki imewashwa kila wakati ili mwalimu au mtaalamu wa kliniki aweze kuingiliana moja kwa moja na kifaa.</string>
+    <string name="info_prompt_im_touchscreen_switch">Inapowashwa, eneo la skrini ya kugusa chini ya skrini linafanya kazi kama swichi ya kawaida, ikitoa pembejeo ya mtindo wa swichi bila kuhitaji vifaa vya nje. Inaweza kufanya kazi katika modi ya Swichi Moja au Swichi Mbili. Inapowashwa, mipangilio mingine inadhibiti ukubwa na tabia ya Swichi ya Skrini ya Kugusa.</string>
+    <string name="info_prompt_beep_on_key_select">Inapowashwa, beep fupi moja inasikika kila wakati kitufe kinapowashwa. Inatoa uthibitishaji wa kusikia kwamba mbonyezo wa kitufe uligunduliwa.</string>
+    <string name="info_prompt_error_beep">Inapowashwa, beep mbili fupi zinasikika wakati kitufe kinawashwa ambacho si kitufe \"halali\" (kitufe hakina athari). Inatoa dalili ya kusikia kwamba kitufe kilichobonyezwa labda hakikuwa kitufe kilichokusudiwa.</string>
+    <string name="info_prompt_speak_selected_key">Inapowashwa, \"jina\" la kila kitufe (orodha ya herufi kwenye kitufe, au jina la kazi kwenye kitufe) linasemwa kwa sauti kitufe kinapowashwa. Inasaidia kutambua ni kitufe gani kilichobonyezwa wakati utambuzi wa kuona wa kitufe ni mgumu.</string>
+    <string name="info_prompt_speak_punctuation">Inapowashwa, majina ya alama za uandishi yanajumuishwa wakati wa kusema yaliyomo ya kitufe kilichochaguliwa (mfano, \"E F G H apostrofu nukta\" badala ya \"E F G H\" tu). Inatumika tu wakati \"Sema kila kitufe kilichochaguliwa\" imewashwa.</string>
+    <string name="info_prompt_speak_selected_word">Inapowashwa, kila wakati unapobonyeza kitufe cha Select, neno linalochaguliwa katika orodha ya uchaguzi linasemwa kwa sauti. Kwa kuwa mara nyingi sana neno lako lililokusudiwa litakuwa neno la kwanza katika orodha, kuwasha hii kunakuruhusu kuzingatia kibodi unapoandika kila neno, na kwa kuwa neno linasemwa kwa sauti unapomaliza kuandika na kubonyeza Select, huitaji kuangalia maandishi mara kwa mara kuthibitisha kwamba unapata neno ulilokusudia. Wakati \"Sema Kila Neno la Matokeo\" pekee imewashwa (kwenye ukurasa wa Mipangilio ya JustType), neno halitasemwa hadi uanze kuandika neno linalofuata. Hii inachelewesha wakati neno linasemwa, lakini ina faida ya kutosema neno usilolitaka kabisa kusema, lakini lazima \"uruke juu yake\" kuchagua neno lililo chini katika Orodha ya Uchaguzi.</string>
+    <string name="info_prompt_speak_prompts_aloud">Inapowashwa, maagizo ya kuvinjari mipangilio (kama \"Lugha ya Kiolesura\", \"Njia za Kuingiza\", n.k.) yanasemwa kwa sauti yanapochaguliwa pamoja na kuonyeshwa skrini. Zima ikiwa unapendelea maagizo ya kuona tu.</string>
+    <string name="info_prompt_flash_key_feedback">Inapowashwa, kila kitufe kinachowashwa kinamulika kwa muda kifupi na mwangaza wa kuona kinapobonyezwa. Inatoa uthibitishaji wa kuona wa haraka wa kila kitufe kinachowashwa.</string>
+
+    <!-- INFO PROMPTs — Set Up Head Tracking page -->
+    <string name="info_prompt_section_ht_zone_thresholds">Ukubwa wa jamaa wa eneo la katikati ambapo mwendo wa kichwa hauna athari — ambapo unaweza tu \"kupumzika\" bila kujaribu kuwasha kitufe, na bila kuwa na wasiwasi wa kuwasha kitufe bila kukusudia. Eneo la Kupumzika kubwa zaidi linahitaji mwendo zaidi wa kichwa mbali na katikati kufikia ambapo vitufe vinavyozunguka huanza kujibu mwendo wa kichwa chako. Ongeza ukubwa ikiwa vitufe vinaanza kuwashwa ingawa unajaribu tu kupumzika katikati. Mpaka wa kila Eneo umewekwa kama sehemu kati ya 0.0 na 1.0, na 0.0 katikati ya kibodi na 1.0 kwenye ukingo wenyewe.</string>
+    <string name="info_prompt_ht_active_zone">Umbali wa jamaa unaopaswa kuhama mbali na katikati ili kuwasha kitufe. Unapoingia kwenye Eneo Amilifu la kitufe, kitufe kitageuka kijani. Baada ya kuingia kwenye Eneo Amilifu na kitufe kugeuka kijani, sogea tu nyuma kuelekea katikati kuwasha kitufe. Kupunguza Eneo Amilifu kunafanya uweze kuwasha vitufe na mwendo mdogo wa kichwa, lakini kunaweza kuongeza uwezekano wa kitufe kuwashwa kwa bahati mbaya.</string>
+    <string name="info_prompt_ht_exit_zone">Kikomo cha jamaa kinachofafanua ukingo wa nje kwa mwendo wa kichwa ndani ya eneo la kibodi. Unaweza kusitisha Ufuatiliaji wa Kichwa kwa kugeuza kichwa chako kulia hadi ufikie mpaka wa Eneo la Kutoka, na kisha kuendelea kushikilia kichwa kimegeuka hadi muda wa Kuchelewa kwa Kutoka upite. Mpaka wa kibodi utaanza kumulika unapofikia Eneo la Kutoka. Punguza ukubwa wa Eneo la Kutoka kupunguza umbali unaohitaji kugeuza kichwa chako kusitisha au kutoka kwenye kibodi. Unapohamia juu (badala ya kulia) hadi Eneo la Kutoka, unaweza kuhamisha kishale kutoka kwenye kibodi ya JustType. Mpaka wa kibodi utaanza kumulika, na kisha kishale kitaonekana katika eneo la juu ya kibodi mara muda wa Kuchelewa kwa Kutoka upite.</string>
+    <string name="info_prompt_ht_key_activation_threshold">Mara kitufe kinapogeuka kijani na unaanza kusogea nyuma kuelekea katikati, kizingiti hiki kinaamua umbali unaopaswa kusogea nyuma kabla kitufe kuwashwa. Thamani ya chini inamaanisha vitufe vitawashwa haraka zaidi, kwani litatokea kabla ya kulazimika kusogea mbali sana nyuma kuelekea katikati. Kuweka thamani hii kwa 100% kunamaanisha lazima urudi mwanzoni mwa Eneo Amilifu ili kuwasha kitufe.</string>
+    <string name="info_prompt_ht_exit_pause_delay">Idadi ya sekunde ambazo kishale lazima kibaki katika Eneo la Kutoka (na mpaka wa kibodi unamulika) ili kusitisha au kutoka. Ikiwa mpaka wa kibodi unaanza kumulika lakini hutaki kutoka au kusitisha, sogeza tu kichwa chako nyuma kuelekea katikati kuendelea kutumia kibodi. Mara mpaka wa kibodi umemulika kwa Muda wa Kuchelewa wa Kutoka/Kusitisha Kibodi, JustType (a) itasitisha ufuatiliaji wa kichwa na kuonyesha \"Ufuatiliaji wa Kichwa Umesimamishwa\" (kuhamia kulia) au (b) itatoka kwenye kibodi hadi eneo la juu (kuhamia juu). Geuza mchakato, kuhamia kushoto kabisa kuanza tena kuandika (\"toa-sitisho\"), au songa chini kufanya kishale \"kisukume\" dhidi ya mpaka wa juu wa kibodi kurudi kwenye kibodi. Ongeza muda wa Kuchelewa wa Kutoka/Kusitisha (au ukubwa wa Eneo la Kutoka) ikiwa kusitisha/kutoka kunatokea kwa urahisi sana.</string>
+    <string name="info_prompt_ht_corner_weighting">Hurekebisha unyeti wa jamaa wa vitufe vya diagonal/kona (mielekeo ya \"kati\" — Kaskazini-Mashariki, Kusini-Magharibi, n.k.) ikilinganishwa na vitufe vya \"dira\" (juu/chini moja kwa moja au kushoto/kulia — Kaskazini, Kusini, Mashariki, Magharibi). Kwa watu wengine, vitufe vya kona vinaonekana vigumu zaidi kuwasha kuliko vitufe vya moja kwa moja vya juu/chini/kushoto/kulia. Thamani zaidi ya 1.0 zinarahisisha kufikia vitufe vya kona — vinakuwa malengo makubwa kiasi ikilinganishwa na vitufe vingine. Thamani chini ya 1.0 zinafanya kinyume na kufanya mielekeo ya dira (juu, chini, kushoto, kulia) kuwa malengo makubwa.</string>
+    <string name="info_prompt_ht_vertical_sensitivity">Hii inarekebisha urahisi wa jamaa ambao mwendo wa kichwa juu/chini husogeza kishale kiwima ikilinganishwa na jinsi mwendo wa kushoto/kulia husogeza kishale kwa mlalo. Ongeza ikiwa mwendo wa wima unahisi polepole ikilinganishwa na wa mlalo (au kwa urahisi ikiwa ni vigumu zaidi kusogeza kichwa chako juu na chini). Thamani zaidi ya 1.0 zinaongeza mwendo wa wima, na thamani chini ya 1.0 zinaongeza mwendo wa mlalo.</string>
+    <string name="info_prompt_ht_responsiveness">Inadhibiti kiasi (au jinsi haraka) kishale kinasogea kulingana na mwendo wa kichwa. Thamani zaidi ya 1.0 zinafanya kishale kisogee haraka/mbali zaidi (rahisi kusogeza umbali mkubwa). Thamani chini ya 1.0 zinasababisha mwendo wa kishale wa polepole/mdogo (kwa kulenga sahihi zaidi).</string>
+    <string name="info_prompt_ht_debug_overlay">Inapowashwa, JustType inaonyesha kifuniko cha utambuzi kwenye kibodi na mipaka ya eneo, nafasi ya kishale, na taarifa ya kasi ya fremu. Inafaa kwa kutatua tabia ya ufuatiliaji wa kichwa.</string>
+
+    <!-- INFO PROMPTs — Set Up Joystick page -->
+    <string name="info_prompt_joy_resting_zone">Ukubwa wa jamaa wa eneo la katikati ambapo mwendo wa kijiti hauna athari — ambapo unaweza tu \"kupumzika\" bila kujaribu kuwasha kitufe, na bila kuwa na wasiwasi wa kuwasha kitufe bila kukusudia. Eneo la Kupumzika kubwa zaidi linahitaji mwendo zaidi wa kijiti mbali na katikati kufikia ambapo vitufe vinavyozunguka huanza kujibu mwendo wa kijiti. Ongeza ukubwa ikiwa vitufe vinaanza kuwashwa ingawa unajaribu tu kupumzika katikati. Mpaka wa kila Eneo umewekwa kama sehemu kati ya 0.0 na 1.0, na 0.0 katikati ya kibodi na 1.0 kwenye ukingo wenyewe.</string>
+    <string name="info_prompt_joy_active_zone">Kiasi cha jamaa cha mkengeuko wa kijiti ambapo kitufe kinapata silaha kwa uwashaji. Unapoingia kwenye Eneo Amilifu la kitufe, kitufe kitageuka kijani. Baada ya kuingia kwenye Eneo Amilifu na kitufe kugeuka kijani, achilia tu kijiti nyuma kuelekea katikati kuwasha kitufe. Kupunguza Eneo Amilifu kunafanya uweze kuwasha vitufe na mkengeuko mdogo wa kijiti, lakini kunaweza kuongeza uwezekano wa kitufe kuwashwa kwa bahati mbaya.</string>
+    <string name="info_prompt_joy_exit_zone">Kikomo cha jamaa kinachofafanua ukingo wa nje wa mkengeuko wa kijiti ndani ya eneo la kibodi. Unaweza kuhamisha kishale kutoka kwenye kibodi ya JustType hadi eneo la juu (au chini) na kutumia kijiti chako kuvinjari kifaa chako. Unapohamia juu (badala ya kulia) hadi ufikie Eneo la Kutoka, mpaka wa kibodi utaanza kumulika, na mara muda wa Kuchelewa kwa Kutoka upite, kishale kitaonekana katika eneo la juu ya kibodi. Punguza ukubwa wa Eneo la Kutoka kupunguza umbali unaohitaji kusogeza kijiti kutoka kwenye kibodi (au kusitisha kijiti). Ingawa hii labda ni muhimu kidogo, unaweza pia kusitisha shughuli ya kijiti kwenye kibodi kwa kuvuta kijiti kulia (badala ya juu) kutoka hadi eneo la Orodha ya Uchaguzi. DOKEZO MUHIMU: Pia utahitaji kufungua HeadBoard na kusanidi swichi ya kutumia na kijiti ili kubofya (au kubofya mara mbili, n.k.) kwenye eneo la kishale cha kijiti.</string>
+    <string name="info_prompt_joy_exit_pause_delay">Idadi ya sekunde ambazo kijiti lazima kibaki katika Eneo la Kutoka (na mpaka wa kibodi unamulika) ili kutoka au kusitisha. Ikiwa mpaka wa kibodi unaanza kumulika lakini hutaki kutoka au kusitisha, sogeza tu kijiti nyuma kuelekea katikati kuendelea kutumia kibodi. Mara mpaka wa kibodi umemulika kwa Muda wa Kuchelewa wa Kutoka/Kusitisha Kibodi, JustType (a) itatoka kwenye kibodi hadi eneo la juu (kuhamia juu) au (b) itasitisha kijiti na kuonyesha \"Kijiti Kimesimamishwa\" (kuhamia kulia). Geuza mchakato, kuhamia kushoto kabisa kuanza tena kuandika (\"toa-sitisho\"), au songa chini kufanya kishale \"kisukume\" dhidi ya mpaka wa juu wa kibodi kurudi kwenye kibodi. Ongeza muda wa Kuchelewa wa Kutoka/Kusitisha (au ukubwa wa Eneo la Kutoka) ikiwa kusitisha/kutoka kunatokea kwa urahisi sana.</string>
+    <string name="info_prompt_joy_corner_weighting">Hurekebisha unyeti wa jamaa wa vitufe vya diagonal/kona (mielekeo ya \"kati\" — Kaskazini-Mashariki, Kusini-Magharibi, n.k.) ikilinganishwa na vitufe vya \"dira\" (juu/chini moja kwa moja au kushoto/kulia — Kaskazini, Kusini, Mashariki, Magharibi). Kwa watu wengine, vitufe vya kona vinaweza kuonekana vigumu (au rahisi) zaidi kuwasha kuliko vitufe vya moja kwa moja vya juu/chini/kushoto/kulia. Thamani zaidi ya 1.0 zinarahisisha kufikia vitufe vya kona — vinakuwa malengo makubwa kiasi ikilinganishwa na vitufe vingine. Thamani chini ya 1.0 zinafanya kinyume na kufanya mielekeo ya dira (juu, chini, kushoto, kulia) kuwa malengo makubwa.</string>
+
+    <!-- INFO PROMPTs — Set Up Single Switch Scanning page -->
+    <string name="info_prompt_ss_assign_switch">Ikiwa unataka kutumia swichi ya Bluetooth, hakikisha umeioanisha na kifaa chako cha Android kama \"Kifaa Kilichounganishwa\" katika mipangilio ya mfumo. Ikiwa unataka kutumia swichi inayoweza kuwekwa katika HeadBoard (ama swichi ya Mwendo wa Kichwa au Ishara ya Uso), basi utahitaji kuwa umeisanidi na kisha kuiwasha hapa chini. Kisha bonyeza kitufe cha \"Washa Swichi ya Utafutaji\" kuingia katika modi ya kuteua swichi, na uama bonyeze swichi halisi au utekeleze kitendo cha HeadBoard kuchochea swichi unayotaka kutumia. JustType itarekodi ni swichi gani uliyochochea na kisha kuitumia kama swichi yako ya utafutaji.</string>
+    <string name="info_prompt_ss_touchscreen_switch">Inapowashwa, eneo la skrini ya kugusa chini ya skrini linafanya kazi kama swichi ya kawaida, ikitoa pembejeo ya mtindo wa swichi bila kuhitaji vifaa vya nje. Swichi ya Skrini ya Kugusa inaweza kufanya kazi katika modi ya Swichi Moja au Swichi Mbili. Inapowashwa, mipangilio mingine inadhibiti ukubwa na tabia ya Swichi ya Skrini ya Kugusa.</string>
+    <string name="info_prompt_ss_scan_layout_size">Chagua kati ya Kubwa (vitufe vikubwa, rahisi kusoma) na Ndogo (zaidi yaliyofupishwa, inaacha nafasi zaidi kwa maudhui mengine kuonyeshwa juu kwenye skrini).</string>
+    <string name="info_prompt_ss_scan_step_delay">Idadi ya sekunde ambazo mwangaza wa utafutaji unakaa kwenye kila kitufe kabla utafutaji kuhamia kitufe kinachofuata. Punguza kwa utafutaji wa haraka; ongeza ikiwa unahitaji muda zaidi wa kujibu.</string>
+    <string name="info_prompt_ss_initial_delay">Muda wa ziada (kwa sekunde) ulioongezwa kwa hatua ya kwanza ya utafutaji baada ya kubonyeza swichi au wakati mchakato wa utafutaji unaanza upya. Hii inakuruhusu muda zaidi wa kuachilia swichi na kuwa na muda wa kutosha kubonyeza swichi kuchagua kitufe cha kwanza wakati utafutaji unaofuata unaanza kweli. Weka IMEZIMWA (0) kwa hakuna kuchelewa kwa ziada.</string>
+    <string name="info_prompt_ss_beep">Inapowashwa, beep fupi inasikika kila wakati mwangaza wa utafutaji unahamia kitufe kinachofuata. Inatoa ufuatiliaji wa kusikia wa maendeleo ya utafutaji unaoweza kusaidia kusaidia ufuatiliaji wa kuona wa maendeleo ya utafutaji.</string>
+    <string name="info_prompt_ss_skip_invalid">Inapowashwa, mchanganuzi unaruka kiotomatiki vitufe ambavyo havina herufi-zinazofuata halali zilizoangaziwa kwenye kitufe. Inaharakisha utafutaji kwa kuruka vitufe visivyo na manufaa. Hii pia inafanya utafutaji kuwa duni kutabirika, kwa hivyo unaweza kutaka kuwasha kipengele kinachofuata \"Onyesha Kitufe Kinachofuata Kitafutwa\".</string>
+    <string name="info_prompt_ss_show_next_key">Wakati \"Ruka Vitufe Visivyo na Herufi-Zinazofuata Halali\" imewashwa, maendeleo ya utafutaji yanakuwa duni kutabirika. Wakati \"Onyesha Kitufe Kinachofuata Kitafutwa\" imewashwa, basi wakati wowote kitufe kimoja au zaidi katika mzunguko wa utafutaji wa sasa kitarukwa, kitufe kinachofuata kitakachoangaziwa kwa uchaguzi kinaonyeshwa kwanza na mwangaza wa manjano mwepesi, kikikupa dalili ya mapema kwamba kitufe kitatafutwa kifuatacho (kuangaziwa kwa manjano nzito) kukusaidia kujiandaa kufunga swichi kinapoangaziwa kweli.</string>
+    <string name="info_prompt_ss_auto_repeat_mode">Unapofunga swichi wakati wa utafutaji, mara moja inawasha kitufe kinachoangaziwa sasa. Wakati \"Modi ya Kurudia Kiotomatiki Uwashaji wa Kitufe\" imewashwa, unaweza kuendelea kushikilia swichi imefungwa kurudia kiotomatiki uwashaji wa kitufe hicho kwa muda wa Kuchelewa kwa Kurudia Kiotomatiki (hapa chini). Wakati neno unaloandika lina herufi mbili au zaidi mfululizo zilizo kwenye kitufe kile kile, hii inaweza kuwa haraka zaidi kuliko kuachilia swichi na kusubiri kutafutwa kutoka mwanzo hadi kitufe kile kile tena na kisha kufunga swichi mara ya pili. Ikiwa kushikilia swichi imefungwa na kusubiri kuiachilia kwa wakati sahihi si vigumu, hii inapendekezwa sana kwani inaokoa muda mkubwa kwa karibu 17% ya herufi unazoandika.</string>
+    <string name="info_prompt_ss_auto_repeat_delay">Idadi ya sekunde kati ya kila uwashaji unaorudiwa wa kitufe wakati swichi imeshikiliwa chini katika Modi ya Kurudia Kiotomatiki Uwashaji wa Kitufe. Mara nyingi, itaweza kufanya kazi vizuri kuiweka kwa muda sawa na Muda wa Kuchelewa wa Hatua ya Utafutaji.</string>
+    <string name="info_prompt_ss_select_triggers_scan">Inapowashwa, kubonyeza swichi kuwasha kitufe cha Select kunaanza kiotomatiki utafutaji wa maneno yaliyoonyeshwa katika Orodha ya Uchaguzi wa sasa. Kuwasha kipengele hiki kunamaanisha kwamba Kuchagua neno KILA WAKATI kutahitaji mifungo miwili tofauti ya swichi: moja kuwasha kitufe cha Select, na kisha mara ya pili Kuchagua neno linalotakiwa wakati linatafutwa katika Orodha ya Uchaguzi. Kwa watu wengi, hii itakuwa NA UFANISI MDOGO ZAIDI, lakini kipengele hiki kinaweza kuwa na thamani ya kuchunguza ikiwa: (a) Modi ya Kurudia Kiotomatiki si chaguo linaloweza kutumika kwako (katika kesi hiyo, kushikilia tu swichi imefungwa kwenye kitufe cha Select kunatimiza kitu kile kile lakini kwa ufanisi zaidi); (b) Kuchelewa kwa Hatua ya Utafutaji kunahitaji kuwa kirefu sana, kwa hivyo kuandika herufi za ziada za neno kufupisha Orodha ya Uchaguzi kunachukua muda; na (c) unaweza kuendelea kuangalia Orodha ya Uchaguzi inavyobadilika na kugundua wakati neno lako linapotokea (uwezekano chini katika orodha).</string>
+    <string name="info_prompt_ss_scan_repeat_count">Wakati utafutaji unaendelea lakini hakuna kitufe kilichochaguliwa, hii ndio idadi ya mara ambazo utafutaji utazunguka kupitia vitufe vyote kabla ya kuacha kiotomatiki. Weka kwa 0 kwa utafutaji \"usio na mwisho\" (utafutaji unasimama tu unapobonyeza swichi kuwasha kitufe, na kisha inaanza upya). Punguza idadi ya mizunguko ya kurudia ikiwa unapata mzunguko unaorudiwa unakuvuruga. Mara utafutaji unaposimama, bonyeza tu swichi mara moja kuanza tena utafutaji.</string>
+    <string name="info_prompt_ss_debounce">Mpangilio huu unawezesha mfumo kupuuza uwashaji wa swichi unaorudiwa haraka ndani ya muda mfupi. Ongeza muda huu ikiwa kifaa chako kinarekodi mibonyezo miwili au mingi unapojaribu tu kufanya mfungo mmoja wa swichi. Chaguo-msingi ni 120 ms.</string>
+
+    <!-- INFO PROMPTs — Set Up Two-Switch Selection page -->
+    <string name="info_prompt_ts_assign_switch">Ikiwa unataka kutumia swichi ya Bluetooth, hakikisha umeioanisha na kifaa chako cha Android kama \"Kifaa Kilichounganishwa\" katika mipangilio ya mfumo. Ikiwa unataka kutumia moja au zaidi ya swichi zinazoweza kuwekwa katika HeadBoard (ama swichi ya Mwendo wa Kichwa au Ishara ya Uso), basi utahitaji kuwa umezisanidi na kisha kuziwasha hapa chini. Kisha bonyeza kitufe cha \"Washa Swichi (Nyekundu au Kijani)\" kuingia katika modi ya kuteua swichi, na uama bonyeze swichi halisi au utekeleze kitendo cha HeadBoard kuchochea unayotaka kutumia. JustType itarekodi ni swichi gani uliyochochea na kisha kuitumia kama swichi yako ya utafutaji.</string>
+    <string name="info_prompt_ts_touchscreen_switch">Inapowashwa, eneo la skrini ya kugusa chini ya skrini linafanya kazi kama swichi ya kawaida, ikitoa pembejeo ya mtindo wa swichi bila kuhitaji vifaa vya nje. Swichi ya Skrini ya Kugusa inaweza kufanya kazi katika modi ya Swichi Moja au Swichi Mbili. Inapowashwa, mipangilio mingine inadhibiti ukubwa na tabia ya Swichi ya Skrini ya Kugusa.</string>
+    <string name="info_prompt_ts_auto_repeat_switch">Inapowashwa, kushikilia swichi Nyekundu au ya Kijani kunasababisha uwashaji unaorudiwa wa swichi hiyo kwa muda wa Kuchelewa kwa Uwashaji wa Swichi. Inafaa wakati swichi ni rahisi zaidi kushikilia imefungwa (na kuachilia) kuliko kubonyeza swichi ile ile mara kwa mara. Kwa mfano, kuwasha Kitufe cha Select kunafanywa na uwashaji wa Swichi ya Kijani mara tatu mfululizo. Kwa Kurudia Kiotomatiki Uwashaji wa Swichi, hii inaweza kufanywa kwa kushikilia tu Swichi ya Kijani imefungwa kwa muda unaohitajika. Dokezo: Wakati Kurudia Kiotomatiki Uwashaji wa Swichi na Kurudia Kiotomatiki Uwashaji wa Kitufe vyote vimewashwa, basi mara mfululizo wa uwashaji wa swichi tatu umekamilika, uwashaji wa kwanza wa kitufe unachochewa, na kuendelea kushikilia swichi imefungwa kutazalisha uwashaji wa kitufe unaorudiwa.</string>
+    <string name="info_prompt_ts_auto_repeat_switch_delay">Idadi ya sekunde kati ya kila uwashaji unaorudiwa wa swichi wakati swichi imeshikiliwa chini katika modi ya Kurudia Kiotomatiki Uwashaji wa Swichi.</string>
+    <string name="info_prompt_ts_auto_repeat_key">Inapowashwa, kufunga kwa swichi ya tatu kwa kila mfululizo wa swichi tatu kunaweza kushikiliwa imefungwa kurudia kiotomatiki uwashaji wa kitufe kilichochaguliwa. Inaharakisha uandishi kwa watumiaji wenye uzoefu.</string>
+    <string name="info_prompt_ts_auto_repeat_key_delay">Idadi ya sekunde kati ya kila uwashaji unaorudiwa wa kitufe wakati modi ya Kurudia Kiotomatiki Uwashaji wa Kitufe imewashwa na kufunga kwa swichi ya tatu kumeshikiliwa imefungwa.</string>
+    <string name="info_prompt_ts_beep">Inapowashwa, beep fupi inasikika kila wakati swichi inafungwa. Inatoa uthibitishaji wa kusikia kwamba kila kufunga kwa swichi kuligunduliwa.</string>
+    <string name="info_prompt_ts_show_color_band">Inapowashwa, bendi ya rangi yenye mfululizo wa sehemu tatu za kijani au nyekundu inaonyeshwa chini ya kila kitufe, ikionyesha mfululizo wa uwashaji wa swichi unaowasha kitufe hicho. Hii inasaidia kukariri mfululizo wa kila kitufe na kuharakisha pembejeo, kwani unaweza kupanga mfululizo wa uwashaji wa swichi bila kusubiri kuona jinsi rangi za mwangaza wa kitufe zinabadilika kweli.</string>
+    <string name="info_prompt_ts_reset_delay">Kila uwashaji wa kitufe ukitumia Uchaguzi wa Swichi Mbili unahitaji mfululizo wa uwashaji wa swichi tatu mfululizo. Kunaweza kuwa na nyakati unapoanza kuingia mfululizo wa swichi kuwasha kitufe lakini ukageukia umakini wako kwa kitu kingine kabla uwashaji wote tatu wa swichi hayajaingizwa. Unaporudi kuandika, hii inaweza kuwa ya kuchanganya, au unaweza kutaka tu kuandika kitu tofauti wakati huo. Wakati \"Kuchelewa kwa Kuanza Upya wa Uchaguzi wa Swichi Mbili\" kimewekwa kuwa kitu chochote isipokuwa 0 (ambayo ni \"IMEZIMWA\"), basi ikiwa unasitisha kuingia mfululizo wa swichi kwa muda mrefu kuliko Kuchelewa kwa Kuanza Upya, mfululizo wa swichi usiokamilika utaghairiwa na mwangaza wowote wa nyekundu na kijani utatoweka. Unapokuwa tayari kuendelea kuandika, bonyeza swichi yoyote na mwangaza wa nyekundu na kijani utarejeshwa kwa vitufe ili uweze kuanza mfululizo mpya wa swichi na kuandika kitufe kinachofuata.</string>
+    <string name="info_prompt_ts_stuck_switch">Endapo mfumo unashindwa kugundua wakati swichi inaachiliwa, hii ndio idadi ya sekunde ambazo mfumo utasubiri kabla ya kuamua kuchukulia kile kinachoonekana kama swichi iliyofungwa kabisa kama \"swichi iliyokwama\" na kuipuuza tu. Hii inazuia \"pembejeo isiyodhibitiwa\" ikiwa swichi inafanya kazi vibaya au inashikiliwa imefungwa kwa bahati mbaya. Weka muda huu kuwa wa juu zaidi ikiwa inachochewa wakati unashikilia swichi kwa kusudi kwa muda mrefu.</string>
+
+    <!-- INFO PROMPTs — Set Up Touchscreen Switch page -->
+    <string name="info_prompt_section_tcs_how_works">Swichi ya Skrini ya Kugusa inakuruhusu kutumia sehemu ya chini ya skrini kama pembejeo ya swichi. Inapotumika na Utafutaji wa Swichi Moja, upana wote wa onyesho unatumika kwa swichi moja inayoweza kubonyezwa popote katika eneo la kijani lililoonyeshwa. Inapotumika na Uchaguzi wa Swichi Mbili, nusu ya kushoto ya onyesho inatumika kwa swichi ya Kijani, na nusu ya kulia inatumika kwa swichi Nyekundu.</string>
+    <string name="info_prompt_tcs_switch_mode">Kuunda swichi moja, chagua Swichi Moja (eneo moja la kugusa la kijani kwenye skrini linafafanuliwa chini ya skrini ya kugusa, likipanuka kupitia upana wote wa skrini). Swichi hii inaweza kutumika kwa Utafutaji wa Swichi Moja au kama Swichi ya Uchaguzi kwa pembejeo ya Ufuatiliaji wa Kichwa au Kijiti cha Kudhibiti. Kuunda swichi mbili tofauti, chagua Swichi Mbili (maeneo mawili ya kugusa karibu kwenye skrini yanafafanuliwa chini ya skrini ya kugusa, yakipanuka kupitia upana wote wa skrini, yamegawanywa katika nusu za kushoto na kulia zinazofanya kazi kama swichi za Kijani na Nyekundu kwa Uchaguzi wa Swichi Mbili).</string>
+    <string name="info_prompt_tcs_switch_height">Swichi ya Skrini ya Kugusa daima inawekwa chini ya skrini kuwezesha kuwasha swichi bila kuwasha kitu kingine kwa bahati mbaya kwenye skrini. Pia inachukua upana wote wa skrini. Mpangilio huu unakuruhusu kufafanua jinsi eneo la swichi ya skrini ya kugusa lilivyo refu. Urefu umewekwa kuhusiana na urefu wa kila safu ya vitufe kwenye kibodi ya JustType, kwa hivyo kuweka urefu kuwa 1 kunafanya iwe ndefu kama safu ya chini ya kibodi, na 3 inafanya iwe ndefu kama safu zote tatu. Unaweza kuiweka kwa chochote kutoka 0.5 hadi 4.0, kwa kutumia thamani za desimali kupata urefu hasa unaofanya kazi vizuri.</string>
+    <string name="info_prompt_tcs_flash">Inapowashwa, eneo la swichi ya skrini ya kugusa linamulika kwa muda kifupi linapobonyezwa, ikitoa uthibitishaji wa kuona kwamba kugusa kuliregistwa na swichi iliwashwa.</string>
+    <string name="info_prompt_tcs_beep">Inapowashwa, beep fupi inasikika wakati eneo la swichi ya skrini ya kugusa linabonyezwa, ikitoa uthibitishaji wa kusikia kwamba kugusa kuliregistwa na swichi iliwashwa.</string>
+    <string name="info_prompt_tcs_debounce">Mpangilio huu unawezesha mfumo kupuuza uwashaji wa swichi unaorudiwa haraka ndani ya muda mfupi. Ongeza muda huu ikiwa kifaa chako kinarekodi mibonyezo miwili au mingi unapojaribu tu kufanya mfungo mmoja wa swichi. Chaguo-msingi ni 120 ms.</string>
+    <string name="info_prompt_tcs_overlay_mode">Wakati Modi ya Mfuniko imewashwa, Swichi za Skrini ya Kugusa hazichukui nafasi yoyote ya skrini, zinaonyeshwa kama kifuniko cha uwazi, ambapo skrini nzima bado inaonekana. Kibodi ya JustType inaonekana mahali pake pa kawaida chini ya skrini. Swichi za kugusa bado zinakamata matukio yote ya kugusa katika eneo lililoshikiliwa na kifuniko cha swichi, kwa hivyo chochote kilicho chini ya eneo la swichi ya kugusa kinaweza kuonekana lakini hakitajibu kwa kuguswa (ambayo inakamatwa na eneo la swichi ya Kifuniko). Hata kama hauwashi kwa kusudi Modi ya Mfuniko, itawashwa kiotomatiki ikiwa urefu wa swichi za kugusa zilizojumuishwa na eneo la kibodi ya JustType (ikiwa ni pamoja na onyesho la Historia ya Vitufe, ikiwa imeonyeshwa) unaenea juu zaidi ya theluthi mbili ya urefu wote uliopatikana wa skrini.</string>
+    <string name="info_prompt_tcs_overlay_timeout">Idadi ya sekunde ambazo kifuniko cha Swichi ya Skrini ya Kugusa kinabaki kionekane baada ya kuonyeshwa wakati hakuna uwashaji wa swichi unaopokelewa. Kifuniko kinaonyesha maeneo ya Swichi ya Skrini ya Kugusa kwenye skrini. Baada ya muda kuisha, kinakuwa cha uwazi kabisa kwa hivyo maeneo ya swichi hayaonekani tena, lakini Swichi ya Skrini ya Kugusa bado itabaki amilifu.</string>
+
+    <!-- INFO PROMPTs — Direct Selection / Directional Selection pages -->
+    <string name="info_prompt_ds_debounce">Mpangilio huu unawezesha mfumo kupuuza uwashaji wa kitufe unaorudiwa haraka ndani ya muda mfupi. Ongeza muda huu ikiwa kifaa chako kinarekodi mibonyezo miwili au mingi kwenye kitufe unapojaribu tu kukibonyeza mara moja. Chaguo-msingi ni 120 ms.</string>
+    <string name="info_prompt_dirsel_debounce">Mpangilio huu unawezesha mfumo kupuuza kupapasa kwa skrini kunakorudiwa haraka ndani ya muda mfupi. Ongeza muda huu ikiwa ishara moja ya kupapasa inaregistwa kama pembejeo nyingi. Chaguo-msingi ni 120 ms.</string>
+    <string name="info_prompt_dirsel_swipe_sensitivity">Umbali wa chini ambao kupapasa kwa skrini kunahitajika kufunika kuregistwa kama kupapasa. Punguza kufanya kupapasa kuwe rahisi kuchochea na mwendo mdogo; ongeza kuzuia kupapasa kwa bahati mbaya. Thamani hii inawekwa kwa kurekebisha mpangilio wa slider ili urefu wa mpangilio wa slider kwenye skrini ulingane na urefu wa chini unaotakiwa wa kupapasa.</string>
+
+    <!-- INFO PROMPTs — Vocabulary Management page -->
+    <string name="info_prompt_vm_include_dict">Inapowashwa, maneno yaliyomo katika kamusi ya maneno ya JustType iliyojengwa ndani yanajumuishwa katika maneno ambayo JustType inaweza kuandika. Zima hii tu ikiwa unataka kuzuia maneno yanayoweza kuzalishwa kwa yale tu yaliyo katika orodha za msamiati zilizochaguliwa (na/au Maneno ya Kibinafsi).</string>
+    <string name="info_prompt_vm_include_custom">Inapowashwa, maneno uliyoongeza mwenyewe (kupitia kazi ya Ongeza Neno Jipya kwenye ukurasa wa Urambazaji) yanajumuishwa katika maneno ambayo JustType inaweza kuandika.</string>
+    <string name="info_prompt_vm_include_phrases">Inapowashwa, Orodha ya Uchaguzi pia itajumuisha jozi za ufupisho/kishazi za maneno mengi ulizoongeza mwenyewe kwenye kamusi (kupitia kazi ya Ongeza Kishazi Kipya kwenye ukurasa wa Urambazaji) unapoandika ufupisho unaohusishwa.</string>
+    <string name="info_prompt_vm_restrict_uncommon">Inapowashwa, vipengele vifuatavyo vinawezeshwa kuzuia maneno ambayo JustType inaonyesha au inazalisha kuwa maneno ambayo ni ya kawaida zaidi.</string>
+    <string name="info_prompt_vm_min_freq_next">Inapowashwa, vidokezo vya herufi-inayofuata haviwonyeshwi tena kwa maneno yaliyo chini ya kizingiti cha masafa ya chini. Thamani za juu zinaonyesha vidokezo tu kwa maneno ya kawaida zaidi, kupunguza msongamano ili vidokezo vinavyoonyeshwa visimame zaidi.</string>
+    <string name="info_prompt_vm_min_freq_selection">Inapowashwa, maneno ya hifadhidata ya JustType yaliyo chini ya kizingiti cha masafa ya chini hayajumuishwi kwenye Orodha ya Uchaguzi. Hii inaweza kusaidia kupunguza idadi ya maneno nadra au yasiyojulikana yanayoonekana kwenye Orodha ya Uchaguzi ili kusisitiza msamiati unaotumika mara nyingi zaidi, au kupunguza orodha kwa maneno ya kawaida zaidi unapojifunza jinsi ya kuandika.</string>
+    <string name="info_prompt_vm_show_excluded_at_end">Inapowashwa, maneno yaliyochujwa nje na kichujio cha masafa bado yanaonyeshwa mwishoni mwa orodha ya uchaguzi (baada ya maneno yote yanayostahili). Hii inakuruhusu bado kufikia maneno yasiyo ya kawaida, lakini bila kuyafanya yajaze juu ya orodha.</string>
+    <string name="info_prompt_vm_enable_accent">Inapowashwa, hii inawezesha JustType kuonyesha aina ya pili ya Vidokezo vya Herufi-Inayofuata \"Vyenye Alama\" kwa makundi yaliyochaguliwa ya maneno. (Vidokezo vya Herufi-Inayofuata vinaelezwa katika mipangilio ya \"Onyesho la JustType\".) Vidokezo vya Herufi-Inayofuata \"Vyenye Alama\" vinaonyeshwa kwa kuonyesha herufi kwenye kitufe katika fonti NYEKUNDU NZITO na nzito ili visimame nje ya Vidokezo vya Herufi-Inayofuata \"vya kawaida\". Mipangilio ifuatayo inakuruhusu kufafanua makundi maalum ya maneno yatakayoonyeshwa na Vidokezo vya Herufi-Inayofuata Vyenye Alama ili vivutie umakini kiasili unapoandika na JustType. Wakati mtu anajaribu kujifunza msamiati mpya, hii inaweza kusaidia kwa kufanya Vidokezo vya Herufi-Inayofuata kwa maneno hayo visimame kweli.</string>
+    <string name="info_prompt_vm_accent_use_count">Idadi ndogo zaidi ya maneno yanayoonyeshwa kwa Vidokezo vyenye Alama, ndivyo Vidokezo vyenye Alama vitakavyosimama zaidi. Madhumuni ya mpangilio huu ni kusaidia kuweka Vidokezo vyenye Alama kuwa na ufanisi iwezekanavyo kwa kuvizima kwa maneno ambayo mtu tayari \"anajua\". JustType inafuatilia idadi ya mara ambazo neno limeandikwa kwa kuandikwa katika JustType. Mpangilio huu unaamini kwamba uandishi wa neno hilo labda tayari \"unajulikana\" mara neno hilo limeandikwa idadi fulani ya mara. Ikiwa ni kweli, Vidokezo vyenye Alama haviwezi tena kuhitajika kwa neno hilo. Mpangilio huu unakuruhusu kuchagua nambari \"N\" ambapo mara neno limeandikwa \"mara N\" basi Vidokezo vyenye Alama vinazimwa kwa neno hilo. Ikiwa N imewekwa kuwa 0, kipengele hiki kinazimwa, ikimaanisha kwamba Vidokezo vyenye Alama bado vitaonyeshwa kwa maneno yote katika msamiati uliochaguliwa, bila kujali ni mara ngapi yameandikwa.</string>
+    <string name="info_prompt_vm_min_freq_accent">Wakati imewekwa kwa thamani juu ya darasa la juu la masafa (slider iko kulia kabisa), kipengele hiki kimezimwa. Wakati imewekwa kwa darasa la masafa, Vidokezo vyenye Alama vitaonyeshwa TU kwa maneno ya Hifadhidata Kuu ambayo ni angalau ya masafa hayo (au zaidi).</string>
+    <string name="info_prompt_vm_max_freq_accent">Wakati imewekwa kwa 0, kipengele hiki kimezimwa. Wakati imewekwa kwa darasa la masafa la juu zaidi (nambari kutoka 1 hadi 14), maneno ya masafa ya chini tu yataonyeshwa na Vidokezo vyenye Alama yanapoandikwa. Kuchanganya hii na \"Masafa ya Chini kwa Vidokezo vyenye Alama\" kunakuruhusu kuzuia Vidokezo vyenye Alama kwanza kwa maneno ya kawaida sana, na kisha yanapojifunza, kuzuia Vidokezo vyenye Alama kwa makundi yaliyozuiliwa ya maneno ya masafa ya chini (hata darasa moja la masafa kwa wakati mmoja). Kadiri darasa la masafa linavyokuwa la chini, ndivyo litakuwa na maneno mengi zaidi.</string>
+    <string name="info_prompt_vm_accent_use_count_main">Idadi ndogo zaidi ya maneno yanayoonyeshwa kwa Vidokezo vyenye Alama, ndivyo Vidokezo vyenye Alama vitakavyosimama zaidi. Madhumuni ya mpangilio huu ni kusaidia kuweka Vidokezo vyenye Alama kuwa na ufanisi iwezekanavyo kwa kuvizima kwa maneno ambayo mtu tayari \"anajua\". JustType inafuatilia idadi ya mara ambazo neno limeandikwa kwa kuandikwa katika JustType. Mpangilio huu unaamini kwamba uandishi wa neno labda tayari \"unajulikana\" mara neno hilo limeandikwa idadi fulani ya mara. Ikiwa ni kweli, Vidokezo vyenye Alama haviwezi tena kuhitajika kwa neno hilo. Mpangilio huu unakuruhusu kuchagua nambari \"N\" ambapo mara neno limeandikwa \"mara N\" basi Vidokezo vyenye Alama vinazimwa kwa neno hilo. Ikiwa N imewekwa kuwa 0, kipengele hiki kinazimwa, ikimaanisha kwamba Vidokezo vyenye Alama bado vitaonyeshwa kwa maneno yote katika madarasa ya masafa yaliyowashwa, bila kujali ni mara ngapi yameandikwa.</string>
+
+    <!-- INFO PROMPTs — Select Active Vocabularies page -->
+    <string name="info_prompt_sav_promote_imported">Moja ya vipengele vya JustType vimebuniwa kusaidia kujifunza ujuzi wa kusoma na kuandika. Njia moja ya kusaidia na hili ni kuweza kubainisha orodha maalum za maneno ili JustType iweze kufanya iwe rahisi kuyaingiza. Hii inafanywa kwa kuingiza faili zinazomo orodha ya maneno, na ambayo inafafanua \"Msamiati Ulioingizwa\" unaotambuliwa na jina la faili. Kisha idadi yoyote ya seti hizi za Msamiati Ulioingizwa zinaweza Kuwashwa (au kuzimwa), zote mbili kwa kama neno linaonekana linapoandikwa na kwa tofauti, kama Vidokezo vyenye Alama vinaonyeshwa linapoandikwa. Maneno ya Hifadhidata ya JustType (hata maneno yasiyo katika Msamiati wowote Ulioingizwa) yanaweza pia Kuwashwa (au kuzimwa). Wakati \"Pandisha Maneno kutoka Msamiati Ulioingizwa Unaotumika\" imewashwa, maneno yaliyo katika orodha za Msamiati Ulioingizwa (zilizowashwa) yanapata ongezeko la nafasi, ambalo linayafanya yaonekane juu zaidi katika Orodha ya Uchaguzi kuhusiana na Maneno ya kawaida ya Hifadhidata Kuu ya JustType.</string>
+
+    <string name="info_prompt_mj_resting_zone">Ukubwa wa jamaa wa eneo la katikati ambapo mwendo wa kipanya hauna athari — ambapo unaweza kupumzika bila kuwa na wasiwasi wa kuwasha kitufe kwa bahati mbaya. Eneo la Kupumzika kubwa zaidi linahitaji mwendo zaidi wa kipanya kutoka katikati kabla ya vitufe vya jirani kuanza kujibu. Ongeza ikiwa vitufe vinawashwa unapokuwa unapumzika tu. Mpaka wa kila Eneo umewekwa kama sehemu kati ya 0.0 na 1.0, na 0.0 katikati ya kibodi na 1.0 kwenye ukingo wenyewe.</string>
+    <string name="info_prompt_mj_active_zone">Kiasi cha jamaa cha mwendo wa kipanya ambacho kitufe kinakuwa tayari kwa uwashaji. Unapoingia kwenye Eneo Amilifu la kitufe, kitufe kitageuka kijani. Hamia nyuma kuelekea katikati ili kukiwasha. Kupunguza Eneo Amilifu hufanya vitufe viwashwe kwa mwendo mdogo wa kipanya, lakini kunaweza kuongeza uwezekano wa uwashaji wa bahati mbaya.</string>
+    <string name="info_prompt_mj_corner_weighting">Hurekebisha unyeti wa jamaa wa vitufe vya diagonal/kona ikilinganishwa na vitufe vya moja kwa moja juu/chini/kushoto/kulia. Thamani zaidi ya 1.0 hufanya vitufe vya kona kuwa rahisi kufikia (malengo makubwa zaidi). Thamani chini ya 1.0 hufanya kinyume na kufanya mielekeo ya dira (juu, chini, kushoto, kulia) kuwa malengo makubwa zaidi.</string>
+    <string name="info_prompt_mj_sensitivity">Hudhibiti ni kiasi gani cha mwendo wa kipanya kinahitajika kuhamisha kishale cha kijiti kutoka katikati hadi ukingo wa kibodi. Thamani za chini (dp chache) hufanya kijiti kiwe na hisia zaidi — mwendo mdogo wa kipanya hutoa mwendo mkubwa wa kishale. Thamani za juu (dp zaidi) zinahitaji mwendo mkubwa zaidi wa kipanya ili kufikia kingo.</string>
+    <!-- INFO PROMPTs — Backup &amp; Restore page -->
+    <string name="info_prompt_page_backup_simple">Unaweza kuhifadhi rudufu JustType kabisa, ikiwa ni pamoja na kila kitu ulichoongeza au kubadilisha: Moduli za Msamiati, Maneno ya Kibinafsi, Vishazi Vilivyofupishwa, mipangilio yako yote, na marekebisho yote yaliyofanywa kwa Hifadhidata Kuu ya JustType kuonyesha jinsi matumizi yako binafsi ya JustType. Data yote inaandikwa kwenye folda unayoichagua — ama kwenye kifaa chako au katika folda ya Google Drive unayoweza kufikia. Kisha baadaye, ikiwa unahitaji, unaweza kutumia faili zilizohifadhiwa kwenye folda kurejesha JustType, au kuweka JustType vivyo hivyo kwenye kifaa kingine.\n\nKuunda hifadhi rudufu (au kusasisha iliyopo kuonyesha mabadiliko ya ziada):\n(1) Bonyeza kitufe cha \"UNDA HIFADHI RUDUFU SASA\". Ikiwa tayari umeshahifadhi rudufu JustType hapo awali, hii itasasisha hifadhi rudufu hiyo kujumuisha mabadiliko yote ambayo huenda yamefanyika tangu mara ya mwisho JustType ilipohifadhiwa rudufu.\n(2) Ikiwa hujaunda hifadhi rudufu hapo awali, kitufe cha \"UNDA HIFADHI RUDUFU SASA\" kitakupeleka kwenye mazungumzo ya kawaida ya Android ambapo unaweza kuchagua folda ya kuhifadhi hifadhi rudufu. Pita kwenye folda na ubonyeze kitufe cha \"Tumia folda hii\". Ikiwa/wakati ujumbe unatokea kuomba ruhusa ya \"Ruhusu JustType kufikia faili katika hifadhi rudufu za JustType?\", bonyeza \"Ruhusu\".\n(3) Utarudi kwenye skrini ya awali, ambayo itaonyesha folda iliyochaguliwa. Baadaye, utaona pia tarehe na muda wa hifadhi rudufu ya mwisho iliyoundwa kwenye folda.\n(4) Bonyeza kitufe cha \"UNDA HIFADHI RUDUFU SASA\" tena kuunda hifadhi rudufu kamili kwenye folda iliyochaguliwa. Hii itakuwa kiotomatiki hifadhi rudufu itakayotumika ikiwa baadaye unataka kurejesha JustType.</string>
+    <string name="info_prompt_br_restore_simple">Ikiwa kitu kimetokea kwa kifaa chako ambacho kimekulazimisha, kwa mfano, kusakinisha tena JustType, unaweza kutaka kurejesha data yako ya JustType kutoka kwa hifadhi rudufu ya awali. Tafadhali fahamu, ikiwa hujapoteza data yako na ukafanya hivi, utapoteza mabadiliko yoyote katika data yako tangu hifadhi rudufu iliundwa. Lakini ikiwa unahitaji kurejesha data yako kutoka kwa hifadhi rudufu ya awali:\n(1) Bonyeza kitufe cha \"REJESHA KUTOKA HIFADHI RUDUFU\". (Kitakuwa kimepauka ikiwa hujaunda hifadhi rudufu bado.)\n(2) Ujumbe utatokea, ukiuliza \"Rejesha hifadhi rudufu? Hii itaandika juu ya data ya sasa. Kuanzisha upya kunaweza kuhitajika kupakia data tena.\" Maadamu una hakika unataka kufanya hivi, bonyeza \"REJESHA\".</string>
+    <string name="info_prompt_br_use_advanced">Unapowasha \"Tumia Hifadhi Rudufu &amp; Kurejesha kwa Hali ya Juu\", unaweza kuunda na kupakia hifadhi rudufu tofauti za JustType zinazoweza kutumika kwenye vifaa tofauti. Hii inaweza kuwa msaada ikiwa, kwa mfano, wewe ni mwalimu au mtu wa msaada wa kiufundi, hasa kwa kuwa hifadhi rudufu hizi zinaweza kuundwa kwenye Google Drive iliyoshirikiwa. Hii inamaanisha unaweza kuhifadhi rudufu kifaa cha mtu kwenye gari lililoshirikiwa, kupakia hifadhi rudufu hiyo kwenye kifaa chako na kuihariri (kwa mfano kwa kuunda na kuongeza Moduli mpya za Msamiati, Maneno ya Kibinafsi, Vishazi Vilivyofupishwa au Mipangilio iliyorekebishwa), na kisha kuihifadhi na kupakia tena toleo lililohaririwa kutoka kwenye kifaa cha mtu binafsi.\n\nIkiwa unatumia JustType kwa nafsi yako tu, labda ni vyema kuacha tu modi ya \"Hali ya Juu\" IMEZIMWA. Kisha utahifadhi rudufu kila wakati mahali pamoja, na ikihitajika, kurejesha kutoka hifadhi rudufu ya hivi karibuni.</string>
+
+    <!-- Letter Spell Mode: which language's diacritic letters to offer (main > Language section). -->
+    <string name="sr_spell_diacritic_scope">Jumuisha herufi zenye alama za lafudhi katika Modi ya Kuandika Herufi</string>
+    <string name="sr_spell_scope_off">Hakuna</string>
+    <string name="sr_spell_scope_current">Kutoka lugha ya sasa ya kuandika</string>
+    <string name="sr_spell_scope_loaded">Kutoka lugha zote za kuandika zilizopakuliwa</string>
+    <string name="sr_spell_scope_all">Zote</string>
+    <string name="sr_spell_diacritic_scope_info">Huchagua herufi zenye alama za lafudhi ambazo Modi ya Kuandika Herufi hutoa unapochagua herufi ya msingi. \"Kutoka lugha ya sasa ya kuandika\" huonyesha tu alama zinazotumiwa na lugha unayoandika; \"Kutoka lugha zote za kuandika zilizopakuliwa\" hujumuisha kila lugha kwenye kifaa chako; \"Zote\" huonyesha alama zote; \"Hakuna\" haionyeshi yoyote. Alama za kila lugha hujifunza kiotomatiki kutoka kwa maneno yake.</string>
+
+    <!-- Per-language TTS voice selection -->
+    <string name="sr_main_section_language_options">Chaguo za Lugha</string>
+    <string name="sr_main_voice_type">Upendeleo wa Aina ya Sauti Binafsi</string>
+    <string name="sr_main_ui_voice_type">Upendeleo wa Aina ya Sauti ya Mrejesho wa Kiolesura</string>
+    <string name="info_prompt_ui_voice_type">Aina ya sauti unayopendelea kwa mrejesho wa kiolesura — sauti inayokusomea maelekezo, majina ya vitufe na matangazo. Watumiaji wengine huchagua aina tofauti na sauti yao binafsi ili mrejesho wa mfumo utofautiane kwa urahisi na maneno yao wenyewe. Hutumika kupendekeza na kuweka chaguomsingi la Sauti ya Mrejesho wa Kiolesura.</string>
+    <string name="sr_voice_type_any">Hakuna upendeleo</string>
+    <string name="sr_voice_type_male">Ya kiume</string>
+    <string name="sr_voice_type_female">Ya kike</string>
+    <string name="sr_voice_type_child">Ya mtoto</string>
+    <string name="info_prompt_voice_type">Aina ya sauti unayoipendelea. JustType huitumia kupendekeza sauti unapochagua moja kwa lugha. Upatikanaji hutegemea injini za usemi zilizosakinishwa kwenye kifaa chako, na ulinganifu ni makadirio — tumia Jaribu kuthibitisha. Sauti za watoto hasa si za kawaida.</string>
+    <string name="tts_voice_automatic">Otomatiki</string>
+    <string name="tts_voice_picker_title">Chagua sauti ya %1$s</string>
+    <string name="tts_voice_picker_scanning">Inatafuta sauti…</string>
+    <string name="tts_voice_picker_test">Jaribu</string>
+    <string name="tts_voice_picker_confirm">Tumia sauti hii</string>
+    <string name="tts_voice_picker_none_found">Hakuna sauti iliyosakinishwa inayotumia %1$s. Sakinisha au washa sauti ya usemi, kisha ujaribu tena.</string>
+    <string name="tts_voice_picker_install">Sakinisha sauti</string>
+    <string name="tts_voice_picker_no_gender_match">Haikupata sauti inayolingana na aina ya sauti unayoipendelea — jaribu chaguo na uchague moja.</string>
+    <string name="tts_voice_generic">Sauti</string>
+    <string name="tts_friendly_lang_region">%1$s (%2$s)</string>
+    <string name="tts_friendly_name_format">%1$s %2$s %3$d</string>
+    <string name="tts_friendly_name_with_engine">%1$s — %2$s</string>
+    <string name="tts_default_voice">SAUTI CHAGUOMSINGI</string>
+    <string name="tts_default_voice_male">SAUTI YA KIUME CHAGUOMSINGI</string>
+    <string name="tts_default_voice_female">SAUTI YA KIKE CHAGUOMSINGI</string>
+    <string name="tts_default_voice_child">SAUTI YA MTOTO CHAGUOMSINGI</string>
+
+    <!-- ScrollMode key captions -->
+    <string name="nav_scroll_back">RUDI</string>
+    <string name="nav_scroll_longer">ZAIDI</string>
+    <string name="nav_scroll_shorter">PUNGUZA</string>
+    <string name="nav_scroll_min">CHINI</string>
+    <!-- Drag-page key caption -->
+    <string name="nav_drag_select">CHAGUA</string>
+    <!-- Nav page key captions -->
+    <string name="nav_key_more">ZAIDI</string>
+    <string name="nav_key_tap">GONGA</string>
+    <string name="nav_key_double_tap">GONGA MARA MBILI</string>
+    <string name="nav_key_long_tap">GONGA KWA MUDA</string>
+    <!-- More page (system nav 2) key captions -->
+    <string name="nav_key_back">RUDI</string>
+    <string name="nav_key_move">SOGEZA</string>
+    <string name="nav_key_scroll">SOGEZA SKRINI</string>
+    <string name="nav_key_drag">BURUTA</string>
+    <string name="nav_key_home">NYUMBANI</string>
+    <string name="nav_key_recents">ZA HIVI KARIBUNI</string>
+    <!-- Center-cell mode labels (two lines; keep short to fit the key) -->
+    <string name="nav_center_layer_1">GONGA\nSKRINI 1</string>
+    <string name="nav_center_layer_2">URATIBU\nMFUMO 2</string>
+    <string name="nav_center_scroll">SOGEZA\nSKRINI</string>
+    <string name="nav_center_drag_select">CHAGUA\nLENGO</string>
+    <string name="nav_center_drag_move">SOGEZA\nLENGO</string>
+    <string name="nav_center_move_keyboard">SOGEZA\nKIBODI</string>
+</resources>

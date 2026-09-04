@@ -1,0 +1,339 @@
+# EnglishWordsAvoid.txt — hand-curated word grading applied by BuildWordDbTask.
+#
+# Format:  word;tier[ marker]      tier is `profanity` or `slur`; the optional marker is
+#                                  hand-added and overrides the tier.
+#
+#   (no marker)  Level 1, Offensive — in the DB, tagged CLASS_OFFENSIVE.
+#   0            Level 0, Non-Offensive — in the DB, untagged. A false positive kept.
+#   2            Level 2, Potentially Offensive — in the DB, tagged
+#                CLASS_POTENTIALLY_OFFENSIVE.
+#   PN           Proper noun: in the DB, Title-cased, CaseType TITLE_ONLY (Yamashita).
+#   ACRONYM      Acronym: in the DB, UPPER-cased, CaseType ACRONYM (DOGE).
+#   slur         Racial / ethnic / religious / anti-LGBTQ slur. NOT in the DB.
+#   X            Excluded for any other reason. NOT in the DB; the entry stays here so
+#                it keeps being excluded.
+#   ?            Undecided — falls through to the tier (a `slur ?` entry stays excluded).
+#
+# Markers combine: `0PN` is Level 0 plus proper-noun casing. Whitespace is parsed
+# loosely because this file is maintained by hand.
+#
+# The "Excluded Words" setting chooses which levels are withheld from predictions:
+# None (nothing) / Offensive Words (Level 1, the default) / Potentially Offensive Words
+# (Levels 1 and 2). Slurs and `X` entries are absent from the DB, so no setting reveals
+# them. Nothing here restricts the user: any word can still be added to a personal
+# vocabulary on-device, and this file never ships.
+#
+# Seeded by tools/case-seeds/build_avoid_list.py from LDNOOBW (CC BY-4.0),
+# google-profanity-words (MIT), cuss (MIT), 4troDev/profanity.csv (MIT) and Wiktionary
+# sense tags + slur categories via Kaikki wiktextract (CC BY-SA 4.0), then graded by hand.
+# Words with real formal-register use are deliberately KEPT (tang, rump, flaps, cock,
+# nook, booby, pros, dong, wang, tit) — rationale in the script header and
+# docs/.plans/language-resources/plan.md. Regenerating does NOT preserve the hand
+# grading; merge by hand or re-apply the markers.
+#
+# 304 entries: 58 excluded (44 slur, 14 other), 37 Level 0, 173 Level 1, 36 Level 2;
+# 7 proper nouns, 1 acronym.
+ani;profanity 0
+anis;profanity 0
+anus;profanity 2
+apeshit;profanity
+arse;profanity
+arsed;profanity
+arsehole;profanity
+arseholes;profanity
+arses;profanity
+ass;profanity
+asses;profanity
+assface;profanity
+asshat;profanity
+asshole;profanity
+assholes;profanity
+asswipe;profanity
+banger;profanity 0
+bangers;profanity 0
+bastard;profanity 2
+bastards;profanity 2
+bat-shit;profanity
+batshit;profanity
+beaner;slur
+biatch;profanity
+bitch;profanity
+bitched;profanity
+bitches;profanity
+bitchin;profanity
+bitching;profanity
+bitchy;profanity
+bj;profanity
+blowjob;profanity
+blowjobs;profanity
+bollock;profanity
+bollocking;profanity
+bollocks;profanity
+bondage;profanity 0
+boner;profanity
+boners;profanity
+bullshit;profanity
+bullshits;profanity
+bullshitter;profanity
+bullshitting;profanity
+bunghole;profanity
+butthead;profanity
+butthole;profanity
+buttholes;profanity
+chicken-shit;profanity
+chickenshit;profanity
+chink;slur ?
+chinks;slur ?
+clit;profanity
+clusterfuck;profanity
+cock;profanity 0
+cocked;profanity 0
+cocker;profanity 0
+cocking;profanity 0
+cocks;profanity 0
+cocksucker;profanity
+cocksuckers;profanity
+cocksucking;profanity
+coolie;slur
+coolies;slur
+coon;slur
+coons;slur
+cumming;profanity 0PN
+cunnilingus;profanity 2
+cunt;profanity
+cunts;profanity
+cunty;profanity
+dadgum;profanity 0
+dago;slur
+darkie;slur
+darkies;profanity slur
+dickface;profanity
+dickhead;profanity
+dickheads;profanity
+dicking;profanity
+dickless;profanity
+dicks;profanity
+dickwad;profanity
+dickweed;profanity
+dildo;profanity 2
+dildos;profanity 2
+dingleberry;profanity X
+dipshit;profanity
+dipshits;profanity
+doge;profanity 0ACRONYM
+doggie;profanity 0
+doggies;profanity 0
+doggone;profanity 0
+doggy;profanity 0
+dogshit;profanity
+douche;profanity 2
+douchebag;profanity
+douchebags;profanity
+douches;profanity 0
+dumb-ass;profanity
+dumbass;profanity
+dumbasses;profanity
+dumbshit;profanity
+fag;slur
+faggot;slur
+faggots;slur
+fagot;slur
+fags;slur
+fatass;profanity
+fellatio;profanity 2
+fingering;profanity  2
+fisting;profanity 2
+fook;profanity
+frick;profanity
+frickin;profanity
+fricking;profanity
+frig;profanity 2
+frigg;profanity X
+friggin;profanity 2
+frigging;profanity 2
+fuck;profanity
+fuck-all;profanity
+fuck-up;profanity
+fuck-ups;profanity
+fuckable;profanity
+fucked;profanity
+fucked-up;profanity
+fucken;profanity
+fucker;profanity
+fuckers;profanity
+fuckface;profanity
+fuckhead;profanity
+fuckin;profanity
+fucking;profanity
+fucks;profanity
+fuckup;profanity
+fuckwit;profanity X
+fugly;profanity 2
+fuk;profanity
+gangbang;profanity 2
+gangbanger;profanity 2
+gangbangers;profanity 2
+gobshite;profanity
+godammit;profanity
+goddam;profanity
+goddamit;profanity
+goddammit;profanity
+goddamn;profanity
+goddamned;profanity
+goddamnit;profanity
+gook;slur
+gooks;slur
+groper;profanity 2
+handjob;profanity
+hoe;profanity 0
+hoes;profanity 0
+hoh;profanity 0PN
+honky;slur
+hookers;profanity 2
+horseshit;profanity
+hos;profanity
+injun;slur
+injuns;slur
+jackass;profanity
+jackasses;profanity
+jailbait;profanity 2
+japs;slur
+jb;profanity X
+jerk-off;profanity
+jerk-offs;profanity
+jerkoff;profanity
+jizz;profanity
+kike;slur
+kinoshita;profanity 0PN
+knobhead;profanity
+lesbo;profanity slur
+lesbos;profanity slur
+man-whore;profanity X
+masturbate;profanity 2
+masturbated;profanity 2
+masturbates;profanity 2
+masturbating;profanity 2
+matsushita;profanity 0PN
+milf;profanity
+milfs;profanity
+miyashita;profanity 0PN
+mofo;profanity
+mother-fucker;profanity
+motherfuck;profanity
+motherfucker;profanity
+motherfuckers;profanity
+motherfuckin;profanity
+motherfucking;profanity
+negroes;profanity slur
+negros;profanity slur
+nig;slur
+nigga;slur
+niggas;slur
+nigger;slur
+niggers;slur
+nutsack;profanity
+nympho;profanity
+paki;slur
+pakis;slur
+pisser;profanity
+poof;slur
+poofs;slur
+poon;profanity
+poontang;profanity
+prick;profanity 0
+pricked;profanity 0
+pricking;profanity 0
+pricks;profanity 0
+puddy;profanity X
+pussies;profanity
+pussy;profanity
+queef;profanity 2
+quim;profanity X
+rapes;profanity 0
+raping;profanity 0
+rectum;profanity 0
+retard;profanity slur
+retarded;profanity slur
+retards;profanity slur
+scheisse;profanity
+schlong;profanity
+shagging;profanity
+shat;profanity
+shii;profanity X
+shit;profanity
+shit-faced;profanity
+shit-for-brains;profanity
+shit-ton;profanity
+shitbag;profanity
+shitbird;profanity
+shite;profanity
+shitface;profanity
+shitfaced;profanity
+shithead;profanity
+shitheads;profanity
+shithole;profanity
+shithouse;profanity
+shitless;profanity
+shitload;profanity
+shitloads;profanity
+shits;profanity
+shitstorm;profanity
+shitted;profanity
+shitter;profanity
+shittier;profanity
+shittiest;profanity
+shitting;profanity
+shitty;profanity
+shylock;slur X
+skank;profanity
+skanks;profanity
+skeet;profanity
+skeeter;profanity
+skeets;profanity
+slut;profanity
+sluts;profanity
+slutty;profanity
+smut;profanity 0
+sodomized;profanity 2
+sodomy;profanity 2
+son-of-a-bitch;profanity
+spic;slur
+spiced;profanity 0
+spicer;profanity X
+spick;slur
+spics;slur
+spunk;profanity 2
+swank;profanity 0
+swanky;profanity 0
+takeshita;profanity 0PN
+tard;profanity slur
+tit;profanity
+tits;profanity
+titties;profanity
+titty;profanity
+tosser;profanity
+tossers;profanity
+trannies;slur
+tranny;slur
+turd;profanity 2
+turds;profanity 2
+twat;profanity
+twats;profanity
+twink;profanity
+vulva;profanity 2
+wank;profanity
+wanker;profanity
+wankers;profanity
+wanking;profanity
+wetback;slur
+wetbacks;slur
+whore;profanity 2
+whored;profanity 2
+whorehouse;profanity 2
+whorehouses;profanity 2
+whoremonger;profanity X
+whores;profanity 2
+whoreson;profanity X
+whoring;profanity 
+wtf;profanity
+yamashita;profanity 0PN

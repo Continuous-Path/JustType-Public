@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ime_name">Teclado JustType</string>
+    <string name="justtype_settings_shortcut_label">Ajustes de JustType</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Ajustes de JustType</string>
+    <string name="format_phrase_delay_disabled">DESACTIVADO</string>
+    <string name="format_phrase_delay_sec">%.1f seg</string>
+    <string name="format_keyboard_size_percent">%.0f%%</string>
+    <string name="format_key_history_height_dp">%.0fdp</string>
+    <string name="welcome_guide_title">Guía de Bienvenida</string>
+    <string name="welcome_guide_open_button">Abrir la Guía de Bienvenida</string>
+    <string name="welcome_guide_next">Siguiente</string>
+    <string name="welcome_guide_back">Atrás</string>
+    <string name="welcome_guide_skip">Omitir</string>
+    <string name="welcome_guide_finish">Finalizar</string>
+    <string name="welcome_guide_step_indicator">Paso %1$d de %2$d</string>
+    <string name="welcome_guide_step_intro_title">Bienvenido a JustType</string>
+    <string name="welcome_guide_step_intro_body">JustType es un teclado accesible de 8 teclas para personas a quienes les resulta difícil usar un teclado táctil normal. Predice las palabras que usted quiere escribir, y funciona con toque directo, deslizamientos, interruptores, un joystick o el movimiento de la cabeza.\n\nEsta breve guía activa JustType y le ayuda a elegir el método de entrada adecuado. Un cuidador puede ayudar con la configuración.</string>
+    <string name="welcome_guide_step_enable_ime_title">Activar el teclado</string>
+    <string name="welcome_guide_step_enable_ime_body">Primero, active JustType en los ajustes de teclado de su dispositivo:\n\n1. Toque \"Abrir ajustes de teclado\" y active el Teclado JustType, luego vuelva aquí.\n2. Toque \"Cambiar de teclado\" y elija JustType.\n\nLa línea de abajo muestra si JustType ya está activado.</string>
+    <string name="welcome_guide_step_done_title">Todo listo</string>
+    <string name="welcome_guide_step_done_body">¡Ya puede escribir! Abra cualquier campo de texto y JustType aparecerá.\n\n¿No sabe qué método de entrada usar? Toque abajo para recibir ayuda al elegir. Puede reabrir esta guía o abrir Métodos de Entrada en cualquier momento desde los Ajustes de JustType.</string>
+    <string name="welcome_enable_open_settings_button">Abrir ajustes de teclado</string>
+    <string name="welcome_enable_switch_button">Cambiar de teclado</string>
+    <string name="welcome_enable_status_enabled">✓ JustType está activado</string>
+    <string name="welcome_enable_status_not_enabled">JustType aún no está activado</string>
+    <string name="welcome_done_choose_method">Ayúdeme a elegir un método de entrada</string>
+    <string name="welcome_chooser_title">¿Cuál se ajusta mejor a usted?</string>
+    <string name="welcome_chooser_open_input_methods">Abrir Métodos de Entrada</string>
+    <string name="welcome_chooser_back">Atrás</string>
+    <string name="welcome_chooser_opt_tap">Puedo tocar la pantalla con precisión</string>
+    <string name="welcome_chooser_opt_swipe">Puedo deslizar pero no tocar con precisión</string>
+    <string name="welcome_chooser_opt_one_switch">Uso un solo interruptor</string>
+    <string name="welcome_chooser_opt_two_switch">Uso dos interruptores</string>
+    <string name="welcome_chooser_opt_joystick">Uso un joystick</string>
+    <string name="welcome_chooser_opt_head">Muevo la cabeza (seguimiento de cabeza)</string>
+    <string name="navigation_mode_title">Modo de Navegación</string>
+    <string name="navigation_mode_main_row_label">Modo de Navegación</string>
+    <string name="navigation_mode_toggle_label">Activar el Modo de Navegación</string>
+    <string name="navigation_mode_info_overview">Controla su dispositivo con la misma cuadrícula de 8 teclas. Un pequeño teclado flotante aparece sobre cualquier aplicación; las teclas de flecha mueven el foco, y otras teclas realizan acciones como Tocar y Atrás.</string>
+    <string name="sr_nav_live_drag">Arrastre en Vivo</string>
+    <string name="info_prompt_nav_live_drag">Cuando está activado, ARRASTRAR mantiene el objetivo presionado y lo mueve en tiempo real mientras presiona las flechas, soltándolo donde queda. Cuando está desactivado, primero apunta con un cursor y el movimiento ocurre de una vez al presionar SOLTAR.</string>
+    <string name="navigation_mode_info_requires_service">Requiere que el servicio de accesibilidad JustType Navigation esté activado en los Ajustes del sistema.</string>
+    <string name="navigation_mode_status_service_running">Servicio en ejecución</string>
+    <string name="navigation_mode_status_service_not_running">Servicio NO activado</string>
+    <string name="navigation_mode_service_not_enabled_toast">El servicio de accesibilidad JustType Navigation no está activado — actívelo primero en los Ajustes del sistema</string>
+    <string name="navigation_mode_disabled_toast">Active el Modo de Navegación en los Ajustes de JustType para usar el teclado de Navegación</string>
+    <string name="navigation_mode_two_switch_codes_unconfigured">Configure los códigos de sus interruptores rojo y verde en los Ajustes de JustType para usar la Selección con Dos Interruptores con el teclado de Navegación</string>
+    <string name="navigation_mode_joystick_unsupported">El joystick en el teclado de Navegación requiere Android 14 o más reciente</string>
+    <string name="navigation_mode_status_overlay_granted">Permiso de superposición concedido</string>
+    <string name="navigation_mode_status_overlay_missing">Falta el permiso de superposición</string>
+    <string name="navigation_mode_open_accessibility_settings">Abrir Ajustes de Accesibilidad</string>
+    <string name="navigation_mode_show_overlay_now">Mostrar la superposición ahora</string>
+    <string name="nav_appearance_section">Apariencia del teclado</string>
+    <string name="nav_appearance_theme">Tema</string>
+    <string name="nav_appearance_theme_system">Predeterminado del sistema</string>
+    <string name="nav_appearance_theme_light">Claro</string>
+    <string name="nav_appearance_theme_dark">Oscuro</string>
+    <string name="nav_appearance_key_opacity">Opacidad de las teclas</string>
+    <string name="nav_appearance_panel_opacity">Opacidad del fondo</string>
+    <string name="nav_appearance_size">Tamaño del teclado</string>
+    <string name="nav_appearance_transparency_mode">Cuando las teclas son transparentes</string>
+    <string name="nav_appearance_mode_glyph_outline">Mantener símbolos y contorno</string>
+    <string name="nav_appearance_mode_glyph_only">Solo símbolos</string>
+    <string name="nav_appearance_mode_uniform">Atenuar todo por igual</string>
+    <string name="nav_appearance_hide_handle">Ocultar el control de arrastre</string>
+    <string name="nav_appearance_apply_hint">Los cambios se aplican la próxima vez que se muestre la superposición.</string>
+    <string name="navigation_mode_service_description">JustType Navigation le permite controlar su dispositivo con la cuadrícula de 8 teclas de JustType. Un pequeño teclado flotante mueve el foco de accesibilidad, toca el elemento enfocado y realiza acciones del sistema como Atrás.</string>
+    <string name="navigation_mode_service_summary">Superposición flotante de navegación de 8 teclas</string>
+    <string name="navigation_mode_service_prompt_title">Activar JustType Navigation</string>
+    <string name="navigation_mode_service_prompt_message">El Modo de Navegación necesita el servicio de accesibilidad JustType Navigation. Abra los Ajustes del sistema para activarlo.</string>
+    <string name="settings_nav_warning">El Teclado de Navegación de JustType no está activado. Active su servicio de accesibilidad para usarlo.</string>
+    <string name="settings_enable_nav_keyboard">Activar el Teclado de Navegación</string>
+    <string name="navigation_mode_no_focus">Ningún elemento enfocado</string>
+    <string name="navigation_mode_stub_pressed">Tecla provisional %1$d</string>
+    
+    <!-- Input Methods Activity -->
+    <string name="setup_directional_selection">Configurar Selección Direccional</string>
+    <string name="setup_direct_selection">Configurar Selección Directa</string>
+    <string name="setup_touch_screen_switch">Configurar Interruptor Táctil</string>
+    <string name="setup_joystick">Configurar Joystick</string>
+    <string name="setup_single_switch_scanning">Configurar Escaneo con Un Interruptor</string>
+    <string name="setup_two_switch_selection">Configurar Selección con Dos Interruptores</string>
+    <string name="setup_head_tracking">Configurar Seguimiento de Cabeza</string>
+    <string name="setup_mouse_joystick">Configurar Joystick de Ratón</string>
+    <string name="format_timeout_sec">%d seg</string>
+    
+    <!-- Developer Settings Activity -->
+    <string name="toast_db_reset_success">Base de datos de palabras reiniciada. Se reinicializará en el próximo uso.</string>
+    <string name="toast_reset_failed">Error al reiniciar: %s</string>
+    <string name="toast_enter_name">Ingrese un nombre.</string>
+    <string name="toast_no_database_to_save">No hay base de datos para guardar.</string>
+    <string name="toast_saved_as_db">Guardado como %s.db</string>
+    <string name="toast_save_failed">Error al guardar: %s</string>
+    <string name="toast_no_file_named">No hay archivo llamado %s.db</string>
+    <string name="toast_loaded_db">%s.db cargado. Reabra la pantalla para aplicar.</string>
+    <string name="toast_load_failed">Error al cargar: %s</string>
+    <string name="toast_debug_log_path">debug.log: %s</string>
+    <string name="toast_debug_log_cleared">debug.log borrado</string>
+    <string name="toast_failed_to_clear">Error al borrar: %s</string>
+    <string name="toast_debug_logging_enabled">Registro de depuración activado</string>
+    <string name="toast_debug_logging_disabled">Registro de depuración desactivado</string>
+    
+    <!-- Two-Switch Setup Activity -->
+    <string name="touch_switch_active_left">Interruptor táctil activo (lado izquierdo)</string>
+    <string name="waiting_for_red_switch">Esperando Interruptor Rojo\u2026</string>
+    <string name="touch_switch_active_right">Interruptor táctil activo (lado derecho)</string>
+    <string name="waiting_for_green_switch">Esperando Interruptor Verde\u2026</string>
+    <string name="red_switch_touch_screen">Interruptor Rojo = Pantalla Táctil (Izq.)</string>
+    <string name="green_switch_touch_screen">Interruptor Verde = Pantalla Táctil (Der.)</string>
+    <string name="red_switch_label">Interruptor Rojo = %s</string>
+    <string name="green_switch_label">Interruptor Verde = %s</string>
+    <string name="red_switch_label_with_touch">Interruptor Rojo = %s + Pantalla Táctil (Izquierda)</string>
+    <string name="green_switch_label_with_touch">Interruptor Verde = %s + Pantalla Táctil (Derecha)</string>
+    <string name="assign_switch_waiting">Presione su interruptor…</string>
+    <string name="content_desc_clear_red_switch">Borrar la asignación del Interruptor Rojo</string>
+    <string name="content_desc_clear_green_switch">Borrar la asignación del Interruptor Verde</string>
+    <string name="switch_1">Interruptor 1</string>
+    <string name="switch_2">Interruptor 2</string>
+    <string name="switch_3">Interruptor 3</string>
+    <string name="switch_undefined">NO DEFINIDO</string>
+    <string name="format_highlight_timeout_disabled">Desactivado (0s)</string>
+    <string name="format_highlight_timeout_sec">%ds</string>
+    <string name="format_delay_sec">%.2f s</string>
+    
+    <!-- Single Switch Setup Activity -->
+    <string name="touch_screen_switch_active">Interruptor de pantalla táctil activo</string>
+    <string name="waiting_for_scanning_switch">Esperando interruptor de escaneo\u2026</string>
+    <string name="switch_configured_as">Interruptor configurado como: %s</string>
+    <string name="switch_configured_as_with_touch">Interruptor configurado como: %s + Pantalla Táctil</string>
+    <string name="content_desc_clear_scan_switch">Borrar la asignación del interruptor de escaneo</string>
+    <string name="numpad_1">Numpad 1</string>
+    <string name="numpad_2">Numpad 2</string>
+    <string name="numpad_3">Numpad 3</string>
+    <string name="scanning_switch_not_configured">Interruptor de escaneo no configurado</string>
+    <string name="keycode_label">Código de tecla %d</string>
+    <string name="touch_screen">Pantalla Táctil</string>
+    <string name="format_debounce_off">OFF</string>
+    <string name="format_debounce_ms">%d ms</string>
+    <string name="touch_screen_switch_mode_label">Disposición de barra de interruptor</string>
+    <string name="touch_screen_switch_mode_single">Un interruptor (una barra verde)</string>
+    <string name="touch_screen_switch_mode_two">Dos interruptores (verde izq., rojo der.)</string>
+    <string name="touch_screen_switch_flash">Parpadear barra al activar</string>
+    <string name="show_region_border">Mostrar el Borde de la Región Táctil</string>
+    <string name="touch_screen_switch_beep">Pitido al activar interruptor</string>
+    
+    <!-- Directional Selection Setup Activity -->
+    <string name="format_swipe_distance_dp">%d dp</string>
+    
+    <!-- Joystick / Head Tracking Setup Activity -->
+    <string name="format_decimal_two">%.2f</string>
+    <string name="format_percent">%d%%</string>
+    <string name="format_exit_delay_sec">%.1fs</string>
+
+    <!-- Edit Mode Pages -->
+    <string name="edit_key_select_text">SELEC.\nTEXTO</string>
+    <string name="edit_key_selecting_text">(SELEC.\nTEXTO)</string>
+    <string name="edit_key_cut_copy_paste_shift">CORTAR /\nCOPIAR /\nPEGAR /\nMAYÚS \u27F3 </string>
+    <string name="edit_key_mode_character_line">CARÁC /\nLÍNEA\n\u27F3</string>
+    <string name="edit_key_mode_word_sentence">PALAB /\nFRASE\n\u27F3</string>
+    <string name="edit_key_mode_paragraph_page">PÁRR /\nPÁG\n\u27F3</string>
+    <string name="edit_key_back_to_main">VOLVER\nA\nPRINC.</string>
+    <string name="edit_key_cut">CORTAR</string>
+    <string name="edit_key_copy">COPIAR</string>
+    <string name="edit_key_paste">PEGAR</string>
+    <string name="edit_key_undo">DESHACER</string>
+    <string name="edit_key_adjust_case">AJUSTAR\nMAYÚS\nMODO</string>
+    <string name="edit_key_back_to_cursor">VOLVER A\nMODO\nCURSOR</string>
+    <string name="edit_key_speak_selection">LEER\nSELEC.</string>
+    <string name="edit_key_speak_sentence">LEER\nFRASE</string>
+    <string name="edit_center_character_line">MODO CURSOR:\nCARÁCTER / LÍNEA</string>
+    <string name="edit_center_word_sentence">MODO CURSOR:\nPALABRA / FRASE</string>
+    <string name="edit_center_paragraph_page">MODO CURSOR:\nPÁRRAFO / PÁGINA</string>
+    <string name="edit_center_clipboard">PORTAPAPELES</string>
+    <string name="edit_center_bookmark">MODO MARCADOR</string>
+    <string name="edit_key_case_to_title">palabra\n\u2193\nPalabra</string>
+    <string name="edit_key_case_to_upper">palabra\n\u2193\nPALABRA</string>
+    <string name="edit_key_case_to_lower">Palabra\n\u2193\npalabra</string>
+    <string name="edit_key_undo_delete">DESHACER /\nBORRAR</string>
+    <string name="edit_key_case_to_sentence">APLICAR\nMayúsc.\nfrase\u2026</string>
+    <string name="edit_key_edit_word">EDITAR\nPALABRA</string>
+    <string name="edit_center_adjust_case">AJUSTAR MAYÚSCULAS</string>
+    <string name="top_left">Sup-Izq</string>
+    <string name="top">Arriba</string>
+    <string name="top_right">Sup-Der</string>
+    <string name="left">Izquierda</string>
+    <string name="right">Derecha</string>
+    <string name="bottom_left">Inf-Izq</string>
+    <string name="bottom">Abajo</string>
+    <string name="bottom_right">Inf-Der</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 1: Internationalization string resources                -->
+    <!-- ============================================================ -->
+
+    <!-- Shared strings (reused across multiple screens) -->
+    <string name="content_desc_back">Atrás</string>
+    <string name="content_desc_key_history">Lista de Historial de Teclas</string>
+    <string name="heading_settings">Ajustes</string>
+    <string name="no_file_selected">Ningún archivo seleccionado</string>
+    <string name="no_folder_selected">Ninguna carpeta seleccionada</string>
+    <string name="hint_vocab_name">Nombre del vocabulario</string>
+    <string name="label_use_touch_screen_switch">Usar Interruptor de Pantalla Táctil</string>
+    <string name="label_corner_bias">Sesgo de Esquina (0.50 \u2013 2.00)</string>
+    <string name="label_dead_zone_min">0.10</string>
+    <string name="label_cancel">Cancelar</string>
+    <string name="label_done">Listo</string>
+    <string name="label_import">Importar</string>
+    <string name="label_save">Guardar</string>
+    <string name="label_load">Cargar</string>
+
+    <!-- activity_settings.xml -->
+    <string name="settings_ime_warning">JustType no está seleccionado como su teclado. Actívelo en los ajustes del sistema.</string>
+    <string name="settings_open_keyboard_settings">Abrir Ajustes de Teclado</string>
+    <string name="emergency_reset_section">Solución de problemas</string>
+    <string name="emergency_reset_label">Restablecimiento de Emergencia (Método de Entrada)</string>
+    <string name="emergency_reset_description">Vuelve a cambiar la escritura a Selección Directa si el teclado queda inutilizable.</string>
+    <string name="emergency_reset_confirm_title">¿Restablecer el método de entrada?</string>
+    <string name="emergency_reset_confirm_message">Esto vuelve a cambiar la escritura a Selección Directa — toque una tecla para escribir. Sus demás ajustes se conservan.</string>
+    <string name="emergency_reset_confirm_button">Restablecer</string>
+    <string name="emergency_reset_done">Restablecido a Selección Directa.</string>
+    <string name="ime_fallback_message">JustType tuvo problemas al cargar el teclado y está cambiando a un diseño simple. Si esto sigue ocurriendo, abra los Ajustes de JustType y toque Restablecimiento de Emergencia.</string>
+    <string name="ht_unavailable_message">El seguimiento de cabeza dejó de responder. Por ahora puede tocar las teclas directamente — volverá a cambiar automáticamente cuando el seguimiento de cabeza se recupere.</string>
+    <string name="ht_recovered_message">El seguimiento de cabeza se reanudó.</string>
+    <string name="nav_ht_unavailable_message">El seguimiento de cabeza dejó de responder. Se minimizó el teclado de Navegación — toque el botón para reabrirlo.</string>
+    <!-- Language settings -->
+    <string name="settings_heading_language">Idioma</string>
+    <string name="settings_language_system_default">Predeterminado del Sistema</string>
+    <string name="settings_heading_typing_language">Idioma de Escritura</string>
+    <string name="settings_typing_language_desc">Base de datos de palabras utilizada para predicciones. Más idiomas próximamente.</string>
+    <string name="sr_main_ui_language">Idioma de Interfaz</string>
+    <string name="sr_main_typing_language">Idioma de Escritura</string>
+    <string name="sr_main_spanish_region">Región del Español</string>
+
+    <string name="settings_input_methods">Métodos de Entrada</string>
+    <string name="settings_vocabulary_management">Gestión de Vocabulario</string>
+    <string name="settings_backup_restore">Copia de Seguridad &amp; Restaurar</string>
+    <string name="settings_heading_keyboard">Teclado JustType</string>
+    <string name="settings_letter_arrangement">Disposición de Letras</string>
+    <string name="settings_layout_alpha">Disposición Alfabética de Letras</string>
+    <string name="settings_layout_opt">Disposición Optimizada de Letras (más eficiente)</string>
+    <string name="settings_keyboard_size">Tamaño del teclado (40% \u2013 95% del ancho)</string>
+    <string name="settings_keyboard_size_min">40%</string>
+    <string name="settings_heading_speech">Salida de Voz</string>
+    <string name="settings_speech_on_label">Cuando la Voz está activada:</string>
+    <string name="settings_speak_output_word">Hablar Cada Palabra Escrita</string>
+    <string name="settings_speak_output_phrase">Hablar cada frase escrita</string>
+    <string name="settings_speak_completed_sentence">Hablar Cada Oración Completada</string>
+    <string name="settings_speak_sentence_hint">Hablar oración al agregar  .  !  o  ?</string>
+    <string name="settings_speak_punct_names">Hablar el Nombre de los Signos de Puntuación</string>
+    <string name="settings_phrase_auto_output">Demora máx. para hablar texto seleccionado (0 - 5.0 seg.)</string>
+    <string name="settings_heading_display">Pantalla de JustType</string>
+    <string name="settings_next_letter_hints">Activar Pistas Estándar de Siguiente Letra</string>
+    <string name="settings_next_letter_hints_desc">Mostrar pistas de siguiente letra al escribir</string>
+    <string name="settings_show_buttons_pressed">Mostrar Historial de Teclas</string>
+    <string name="settings_key_history_height">Altura máx. del historial de teclas</string>
+    <string name="settings_shrink_to_fit">Reducir para ajustar</string>
+    <string name="settings_shrink_to_fit_desc">Reducir teclas en el historial para mostrar la secuencia completa</string>
+    <string name="settings_heading_selection_list">Lista de Selección</string>
+    <string name="settings_auto_load_word">Cargar palabra automáticamente en el cursor</string>
+    <string name="settings_case_type_variants">Agregar Automáticamente Formas Mayúsculas de Palabras a la Lista de Selección</string>
+    <string name="settings_case_type_deferred">Esperar Hasta que la Palabra sea Seleccionada para Agregar Formas Mayúsculas</string>
+    <string name="settings_case_type_delay">Demora para Agregar Formas Mayúsculas (DESACTIVADO)</string>
+    <string name="settings_show_abbrev">Mostrar abreviatura en la Lista de Selección</string>
+    <string name="settings_show_phrase">Mostrar frase expandida en la Lista de Selección</string>
+    <string name="settings_developer">Ajustes de Desarrollador</string>
+
+    <!-- activity_input_methods.xml -->
+    <string name="input_methods_title">Métodos de Entrada</string>
+    <string name="input_methods_touch_heading">Métodos de Entrada por Pantalla Táctil</string>
+    <string name="input_methods_direct_selection">Selección Directa</string>
+    <string name="input_methods_directional_selection">Selección Direccional</string>
+    <string name="input_methods_touch_screen_switch">Interruptor de Pantalla Táctil</string>
+    <!-- "Adaptive Input Methods" per spec; resource id retains the legacy
+         "_other_" name to avoid breaking sibling locale files. -->
+    <string name="input_methods_other_heading">Métodos de Entrada Adaptativos</string>
+    <string name="input_methods_head_tracking">Seguimiento de Cabeza</string>
+    <string name="input_methods_head_tracking_hint">(requiere la app HeadBoard)</string>
+    <string name="input_methods_joystick">Joystick</string>
+    <string name="input_methods_mouse_joystick">Joystick de Ratón</string>
+    <string name="input_methods_single_switch">Escaneo con Un Interruptor</string>
+    <string name="input_methods_two_switch">Selección con Dos Interruptores</string>
+    <string name="input_methods_heading_auditory">Retroalimentación Auditiva</string>
+    <string name="input_methods_beep_key">Pitido al presionar tecla</string>
+    <string name="input_methods_error_beep">Pitido cuando la Pulsación de Tecla No Tiene Efecto (Pitido de Error)</string>
+    <string name="input_methods_speak_key">Hablar cada tecla seleccionada</string>
+    <string name="input_methods_speak_key_desc">Hablar el nombre de la tecla al presionarla</string>
+    <string name="input_methods_speak_punct">Hablar puntuación</string>
+    <string name="input_methods_speak_punct_desc">Incluir puntuación al hablar el nombre de una tecla ambigua</string>
+    <string name="input_methods_speak_word">Hablar cada palabra seleccionada</string>
+    <string name="input_methods_speak_word_desc">Hablar una palabra cuando Seleccionar la resalta</string>
+    <string name="input_methods_speak_prompts">Hablar avisos en voz alta</string>
+    <string name="input_methods_heading_visual">Retroalimentación Visual</string>
+    <string name="input_methods_flash_key">Parpadear tecla al presionar</string>
+    <string name="input_methods_heading_touch_overlay">Superposición Táctil</string>
+    <string name="input_methods_touch_timeout">Tiempo de espera táctil para ocultar teclado (2 - 10 seg.)</string>
+    <string name="input_methods_touch_timeout_min">2s</string>
+
+    <!-- activity_developer_settings.xml -->
+    <string name="dev_title">Ajustes de Desarrollador</string>
+    <string name="dev_intro">Las opciones de desarrollador aparecerán aquí.</string>
+    <string name="dev_heading_search">Parámetros de Búsqueda</string>
+    <string name="dev_basic_search_depth">Profundidad de Búsqueda Básica (3\u201310)</string>
+    <string name="dev_search_expansion_depth">Profundidad de Expansión de Búsqueda (0\u201310)</string>
+    <string name="dev_min_qualifying_candidates">Candidatos Mínimos Calificados (5\u20131000)</string>
+    <string name="dev_max_examined_nodes">Nodos Máximos Examinados (50\u201310000)</string>
+    <string name="dev_ignore_men_limit">Ignorar límite de Nodos Máximos Examinados</string>
+    <string name="dev_reset_lang_db">Restablecer BD de Idioma a Valores Predeterminados</string>
+    <string name="dev_hint_db_name">nombre de base de datos</string>
+    <string name="dev_heading_weights">Pesos</string>
+    <string name="dev_sls_partition">Política de partición de lista (Bloques / Fijar FTS / Intercalar)</string>
+    <string name="dev_sls_tone_promoted">Promover palabras con tono pendiente</string>
+    <string name="dev_select_behavior_mode">Comportamiento de selección (escalera de promoción FTS adaptativa)</string>
+    <string name="dev_select_behavior_stats">Mostrar estadísticas de comportamiento de selección</string>
+    <string name="dev_select_behavior_stats_empty">Aún no se han registrado episodios de pulsación de Seleccionar.</string>
+    <string name="dev_show_sort_metric">Mostrar sortMetric</string>
+    <string name="dev_heading_ime_debug">Depuración / Tiempos de IME</string>
+    <string name="dev_show_edit_ops">Mostrar operaciones de edición</string>
+    <string name="dev_debug_log_categories">Categorías de registro de depuración</string>
+    <string name="dev_cat_lifecycle">Lifecycle / UI</string>
+    <string name="dev_cat_undo">Undo flow</string>
+    <string name="dev_cat_pull_in">Pull-in flow</string>
+    <string name="dev_cat_ambig">Ambiguous buffer</string>
+    <string name="dev_cat_selection">Selection / cursor sync</string>
+    <string name="dev_cat_input">InputConnection ops</string>
+    <string name="dev_cat_word_db">Word database</string>
+    <string name="dev_cat_text_edit">Text editing</string>
+    <string name="dev_cat_shift">Shift state</string>
+    <string name="dev_enable_debug_logging">Activar registro de depuración</string>
+    <string name="dev_enter_extra_blank_line">Tecla ENTER inserta línea en blanco extra</string>
+    <string name="dev_exact_case_pull_in">Requerir coincidencia exacta de mayúsculas para pull-in de palabras</string>
+    <string name="dev_head_tracking_debug_overlay">Superposición de depuración de seguimiento de cabeza</string>
+    <string name="dev_force_pre34_joystick">Forzar la ruta de joystick pre-34 (Nav)</string>
+    <string name="dev_switch_input_logs">Registrar el enrutamiento de entrada de interruptor/gamepad</string>
+    <string name="dev_scroll_logs">Registrar diagnósticos de desplazamiento de borde</string>
+    <string name="dev_head_tracking_diag_logs">Registros de diagnóstico de seguimiento de cabeza</string>
+    <string name="dev_head_tracking_rearm_in_feedback">Rearmar en Zona de Retroalimentación</string>
+    <string name="dev_toggle_debug_logging">Alternar registro de depuración</string>
+    <string name="dev_show_log_path">Mostrar ruta de debug.log</string>
+    <string name="dev_clear_log">Borrar debug.log</string>
+    <string name="dev_freq_add_weight">FreqAddWeight (0.00\u20132.00)</string>
+    <string name="dev_freq_mult_weight">FreqMultWeight (1.00\u20132.00)</string>
+    <string name="dev_seq_add_weight">SeqAddWeight (0.00\u201350.00)</string>
+    <string name="dev_seq_mult_weight">SeqMultWeight (1.00\u20138.00)</string>
+    <string name="dev_use_add_weight">UseAddWeight (0.00\u20136.00)</string>
+    <string name="dev_use_mult_weight">UseMultWeight (1.00\u20132.00)</string>
+    <string name="dev_recency_add_weight">RecencyAddWeight (0.00\u20134.00)</string>
+    <string name="dev_recency_mult_weight">RecencyMultWeight (1.00\u20132.00)</string>
+    <string name="dev_case_switch_margin">Usos consecutivos para cambiar forma preferida de mayúsculas (1\u20138)</string>
+
+    <!-- activity_setup_direct_selection.xml -->
+    <string name="setup_ds_title">Configurar Selección Directa</string>
+    <string name="setup_ds_how_it_works">Cómo Funciona la Selección Directa</string>
+    <string name="setup_ds_explanation">La Selección Directa es el método de entrada táctil más simple. Solo toque directamente cualquier tecla para seleccionarla.</string>
+    <string name="setup_ds_explanation2">Este modo funciona mejor cuando puede apuntar y tocar la pantalla con precisión. Cada toque en una tecla seleccionará esa tecla inmediatamente.</string>
+    <string name="setup_ds_tips">Consejos</string>
+    <string name="setup_ds_tips_text">\u2022 Toque una vez en una tecla para seleccionarla\n\u2022 Use el ajuste de tamaño del teclado para modificar el tamaño de las teclas\n\u2022 Si tiene dificultad con toques precisos, considere probar la Selección Direccional</string>
+    <string name="setup_ds_touch_debounce">Touch Debounce / Enfriamiento</string>
+    <string name="setup_ds_debounce_desc">Ignorar toques rápidos repetidos dentro de esta ventana de tiempo</string>
+    <string name="setup_ds_auto_repeat">Auto-Repetición de Activación de Teclas</string>
+    <string name="setup_ds_auto_repeat_desc">Mantenga presionada una tecla de movimiento o desplazamiento en el teclado de navegación para repetirla</string>
+    <string name="setup_ds_auto_repeat_delay">Tiempo de Demora de Auto-Repetición</string>
+
+    <!-- activity_setup_directional_selection.xml -->
+    <string name="setup_dir_title">Configurar Selección Direccional</string>
+    <string name="setup_dir_how_it_works">Cómo Funciona la Selección Direccional</string>
+    <string name="setup_dir_explanation">La Selección Direccional usa gestos de deslizamiento para navegar el teclado. Deslice en cualquiera de 8 direcciones para seleccionar la tecla correspondiente en el botón resaltado.</string>
+    <string name="setup_dir_8_directions">8 Direcciones de Deslizamiento</string>
+    <string name="setup_dir_arrows">↖  ↑  ↗\n←  •  →\n↙  ↓  ↘</string>
+    <string name="setup_dir_swipe_desc">Deslice desde cualquier parte de la pantalla en la dirección de la tecla que desea seleccionar.</string>
+    <string name="setup_dir_swipe_sensitivity">Sensibilidad de Deslizamiento</string>
+    <string name="setup_dir_swipe_distance_desc">Distancia mínima para registrar un deslizamiento</string>
+    <string name="setup_dir_touch_timeout">Tiempo de Espera Táctil</string>
+    <string name="setup_dir_touch_timeout_desc">Mantenga presionado este tiempo para cerrar el teclado</string>
+    <string name="setup_dir_swipe_debounce">Swipe Debounce / Enfriamiento</string>
+    <string name="setup_dir_debounce_desc">Ignorar deslizamientos rápidos repetidos dentro de esta ventana de tiempo</string>
+
+    <!-- activity_setup_touch_screen_switch.xml -->
+    <string name="setup_tss_title">Configurar Interruptor de Pantalla Táctil</string>
+    <string name="setup_tss_how_it_works">Cómo Funciona el Interruptor de Pantalla Táctil</string>
+    <string name="setup_tss_explanation">El Interruptor de Pantalla Táctil divide la pantalla en dos mitades que actúan como entradas de interruptor. Úselo con los modos de Escaneo con Un Interruptor o Selección con Dos Interruptores.</string>
+    <string name="setup_tss_left_label">IZQ.\n(Interr. 1 / Verde)</string>
+    <string name="setup_tss_right_label">DER.\n(Interr. 2 / Rojo)</string>
+    <string name="setup_tss_usage_tips">\u2022 Para Escaneo con Un Interruptor: Toque en cualquier parte de la pantalla\n\u2022 Para Selección con Dos Interruptores: Toque el lado izquierdo para el interruptor Rojo, el lado derecho para el Verde</string>
+    <string name="setup_tss_touch_debounce">Touch Debounce / Enfriamiento</string>
+    <string name="setup_tss_debounce_desc">Ignorar toques rápidos repetidos dentro de esta ventana de tiempo</string>
+    <string name="setup_tss_note">Nota: Este ajuste solo afecta la entrada del interruptor de pantalla táctil. El debounce del interruptor físico se configura por separado en los ajustes de Escaneo con Un Interruptor o Selección con Dos Interruptores.</string>
+
+    <!-- activity_setup_single_switch.xml -->
+    <string name="setup_ss_title">Configurar Escaneo con Un Interruptor</string>
+    <string name="setup_ss_activate_switch">ACTIVAR INTERRUPTOR DE ESCANEO</string>
+    <string name="setup_ss_scanning_layout_size">Tamaño del diseño de escaneo</string>
+    <string name="setup_ss_layout_small">Pequeño</string>
+    <string name="setup_ss_layout_large">Grande</string>
+    <string name="setup_ss_scan_step_delay">Tiempo de Demora por Paso de Escaneo</string>
+    <string name="setup_ss_initial_delay">Agregar Demora Extra en la Primera Tecla Escaneada</string>
+    <string name="setup_ss_beep_each_step">Pitido en cada paso de escaneo</string>
+    <string name="setup_ss_skip_keys">Omitir teclas sin letras válidas</string>
+    <string name="setup_ss_show_next_key">Mostrar siguiente tecla a escanear cuando se omitirá alguna tecla</string>
+    <string name="setup_ss_auto_repeat_mode">Modo de Auto-Repetición</string>
+    <string name="setup_ss_select_triggers_scan">Seleccionar tecla activa escaneo de lista de selección</string>
+    <string name="setup_ss_repeat_count">Veces que se repite el escaneo sin selección</string>
+    <string name="setup_ss_physical_debounce">Debounce de Interruptor Físico</string>
+    <string name="setup_ss_debounce_desc">Ignorar presiones rápidas repetidas dentro de esta ventana de tiempo</string>
+
+    <!-- activity_setup_two_switch.xml -->
+    <string name="setup_ts_title">Configurar Selección con Dos Interruptores</string>
+    <string name="setup_ts_activate_red">Activar Interruptor Rojo</string>
+    <string name="setup_ts_activate_green">Activar Interruptor Verde</string>
+    <string name="switch_unassigned_warning">Ningún interruptor asignado</string>
+    <string name="setup_ts_highlight_timeout">Tiempo de espera del resaltado del teclado</string>
+    <string name="setup_ts_show_color_band">Mostrar banda de color en la parte inferior de la tecla</string>
+    <string name="setup_ts_auto_repeat_key">Auto-Repetición de Activaciones de Tecla</string>
+    <string name="setup_ts_auto_repeat_switch">Auto-Repetición de Activaciones de Interruptor</string>
+    <string name="setup_ts_beep_activation">Pitido al activar interruptor</string>
+
+    <!-- activity_setup_head_tracking.xml -->
+    <string name="setup_ht_vertical_sensitivity">Sensibilidad Vertical (1.00 \u2013 2.00)</string>
+    <string name="setup_ht_vertical_desc">Compensa el rango natural de movimiento de la cabeza. Valores más altos facilitan el movimiento arriba/abajo.</string>
+    <string name="setup_ht_response_curve">Curva de Respuesta (0.50 \u2013 1.50)</string>
+    <string name="setup_ht_response_desc">Valores por debajo de 1.0 hacen los movimientos pequeños más sensibles. Valores por encima de 1.0 requieren más movimiento cerca del centro.</string>
+    <string name="setup_ht_section_zone_thresholds">Umbrales de Zona</string>
+    <string name="setup_ht_section_tuning_feedback">Ajuste y Retroalimentación</string>
+    <string name="setup_ht_dead_zone">Zona de Reposo (0.10 - 0.50)</string>
+    <string name="setup_ht_active_zone">Zona Activa (Zona de Reposo &lt; Zona Activa &lt; Zona de Salida)</string>
+    <string name="setup_ht_exit_zone">Zona de Salida (Zona Activa &lt; Zona de Salida &lt; 1.0)</string>
+    <string name="setup_ht_key_activation">Umbral de Activación de Tecla (0% \u2013 100%)</string>
+    <string name="setup_ht_key_activation_desc">Cuánto debe moverse su cabeza de regreso al centro para activar una tecla. 0% => Activar tan pronto como empiece a regresar; 100% => Activar cuando regrese al punto donde la tecla ya no está verde.</string>
+    <string name="setup_ht_key_activation_min">0%</string>
+    <string name="setup_ht_aim_tolerance">Tolerancia de Puntería (0% – 100%)</string>
+    <string name="setup_ht_aim_tolerance_desc">Cuánto puede desviarse el cursor del límite natural de una tecla antes de que un gesto de Corrección mueva el resaltado a la siguiente tecla. 0% => Corrección se activa justo en el límite (más sensible); 100% => el cursor debe alcanzar el centro de la tecla vecina (menos sensible).</string>
+    <string name="setup_ht_aim_tolerance_min">0%</string>
+    <string name="setup_ht_exit_delay">Demora de Salida/Pausa del Teclado (2 \u2013 5 seg)</string>
+    <string name="setup_ht_exit_delay_desc">Tiempo que el cursor debe permanecer en la zona de salida antes de activar la salida o pausa.</string>
+    <string name="setup_ht_exit_delay_min">2s</string>
+
+    <string name="setup_ht_restart_timer">Temporizador de Reinicio (0.5 – 3 seg)</string>
+    <string name="setup_ht_restart_timer_desc">Después de Pausar o Salir, las activaciones de teclas están temporalmente desactivadas durante este tiempo mientras se reingresa al teclado.</string>
+    <string name="setup_ht_restart_timer_min">0.5s</string>
+    <string name="info_prompt_ht_restart_timer">Después de Pausar o Salir del teclado, este es el tiempo que las activaciones de teclas están temporalmente desactivadas al reingresar. La demora previene activaciones no intencionadas por temblor del cursor durante el reingreso. Mientras el temporizador cuenta hacia atrás, el cuadrado azul del centro parpadea como recordatorio visual para regresar su cursor al centro — esa es la mejor posición para comenzar a seleccionar su siguiente tecla.</string>
+    <!-- activity_setup_joystick.xml -->
+    <string name="setup_joy_title">Configurar Joystick</string>
+    <string name="setup_joy_select_device">Seleccionar Joystick</string>
+    <string name="setup_joy_selecting_device">Mueva el joystick que desea usar…</string>
+    <string name="setup_joy_device_none">Ningún joystick seleccionado</string>
+    <string name="setup_joy_device_selected">Seleccionado: %s</string>
+    <string name="setup_joy_accept_any">Aceptar cualquier joystick</string>
+    <string name="setup_joy_dead_zone">Zona de Reposo (0.10 – 0.80)</string>
+    <string name="setup_joy_active_zone">Zona Activa (Zona de Reposo &lt; Zona Activa &lt; 1.00)</string>
+
+    <string name="setup_mj_title">Configurar Joystick de Ratón</string>
+    <string name="setup_mj_dead_zone">Zona de Reposo (0.05 – 0.80)</string>
+    <string name="setup_mj_active_zone">Zona Activa (Zona de Reposo &lt; Zona Activa &lt; 0.90)</string>
+    <string name="setup_mj_corner_bias">Peso de Esquina (0.50 – 2.00)</string>
+    <string name="setup_mj_sensitivity">Sensibilidad del Ratón (20 – 300 dp)</string>
+    <string name="setup_mj_exit_delay">Demora de Salida (0.5s – 5.0s)</string>
+    <string name="setup_mj_reengage_hysteresis">Demora de Reenganche (0.0s – 2.0s)</string>
+    <string name="reset_to_defaults">Restablecer Valores Predeterminados</string>
+    <!-- activity_backup_restore.xml -->
+    <string name="backup_heading">Copia de Seguridad &amp; Restaurar</string>
+    <string name="backup_intro">Elija una carpeta para guardar sus archivos de respaldo. Use Respaldo para guardar sus datos, o Restaurar para recargarlos después.</string>
+    <string name="backup_choose_folder">Elegir Carpeta de Respaldo</string>
+    <string name="backup_last_run">Último respaldo: ninguno</string>
+    <string name="backup_create_now">Crear Respaldo Ahora</string>
+    <string name="backup_restore_now">Restaurar desde Respaldo</string>
+
+    <!-- activity_vocabulary_management.xml -->
+    <string name="vocab_mgmt_title">Gestión de Vocabulario</string>
+    <string name="vocab_mgmt_accent_heading">Pistas de Siguiente Letra</string>
+    <string name="vocab_mgmt_accent_enable">Activar Predicción con Acentos</string>
+    <string name="vocab_mgmt_accent_total">Total de palabras activas con Predicción con Acentos: 0</string>
+    <string name="vocab_mgmt_accent_use_count">Desactivar Pistas Acentuadas para Palabras de Vocabulario Deletreadas Más de __ Veces</string>
+    <string name="vocab_mgmt_accent_use_count_jt">Desactivar Pistas Acentuadas para Palabras JustType Deletreadas Más de __ Veces</string>
+    <string name="vocab_mgmt_main_modules">Módulos Principales de Vocabulario</string>
+    <string name="vocab_mgmt_col_module_name">Nombre del\nMódulo</string>
+    <string name="vocab_mgmt_col_active_word_count">Palabras\nActivas</string>
+    <string name="vocab_mgmt_col_enable_module">Activar\nMódulo</string>
+    <string name="vocab_mgmt_col_show_accented">Mostrar\nPredicción\nAcentuada</string>
+    <string name="vocab_mgmt_col_accented_word_count">Palabras\nAcentuadas</string>
+    <string name="vocab_mgmt_justtype_db_words">Palabras de la Base de Datos JustType</string>
+    <string name="vocab_mgmt_custom_words">Palabras Personalizadas</string>
+    <string name="vocab_mgmt_abbrev_phrases">Frases Abreviadas</string>
+    <string name="vocab_mgmt_section_select_active">Seleccionar Vocabularios Activos</string>
+    <string name="vocab_mgmt_section_manage_imported">Gestionar Palabras de Módulos de Vocabulario Importados</string>
+    <string name="vocab_mgmt_filter_heading">Gestionar Palabras de la Base de Datos JustType</string>
+    <string name="vocab_mgmt_enable_freq_filter">Activar Filtrado por Frecuencia</string>
+    <string name="vocab_mgmt_min_freq_include">Frecuencia Mínima para Palabras Permitidas en la Lista de Selección (Corte de Lista)</string>
+    <string name="vocab_mgmt_display_excluded">Mostrar palabras excluidas al final de la Lista</string>
+    <string name="vocab_mgmt_min_freq_accent">Frecuencia Mínima para Mostrar Pistas Acentuadas para Palabras de JustType</string>
+    <string name="vocab_mgmt_max_freq_accent">Frecuencia Máxima para Mostrar Pistas Acentuadas para Palabras de JustType</string>
+    <string name="vocab_mgmt_select_active">Seleccionar Vocabularios Activos</string>
+    <string name="vocab_mgmt_manage_vocabs">Gestionar Vocabularios (Importar / Exportar / Combinar / Eliminar)</string>
+
+    <!-- activity_manage_vocabularies.xml -->
+    <string name="manage_vocab_title">Importar / Exportar / Combinar / Eliminar Vocabularios</string>
+    <string name="manage_vocab_col_export">Exportar\nVocabulario</string>
+    <string name="manage_vocab_choose_file">Elegir Archivo para Importar</string>
+    <string name="manage_vocab_no_slots">Combine o Elimine un vocabulario para importar un nuevo archivo de Vocabulario.</string>
+    <string name="manage_vocab_import_selected">Importar Archivo Seleccionado</string>
+    <string name="manage_vocab_merge_delete_heading">Seleccionar Vocabularios para Combinar, Eliminar o Exportar</string>
+    <string name="manage_vocab_col_name">Nombre del\nVocabulario</string>
+    <string name="manage_vocab_col_date">Fecha\nAgregada</string>
+    <string name="manage_vocab_col_word_count">Cant. de\nPalabras</string>
+    <string name="manage_vocab_col_merge_from">Combinar\nDesde</string>
+    <string name="manage_vocab_col_merge_into">Combinar\nEn</string>
+    <string name="manage_vocab_col_delete">Eliminar\nVocabulario</string>
+    <string name="manage_vocab_merge">Combinar Vocabularios Seleccionados</string>
+    <string name="manage_vocab_delete">Eliminar Vocabularios Seleccionados</string>
+
+    <!-- activity_vocabulary_import.xml -->
+    <string name="vocab_import_title">Importar Vocabulario</string>
+    <string name="vocab_import_choose_file">Elegir archivo</string>
+    <string name="vocab_import_modules_heading">Módulos de Vocabulario</string>
+
+    <!-- activity_select_active_vocabularies.xml -->
+    <string name="select_vocab_title">Seleccionar Vocabularios Activos</string>
+    <string name="select_vocab_promote_imported">Promover palabras de vocabularios importados activos</string>
+    <string name="select_vocab_col_module_name">Nombre del\nMódulo de\nVocabulario</string>
+    <string name="select_vocab_col_active_count">Palabras\nActivas</string>
+    <string name="select_vocab_col_date">Fecha\nAgregada</string>
+    <string name="select_vocab_col_enable">Activar\nMódulo</string>
+    <string name="select_vocab_col_show_accented">Mostrar\nPredicción\nAcentuada</string>
+    <string name="select_vocab_col_accented_count">Palabras\nAcentuadas</string>
+    <string name="select_vocab_export_heading">Exportar Uso para Vocabularios Seleccionados</string>
+    <string name="select_vocab_export_desc">Exportar Palabras Activas que se han deletreado:</string>
+    <string name="select_vocab_export_never">Nunca</string>
+    <string name="select_vocab_export_once">Al Menos Una Vez</string>
+    <string name="select_vocab_export_at_least">Al Menos __ Veces</string>
+    <string name="select_vocab_export_all">Todas las Palabras</string>
+    <string name="select_vocab_export_button">Exportar Datos de Uso para Palabras Activas en Vocabularios Seleccionados</string>
+
+    <!-- activity_export_vocab_usage.xml -->
+    <string name="export_vocab_title">Exportar Uso de Vocabulario</string>
+    <string name="export_vocab_intro">Seleccione una carpeta para guardar el archivo de exportación.</string>
+    <string name="export_vocab_choose_folder">Elegir Carpeta de Exportación</string>
+    <string name="export_vocab_file_name_label">Nombre del archivo de exportación</string>
+    <string name="export_vocab_hint_file_name">nombre del archivo de exportación</string>
+    <string name="export_vocab_export_now">Exportar Datos de Uso</string>
+
+    <!-- include_phrase_overlay.xml -->
+    <string name="phrase_overlay_title">Agregar Nueva Frase</string>
+    <string name="phrase_overlay_prompt">Escriba la frase, luego presione LISTO.</string>
+    <string name="phrase_overlay_abbrev_label">Abreviatura (Deletreo de Dos Teclas):</string>
+
+    <!-- activity_phrase_overlay.xml -->
+    <string name="phrase_overlay_instructions">Use el teclado para ingresar la frase y la abreviatura.</string>
+    <string name="phrase_overlay_phrase_label">Frase (presione \"LISTO CON FRASE\" en el diseño de Funciones al terminar):</string>
+    <string name="phrase_overlay_abbrev_full_label">Abreviatura (presione \"LISTO\" en el diseño de Deletreo de Dos Teclas al terminar - deje la abreviatura vacía para Cancelar):</string>
+
+    <!-- include_scan_layout.xml -->
+    <string name="scan_center_label">Centro</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 2: Toast / programmatic string resources               -->
+    <!-- ============================================================ -->
+
+    <!-- BackupRestoreActivity -->
+    <string name="toast_choose_backup_folder">Elija una carpeta de respaldo primero.</string>
+    <string name="toast_backup_completed">Respaldo completado.</string>
+    <string name="toast_backup_failed">Error en el respaldo.</string>
+    <string name="toast_restore_completed">Restauración completada.</string>
+    <string name="toast_restore_failed">Error en la restauración.</string>
+    <string name="backup_last_run_format">Último respaldo: %s</string>
+    <string name="backup_last_run_none">Último respaldo: ninguno</string>
+    <string name="backup_status_no_backup">No se encontró respaldo en la carpeta seleccionada.</string>
+    <string name="backup_status_incompatible">El formato del respaldo no es compatible con esta versión.</string>
+    <string name="dialog_restore_title">¿Restaurar respaldo?</string>
+    <string name="dialog_restore_message">Esto sobreescribirá los datos actuales. Puede ser necesario reiniciar para recargar los datos.</string>
+    <string name="dialog_restore_button">Restaurar</string>
+    <string name="dialog_restore_previous_title">¿Restaurar datos anteriores?</string>
+    <string name="dialog_restore_previous_message">Se encontró un respaldo compatible. ¿Restaurar ahora?</string>
+    <string name="dialog_later_button">Después</string>
+
+    <!-- ExportVocabUsageActivity -->
+    <string name="toast_choose_export_folder">Elija una carpeta de exportación primero.</string>
+    <string name="toast_export_completed">Exportación completada.</string>
+    <string name="toast_export_failed">Error en la exportación.</string>
+
+    <!-- ManageVocabulariesActivity -->
+    <string name="toast_choose_file_first">Elija un archivo primero.</string>
+    <string name="toast_enter_vocab_name">Ingrese un nombre de vocabulario.</string>
+    <string name="toast_no_available_slot">No hay espacio disponible para importar.</string>
+    <string name="toast_imported_vocab">Importado \"%1$s\" (espacio %2$d).</string>
+    <string name="toast_merge_target_conflict">El destino de combinación no puede estar en Combinar Desde.</string>
+    <string name="toast_merged_vocabs">%d vocabularios combinados.</string>
+    <string name="toast_deleted_vocabs">%d vocabularios eliminados.</string>
+    <string name="dialog_rename_merge_target">Renombrar Destino de Combinación</string>
+    <string name="dialog_rename_merge_message">Edite el nombre del vocabulario de destino:</string>
+    <string name="dialog_confirm_delete_title">Confirmar eliminación</string>
+    <string name="dialog_confirm_delete_message">¿Eliminar %s? Esto no se puede deshacer.</string>
+    <string name="dialog_confirm_delete_single">1 vocabulario</string>
+    <string name="dialog_confirm_delete_plural">%d vocabularios</string>
+    <string name="dialog_delete_button">Eliminar</string>
+    <string name="label_past_vocabularies">(Vocabularios Anteriores)</string>
+    <string name="label_not_applicable">N/A</string>
+    <string name="label_em_dash">\u2014</string>
+    <string name="label_unknown">Desconocido</string>
+
+    <!-- VocabularyImportActivity -->
+    <string name="toast_selected_vocab_not_found">Vocabulario seleccionado no encontrado.</string>
+    <string name="toast_no_slot_to_replace">No hay espacio disponible para reemplazar.</string>
+    <string name="toast_no_merge_target">No hay destino disponible para combinar.</string>
+    <string name="toast_removed_words">%d palabras eliminadas.</string>
+    <string name="toast_could_not_write_word_list">No se pudo escribir la lista de palabras: la fuente no es un documento.</string>
+    <string name="toast_could_not_locate_parent">No se pudo ubicar la carpeta principal de la lista de palabras.</string>
+    <string name="toast_unable_create_word_list">No se pudo crear el archivo de lista de palabras.</string>
+    <string name="toast_failed_writing_word_list">Error al escribir la lista de palabras: %s</string>
+    <string name="label_shared_text">Texto compartido</string>
+    <string name="label_shared_vocabulary">Vocabulario Compartido</string>
+    <string name="dialog_all_slots_used">Todos los espacios de Vocabulario están en uso</string>
+    <string name="dialog_replace_button">Reemplazar</string>
+    <string name="dialog_replace_vocab_title">Reemplazar Vocabulario %d</string>
+    <string name="dialog_replace_vocab_message">¿Desea eliminar \"%s\" o combinarlo con otro vocabulario?</string>
+    <string name="dialog_merge_button">Combinar</string>
+    <string name="dialog_select_merge_target">Seleccionar destino de combinación</string>
+
+    <!-- SelectActiveVocabulariesActivity -->
+    <string name="toast_no_vocabs_to_export">No hay vocabularios seleccionados para exportar. Marque la columna \"Exportar Vocabulario\" en una o más filas.</string>
+    <string name="format_at_least_times">Al Menos %s Veces</string>
+    <string name="label_disabled">DESACTIVADO</string>
+    <string name="export_button_with_accent">Exportar Datos de Uso para Palabras Activas en Vocabularios Seleccionados (se aplican filtros de acentos)</string>
+    <string name="dialog_continue_export_title">¿Continuar exportación?</string>
+    <string name="dialog_continue_export_message">Esta exportación incluirá aproximadamente %d palabras. Puede volver y ajustar las selecciones de la columna Exportar o el filtro de Conteo de Uso para exportar menos palabras. ¿Desea continuar?</string>
+    <string name="dialog_continue_button">Continuar</string>
+
+    <!-- SettingsActivity -->
+    <string name="format_casetype_delay_disabled">Demora para Agregar Formas Mayúsculas (DESACTIVADO)</string>
+    <string name="format_casetype_delay_sec">Demora para Agregar Formas Mayúsculas: %.1f segundos</string>
+
+    <!-- VocabularyManagementActivity -->
+    <string name="format_freq_off">OFF</string>
+    <string name="format_freq_no_minimum">SIN MÍNIMO</string>
+    <string name="format_freq_no_maximum">SIN MÁXIMO</string>
+    <string name="format_freq_below_list_cutoff">%s (POR DEBAJO DEL CORTE)</string>
+    <string name="format_accent_usecount_disabled">DESACTIVADO</string>
+    <string name="format_accent_total">Total de palabras activas con Predicción con Acentos: %d</string>
+    <string name="format_accent_usecount_title">Desactivar Pistas Acentuadas para Palabras de Vocabulario Deletreadas Más de %s Veces</string>
+    <string name="format_accent_usecount_title_jt">Desactivar Pistas Acentuadas para Palabras JustType Deletreadas Más de %s Veces</string>
+    <!-- Phase 3D: cleaner title text when the use-count slider is at 0 (OFF),
+         replacing the awkward "Spelled More Than DISABLED Times" rendering. -->
+    <string name="format_accent_usecount_title_off">Pistas Acentuadas activadas para todas las palabras en Vocabularios seleccionados</string>
+    <string name="format_accent_usecount_title_off_jt">Pistas Acentuadas activadas para todas las Palabras JustType</string>
+    <string name="toast_accent_range_error">El valor máximo debe ser mayor o igual al valor mínimo</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 3: JTUI button label string resources                  -->
+    <!-- ============================================================ -->
+
+    <!-- Main page button labels -->
+    <string name="jtui_btn_undo_delete">DESHACER /\nBORRAR</string>
+    <string name="jtui_btn_select">SELEC.</string>
+
+    <!-- Symbol page labels -->
+    <string name="jtui_btn_type_multiple_symbols">ESCRIBIR\nMÚLTIPLES\nSÍMBOLOS</string>
+    <string name="jtui_btn_back_to_main">VOLVER\nA\nPRINC.</string>
+    <string name="jtui_btn_symbol_pg_2">SÍMBOLO\nPÁG. 2</string>
+    <string name="jtui_btn_space">&lt;ESPACIO&gt;</string>
+    <string name="jtui_btn_back">ATRÁS</string>
+    <string name="jtui_btn_symbol_pg_3">SÍMBOLO\nPÁG. 3</string>
+    <string name="jtui_btn_all_symbols_mode">MODO\nTODOS\nSÍMBOLOS</string>
+    <string name="jtui_btn_all_symbols_up">ARRIBA</string>
+    <string name="jtui_btn_all_symbols_page">PÁG. %1$d</string>
+    <string name="jtui_btn_all_symbols_page1">VOLVER\nA PÁG.\n1</string>
+    <string name="jtui_symcat_all">TODOS LOS SÍMBOLOS</string>
+    <string name="jtui_symcat_punctuation">Puntuación</string>
+    <string name="jtui_symcat_brackets">Paréntesis</string>
+    <string name="jtui_symcat_quotes">Comillas</string>
+    <string name="jtui_symcat_currency">Moneda</string>
+    <string name="jtui_symcat_math">Matemáticas</string>
+    <string name="jtui_symcat_signs">Signos</string>
+    <string name="jtui_symcat_fractions">Fracciones</string>
+    <string name="jtui_symcat_superscripts">Super-\níndices\ny Unidades</string>
+    <string name="jtui_symcat_arrows">Flechas</string>
+    <string name="jtui_symcat_shapes">Formas</string>
+    <string name="jtui_symcat_marks">Marcas</string>
+    <string name="jtui_symcat_science">Ciencia</string>
+    <string name="jtui_btn_cancel">CANCELAR</string>
+
+    <!-- Multi-symbol page labels -->
+    <string name="jtui_btn_multi_symbols_pg_2">MULTI\nSÍMB.\nPÁG. 2</string>
+    <string name="jtui_btn_multi_symbols_pg_3">MULTI\nSÍMB.\nPÁG. 3</string>
+
+    <!-- Number page labels -->
+    <string name="jtui_btn_delete">BORRAR</string>
+    <string name="jtui_btn_done">&lt;LISTO&gt;</string>
+    <string name="jtui_btn_numbers_6_0">6 - 0\n+-./,</string>
+    <string name="jtui_btn_numbers_punct">+-./,</string>
+    <string name="jtui_btn_numbers_1_5">1 - 5\n(O\n&lt;LISTO&gt;)</string>
+    <string name="jtui_btn_cancel_paren">(CANCELAR)</string>
+    <string name="jtui_btn_shift">SHIFT</string>
+
+    <!-- Function page labels -->
+    <string name="jtui_btn_delete_word">BORRAR\nPALABRA</string>
+    <string name="jtui_btn_done_with_phrase">LISTO CON\nFRASE</string>
+    <string name="jtui_btn_caps_lock_on_off_spaced">BLOQ\nMAYÚS\nON / OFF</string>
+    <string name="jtui_btn_enter">ENTER</string>
+    <string name="jtui_btn_function_pg_1">FUNCIÓN\nPÁG. 1</string>
+    <string name="jtui_btn_cancel_phrase">CANCELAR\nFRASE</string>
+    <string name="jtui_btn_caps_lock_on_off">BLOQ\nMAYÚS\nON/OFF</string>
+    <string name="jtui_btn_phrase_entry_functions">FUNCIONES\nDE ENTRADA\nDE FRASE</string>
+    <string name="jtui_btn_speech_on_off">VOZ\nON/OFF</string>
+    <string name="jtui_btn_speak_sentence">LEER\nFRASE</string>
+    <string name="jtui_btn_function_pg_2">FUNCIÓN\nPÁG. 2</string>
+    <string name="jtui_btn_speak_last_selection">LEER\n(ÚLT.)\nSELEC.</string>
+    <string name="jtui_btn_page_up">PÁG.\nARRIBA</string>
+    <string name="jtui_btn_delete_char">BORRAR\nCARÁCT.</string>
+    <string name="jtui_btn_page_down">PÁG.\nABAJO</string>
+    <string name="jtui_btn_speak_next_sentence">LEER\nSIG.\nFRASE</string>
+    <string name="jtui_btn_open_nav_keyboard">TECL.\nNAV</string>
+
+    <!-- Navigation page labels -->
+    <string name="jtui_btn_nav_back">&lt;\nATRÁS</string>
+    <string name="jtui_btn_add_new_word">AGREGAR\nPALABRA</string>
+    <string name="jtui_btn_add_new_phrase">AGREGAR\nFRASE</string>
+    <string name="jtui_btn_settings">AJUSTES</string>
+    <string name="jtui_btn_edit_mode">MODO\nEDICIÓN</string>
+    <string name="jtui_btn_menu">|||\nMENÚ</string>
+    <string name="jtui_btn_123_mode">123\nMODO</string>
+    <string name="jtui_btn_letter_symbol_mode">MODO\nLETRA /\nSÍMBOLO</string>
+    <string name="jtui_btn_system_nav_mode">MODO\nNAV DEL\nSISTEMA</string>
+    <string name="jtui_btn_123_number_mode">123\nMODO\nNÚMEROS</string>
+    <string name="jtui_btn_letter_spell_mode">MODO\nDELETREO\nLETRAS</string>
+    <string name="jtui_btn_punct_symbol_mode">!.?\nMODO\nSÍMBOLOS</string>
+    <string name="jtui_btn_emoji_gifs">EMOJI /\nGIFs /\n???</string>
+    <string name="jtui_btn_nav_left">←</string>
+    <string name="jtui_btn_nav_right">→</string>
+    <string name="jtui_btn_spell_caps_lock_on">BLOQ MAYÚS\nON</string>
+    <string name="jtui_btn_spell_caps_lock_off">BLOQ MAYÚS\nOFF</string>
+    <string name="jtui_center_letters_symbols">LETRAS /\nSÍMBOLOS</string>
+    <string name="jtui_center_navigate">NAVEGAR</string>
+    <string name="jtui_center_symbols">SÍMBOLOS</string>
+    <string name="jtui_center_repeated_symbols">SÍMBOLOS\nREPETIDOS</string>
+    <string name="jtui_center_numbers">123\nNÚMEROS</string>
+
+    <!-- Edit mode bookmark labels -->
+    <string name="jtui_btn_jump_to_mark_a">IR A\nMARCA A</string>
+    <string name="jtui_btn_set_mark_a">PONER\nMARCA A</string>
+    <string name="jtui_btn_set_mark_b">PONER\nMARCA B</string>
+    <string name="jtui_btn_jump_to_mark_b">IR A\nMARCA B</string>
+    <string name="jtui_btn_back_to_edit">VOLVER\nA\nEDICIÓN</string>
+
+    <!-- renderKeyLabels dynamic labels -->
+    <string name="jtui_label_bookmark_mode">MODO\nMARCADOR\n\u27F3</string>
+    <string name="jtui_label_speech">VOZ</string>
+    <string name="jtui_label_caps_lock">BLOQ\nMAYÚS</string>
+    <string name="jtui_label_on">ON</string>
+    <string name="jtui_label_off">OFF</string>
+    <string name="jtui_label_on_active">[ON]</string>
+    <string name="jtui_label_off_active">[OFF]</string>
+    <string name="jtui_center_numeric_punctuation">NÚMEROS\nPUNTUACIÓN</string>
+    <string name="jtui_center_functions">FUNCIONES</string>
+    <string name="jtui_btn_symbol_pg_1">SÍMBOLO\nPÁG. 1</string>
+    <string name="jtui_btn_multi_symbols_pg_1">MULTI\nSÍMB.\nPÁG. 1</string>
+    <string name="jtui_spelling_banner_top">DELETREO DE</string>
+    <string name="jtui_spelling_banner_mid">DOS TECLAS</string>
+    <string name="jtui_hint_symbols">SÍM</string>
+    <string name="jtui_hint_functions">FNC</string>
+    <string name="jtui_hint_navigation">NAV</string>
+
+    <!-- editModeArrowLabel cursor unit labels -->
+    <string name="jtui_unit_line">LÍNEA</string>
+    <string name="jtui_unit_char">CARÁC</string>
+    <string name="jtui_unit_sentence">FRASE</string>
+    <string name="jtui_unit_word">PALAB</string>
+    <string name="jtui_unit_page">PÁG</string>
+    <string name="jtui_unit_para">PÁRR</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 4: KeyboardSettingsController string resources          -->
+    <!-- ============================================================ -->
+
+    <!-- SliderStepSize enum labels -->
+    <string name="settings_ctrl_step_one_notch">1 paso</string>
+    <string name="settings_ctrl_step_five_percent">5%</string>
+    <string name="settings_ctrl_step_ten_percent">10%</string>
+
+    <!-- Page nav key action labels -->
+    <string name="settings_ctrl_revert">REVERTIR</string>
+    <string name="settings_ctrl_revert_to">REVERTIR\nA\n%s</string>
+    <string name="settings_ctrl_apply">APLICAR</string>
+    <string name="settings_ctrl_confirm_seconds">CONFIRMAR\n%ds</string>
+    <string name="settings_ctrl_confirm_change_seconds">CONFIRMAR\nCAMBIO\n%ds</string>
+    <string name="settings_ctrl_turn_off">APAGAR</string>
+    <string name="settings_ctrl_turn_on">ENCENDER</string>
+    <string name="settings_ctrl_adjust">AJUSTAR</string>
+    <string name="settings_ctrl_next">SIG.</string>
+    <string name="settings_ctrl_open">ABRIR</string>
+    <string name="settings_ctrl_up">\u2191 ARRIBA</string>
+    <string name="settings_ctrl_left">\u2190 IZQ.</string>
+    <string name="settings_ctrl_right">DER. \u2192</string>
+    <string name="settings_ctrl_down">\u2193 ABAJO</string>
+    <string name="settings_ctrl_back">ATRÁS</string>
+
+    <!-- Slider page key labels -->
+    <string name="settings_ctrl_dec">\u2190 DEC</string>
+    <string name="settings_ctrl_inc">INC \u2192</string>
+    <string name="settings_ctrl_apply_and_exit">APLICAR &amp;\nSALIR</string>
+    <string name="settings_ctrl_test">PROBAR</string>
+    <string name="settings_ctrl_test_time">PROBAR\nTIEMPO:\n%d seg</string>
+    <string name="settings_ctrl_step_label">PASO:\n%s</string>
+
+    <!-- Speech/status strings -->
+    <string name="settings_ctrl_applied">Aplicado</string>
+    <string name="settings_ctrl_reverted">Revertido</string>
+    <string name="settings_ctrl_test_complete">Prueba completada</string>
+    <string name="settings_ctrl_auto_reverted">Auto-revertido</string>
+    <string name="settings_ctrl_change_confirmed">Cambio confirmado</string>
+    <string name="settings_ctrl_testing_for_seconds">Probando por %d segundos</string>
+    <string name="settings_ctrl_step_speech">Paso: %s</string>
+    <string name="settings_ctrl_seconds_speech">%d segundos</string>
+
+    <!-- Key capture (switch assignment) -->
+    <string name="sr_key_capture_prompt">Presione el interruptor ahora…</string>
+    <string name="sr_key_capture_assigned">Asignado: %s</string>
+    <string name="sr_key_capture_not_assigned">No asignado</string>
+    <string name="sr_key_capture_assign">ASIGNAR</string>
+    <string name="sr_key_label_number">Tecla %d</string>
+    <string name="sr_key_label_numpad">Numpad %d</string>
+    <string name="sr_key_label_space">Espacio</string>
+    <string name="sr_key_label_enter">Enter</string>
+    <string name="sr_a11y_toggle">%1$s, %2$s, interruptor</string>
+    <string name="sr_a11y_slider">%1$s, %2$s, rango de %3$s a %4$s</string>
+    <string name="sr_a11y_choice">%1$s, actual %2$s</string>
+    <string name="sr_a11y_subpage">Abrir %1$s</string>
+    <string name="sr_a11y_key_capture">%1$s, %2$s</string>
+
+    <!-- Settings renderer (4.3) -->
+
+    <!-- Display text -->
+    <string name="settings_ctrl_on">ON</string>
+    <string name="settings_ctrl_off">OFF</string>
+    <string name="settings_ctrl_on_speech">activado</string>
+    <string name="settings_ctrl_off_speech">desactivado</string>
+    <string name="settings_ctrl_settings_fallback">Ajustes</string>
+    <string name="settings_ctrl_adjust_title">Ajustar: %s</string>
+
+    <!-- Auto-revert display -->
+    <string name="settings_ctrl_keep_change_revert">¿Mantener cambio?\nRevirtiendo en %ds</string>
+
+    <!-- Test mode display -->
+    <string name="settings_ctrl_test_mode">Modo de Prueba</string>
+    <string name="settings_ctrl_test_mode_fallback">Prueba</string>
+    <string name="settings_ctrl_press_any_key">Presione cualquier tecla para probar</string>
+    <string name="settings_ctrl_test_mode_center">MODO PRUEBA\n%s\nPresione teclas para probar</string>
+    <string name="settings_ctrl_testing_title">Probando: %s</string>
+
+    <!-- ============================================================ -->
+    <!-- Phase 5: SettingsRegistry string resources                    -->
+    <!-- ============================================================ -->
+
+    <!-- Format strings used in SettingsRegistry formatValue lambdas -->
+    <string name="sr_format_off">OFF</string>
+    <string name="sr_format_ms">%d ms</string>
+    <string name="sr_format_sec">%d seg</string>
+    <string name="sr_format_sec_float">%.1f seg</string>
+    <string name="sr_format_sec_float2">%.2f seg</string>
+    <string name="sr_format_percent">%d%%</string>
+    <string name="sr_format_dp_float">%.0f dp</string>
+    <string name="sr_format_dp_int">%d dp</string>
+    <string name="sr_format_decimal2">%.2f</string>
+    <string name="sr_format_decimal1">%.1f</string>
+    <string name="sr_format_day_singular">1 día</string>
+    <string name="sr_format_days_plural">%d días</string>
+    <string name="sr_format_infinite">Infinito</string>
+
+    <!-- Page titles -->
+    <string name="sr_page_main">Ajustes</string>
+    <string name="sr_page_input_methods">Métodos de Entrada</string>
+    <string name="sr_page_head_tracking">Seguimiento de Cabeza</string>
+    <string name="sr_page_joystick">Joystick</string>
+    <string name="sr_page_mouse_joystick">Joystick de Ratón</string>
+    <string name="sr_page_single_switch">Un Interruptor</string>
+    <string name="sr_page_two_switch">Dos Interruptores</string>
+    <string name="sr_page_touch_switch">Interruptor Táctil</string>
+    <string name="sr_page_direct_selection">Selección Directa</string>
+    <string name="sr_page_directional_selection">Selección Direccional</string>
+    <string name="sr_page_vocabulary">Vocabulario</string>
+    <string name="sr_page_backup_info">Copia de Seguridad &amp; Restaurar</string>
+    <string name="sr_page_developer">Desarrollador</string>
+
+    <!-- Choice option display names -->
+    <string name="sr_opt_optimized">Optimizado</string>
+    <string name="sr_opt_alphabetical">Alfabético</string>
+    <string name="sr_opt_none">Ninguno</string>
+    <string name="sr_opt_head_tracking">Seguimiento de Cabeza</string>
+    <string name="sr_opt_joystick">Joystick</string>
+    <string name="sr_opt_mouse_joystick">Joystick de Ratón</string>
+    <string name="sr_opt_single_switch">Un Interruptor</string>
+    <string name="sr_opt_two_switch">Dos Interruptores</string>
+    <string name="sr_opt_large">Grande</string>
+    <string name="sr_opt_small">Pequeño</string>
+    <string name="sr_opt_single">Único</string>
+    <string name="sr_opt_two">Dos</string>
+
+    <!-- Main page: navigation links -->
+    <string name="sr_main_nav_input_methods">Métodos de Entrada</string>
+    <string name="sr_main_nav_vocabulary">Gestión de Vocabulario</string>
+    <string name="sr_main_nav_backup">Copia de Seguridad &amp; Restaurar</string>
+    <string name="sr_main_nav_backup_desc">Use los ajustes de pantalla táctil para operaciones de archivos</string>
+    <string name="sr_main_nav_developer">Ajustes de Desarrollador</string>
+
+    <!-- Main page: Keyboard section -->
+    <string name="sr_main_sec_keyboard">Teclado</string>
+    <string name="sr_main_letter_arrangement">Disposición de Letras</string>
+    <string name="sr_main_keyboard_size">Tamaño del Teclado</string>
+    <string name="sr_main_extra_blank_line">Línea en Blanco Extra con Enter</string>
+
+    <!-- Main page: Speech Output section -->
+    <string name="sr_main_sec_speech">Salida de Voz</string>
+    <string name="sr_main_speak_output_word">Hablar Palabra Escrita</string>
+    <string name="sr_main_speak_output_phrase">Hablar Frase Escrita</string>
+    <string name="sr_main_speak_output_sentence">Hablar Oración Escrita</string>
+    <string name="sr_main_speak_punct_names">Hablar Nombres de Puntuación</string>
+    <string name="sr_main_speaking_indicator_icon">Icono Indicador de Habla</string>
+    <string name="sr_opt_indicator_outlined">Contorno</string>
+    <string name="sr_opt_indicator_wave">Onda de audio</string>
+    <string name="sr_main_phrase_speak_delay">Demora de Habla de Frase</string>
+    <string name="sr_main_phrase_speak_delay_desc">Demora máxima antes de hablar el texto seleccionado</string>
+
+    <!-- Main page: JustType Display section -->
+    <string name="sr_main_sec_display">Pantalla de JustType</string>
+    <string name="sr_main_next_letter_hints">Pistas de Siguiente Letra</string>
+    <string name="sr_main_show_key_history">Mostrar Historial de Teclas</string>
+    <string name="sr_main_key_history_height">Altura del Historial de Teclas</string>
+    <string name="sr_main_shrink_key_history">Reducir Historial para Ajustar</string>
+
+    <!-- Main page: Selection List section -->
+    <string name="sr_main_sec_selection">Lista de Selección</string>
+    <string name="sr_main_auto_restore_selection">Auto-Restaurar Selección en Cursor</string>
+    <string name="sr_main_exact_case_pull_in">Pull-In con Mayúsculas Exactas</string>
+    <string name="sr_main_show_case_type_variants">Agregar Automáticamente Formas Mayúsculas de Palabras a la Lista de Selección</string>
+    <string name="sr_main_deferred_case_expansion">Esperar Hasta que la Palabra sea Seleccionada para Agregar Formas Mayúsculas</string>
+    <string name="sr_main_case_expansion_delay">Demora para Agregar Formas Mayúsculas</string>
+    <string name="sr_main_show_abbrev_in_selection">Mostrar Abreviatura en Selección</string>
+    <string name="sr_main_show_phrase_in_selection">Mostrar Frase en Selección</string>
+
+    <!-- Input Methods page -->
+    <string name="sr_input_methods_sec_primary">Método de Entrada Adaptativo</string>
+    <string name="sr_input_methods_primary_method">Método de Entrada Adaptativo</string>
+    <string name="sr_input_methods_direct_selection">Selección Directa (Táctil)</string>
+    <string name="sr_input_methods_directional_selection">Selección Direccional</string>
+    <string name="sr_input_methods_touch_screen_switch">Interruptor de Pantalla Táctil</string>
+    <string name="sr_input_methods_sec_method_setup">Configuración de Método</string>
+    <string name="sr_input_methods_nav_head_tracking">Ajustes de Seguimiento de Cabeza</string>
+    <string name="sr_input_methods_nav_joystick">Ajustes de Joystick</string>
+    <string name="sr_input_methods_nav_mouse_joystick">Ajustes de Joystick de Ratón</string>
+    <string name="sr_input_methods_nav_single_switch">Ajustes de Un Interruptor</string>
+    <string name="sr_input_methods_nav_two_switch">Ajustes de Dos Interruptores</string>
+    <string name="sr_input_methods_nav_touch_switch">Ajustes de Interruptor Táctil</string>
+    <string name="sr_input_methods_nav_direct_sel">Ajustes de Selección Directa</string>
+    <string name="sr_input_methods_nav_directional_sel">Ajustes de Selección Direccional</string>
+    <string name="sr_input_methods_cannot_disable_both">No se puede desactivar — establezca un Método de Entrada Principal primero</string>
+    <string name="sr_input_methods_sec_feedback">Retroalimentación</string>
+    <string name="sr_input_methods_flash_key">Parpadear Tecla al Seleccionar</string>
+    <string name="sr_input_methods_beep_key">Pitido al Seleccionar Tecla</string>
+    <string name="sr_input_methods_vibration_feedback">Vibrar al activar una tecla</string>
+    <string name="info_prompt_vibration_feedback">Vibra brevemente cuando se activa una tecla, y con un doble pulso distintivo cuando una pulsación no tiene efecto. Útil en entornos silenciosos o ruidosos, o junto con el pitido. Desactívelo si la vibración le distrae.</string>
+    <string name="sr_input_methods_speak_selected_word">Hablar Palabra Seleccionada</string>
+    <string name="sr_input_methods_speak_selected_key">Hablar Tecla Seleccionada</string>
+    <string name="sr_input_methods_speak_punctuation">Hablar Puntuación</string>
+    <string name="sr_input_methods_speak_prompts">Hablar Avisos en Voz Alta</string>
+
+    <!-- Head Tracking page -->
+    <string name="sr_head_tracking_sec_zones">Umbrales de Zona</string>
+    <string name="sr_head_tracking_dead_zone">Zona de Reposo</string>
+    <string name="sr_head_tracking_active_zone">Zona Activa</string>
+    <string name="sr_head_tracking_exit_zone">Zona de Salida</string>
+    <string name="sr_head_tracking_activation_threshold">Umbral de Activación</string>
+    <string name="sr_head_tracking_aim_tolerance">Tolerancia de Puntería</string>
+    <string name="sr_head_tracking_exit_delay">Demora de Salida</string>
+    <string name="sr_head_tracking_restart_delay">Temporizador de Reinicio</string>
+    <string name="sr_head_tracking_sec_tuning">Ajuste Fino</string>
+    <string name="sr_head_tracking_vertical_sensitivity">Sensibilidad Vertical</string>
+    <string name="sr_head_tracking_response_curve">Curva de Respuesta</string>
+    <string name="sr_head_tracking_corner_bias">Sesgo de Esquina</string>
+    <string name="sr_head_tracking_debug_overlay">Superposición de Depuración</string>
+
+    <string name="sr_head_tracking_diag_logs">Registros de Diagnóstico</string>
+    <string name="sr_head_tracking_rearm_in_feedback">Rearmar en Zona de Retroalimentación</string>
+    <string name="sr_head_tracking_correction_beep">Pitido del Gesto de Corrección</string>
+    <string name="sr_head_tracking_correction_flash_red">Gesto de Corrección - La Tecla Cancelada Parpadea en Rojo</string>
+    <!-- Joystick page -->
+    <string name="sr_joystick_dead_zone">Zona de Reposo</string>
+    <string name="sr_joystick_active_zone">Zona Activa</string>
+    <string name="sr_joystick_corner_bias">Sesgo de Esquina</string>
+
+    <string name="sr_mouse_joystick_dead_zone">Zona de Reposo</string>
+    <string name="sr_mouse_joystick_active_zone">Zona Activa</string>
+    <string name="sr_mouse_joystick_corner_bias">Peso de Esquina</string>
+    <string name="sr_mouse_joystick_sensitivity">Sensibilidad del Ratón</string>
+    <string name="sr_mouse_joystick_barrier_height">Altura de Barrera</string>
+    <string name="sr_mouse_joystick_exit_delay">Demora de Salida</string>
+    <string name="sr_mouse_joystick_reengage_hysteresis">Demora de Reenganche</string>
+    <!-- Single Switch page -->
+    <string name="sr_single_switch_debounce">Debounce / Enfriamiento del Interruptor</string>
+    <string name="sr_single_switch_debounce_desc">Ignorar activaciones rápidas repetidas del interruptor en esta ventana de tiempo (predeterminado 120 ms)</string>
+    <string name="sr_single_switch_scan_step_delay">Demora por Paso de Escaneo</string>
+    <string name="sr_single_switch_initial_delay">Aumento de Demora Inicial</string>
+    <string name="sr_single_switch_scan_repeat_count">Conteo de Repetición de Escaneo</string>
+    <string name="sr_single_switch_skip_no_valid">Omitir Teclas Sin Opciones Válidas</string>
+    <string name="sr_single_switch_show_next_key">Mostrar Siguiente Tecla</string>
+    <string name="sr_single_switch_auto_repeat_mode">Modo de Auto-Repetición</string>
+    <string name="sr_single_switch_auto_repeat_delay">Demora de Auto-Repetición</string>
+    <string name="sr_single_switch_select_triggers_scan">Selec. Tecla Activa Escaneo</string>
+    <string name="sr_single_switch_beep_each_step">Pitido en Cada Paso de Escaneo</string>
+    <string name="sr_single_switch_scan_layout_size">Tamaño del Diseño de Escaneo</string>
+    <string name="sr_single_switch_highlight_timeout">Tiempo de Espera del Resaltado</string>
+    <string name="sr_single_switch_assign_switch">Asignar Interruptor</string>
+
+    <!-- Two Switch page -->
+    <string name="sr_two_switch_assign_red">Asignar Interruptor Rojo</string>
+    <string name="sr_two_switch_assign_green">Asignar Interruptor Verde</string>
+    <string name="sr_two_switch_auto_repeat_mode">Modo de Auto-Repetición</string>
+    <string name="sr_two_switch_auto_repeat_delay">Demora de Auto-Repetición</string>
+    <string name="sr_two_switch_repeat_activations">Activaciones Repetidas</string>
+    <string name="sr_two_switch_repeat_activation_delay">Demora de Activación Repetida</string>
+    <string name="sr_two_switch_beep_activation">Pitido al Activar</string>
+    <string name="sr_two_switch_show_band">Mostrar Banda de Color</string>
+    <string name="sr_two_switch_stuck_timeout">Tiempo de Espera por Interruptor Atascado</string>
+
+    <!-- Touchscreen Switch page -->
+    <string name="sr_touch_switch_sec_how">Cómo Funciona el Interruptor de Pantalla Táctil</string>
+    <string name="sr_touch_switch_info_1">El Interruptor de Pantalla Táctil divide la pantalla en dos mitades que actúan como entradas de interruptor. Úselo con los modos de Escaneo con Un Interruptor o Selección con Dos Interruptores.</string>
+    <string name="sr_touch_switch_info_2">\u2022 Para Escaneo con Un Interruptor: Toque en cualquier parte de la pantalla\n\u2022 Para Selección con Dos Interruptores: Toque el lado izquierdo para el interruptor Rojo, el lado derecho para el Verde</string>
+    <string name="sr_touch_switch_sec_settings">Ajustes</string>
+    <string name="sr_touch_switch_mode">Modo de Interruptor</string>
+    <string name="sr_touch_switch_debounce">Touch Debounce / Enfriamiento</string>
+    <string name="sr_touch_switch_debounce_desc">Ignorar toques rápidos repetidos en esta ventana de tiempo (predeterminado 120 ms)</string>
+    <string name="sr_touch_switch_overlay_timeout">Tiempo de Espera de Superposición</string>
+    <string name="sr_touch_switch_flash">Parpadear al Seleccionar</string>
+    <string name="sr_touch_switch_beep">Pitido al Seleccionar</string>
+    <string name="sr_touch_switch_button_height">Altura del Botón</string>
+    <string name="sr_touch_switch_overlay_opacity">Opacidad del Botón</string>
+    <string name="sr_touch_switch_overlay_mode">Modo Superpuesto</string>
+    <string name="sr_touch_switch_overlay_mode_desc">Cuando está activado, se usa toda la pantalla para la entrada del interruptor. Cuando está desactivado, solo el área del botón está activa.</string>
+    <string name="setup_tss_button_height">Altura del Interruptor Táctil</string>
+    <string name="setup_tss_button_height_desc">Altura de los botones de interruptor como porcentaje de la altura de la pantalla</string>
+    <string name="setup_tss_overlay_opacity">Opacidad del Botón</string>
+    <string name="setup_tss_overlay_opacity_desc">Opacidad de los botones de interruptor</string>
+    <string name="setup_tss_overlay_mode">Modo Superpuesto</string>
+    <string name="setup_tss_overlay_mode_desc">Cuando está activado, se usa toda la pantalla para la entrada del interruptor. Cuando está desactivado, solo el área del botón está activa (se activa automáticamente si el teclado y los botones superan 2/3 de la altura de la pantalla).</string>
+    <string name="format_tss_button_height_percent">%d%%</string>
+
+    <!-- Direct Selection page -->
+    <string name="sr_direct_selection_sec_how">Cómo Funciona la Selección Directa</string>
+    <string name="sr_direct_selection_info_1">La Selección Directa es el método de entrada táctil más simple. Solo toque directamente cualquier tecla para seleccionarla.</string>
+    <string name="sr_direct_selection_info_2">Este modo funciona mejor cuando puede apuntar y tocar la pantalla con precisión. Cada toque en una tecla seleccionará esa tecla inmediatamente.</string>
+    <string name="sr_direct_selection_sec_tips">Consejos</string>
+    <string name="sr_direct_selection_info_tips">\u2022 Toque una vez en una tecla para seleccionarla\n\u2022 Use el ajuste de tamaño del teclado para modificar el tamaño de las teclas\n\u2022 Si tiene dificultad con toques precisos, considere probar la Selección Direccional</string>
+    <string name="sr_direct_selection_sec_settings">Ajustes</string>
+    <string name="sr_direct_selection_debounce">Touch Debounce / Enfriamiento</string>
+    <string name="sr_direct_selection_debounce_desc">Ignorar toques rápidos repetidos en esta ventana de tiempo (predeterminado 120 ms)</string>
+    <string name="sr_direct_selection_auto_repeat">Auto-Repetición de Activación de Teclas</string>
+    <string name="sr_direct_selection_auto_repeat_desc">Mantenga presionada una tecla de movimiento o desplazamiento en el teclado de navegación para repetirla</string>
+    <string name="sr_direct_selection_auto_repeat_delay">Tiempo de Demora de Auto-Repetición</string>
+
+    <!-- Directional Selection page -->
+    <string name="sr_directional_selection_sec_how">Cómo Funciona la Selección Direccional</string>
+    <string name="sr_directional_selection_info_1">La Selección Direccional usa gestos de deslizamiento para navegar el teclado. Deslice en cualquiera de 8 direcciones para seleccionar la tecla correspondiente en el botón resaltado.</string>
+    <string name="sr_directional_selection_info_2">Deslice desde cualquier parte de la pantalla en la dirección de la tecla que desea seleccionar.</string>
+    <string name="sr_directional_selection_sec_settings">Ajustes</string>
+    <string name="sr_directional_selection_debounce">Swipe Debounce / Enfriamiento</string>
+    <string name="sr_directional_selection_debounce_desc">Ignorar deslizamientos rápidos repetidos en esta ventana de tiempo (predeterminado 120 ms)</string>
+    <string name="sr_directional_selection_swipe_sensitivity">Sensibilidad de Deslizamiento</string>
+    <string name="sr_directional_selection_swipe_sensitivity_desc">Distancia mínima para registrar un deslizamiento</string>
+
+    <!-- Vocabulary page -->
+    <string name="sr_vocabulary_sec_sources">Fuentes de Vocabulario</string>
+    <string name="sr_vocabulary_include_justtype">Incluir Diccionario JustType</string>
+    <string name="sr_vocabulary_include_custom_words">Incluir Palabras Personalizadas</string>
+    <string name="sr_vocabulary_include_phrases">Incluir Frases</string>
+    <string name="sr_vocabulary_promote_imported">Promover Palabras Importadas</string>
+    <string name="sr_vocabulary_sec_filter">Filtro de Frecuencia</string>
+    <string name="sr_vocabulary_enable_freq_filter">Activar Filtro de Frecuencia</string>
+<!-- Phase 3D: sr_vocabulary_min_freq_next_letter removed (orphan key). -->
+    <string name="sr_vocabulary_min_freq_selection">Frec. Mín (Selección)</string>
+    <string name="sr_vocabulary_show_excluded">Mostrar Excluidas al Final</string>
+    <string name="sr_vocabulary_sec_accent">Módulo de Acentos</string>
+    <string name="sr_vocabulary_enable_accent">Activar Módulo de Acentos</string>
+    <string name="sr_vocabulary_accent_min_freq">Frec. Mín de Acentos</string>
+    <string name="sr_vocabulary_accent_max_freq">Frec. Máx de Acentos</string>
+    <string name="sr_vocabulary_accent_max_use_count">Máx Usos de Acentos</string>
+    <string name="sr_vocabulary_accent_max_use_jt">Máx Usos Acentos (JT)</string>
+    <string name="sr_spell_sec_diacritics">Diacríticos del Modo Deletreo</string>
+
+    <!-- Backup Info page -->
+    <string name="sr_backup_sec_info">Copia de Seguridad &amp; Restaurar</string>
+    <string name="sr_backup_sec_note">Use los ajustes de pantalla táctil para operaciones de respaldo y restauración</string>
+
+    <!-- Developer page -->
+    <string name="sr_developer_sec_sort">Pesos de Ordenamiento</string>
+    <string name="sr_developer_freq_add_weight">Freq Add Weight</string>
+    <string name="sr_developer_freq_mult_weight">Freq Mult Weight</string>
+    <string name="sr_developer_seq_add_weight">Seq Add Weight</string>
+    <string name="sr_developer_seq_mult_weight">Seq Mult Weight</string>
+    <string name="sr_developer_use_add_weight">Use Add Weight</string>
+    <string name="sr_developer_use_mult_weight">Use Mult Weight</string>
+    <string name="sr_developer_recency_add_weight">Recency Add Weight</string>
+    <string name="sr_developer_recency_mult_weight">Recency Mult Weight</string>
+    <string name="sr_developer_sls_partition">Política de Partición de Lista</string>
+    <string name="sr_developer_sls_partition_blocks">Bloques</string>
+    <string name="sr_developer_sls_partition_pin">Fijar FTS</string>
+    <string name="sr_developer_sls_partition_interleave">Intercalar</string>
+    <string name="info_prompt_sls_partition">Cómo se ordena la lista de selección. Bloques (predeterminado): las palabras completamente escritas siempre van primero, luego las terminaciones. Fijar FTS: la mejor palabra completamente escrita conserva la posición 1 y el resto se ordena por métrica. Intercalar: toda la lista se ordena por métrica. Las palabras completamente escritas siempre aparecen bajo cualquier política.</string>
+    <string name="sr_developer_sls_tone_promoted">Promover Palabras con Tono Pendiente</string>
+    <string name="info_prompt_sls_tone_promoted">Cuando está activado (predeterminado), las palabras con todas las letras escritas y solo la pulsación de tono pendiente tienen garantizado un lugar por encima de las terminaciones incompletas. Desactivado, compiten por métrica como cualquier otra terminación. Solo afecta a idiomas con tecla de tono.</string>
+    <string name="sr_developer_select_behavior">Modo de Comportamiento de Selección</string>
+    <string name="sr_developer_select_behavior_observe">Observar</string>
+    <string name="sr_developer_select_behavior_force_page1">Forzar Página 1</string>
+    <string name="sr_developer_select_behavior_force_head">Forzar Cabecera</string>
+    <string name="sr_developer_select_behavior_adaptive">Adaptativo</string>
+    <string name="info_prompt_select_behavior">Escalera de promoción FTS adaptativa. Observar (predeterminado): solo registra los patrones de pulsación de Seleccionar, sin cambios de comportamiento. Forzar Página 1 / Forzar Cabecera: al pulsar Seleccionar sin señal de confianza, las palabras completamente escritas situadas bajo la cabecera se promueven a la página 1 o a la cabecera. Adaptativo: reservado — solo observa hasta que se active la rampa automática.</string>
+    <string name="sr_developer_sec_search">Parámetros de Búsqueda</string>
+    <string name="sr_developer_beam_search_depth">Profundidad de Búsqueda Beam</string>
+    <string name="sr_developer_subseq_edit_distance">Distancia de Edición de Subsecuencia</string>
+    <string name="sr_developer_max_queue_candidates">Max Candidatos en Cola</string>
+    <string name="sr_developer_max_examined_nodes">Max Nodos Examinados</string>
+    <string name="sr_developer_ignore_max_examined">Ignorar Max Nodos Examinados</string>
+    <string name="sr_developer_case_switch_margin">Margen de Cambio de Mayúsculas</string>
+    <string name="sr_developer_sec_behavior">Comportamiento</string>
+    <string name="sr_developer_sec_debug">Depuración</string>
+    <string name="sr_developer_enable_debug_log">Activar Registro de Depuración</string>
+    <string name="sr_developer_debug_log_retention">Retención de Registros de Depuración</string>
+    <string name="sr_developer_show_sort_metric">Mostrar Métrica de Ordenamiento</string>
+    <string name="sr_developer_show_edit_ops">Mostrar Operaciones de Edición</string>
+    <string name="settings_tier_beta">beta</string>
+    <string name="settings_tier_internal">interno</string>
+    <string name="sr_main_submit_feedback">Enviar Comentarios</string>
+    <string name="sr_main_submit_feedback_description">Agrupa los registros de depuración recientes en un archivo que puede enviar por correo electrónico o cualquier aplicación para compartir — útil si ha tenido algún problema.</string>
+    <string name="feedback_share_chooser_title">Enviar registros de depuración mediante…</string>
+    <string name="feedback_subject_default">Registros de depuración de JustType</string>
+    <string name="feedback_no_logs_available">No hay registros de depuración disponibles para compartir.</string>
+    <string name="feedback_share_failed">No se pudo preparar el archivo de registros de depuración.</string>
+
+    <!-- Head tracking paused overlay -->
+    <string name="head_tracking_paused">SEGUIMIENTO\nDE CABEZA\nPAUSADO</string>
+    <string name="head_tracking_label_pausing">Pausando\nJustType</string>
+    <string name="head_tracking_label_paused">JustType\nen Pausa</string>
+    <string name="head_tracking_label_exiting">Saliendo de\nJustType</string>
+    <string name="head_tracking_label_exited">Salió de\nJustType</string>
+    <string name="head_tracking_label_resuming">Reanudando\nJustType</string>
+
+    <!-- Vocabulary system module labels (SelectActiveVocabulariesActivity) -->
+    <string name="vocab_module_justtype_main">Base de Datos Principal de JustType</string>
+    <string name="vocab_module_custom_words">Palabras Personalizadas del Usuario</string>
+    <string name="vocab_module_phrases">Abreviaturas/Frases</string>
+    <string name="vocab_module_past_vocabs">(Vocabularios Anteriores)</string>
+
+    <!-- Vocabulary export module names -->
+    <string name="export_module_justtype">Base de Datos JustType</string>
+    <string name="export_module_custom">Palabras Personalizadas</string>
+    <string name="export_module_phrases">Frases Abreviadas</string>
+
+    <!-- Export file headers (ExportVocabUsageActivity) -->
+    <string name="export_header_usage_counts">Conteos de Uso del Vocabulario %s:\n</string>
+    <string name="export_header_freq_class">Palabras de la BD Principal de JustType en Clase de Frecuencia %d\n</string>
+    <string name="export_header_words_spelled">Palabras deletreadas %d veces\n</string>
+
+    <string name="accessible_prompt_dismiss_hint">Presione UnDo para cerrar este mensaje</string>
+    <!-- Overlay permission dialog (first-run) -->
+    <string name="overlay_permission_title">Permiso Necesario</string>
+    <string name="overlay_permission_message">JustType necesita permiso para mostrarse sobre otras aplicaciones. Esto habilita métodos de entrada avanzados como Selección Direccional. Puede otorgar este permiso ahora o después en los ajustes del sistema.</string>
+    <string name="overlay_permission_grant">Otorgar Permiso</string>
+    <string name="overlay_permission_later">Después</string>
+
+    <!-- Info-icon mechanism (Phase 3B) -->
+    <string name="info_icon_content_description">Mostrar ayuda para este ajuste</string>
+
+    <!-- Letter Arrangement confirmation dialog (Phase 3D) -->
+    <string name="letter_arrangement_confirm_title">¿Cambiar Disposición de Letras?</string>
+    <string name="letter_arrangement_confirm_message">Esto cambiará cómo están dispuestas las letras en su teclado, y ciertamente requerirá tiempo para acostumbrarse. ¿Le gustaría probarlo por un tiempo?</string>
+    <string name="letter_arrangement_confirm_yes">Sí, probarlo</string>
+    <string name="letter_arrangement_confirm_no">Cancelar</string>
+
+    <!-- INFO PROMPTs — JustType Settings page -->
+    <string name="info_prompt_ui_language">Controla el idioma usado para todas las etiquetas de teclas en pantalla, menús, texto de ayuda y mensajes. Elija Predeterminado del Sistema para seguir el idioma del dispositivo, o seleccione un idioma específico.</string>
+    <string name="info_prompt_typing_language">Selecciona qué base de datos de palabras se usa para escribir palabras con el teclado JustType. Actualmente solo está disponible Inglés.</string>
+    <string name="info_prompt_spanish_region">Solo afecta al español. Elige su variedad regional para que las formas de palabras específicas de una región (p. ej., las formas de vosotros de España) bajen al final de la lista de selección. \"General\" mantiene todas las regiones por igual.</string>
+    <string name="info_prompt_letter_arrangement">Elija entre Optimizada (letras agrupadas por frecuencia para una escritura más rápida) y Alfabética (letras en orden A-Z para una apariencia más familiar). La disposición Optimizada es más eficiente, requiere menos pulsaciones, y se recomienda para la mayoría de las personas. Cambiar esto es reversible y puede probarse antes de confirmar.</string>
+    <string name="info_prompt_keyboard_size">Establece la altura del teclado JustType como porcentaje de la pantalla. Aumente para teclas más grandes y fáciles de leer; disminuya para dejar más espacio para el campo de texto arriba.</string>
+    <string name="info_prompt_extra_blank_line">Cuando está ACTIVADO, presionar Enter inserta dos saltos de línea en lugar de uno, creando una línea en blanco visible entre párrafos. Útil para redactar correos electrónicos o documentos con espaciado de párrafos.</string>
+    <string name="info_prompt_speak_output_word">Cuando está ACTIVADO, cada palabra se habla en voz alta tan pronto como se finaliza — después de que la Selecciona y tan pronto como escribe la primera tecla de la siguiente palabra (o la Demora de Auto-Habla está habilitada y se agota). Esto ayuda a verificar que se seleccionó la palabra correcta sin tener que mirar el campo de texto cada vez.</string>
+    <string name="info_prompt_speak_output_phrase">Cuando está ACTIVADO, una vez que una frase almacenada es Seleccionada en la Lista de Selección, se habla en voz alta después de que transcurre la Demora de Auto-Habla. Esto le permite hablar una frase almacenada que recuerda sin tener que escribir primero una tecla siguiente.</string>
+    <string name="info_prompt_speak_output_sentence">Cuando está ACTIVADO, cada oración completada se habla en voz alta después de ser finalizada al agregar un punto, signo de exclamación o signo de interrogación. Le permite hablar automáticamente cada oración al completarse.</string>
+    <string name="info_prompt_speak_punct_names">Cuando está ACTIVADO, los caracteres de puntuación (punto, coma, etc.) se hablan por nombre cuando se generan. Útil para verificar que se escribió la puntuación deseada.</string>
+    <string name="info_prompt_speaking_indicator_icon">Elige el pequeño icono animado que se muestra en la esquina superior derecha del teclado mientras se lee el texto en voz alta. El icono permite que las personas cercanas vean que JustType está hablando.</string>
+    <string name="info_prompt_phrase_auto_output">El número de segundos que JustType esperará después de que se selecciona una palabra o una frase abreviada antes de hablar automáticamente la palabra o frase seleccionada. Establezca en DESACTIVADO (0) para deshabilitar el habla automática. Cuando la Demora de Auto-Habla está deshabilitada, la palabra o frase seleccionada solo se hablará cuando comience a escribir la siguiente palabra.</string>
+    <string name="info_prompt_next_letter_hints">A medida que escribe una palabra, JustType determina todas las palabras posibles en la base de datos que coinciden con las teclas que ha presionado hasta ahora. JustType también puede determinar todas las letras que vienen a continuación en cualquiera de las palabras que podría estar escribiendo. Cuando \"Pistas de Siguiente Letra\" está ACTIVADO, JustType \"resaltará\" cada una de esas letras en el teclado mostrando estas \"Siguientes-Letras\" en negrita, mientras que todas las demás letras se muestran \"en gris\". Activar \"Pistas de Siguiente Letra\" puede ayudarlo a guiarse al deletrear palabras más largas — si ha ingresado la secuencia de teclas correcta hasta ahora, la siguiente letra de su palabra estará resaltada. Si su siguiente letra está \"en gris\", probablemente necesite retroceder un poco y corregir un error de escritura (o agregar una nueva palabra que aún no está incluida en la base de datos). Cuando TODAS las letras de una tecla están \"en gris\", la tecla no hará nada al ser presionada (y si \"Pitido de Error\" está ACTIVADO, escuchará un pitido corto que puede ayudarle a notar esto).</string>
+    <string name="info_prompt_show_key_history">Cuando está ACTIVADO, una franja sobre el teclado muestra la secuencia de teclas que ha presionado para la palabra actual. Le ayuda a seguir su progreso y detectar errores.</string>
+    <string name="info_prompt_key_history_height">Establece la altura de la franja de historial de teclas sobre el teclado. Establece la altura como un múltiplo (de 0.25 a 1.0) de la altura de las teclas en el teclado. Aumente para una franja más alta y más legible; disminuya para ahorrar espacio en pantalla.</string>
+    <string name="info_prompt_key_history_shrink">Cuando está ACTIVADO, la franja de historial de teclas reduce automáticamente su altura para palabras más largas para que todas las teclas presionadas quepan en la pantalla. Cuando está DESACTIVADO, la franja siempre usa la altura completa configurada, y las teclas anteriores se desplazan fuera de la pantalla a la izquierda para palabras más largas.</string>
+    <string name="info_prompt_auto_load_word">Cuando está ACTIVADO, tocar una palabra existente en el campo de texto la carga automáticamente en la lista de selección para que pueda recorrer alternativas, extender la palabra escribiendo letras adicionales, o acortarla presionando la tecla UnDo. Cuando está DESACTIVADO, debe iniciar manualmente la edición de palabras existentes presionando la tecla Select. Cuando \"Auto-Cargar\" está ACTIVADO y se usa el Modo Edición para mover el cursor a una palabra, la palabra se cargará automáticamente cuando vuelva al teclado Principal (presionando \"VOLVER A PRINC.\").</string>
+    <string name="info_prompt_case_type_variants">Cuando está ACTIVADO, la lista de selección incluye cualquier Forma Mayúscula disponible de una palabra (por ejemplo, \"brown\" para el color, y quizás también \"Brown\" para \"Sr. Brown\"). Cuando está DESACTIVADO, solo se muestra la capitalización predeterminada de cada palabra en la lista, y se deben usar las funciones SHIFT o BLOQ MAYÚS para crear Formas Mayúsculas cuando se desee.</string>
+    <string name="info_prompt_case_type_deferred">Cuando está ACTIVADO, las Formas Mayúsculas de una palabra no se agregan inmediatamente cuando se Selecciona la palabra — solo se agregan para la palabra Seleccionada después de que transcurre la \"Demora para Agregar Formas Mayúsculas\". Esto mantiene la lista de selección más corta (menos palabras por las que pasar), mientras que aún hace disponibles otras formas cuando se desean.</string>
+    <string name="info_prompt_case_type_delay">El número de segundos a esperar antes de mostrar las Formas Mayúsculas de una palabra una vez que es Seleccionada en la lista de selección. Esta Demora solo aplica cuando \"Esperar Hasta que la Palabra sea Seleccionada para Agregar Formas Mayúsculas\" está ACTIVADO, y la palabra actualmente seleccionada tiene una o más Formas Mayúsculas variantes. Cuando esta Demora se establece en DESACTIVADO (0), las Formas Mayúsculas disponibles se muestran inmediatamente (tan pronto como una palabra es Seleccionada).</string>
+    <string name="info_prompt_show_abbrev_in_selection">Cuando está ACTIVADO, la abreviatura asociada a una entrada de frase (por ejemplo, \"CMBL\" para \"Call me back later. \") se mostrará en la lista de selección (junto con la frase misma si \"Mostrar Frase en Selección\" también está ACTIVADO). Cuando está DESACTIVADO, las abreviaturas de frases no se muestran en la lista de selección.</string>
+    <string name="info_prompt_show_phrase_in_selection">Cuando está ACTIVADO, las frases de varias palabras que se han agregado con una abreviatura asociada (por ejemplo, la frase \"Call me back later.\" que podría abreviarse como \"CMBL\") se muestran en la lista de selección. Cuando está DESACTIVADO, solo se muestra la abreviatura.</string>
+
+    <!-- INFO PROMPTs — Input Methods page -->
+    <string name="info_prompt_alternative_input_method">Hay cuatro métodos de entrada adaptativos que pueden usarse para activar teclas, además de cualquier método de pantalla táctil que pueda estar en uso. Estos métodos adaptativos incluyen:\n(1) Seguimiento de Cabeza (mover un cursor en respuesta al movimiento de la cabeza)\n(2) Joystick (requiere un joystick externo)\n(3) Escaneo con Un Interruptor (escaneo lineal con un solo interruptor de las 8 teclas)\n(4) Selección con Dos Interruptores (una secuencia de tres activaciones de cualquiera de los dos interruptores selecciona inmediatamente una de las 8 teclas)\n(5) (Ninguno - use solo uno de los métodos de pantalla táctil, ya sea Selección Directa o Selección Direccional).</string>
+    <!-- Per-method INFO PROMPTs for the Adaptive Input Methods section. -->
+    <string name="info_prompt_im_head_tracking">El método de entrada de Seguimiento de Cabeza requiere que la aplicación \"HeadBoard\" (también disponible de Continuous Path Foundation) esté también instalada y configurada en su dispositivo (solo siga las indicaciones al instalar HeadBoard). La aplicación HeadBoard usa la cámara frontal para rastrear el movimiento de su cabeza, y mueve un cursor del ratón en pantalla en respuesta. Este cursor aparece siempre que está operando cualquier software en su dispositivo QUE NO SEA EL TECLADO JUSTTYPE MISMO. Cuando el cursor entra al teclado, su ubicación exacta ya no se muestra. Esto se debe a que las teclas se presionan simplemente moviendo la cabeza en la dirección general de la tecla que desea presionar. No tiene que ser muy preciso — solo mueva la cabeza del \"área de descanso\" (el centro del teclado) en la dirección de la tecla (la \"dirección cardinal\" de la tecla desde el centro del teclado). Tan pronto como la tecla se vuelve verde, muévase de vuelta hacia el centro. La tecla se activará, y puede moverse directamente hacia la siguiente tecla que desea presionar. Si accidentalmente activa la tecla equivocada, simplemente vaya a la tecla \"Undo\" para eliminar esa pulsación.</string>
+    <string name="info_prompt_im_joystick">El método de entrada de Joystick requiere que use un joystick externo Bluetooth instalado y configurado en su dispositivo. JustType mostrará un cursor del ratón en pantalla que se moverá en respuesta a cómo mueve el joystick. Este cursor aparece siempre que está operando cualquier software en su dispositivo QUE NO SEA EL TECLADO JUSTTYPE MISMO. Cuando el cursor entra al teclado, su ubicación exacta ya no se muestra. Esto se debe a que las teclas se presionan simplemente moviendo el joystick en la dirección general de la tecla que desea presionar. No tiene que ser muy preciso — solo mueva desde el \"área de descanso\" (el centro del teclado, donde el joystick está cerca de su posición central) en la dirección de la tecla (la \"dirección cardinal\" de la tecla desde el centro del teclado). Tan pronto como la tecla se vuelve verde, muévase de vuelta hacia el centro. La tecla se activará, y puede moverse directamente hacia la siguiente tecla que desea presionar. Si accidentalmente activa la tecla equivocada, simplemente vaya a la tecla \"Undo\" para eliminar esa pulsación.</string>
+    <string name="info_prompt_im_single_switch">El Escaneo con Un Interruptor muestra el teclado como una o dos filas horizontales de teclas que se escanean (resaltan) en secuencia. Esto le permite cerrar un solo interruptor para activar la tecla que está actualmente resaltada. Debido a que el teclado JustType solo tiene ocho teclas, es más fácil y eficiente simplemente escanear todas las teclas en secuencia en lugar de organizarlas en múltiples filas y usar algún tipo de \"escaneo de fila-columna\" que se podría usar en un teclado con muchas más teclas. El interruptor mismo puede ser un interruptor Bluetooth externo que se haya instalado y configurado en su dispositivo. Si no usa un interruptor externo, puede configurar el \"Interruptor Táctil\" para usar la parte inferior de la pantalla del dispositivo como su interruptor y simplemente tocar la pantalla para cerrar el interruptor.</string>
+    <string name="info_prompt_im_two_switch">La Selección con Dos Interruptores es diferente de los métodos de escaneo: usa dos interruptores diferentes (un interruptor \"verde\" y uno \"rojo\", aunque el color real de los interruptores no importa realmente), y seleccionar una tecla requiere una secuencia de tres pulsaciones de interruptor en uno de los dos. Las teclas se resaltan en verde o rojo — y todo lo que tiene que hacer es presionar el interruptor que coincide con el color de la tecla que desea. Al inicio de una secuencia, cuatro de las teclas se resaltan en verde y las otras cuatro en rojo. Digamos que la tecla que quiere presionar está resaltada en verde en este punto — entonces comienza presionando el interruptor verde. Luego las cuatro teclas que eran rojas dejan de estar resaltadas, y dos de las teclas que eran verdes ahora se vuelven rojas. De nuevo, solo siga presionando el interruptor que coincida con el color del resaltado en su tecla. Después de la segunda pulsación del interruptor, solo quedarán dos teclas — una verde y una roja — ya sabe qué hacer. Al principio, encontrará útil el resaltado cambiante para guiarse. Pero también hay un ajuste (\"Mostrar banda de código de color en la parte inferior\") que puede activar cuando quiera. Esto mostrará un rectángulo debajo de cada tecla con tres bandas de color, ya sea verde o rojo. La secuencia de izquierda a derecha de bandas de color muestra la secuencia de interruptores que activa esa tecla. Entonces no tiene que mirar la tecla y pensar al respecto: si la banda muestra verde, rojo, verde, simplemente presione los interruptores verde-rojo-verde sin esperar, y la tecla se activará.</string>
+    <string name="info_prompt_section_touchscreen_input_methods">NOTA: Cuando la Selección Direccional (o el Interruptor Táctil) está activada abajo, JustType \"capturará\" todas las acciones táctiles que se realicen en toda (o parte de) la pantalla táctil. Cuando esto está sucediendo, no puede tocar e interactuar con otros controles de UI que puedan mostrarse en la pantalla. Si usted u otra persona necesita operar el dispositivo y por lo tanto necesita poder interactuar con la pantalla, el enfoque más simple es abrir el teclado de Funciones y activar la función \"OCULTAR TECLADO\". Cuando el teclado está oculto, esta \"captura\" de pantalla se pausa para que alguien pueda interactuar como de costumbre con cualquier cosa que se muestre en la pantalla. Esto también significa que la Selección Direccional (o el Interruptor Táctil) no funcionará hasta que el teclado se muestre nuevamente. La forma más simple de traer el teclado de vuelta es simplemente tocando un campo de texto. Si también hay necesidad de ingresar texto mientras la Selección Direccional (o el Interruptor Táctil) está DESACTIVADA, primero oculte el teclado con la función \"OCULTAR TECLADO\", luego vaya a los ajustes del sistema y desactive la Selección Direccional (o el Interruptor Táctil) en los ajustes de JustType. Cuando termine, simplemente vuelva a los ajustes y active la Selección Direccional (o el Interruptor Táctil) de nuevo.</string>
+    <string name="info_prompt_direct_selection">Cuando está ACTIVADO, puede tocar directamente cada tecla para activarla. Este es el método de entrada de pantalla táctil predeterminado. Al menos uno entre Selección Directa o Selección Direccional siempre permanecerá activado para que un maestro o clínico pueda interactuar directamente con el dispositivo.</string>
+    <string name="info_prompt_directional_selection">Cuando este método está ACTIVADO, las teclas pueden activarse deslizando en cualquier parte del teclado y trazando un trazo en una de las 8 direcciones posibles (hacia cualquiera de los 8 puntos cardinales). Un trazo de casi cualquier longitud, en cualquier parte del teclado, activará la tecla que está en la misma dirección relativa al centro del teclado. Para muchas personas, esto puede ser mucho más fácil y rápido que tener que tocar con precisión una tecla específica. Al menos uno entre Selección Directa o Selección Direccional siempre permanecerá activado para que un maestro o clínico pueda interactuar directamente con el dispositivo.</string>
+    <string name="info_prompt_im_touchscreen_switch">Cuando está ACTIVADO, el área de la pantalla táctil en la parte inferior de la pantalla actúa como un interruptor virtual, proporcionando entrada estilo interruptor sin requerir ningún hardware externo. Puede operar en modo de Un Interruptor o Dos Interruptores. Cuando está habilitado, otros ajustes controlan el tamaño y el comportamiento del Interruptor Táctil.</string>
+    <string name="info_prompt_beep_on_key_select">Cuando está ACTIVADO, suena un pitido corto cada vez que se activa una tecla. Proporciona confirmación auditiva de que se detectó una pulsación de tecla.</string>
+    <string name="info_prompt_error_beep">Cuando está ACTIVADO, suena un pitido doble corto cuando se activa una tecla que no es una tecla \"válida\" (la tecla no tiene efecto). Proporciona una indicación auditiva de que la tecla presionada probablemente no era la tecla deseada.</string>
+    <string name="info_prompt_speak_selected_key">Cuando está ACTIVADO, el \"nombre\" de cada tecla (la lista de letras en la tecla, o el nombre de la función en la tecla) se habla en voz alta cuando se activa la tecla. Ayuda a identificar qué tecla se presionó cuando la identificación visual de la tecla es difícil.</string>
+    <string name="info_prompt_speak_punctuation">Cuando está ACTIVADO, los nombres de puntuación se incluyen al hablar el contenido de la tecla seleccionada (por ejemplo, \"E F G H apóstrofo punto\" en lugar de solo \"E F G H\"). Solo aplica cuando \"Hablar cada tecla seleccionada\" está ACTIVADO.</string>
+    <string name="info_prompt_speak_selected_word">Cuando está ACTIVADO, cada vez que presiona la tecla Select, la palabra que se selecciona en la lista de selección se habla en voz alta. Dado que la gran mayoría de las veces su palabra deseada será la primera palabra en la lista, activar esto le permite enfocarse en el teclado mientras deletrea cada palabra, y dado que la palabra se habla en voz alta cuando termina de escribir y presiona Select, no tiene que seguir mirando el texto para confirmar que está obteniendo la palabra que deseaba. Cuando solo \"Hablar Cada Palabra Escrita\" está ACTIVADO (en la página de Ajustes de JustType), la palabra no se hablará hasta que comience a escribir la siguiente palabra. Esto retrasa el momento en que se habla la palabra, pero tiene la ventaja de no hablar una palabra que en realidad no quiere decir, pero que tiene que \"saltar\" para Seleccionar una palabra que está más abajo en la Lista de Selección.</string>
+    <string name="info_prompt_speak_prompts_aloud">Cuando está ACTIVADO, los avisos de navegación de ajustes (como \"Idioma\", \"Métodos de Entrada\", etc.) se hablan en voz alta cuando se seleccionan además de mostrarse en pantalla. Desactive si prefiere avisos solo visuales.</string>
+    <string name="info_prompt_flash_key_feedback">Cuando está ACTIVADO, cada tecla que se activa parpadea brevemente con un resalte visual al ser presionada. Proporciona confirmación visual inmediata de cada tecla que se activa.</string>
+
+    <!-- INFO PROMPTs — Set Up Head Tracking page -->
+    <string name="info_prompt_section_ht_zone_thresholds">El tamaño relativo de la región central donde el movimiento de la cabeza no tiene efecto — donde puede simplemente \"descansar\" sin tratar de activar una tecla, y sin preocuparse de activar una tecla involuntariamente. Una Zona de Descanso más grande requiere más movimiento de cabeza lejos del centro para llegar a donde las teclas circundantes comienzan a responder al movimiento de la cabeza. Aumente el tamaño si las teclas comienzan a activarse aunque solo esté tratando de descansar en el medio. El límite de cada Zona se establece como una fracción entre 0.0 y 1.0, con 0.0 en el centro del teclado y 1.0 en el borde mismo.</string>
+    <string name="info_prompt_ht_active_zone">La distancia relativa que debe moverse desde el centro para activar una tecla. Cuando entra a la Zona Activa de una tecla, la tecla se volverá verde. Después de entrar a la Zona Activa y la tecla se vuelve verde, simplemente se mueve de vuelta hacia el centro para activar la tecla. Disminuir la Zona Activa hace que pueda activar teclas con menos movimiento de cabeza, pero puede aumentar la probabilidad de que una tecla se active accidentalmente.</string>
+    <string name="info_prompt_ht_exit_zone">El límite relativo que define el borde exterior para el movimiento de la cabeza dentro de la región del teclado. Puede pausar el Seguimiento de Cabeza girando la cabeza hacia la derecha hasta alcanzar el límite de la Zona de Salida, y luego mantener la cabeza girada hasta que transcurra el tiempo de Demora de Salida. El borde del teclado comenzará a parpadear cuando alcance la Zona de Salida. Disminuya el tamaño de la Zona de Salida para reducir cuánto necesita girar la cabeza para pausar o salir del teclado. Cuando se mueve hacia arriba (en lugar de a la derecha) hacia la Zona de Salida, puede mover el cursor fuera del teclado JustType. El borde del teclado comenzará a parpadear, y luego el cursor aparecerá en la región sobre el teclado una vez que transcurra el tiempo de Demora de Salida.</string>
+    <string name="info_prompt_ht_key_activation_threshold">Una vez que una tecla se vuelve verde y comienza a moverse de vuelta hacia el centro, este umbral determina cuánto debe moverse de vuelta antes de que la tecla se active. Un valor más bajo significa que las teclas se activarán más rápidamente, ya que sucederá antes de que tenga que moverse muy lejos de vuelta hacia el centro. Establecer este valor en 100%, quiere decir que tiene que volver completamente al inicio de la Zona Activa para activar la tecla.</string>
+    <string name="info_prompt_ht_exit_pause_delay">El número de segundos que el cursor debe permanecer en la Zona de Salida (con el borde del teclado parpadeando) para pausar o salir. Si el borde del teclado comienza a parpadear pero no quiere salir o pausar, simplemente mueva la cabeza de vuelta hacia el centro para continuar usando el teclado. Una vez que el borde del teclado ha parpadeado durante el Tiempo de Demora de Salida/Pausa del Teclado, JustType (a) pausará el seguimiento de cabeza y mostrará \"Seguimiento de Cabeza Pausado\" (al moverse a la derecha) o (b) saldrá del teclado a la región superior (al moverse hacia arriba). Invierta el proceso, moviéndose hasta la izquierda para reanudar la escritura (\"despausar\"), o muévase hacia abajo para hacer que el cursor \"empuje contra\" el borde superior del teclado para volver a entrar. Aumente la Demora de Salida/Pausa (o el tamaño de la Zona de Salida) si pausar/salir sucede demasiado fácilmente.</string>
+    <string name="info_prompt_ht_corner_weighting">Ajusta la sensibilidad relativa de las teclas diagonales/de esquina (las direcciones \"ordinales\" — Noreste, Suroeste, etc.) en comparación con las teclas \"cardinales\" (arriba/abajo o izquierda/derecha — Norte, Sur, Este, Oeste). Para algunas personas, las teclas de esquina parecen más difíciles de activar que las teclas rectas arriba/abajo/izquierda/derecha. Valores por encima de 1.0 facilitan alcanzar las teclas de esquina — se vuelven objetivos relativamente más grandes en relación con otras teclas. Valores por debajo de 1.0 hacen lo opuesto y hacen que las direcciones cardinales (arriba, abajo, izquierda, derecha) se vuelvan objetivos más grandes.</string>
+    <string name="info_prompt_ht_vertical_sensitivity">Esto ajusta la facilidad relativa con la que el movimiento de cabeza arriba/abajo mueve el cursor verticalmente en comparación con cuánto el movimiento izquierda/derecha mueve el cursor horizontalmente. Aumente si los movimientos verticales se sienten lentos en comparación con los horizontales (o simplemente si es más difícil mover su cabeza arriba y abajo). Valores por encima de 1.0 amplifican el movimiento vertical, y valores por debajo de 1.0 amplifican el movimiento horizontal.</string>
+    <string name="info_prompt_ht_responsiveness">Controla cuánto (o qué tan rápido) se mueve el cursor en respuesta al movimiento de cabeza. Valores por encima de 1.0 hacen que el cursor se mueva más rápido/más lejos (más fácil mover distancias mayores). Valores por debajo de 1.0 resultan en movimientos del cursor más lentos/más pequeños (para apuntar más preciso).</string>
+    <string name="info_prompt_ht_debug_overlay">Cuando está ACTIVADO, JustType muestra una superposición de diagnóstico en el teclado con límites de zona, posición del cursor e información de cuadros por segundo. Útil para solucionar problemas de comportamiento del seguimiento de cabeza.</string>
+
+    <!-- INFO PROMPTs — Set Up Joystick page -->
+    <string name="info_prompt_joy_resting_zone">El tamaño relativo de la región central donde el movimiento del joystick no tiene efecto — donde puede simplemente \"descansar\" sin tratar de activar una tecla, y sin preocuparse de activar una tecla involuntariamente. Una Zona de Descanso más grande requiere más movimiento del joystick lejos del centro para llegar a donde las teclas circundantes comienzan a responder al movimiento del joystick. Aumente el tamaño si las teclas comienzan a activarse aunque solo esté tratando de descansar en el medio. El límite de cada Zona se establece como una fracción entre 0.0 y 1.0, con 0.0 en el centro del teclado y 1.0 en el borde mismo.</string>
+    <string name="info_prompt_joy_active_zone">La cantidad relativa de deflexión del joystick en la que una tecla se arma para activación. Cuando entra a la Zona Activa de una tecla, la tecla se volverá verde. Después de entrar a la Zona Activa y la tecla se vuelve verde, simplemente libera el joystick de vuelta hacia el centro para activar la tecla. Disminuir la Zona Activa hace que pueda activar teclas con menos deflexión del joystick, pero puede aumentar la probabilidad de que una tecla se active accidentalmente.</string>
+    <string name="info_prompt_joy_exit_zone">El límite relativo que define el borde exterior para la deflexión del joystick dentro de la región del teclado. Puede mover el cursor fuera del teclado JustType a la región arriba (o abajo) y usar su joystick para navegar su dispositivo. Cuando se mueve hacia arriba (en lugar de a la derecha) hasta alcanzar la Zona de Salida, el borde del teclado comenzará a parpadear, y una vez que transcurra el tiempo de Demora de Salida, el cursor aparecerá en la región sobre el teclado. Disminuya el tamaño de la Zona de Salida para reducir cuán lejos necesita mover el joystick para dejar el teclado (o pausar el joystick). Aunque esto probablemente es menos útil, también puede pausar la actividad del joystick en el teclado deflectando el joystick a la derecha (en lugar de hacia arriba) para salir a la región de la Lista de Selección. NOTA IMPORTANTE: También necesitará abrir HeadBoard y configurar un interruptor para usar con el joystick para hacer click (o doble-click, etc.) en la ubicación del cursor del joystick.</string>
+    <string name="info_prompt_joy_exit_pause_delay">El número de segundos que el joystick debe permanecer en la Zona de Salida (con el borde del teclado parpadeando) para salir o pausar. Si el borde del teclado comienza a parpadear pero no quiere salir o pausar, simplemente mueva el joystick de vuelta hacia el centro para continuar usando el teclado. Una vez que el borde del teclado ha parpadeado durante el Tiempo de Demora de Salida/Pausa del Teclado, JustType (a) saldrá del teclado a la región superior (al moverse hacia arriba) o (b) pausará el joystick y mostrará \"Joystick Pausado\" (al moverse a la derecha). Invierta el proceso, moviéndose hasta la izquierda para reanudar la escritura (\"despausar\"), o muévase hacia abajo para hacer que el cursor \"empuje contra\" el borde superior del teclado para volver a entrar. Aumente la Demora de Salida/Pausa (o el tamaño de la Zona de Salida) si pausar/salir sucede demasiado fácilmente.</string>
+    <string name="info_prompt_joy_corner_weighting">Ajusta la sensibilidad relativa de las teclas diagonales/de esquina (las direcciones \"ordinales\" — Noreste, Suroeste, etc.) en comparación con las teclas \"cardinales\" (arriba/abajo o izquierda/derecha — Norte, Sur, Este, Oeste). Para algunas personas, las teclas de esquina pueden parecer más difíciles (o más fáciles) de activar que las teclas rectas arriba/abajo/izquierda/derecha. Valores por encima de 1.0 facilitan alcanzar las teclas de esquina — se vuelven objetivos relativamente más grandes en relación con otras teclas. Valores por debajo de 1.0 hacen lo opuesto y hacen que las direcciones cardinales (arriba, abajo, izquierda, derecha) se vuelvan objetivos más grandes.</string>
+
+    <!-- INFO PROMPTs — Set Up Single Switch Scanning page -->
+    <string name="info_prompt_ss_assign_switch">Si quiere usar un interruptor Bluetooth, asegúrese de haberlo emparejado con su dispositivo Android como un \"Dispositivo Conectado\" en los ajustes del sistema. Si quiere usar un interruptor que pueda configurarse en HeadBoard (ya sea un interruptor de Movimiento de Cabeza o un Gesto Facial), entonces necesitará configurar y luego habilitar el interruptor abajo. Luego presione el botón \"Activar Interruptor de Escaneo\" para entrar al modo de asignación de interruptor, y presione un interruptor físico o realice la acción de HeadBoard para activar el interruptor que desea usar. JustType registrará qué interruptor activó y luego lo usará como su interruptor de escaneo.</string>
+    <string name="info_prompt_ss_touchscreen_switch">Cuando está ACTIVADO, el área de la pantalla táctil en la parte inferior de la pantalla actúa como un interruptor virtual, proporcionando entrada estilo interruptor sin requerir ningún hardware externo. El Interruptor Táctil puede operar en modo de Un Interruptor o Dos Interruptores. Cuando está habilitado, otros ajustes controlan el tamaño y el comportamiento del Interruptor Táctil.</string>
+    <string name="info_prompt_ss_scan_layout_size">Elija entre Grande (teclas más grandes, más fáciles de leer) y Pequeño (más compacto, deja más espacio para que se muestre otro contenido arriba en la pantalla).</string>
+    <string name="info_prompt_ss_scan_step_delay">El número de segundos que el resaltado de escaneo permanece en cada tecla antes de que el escaneo se mueva a la siguiente tecla. Disminuya para escaneo más rápido; aumente si necesita más tiempo para reaccionar.</string>
+    <string name="info_prompt_ss_initial_delay">Tiempo extra (en segundos) agregado al primer paso de escaneo después de presionar el interruptor o cuando el proceso de escaneo se reinicia. Esto le permite más tiempo para liberar el interruptor y tener suficiente tiempo para presionar el interruptor para seleccionar la primera tecla cuando el siguiente escaneo realmente comienza. Establezca en DESACTIVADO (0) para ningún retraso extra.</string>
+    <string name="info_prompt_ss_beep">Cuando está ACTIVADO, suena un pitido corto cada vez que el resaltado de escaneo se mueve a la siguiente tecla. Proporciona seguimiento auditivo del progreso del escaneo que puede ayudar a apoyar el seguimiento visual del progreso del escaneo.</string>
+    <string name="info_prompt_ss_skip_invalid">Cuando está ACTIVADO, el escaneador automáticamente omite teclas que no tienen siguientes-letras válidas resaltadas en la tecla. Acelera el escaneo omitiendo teclas inútiles. Esto también hace que el escaneo sea menos predecible, así que es posible que quiera activar la siguiente característica \"Mostrar Siguiente Tecla a Escanear\".</string>
+    <string name="info_prompt_ss_show_next_key">Cuando \"Omitir Teclas sin Siguientes-Letras Válidas\" está ACTIVADO, el progreso del escaneo se vuelve menos predecible. Cuando \"Mostrar Siguiente Tecla a Escanear\" está ACTIVADO, entonces siempre que una o más teclas en el ciclo de escaneo actual serán omitidas, la siguiente tecla que será resaltada para selección se muestra primero con un resaltado amarillo pálido, dándole una indicación anticipada de que la tecla será escaneada a continuación (resaltada en amarillo brillante) para ayudarle a prepararse para cerrar el interruptor cuando realmente esté resaltada.</string>
+    <string name="info_prompt_ss_auto_repeat_mode">Cuando cierra el interruptor durante un escaneo, activa inmediatamente la tecla actualmente resaltada. Cuando el \"Modo de Auto-Repetición de Activación de Tecla\" está ACTIVADO, puede continuar manteniendo el interruptor cerrado para repetir automáticamente las activaciones de esa tecla al intervalo de Tiempo de Demora de Auto-Repetición (abajo). Cuando la palabra que está deletreando tiene dos o más letras seguidas que están en la misma tecla, esto puede ser mucho más rápido que liberar el interruptor y esperar para escanear desde el inicio hasta la misma tecla de nuevo y luego cerrar el interruptor por segunda vez. Si mantener el interruptor cerrado y esperar para liberarlo en el momento correcto no es difícil, esto es altamente recomendable ya que ahorra tiempo significativo para aproximadamente 17% de las letras que escribe.</string>
+    <string name="info_prompt_ss_auto_repeat_delay">El número de segundos entre cada activación repetida de tecla cuando el interruptor se mantiene presionado en Modo de Auto-Repetición de Activación de Tecla. En la mayoría de los casos, probablemente funcionará bien establecer esto al mismo intervalo de tiempo que el Tiempo de Demora por Paso de Escaneo.</string>
+    <string name="info_prompt_ss_select_triggers_scan">Cuando está ACTIVADO, presionar el interruptor para activar la tecla Select inicia automáticamente un escaneo de las palabras mostradas en la Lista de Selección actual. Activar esta característica significa que Seleccionar una palabra SIEMPRE requerirá dos cierres de interruptor separados: uno para activar la tecla Select, y luego una segunda vez para Seleccionar la palabra deseada cuando sea escaneada en la Lista de Selección. Para la mayoría de las personas, esto será MENOS eficiente, pero esta característica puede valer la pena explorar si: (a) el Modo de Auto-Repetición no es una opción viable para usted (en ese caso, simplemente mantener el interruptor cerrado en la tecla Select logra lo mismo pero más eficientemente); (b) la Demora por Paso de Escaneo necesita ser bastante larga, así que escribir letras adicionales de una palabra para acortar la Lista de Selección lleva tiempo; y (c) puede mantener un ojo en la Lista de Selección mientras cambia y notar cuando aparece su palabra (potencialmente más abajo en la lista).</string>
+    <string name="info_prompt_ss_scan_repeat_count">Cuando el escaneo continúa pero no se Selecciona ninguna tecla, este es el número de veces que el escaneo recorrerá todas las teclas antes de detenerse automáticamente. Establezca en 0 para escaneo \"infinito\" (el escaneo solo se detiene cuando presiona el interruptor para activar una tecla, y luego se reinicia). Reduzca el número de ciclos de repetición si encuentra el ciclo repetido distractor. Una vez que el escaneo se detiene, simplemente presione el interruptor una vez para reiniciar el escaneo.</string>
+    <string name="info_prompt_ss_debounce">Este ajuste permite al sistema ignorar activaciones rápidas repetidas del interruptor dentro de una ventana de tiempo corta. Aumente este tiempo si su dispositivo registra doble-toques o múltiples pulsaciones cuando simplemente está tratando de hacer un cierre único del interruptor. El predeterminado es 120 ms.</string>
+
+    <!-- INFO PROMPTs — Set Up Two-Switch Selection page -->
+    <string name="info_prompt_ts_assign_switch">Si quiere usar un interruptor Bluetooth, asegúrese de haberlo emparejado con su dispositivo Android como un \"Dispositivo Conectado\" en los ajustes del sistema. Si quiere usar uno o más de los interruptores que pueden configurarse en HeadBoard (ya sea un interruptor de Movimiento de Cabeza o un Gesto Facial), entonces necesitará configurar y luego habilitar el/los interruptor(es) abajo. Luego presione el botón \"Activar Interruptor (Rojo o Verde)\" para entrar al modo de asignación de interruptor, y presione un interruptor físico o realice la acción de HeadBoard para activar el que desea usar. JustType registrará qué interruptor activó y luego lo usará como su interruptor de escaneo.</string>
+    <string name="info_prompt_ts_touchscreen_switch">Cuando está ACTIVADO, el área de la pantalla táctil en la parte inferior de la pantalla actúa como un interruptor virtual, proporcionando entrada estilo interruptor sin requerir ningún hardware externo. El Interruptor Táctil puede operar en modo de Un Interruptor o Dos Interruptores. Cuando está habilitado, otros ajustes controlan el tamaño y el comportamiento del Interruptor Táctil.</string>
+    <string name="info_prompt_ts_auto_repeat_switch">Cuando está ACTIVADO, mantener presionado el interruptor Rojo o Verde causa activaciones repetidas de ese interruptor al intervalo de Tiempo de Demora de Auto-Repetición de Interruptor. Útil cuando los interruptores son más fáciles de mantener cerrados (y liberar) que presionar el mismo interruptor repetidamente. Por ejemplo, activar la Tecla Select se hace con tres activaciones seguidas del Interruptor Verde. Con Auto-Repetición de Activaciones de Interruptor, esto se puede hacer simplemente manteniendo el Interruptor Verde cerrado por el tiempo requerido. Nota: Cuando tanto Auto-Repetición de Activación de Interruptor como Auto-Repetición de Activación de Tecla están ACTIVADAS, entonces una vez que una secuencia de tres activaciones de interruptor está completa, se activa la primera activación de tecla, y continuar manteniendo el interruptor cerrado generará activaciones de tecla repetidas.</string>
+    <string name="info_prompt_ts_auto_repeat_switch_delay">El número de segundos entre cada activación repetida de interruptor cuando un interruptor se mantiene presionado en el modo de Auto-Repetición de Activación de Interruptor.</string>
+    <string name="info_prompt_ts_auto_repeat_key">Cuando está ACTIVADO, el tercer cierre de interruptor de cada secuencia de tres interruptores puede mantenerse cerrado para repetir automáticamente la activación de la tecla recién seleccionada. Acelera la escritura para usuarios experimentados.</string>
+    <string name="info_prompt_ts_auto_repeat_key_delay">El número de segundos entre cada activación repetida de tecla cuando el modo de Auto-Repetición de Activación de Tecla está ACTIVADO y el tercer cierre de interruptor se mantiene cerrado.</string>
+    <string name="info_prompt_ts_beep">Cuando está ACTIVADO, suena un pitido corto cada vez que se cierra un interruptor. Proporciona confirmación auditiva de que cada cierre de interruptor fue detectado.</string>
+    <string name="info_prompt_ts_show_color_band">Cuando está ACTIVADO, una banda coloreada con una secuencia de tres segmentos verdes o rojos se muestra debajo de cada tecla, mostrando la secuencia de activaciones de interruptor que activa esa tecla. Esto ayuda a memorizar la secuencia para cada tecla y acelerar la entrada, ya que puede planear la secuencia de activaciones de interruptor sin esperar para ver cómo los colores de resaltado de tecla cambian realmente.</string>
+    <string name="info_prompt_ts_reset_delay">Cada activación de tecla usando Selección con Dos Interruptores requiere una secuencia de tres activaciones consecutivas de interruptor. Puede haber momentos en que comience a ingresar una secuencia de interruptor para activar una tecla pero dirija su atención a otra cosa antes de que se ingresen las tres activaciones de interruptor. Cuando vuelva a escribir, esto puede ser confuso, o simplemente puede querer escribir algo diferente en ese momento. Cuando la \"Demora de Reinicio de Selección con Dos Interruptores\" se establece en algo diferente de 0 (que es \"DESACTIVADO\"), entonces si pausa al ingresar una secuencia de interruptor por más tiempo que la Demora de Reinicio, la secuencia de interruptor incompleta será cancelada y cualquier resaltado rojo y verde desaparecerá. Cuando esté listo para reanudar la escritura, presione cualquier interruptor y el resaltado rojo y verde se restaurará a las teclas para que pueda comenzar una nueva secuencia de interruptor y escribir la siguiente tecla.</string>
+    <string name="info_prompt_ts_stuck_switch">En caso de que el sistema no detecte cuando un interruptor es liberado, este es el número de segundos que el sistema esperará antes de decidir tratar lo que parece ser un interruptor continuamente cerrado como un \"interruptor atascado\" y simplemente ignorarlo. Esto previene \"entrada descontrolada\" si un interruptor funciona mal o se mantiene cerrado accidentalmente. Establezca este tiempo más alto si se activa cuando está manteniendo intencionalmente un interruptor por periodos largos.</string>
+
+    <!-- INFO PROMPTs — Set Up Touchscreen Switch page -->
+    <string name="info_prompt_section_tcs_how_works">El Interruptor Táctil le permite usar la parte inferior de la pantalla como entrada de interruptor. Cuando se usa con Escaneo con Un Interruptor, todo el ancho de la pantalla se usa para un solo interruptor que puede ser tocado en cualquier parte del área verde mostrada. Cuando se usa con Selección con Dos Interruptores, la mitad izquierda de la pantalla se usa para el interruptor Verde, y la mitad derecha se usa para el interruptor Rojo.</string>
+    <string name="info_prompt_tcs_switch_mode">Para crear un solo interruptor, elija Un Interruptor (se define una sola área táctil verde en pantalla en la parte inferior de la pantalla táctil, extendiéndose por todo el ancho de la pantalla). Este interruptor puede usarse para Escaneo con Un Interruptor o como Interruptor de Selección para entrada de Seguimiento de Cabeza o Joystick. Para crear dos interruptores separados, elija Dos Interruptores (dos áreas táctiles adyacentes en pantalla se definen en la parte inferior de la pantalla táctil, extendiéndose por todo el ancho de la pantalla, divididas en mitades izquierda y derecha que funcionan como los interruptores Verde y Rojo para Selección con Dos Interruptores).</string>
+    <string name="info_prompt_tcs_switch_height">El Interruptor Táctil siempre se coloca en la parte inferior de la pantalla para facilitar activar el/los interruptor(es) sin activar involuntariamente otra cosa en la pantalla. También ocupa todo el ancho de la pantalla. Este ajuste le permite definir qué tan alta es el área del interruptor táctil. La altura se establece relativa a la altura de cada fila de teclas en el teclado JustType, así que establecer la altura a 1 lo hace tan alto como la fila inferior del teclado, y 3 lo hace tan alto como las tres filas. Puede establecerlo a cualquier valor de 0.5 a 4.0, usando valores decimales para obtener exactamente la altura que mejor funciona.</string>
+    <string name="info_prompt_tcs_flash">Cuando está ACTIVADO, el área del interruptor táctil parpadea brevemente al ser tocada, proporcionando confirmación visual de que el toque fue registrado y el interruptor fue activado.</string>
+    <string name="info_prompt_tcs_beep">Cuando está ACTIVADO, suena un pitido corto cuando el área del interruptor táctil es tocada, proporcionando confirmación auditiva de que el toque fue registrado y el interruptor fue activado.</string>
+    <string name="info_prompt_tcs_debounce">Este ajuste permite al sistema ignorar activaciones rápidas repetidas del interruptor dentro de una ventana de tiempo corta. Aumente este tiempo si su dispositivo registra doble-toques o múltiples pulsaciones cuando simplemente está tratando de hacer un cierre único del interruptor. El predeterminado es 120 ms.</string>
+    <string name="info_prompt_tcs_overlay_mode">Cuando el Modo Superpuesto está ACTIVADO, los Interruptores Táctiles no ocupan espacio en pantalla, se muestran como una superposición translúcida, bajo la cual toda la pantalla aún es visible. El Teclado JustType aparece en su lugar usual en la parte inferior de la pantalla. Los interruptores táctiles aún capturan todos los eventos de toque en el área ocupada por la superposición del interruptor, así que lo que sea que esté debajo del área del interruptor táctil se puede ver pero no responderá a toques (que son capturados por el área del interruptor Superpuesto). Incluso si no activa intencionalmente el Modo Superpuesto, se activará automáticamente si la altura combinada del área de interruptores táctiles y teclado JustType (incluyendo la pantalla de Historia de Teclas, si se muestra) se extiende más alto que dos tercios de la altura total disponible de la pantalla.</string>
+    <string name="info_prompt_tcs_overlay_timeout">El número de segundos que la superposición del Interruptor Táctil permanece visible después de ser mostrada cuando no se reciben activaciones de interruptor. La superposición muestra las áreas del Interruptor Táctil en pantalla. Después del tiempo de espera, se vuelve completamente transparente para que las áreas del interruptor ya no sean visibles, pero el Interruptor Táctil aún permanecerá activo.</string>
+
+    <!-- INFO PROMPTs — Direct Selection / Directional Selection pages -->
+    <string name="info_prompt_ds_debounce">Este ajuste permite al sistema ignorar activaciones rápidas repetidas de tecla dentro de una ventana de tiempo corta. Aumente este tiempo si su dispositivo registra doble-toques o múltiples pulsaciones en una tecla cuando simplemente está tratando de tocarla una vez. El predeterminado es 120 ms.</string>
+    <string name="info_prompt_ds_auto_repeat">Cuando está ACTIVADO, mantener el dedo sobre una tecla de movimiento o desplazamiento del teclado de navegación repite automáticamente esa tecla en el intervalo del Tiempo de Demora de Auto-Repetición (abajo). Esto puede ser mucho más rápido que tocar la misma tecla repetidamente, por ejemplo al mover la selección a través de varios elementos o al desplazarse por una lista larga. Las teclas que realizan acciones únicas (como Tocar o Inicio) nunca se repiten.</string>
+    <string name="info_prompt_ds_auto_repeat_delay">El número de segundos entre cada activación repetida de la tecla mientras mantiene el dedo sobre una tecla repetible del teclado de navegación.</string>
+    <string name="info_prompt_dirsel_debounce">Este ajuste permite al sistema ignorar deslizamientos repetidos rápidos en pantalla dentro de una ventana de tiempo corta. Aumente este tiempo si un solo gesto de deslizamiento se está registrando como múltiples entradas. El predeterminado es 120 ms.</string>
+    <string name="info_prompt_dirsel_swipe_sensitivity">La distancia mínima que un deslizamiento de pantalla debe cubrir para registrarse como un deslizamiento. Disminuya para hacer los deslizamientos más fáciles de activar con movimientos menores; aumente para prevenir deslizamientos accidentales. Este valor se establece ajustando el control deslizante de modo que la longitud del ajuste del control deslizante en la pantalla coincida con la longitud mínima deseada del deslizamiento.</string>
+
+    <!-- INFO PROMPTs — Vocabulary Management page -->
+    <string name="info_prompt_vm_include_dict">Cuando está ACTIVADO, las palabras contenidas en el diccionario integrado de palabras JustType se incluyen en las palabras que JustType puede deletrear. Desactive esto solo si quiere limitar las palabras que pueden generarse a solo aquellas contenidas en listas de vocabulario seleccionadas (y/o Palabras Personalizadas).</string>
+    <string name="info_prompt_vm_include_custom">Cuando está ACTIVADO, las palabras que ha agregado manualmente (a través de la función Agregar Nueva Palabra en la página de Navegación) se incluyen en las palabras que JustType puede deletrear.</string>
+    <string name="info_prompt_vm_include_phrases">Cuando está ACTIVADO, la Lista de Selección también incluirá pares de abreviatura/frase de múltiples palabras que ha agregado manualmente al diccionario (a través de la función Agregar Nueva Frase en la página de Navegación) cuando escribe la abreviatura asociada.</string>
+    <string name="info_prompt_vm_restrict_uncommon">Cuando está ACTIVADO, las siguientes características se habilitan para restringir las palabras que JustType muestra o genera a palabras que son más comunes.</string>
+    <string name="info_prompt_vm_min_freq_next">Cuando está ACTIVADO, las pistas de siguiente letra ya no se muestran para palabras debajo de un umbral de frecuencia mínima. Valores más altos muestran pistas solo para palabras más comunes, reduciendo el desorden para que las pistas mostradas resalten más.</string>
+    <string name="info_prompt_vm_min_freq_selection">Cuando está ACTIVADO, las palabras de la base de datos JustType por debajo de un umbral de frecuencia mínima son excluidas de la Lista de Selección. Esto puede ser útil para limitar el número de palabras raras u obscuras que aparecen en la Lista de Selección con el fin de enfatizar el vocabulario más usado, o para restringir la lista a palabras más comunes al aprender a deletrear.</string>
+    <string name="info_prompt_vm_show_excluded_at_end">Cuando está ACTIVADO, las palabras que fueron filtradas por el filtro de frecuencia aún se muestran al final de la lista de selección (después de todas las palabras calificadas). Esto le permite aún acceder a palabras menos comunes, pero sin tenerlas atestando la parte superior de la lista.</string>
+    <string name="info_prompt_vm_enable_accent">Cuando está ACTIVADO, esto permite a JustType mostrar un segundo tipo de Pistas de Siguiente Letra \"Acentuadas\" para grupos seleccionados de palabras. (Las Pistas de Siguiente Letra se describen en los ajustes de \"Pantalla de JustType\".) Las Pistas de Siguiente Letra \"Acentuadas\" se muestran mostrando una letra en una tecla en fuente ROJO OSCURO y negrita para que resalten de las Pistas de Siguiente Letra \"ordinarias\". Los siguientes ajustes le permiten definir los grupos específicos de palabras que se mostrarán con Pistas de Siguiente Letra Acentuadas para que naturalmente llamen la atención al escribir con JustType. Cuando alguien está tratando de aprender vocabulario nuevo, esto puede ayudar haciendo que las Pistas de Siguiente Letra para esas palabras realmente resalten.</string>
+    <string name="info_prompt_vm_accent_use_count">Cuanto menor sea el número de palabras mostradas con Pistas Acentuadas, más resaltarán las Pistas Acentuadas. El propósito de este ajuste es ayudar a mantener las Pistas Acentuadas tan efectivas como sea posible desactivándolas para palabras que alguien ya \"conoce\". JustType mantiene un registro de cuántas veces se ha deletreado una palabra escribiéndola con JustType. Este ajuste asume que el deletreo de esa palabra probablemente ya es \"conocido\" una vez que esa palabra ha sido escrita un cierto número de veces. Si eso es cierto, las Pistas Acentuadas ya no se necesitarían para esa palabra. Este ajuste le permite elegir un número \"N\" donde una vez que una palabra ha sido deletreada \"N veces\" entonces las Pistas Acentuadas se desactivan para esa palabra. Si N se establece en 0, esta característica se deshabilita, lo que significa que las Pistas Acentuadas aún se mostrarán para todas las palabras en vocabularios seleccionados, sin importar cuántas veces hayan sido deletreadas.</string>
+    <string name="info_prompt_vm_min_freq_accent">Cuando se establece en un valor por encima de la clase de frecuencia máxima (deslizador completamente a la derecha), esta característica está DESACTIVADA. Cuando se establece en una clase de frecuencia, las Pistas Acentuadas se mostrarán SOLO para palabras de la Base de Datos Principal que son al menos tan frecuentes (o más).</string>
+    <string name="info_prompt_vm_max_freq_accent">Cuando se establece en 0, esta característica está DESACTIVADA (deshabilitada). Cuando se establece en una clase de frecuencia más alta (un número de 1 a 14), solo las palabras de menor frecuencia se mostrarán con Pistas Acentuadas cuando se escriban. Combinar esto con la \"Frecuencia Mínima para Pistas Acentuadas\" le permite limitar las Pistas Acentuadas primero a palabras muy comunes, y luego a medida que se aprenden, limitar las Pistas Acentuadas a grupos limitados de palabras de menor frecuencia (incluso solo una clase de frecuencia a la vez). Cuanto menor sea la clase de frecuencia, más palabras contendrá.</string>
+    <string name="info_prompt_vm_accent_use_count_main">Cuanto menor sea el número de palabras mostradas con Pistas Acentuadas, más resaltarán las Pistas Acentuadas. El propósito de este ajuste es ayudar a mantener las Pistas Acentuadas tan efectivas como sea posible desactivándolas para palabras que alguien ya \"conoce\". JustType mantiene un registro de cuántas veces se ha deletreado una palabra escribiéndola con JustType. Este ajuste asume que el deletreo de una palabra probablemente ya es \"conocido\" una vez que esa palabra ha sido escrita un cierto número de veces. Si eso es cierto, las Pistas Acentuadas ya no se necesitarían para esa palabra. Este ajuste le permite elegir un número \"N\" donde una vez que una palabra ha sido deletreada \"N veces\" entonces las Pistas Acentuadas se desactivan para esa palabra. Si N se establece en 0, esta característica se deshabilita, lo que significa que las Pistas Acentuadas aún se mostrarán para todas las palabras en clases de frecuencia habilitadas, sin importar cuántas veces hayan sido deletreadas.</string>
+
+    <!-- INFO PROMPTs — Select Active Vocabularies page -->
+    <string name="info_prompt_sav_promote_imported">Una de las características de JustType está diseñada para apoyar el aprendizaje de habilidades de alfabetización. Una forma de ayudar con esto es poder especificar listas específicas de palabras para que JustType pueda facilitar ingresarlas. Esto se hace importando archivos que contienen una lista de palabras, y que define un \"Vocabulario Importado\" que se identifica por el nombre del archivo. Luego cualquier número de estos conjuntos de Vocabulario Importado puede ser Habilitado (o deshabilitado), tanto para si la palabra aparece cuando se escribe como por separado, si las Pistas Acentuadas se muestran cuando se escribe. Las palabras de la Base de Datos JustType (incluso las palabras que no están contenidas en ningún Vocabulario Importado) también pueden ser Habilitadas (o deshabilitadas). Cuando \"Promover Palabras de Vocabularios Importados Activos\" está ACTIVADO, las palabras contenidas en listas de Vocabulario Importado (que están habilitadas) reciben un impulso de clasificación, lo que las hace aparecer más arriba en la Lista de Selección en relación con las palabras ordinarias de la Base de Datos Principal de JustType.</string>
+
+    <string name="info_prompt_mj_resting_zone">El tamaño relativo de la región central donde el movimiento del ratón no tiene efecto — donde puede descansar sin preocuparse por activar accidentalmente una tecla. Una Zona de Reposo más grande requiere más movimiento del ratón desde el centro antes de que las teclas circundantes comiencen a responder. Auméntela si las teclas se activan cuando simplemente está descansando. El límite de cada Zona se establece como una fracción entre 0.0 y 1.0, con 0.0 en el centro del teclado y 1.0 en el borde mismo.</string>
+    <string name="info_prompt_mj_active_zone">La cantidad relativa de movimiento del ratón a la cual una tecla queda armada para activación. Cuando entra en la Zona Activa de una tecla, la tecla se volverá verde. Muévase de vuelta hacia el centro para activarla. Disminuir la Zona Activa hace que las teclas se activen con menos movimiento del ratón, pero puede aumentar la posibilidad de activación accidental.</string>
+    <string name="info_prompt_mj_corner_weighting">Ajusta la sensibilidad relativa de las teclas diagonales/de esquina en comparación con las teclas rectas arriba/abajo/izquierda/derecha. Valores superiores a 1.0 hacen las teclas de esquina más fáciles de alcanzar (objetivos más grandes). Valores inferiores a 1.0 hacen lo opuesto y hacen que las direcciones cardinales (arriba, abajo, izquierda, derecha) se vuelvan objetivos más grandes.</string>
+    <string name="info_prompt_mj_sensitivity">Controla cuánto movimiento del ratón se necesita para mover el cursor del joystick desde el centro hasta el borde del teclado. Valores más bajos (menos dp) hacen el joystick más sensible — pequeños movimientos del ratón producen grandes movimientos del cursor. Valores más altos (más dp) requieren movimientos más grandes del ratón para alcanzar los bordes.</string>
+    <string name="info_prompt_mj_exit_delay">Cuánto tiempo (en milisegundos) debe mantener el ratón empujado hacia ARRIBA para liberar el joystick y restaurar el cursor. Una pulsación de un botón del ratón lo libera inmediatamente en cualquier momento. Auméntelo si se encuentra saliendo accidentalmente; redúzcalo para un escape más rápido.</string>
+    <string name="info_prompt_mj_reengage_hysteresis">Cuánto tiempo después de una liberación voluntaria (pulsación de un botón del ratón o salida manteniendo ARRIBA) antes de que el joystick vuelva a capturar el ratón al pasar sobre él. Evita que el joystick recupere el cursor inmediatamente cuando usted quería usarlo. Establezca en 0 para recapturar al instante.</string>
+    <!-- INFO PROMPTs — Backup &amp; Restore page -->
+    <string name="info_prompt_page_backup_simple">Puede respaldar completamente JustType, incluyendo todo lo que ha agregado o modificado: Módulos de Vocabulario, Palabras Personalizadas, Frases Abreviadas, todos sus ajustes, y todas las modificaciones que se hicieron a la Base de Datos Principal de JustType para reflejar como su uso individual de JustType. Todos los datos se escriben en una carpeta que selecciona — ya sea en su dispositivo o en una carpeta de Google Drive a la que pueda acceder. Luego más tarde, si lo necesita, puede usar los archivos guardados en la carpeta para restaurar JustType, o configurar JustType exactamente de la misma manera en un dispositivo diferente.\n\nPara crear un respaldo (o actualizar uno existente para reflejar cambios adicionales):\n(1) Presione el botón \"CREAR RESPALDO AHORA\". Si ya ha respaldado JustType antes, esto actualizará ese respaldo para incluir todos los cambios que pueden haber ocurrido desde la última vez que se respaldó JustType.\n(2) Si no ha creado un respaldo antes, el botón \"CREAR RESPALDO AHORA\" lo llevará a un diálogo estándar de Android donde puede seleccionar la carpeta para almacenar el respaldo. Navegue a la carpeta y presione el botón \"Usar esta carpeta\". Si/cuando aparece un aviso pidiendo permiso para \"¿Permitir que JustType acceda a archivos en respaldos de JustType?\", presione \"Permitir\".\n(3) Volverá a la pantalla anterior, que mostrará la carpeta seleccionada. En el futuro, también verá la fecha y hora del último respaldo creado en la carpeta.\n(4) Presione el botón \"CREAR RESPALDO AHORA\" de nuevo para crear un respaldo completo en la carpeta seleccionada. Este será automáticamente el respaldo que se usará si más tarde quiere restaurar JustType.</string>
+    <string name="info_prompt_br_restore_simple">Si algo le ha pasado a su dispositivo que, por ejemplo, lo ha forzado a reinstalar JustType, puede querer restaurar sus datos de JustType desde un respaldo previo. Por favor sea consciente, si no ha perdido sus datos y hace esto, perderá cualquier cambio en sus datos desde que se creó el respaldo. Pero si necesita restaurar sus datos desde un respaldo previo:\n(1) Presione el botón \"RESTAURAR DESDE RESPALDO\". (Estará en gris si aún no ha creado un respaldo.)\n(2) Un aviso aparecerá, preguntando \"¿Restaurar respaldo? Esto sobrescribirá los datos actuales. Puede ser necesario un reinicio para recargar los datos.\" Mientras esté seguro que quiere hacer esto, presione \"RESTAURAR\".</string>
+    <string name="info_prompt_br_use_advanced">Cuando activa \"Usar Respaldo y Restauración Avanzados\", es capaz de crear y cargar diferentes respaldos de JustType que pueden usarse en diferentes dispositivos. Esto puede ser útil si, por ejemplo, es un maestro o persona de soporte técnico, especialmente ya que estos respaldos pueden crearse en un Google Drive compartido. Esto significa que puede respaldar el dispositivo de alguien en una unidad compartida, cargar ese respaldo en su dispositivo y editarlo (por ejemplo creando y agregando nuevos Módulos de Vocabulario, Palabras Personalizadas, Frases Abreviadas o Ajustes ajustados), y luego guardarlo y recargar la versión editada desde el dispositivo del individuo.\n\nSi solo está usando JustType para usted mismo, probablemente sea mejor solo dejar el modo \"Avanzado\" DESACTIVADO. Entonces siempre respaldará a la misma ubicación, y si es necesario, restaurará desde el último respaldo.</string>
+    <string name="speech_select">Seleccionar</string>
+    <string name="speech_delete">Borrar</string>
+    <string name="speech_space">Espacio</string>
+    <string name="speech_number_mode">Modo numérico</string>
+    <string name="speech_zero_through_four">0 al 4</string>
+    <string name="speech_five_through_nine">5 al 9</string>
+    <string name="speech_punct_exclamation">signo de exclamación</string>
+    <string name="speech_punct_question">signo de interrogación</string>
+    <string name="speech_punct_period">punto</string>
+    <string name="speech_punct_comma">coma</string>
+    <string name="speech_punct_semicolon">punto y coma</string>
+    <string name="speech_punct_colon">dos puntos</string>
+    <string name="speech_punct_apostrophe">apóstrofo</string>
+    <string name="speech_punct_double_quote">comillas</string>
+    <string name="speech_punct_hyphen">guion</string>
+    <string name="speech_punct_underscore">guion bajo</string>
+    <string name="speech_punct_slash">barra</string>
+    <string name="speech_punct_backslash">barra invertida</string>
+    <string name="speech_punct_left_paren">abrir paréntesis</string>
+    <string name="speech_punct_right_paren">cerrar paréntesis</string>
+    <string name="speech_punct_left_bracket">abrir corchete</string>
+    <string name="speech_punct_right_bracket">cerrar corchete</string>
+    <string name="speech_punct_left_brace">abrir llave</string>
+    <string name="speech_punct_right_brace">cerrar llave</string>
+    <string name="speech_punct_at_sign">arroba</string>
+    <string name="speech_punct_hash">numeral</string>
+    <string name="speech_punct_dollar">signo de dólar</string>
+    <string name="speech_punct_percent">por ciento</string>
+    <string name="speech_punct_caret">acento circunflejo</string>
+    <string name="speech_punct_ampersand">y comercial</string>
+    <string name="speech_punct_asterisk">asterisco</string>
+    <string name="speech_punct_plus">más</string>
+    <string name="speech_punct_equals">igual</string>
+    <string name="speech_punct_less_than">menor que</string>
+    <string name="speech_punct_greater_than">mayor que</string>
+    <string name="speech_punct_backtick">acento grave</string>
+    <string name="speech_punct_tilde">tilde</string>
+    <string name="speech_punct_pipe">barra vertical</string>
+
+    <!-- Letter Spell Mode: which language's diacritic letters to offer (main > Language section). -->
+    <string name="sr_spell_diacritic_scope">Incluir letras con diacríticos en el Modo Deletreo por Letras</string>
+    <string name="sr_spell_scope_off">Ninguna</string>
+    <string name="sr_spell_scope_current">Del idioma de escritura actual</string>
+    <string name="sr_spell_scope_loaded">De todos los idiomas de escritura descargados</string>
+    <string name="sr_spell_scope_all">Todas</string>
+    <string name="sr_spell_diacritic_scope_info">Elige qué letras acentuadas ofrece el Modo Deletreo por Letras cuando eliges una letra base. \"Del idioma de escritura actual\" muestra solo los acentos usados por el idioma en el que escribes; \"De todos los idiomas de escritura descargados\" incluye todos los idiomas de tu dispositivo; \"Todas\" muestra todos los acentos; \"Ninguna\" no muestra ninguno. Los acentos de cada idioma se aprenden automáticamente de sus palabras.</string>
+
+    <!-- Per-language TTS voice selection -->
+    <string name="sr_main_section_language_options">Opciones de Idioma</string>
+    <string name="sr_main_voice_type">Preferencia de Tipo de Voz Personal</string>
+    <string name="sr_main_ui_voice_type">Preferencia de Tipo de Voz de la Interfaz</string>
+    <string name="info_prompt_ui_voice_type">Su tipo de voz preferido para la respuesta de la interfaz: la voz que le habla con indicaciones, nombres de teclas y anuncios. Algunos usuarios eligen el tipo opuesto al de su voz personal para distinguir fácilmente la respuesta del sistema de sus propias palabras. Se usa para sugerir y predeterminar la Voz de Respuesta de la Interfaz.</string>
+    <string name="sr_voice_type_any">Sin preferencia</string>
+    <string name="sr_voice_type_male">Masculina</string>
+    <string name="sr_voice_type_female">Femenina</string>
+    <string name="sr_voice_type_child">Infantil</string>
+    <string name="info_prompt_voice_type">Tu tipo de voz preferido. JustType lo usa para sugerir una voz cuando eliges una para un idioma. La disponibilidad depende de los motores de voz instalados en tu dispositivo, y la coincidencia es una estimación: usa Probar para confirmar. Las voces infantiles en particular son poco comunes.</string>
+    <string name="tts_voice_automatic">Automática</string>
+    <string name="tts_voice_picker_title">Elige una voz para %1$s</string>
+    <string name="tts_voice_picker_scanning">Buscando voces…</string>
+    <string name="tts_voice_picker_test">Probar</string>
+    <string name="tts_voice_picker_confirm">Usar esta voz</string>
+    <string name="tts_voice_picker_none_found">Ninguna voz instalada admite %1$s. Instala o activa una voz y vuelve a intentarlo.</string>
+    <string name="tts_voice_picker_install">Instalar una voz</string>
+    <string name="tts_voice_picker_no_gender_match">No se encontró una voz que coincida con tu tipo de voz preferido: prueba las opciones y elige una.</string>
+    <string name="tts_voice_generic">Voz</string>
+    <string name="tts_friendly_lang_region">%1$s (%2$s)</string>
+    <string name="tts_friendly_name_format">%1$s %2$s %3$d</string>
+    <string name="tts_friendly_name_with_engine">%1$s — %2$s</string>
+    <string name="tts_default_voice">VOZ PREDETERMINADA</string>
+    <string name="tts_default_voice_male">VOZ MASCULINA PREDETERMINADA</string>
+    <string name="tts_default_voice_female">VOZ FEMENINA PREDETERMINADA</string>
+    <string name="tts_default_voice_child">VOZ INFANTIL PREDETERMINADA</string>
+    <string name="sr_spell_show_diacritics">Mostrar diacríticos en el Modo Deletreo</string>
+    <string name="sr_spell_show_diacritics_info">Cuando está activado, elegir una letra en el Modo Deletreo de Letras abre una página de variantes para que pueda elegir una forma acentuada (á, ä, etc.). Cuando está desactivado, solo se ingresa la letra base y el Modo Deletreo se mantiene en dos pulsaciones fijas por carácter.</string>
+    <string name="sr_spell_show_uncommon_diacritics">Mostrar diacríticos poco comunes</string>
+    <string name="sr_spell_show_uncommon_diacritics_info">Cuando está activado, las variantes menos comunes (ā, ů, ǔ, etc.) se agregan a la página de variantes junto a las comunes. Requiere que \"Mostrar diacríticos en el Modo Deletreo\" esté activado.</string>
+    <string name="sr_spell_viet_mode">Variantes vietnamitas</string>
+    <string name="sr_spell_viet_off">Desactivado</string>
+    <string name="sr_spell_viet_include">Incluir (ordenadas primero)</string>
+    <string name="sr_spell_viet_only">Solo vietnamitas</string>
+    <string name="sr_spell_viet_mode_info">Las variantes específicas del vietnamita (ư, ầ, ằ, etc.) son independientes de las comunes / poco comunes. Incluir las agrega a la página de variantes ordenadas al principio; Solo muestra únicamente las variantes etiquetadas como vietnamitas (y oculta todo lo demás).</string>
+    <string name="sr_spell_turkish_azeri_override">Anulación de mayúsculas turco / azerbaiyano</string>
+    <string name="sr_spell_turkish_azeri_override_info">Cuando está activado, la i se convierte en İ mayúscula (con punto) y la ı se convierte en I (sin punto), independientemente de la configuración regional del sistema. Útil al escribir turco o azerbaiyano en un sistema con otra configuración regional.</string>
+
+    <!-- Languages screen (language-pack downloads) -->
+    <string name="languages_heading">Idiomas</string>
+    <string name="languages_offline">Está sin conexión. Los idiomas instalados siguen funcionando; conéctese para descargar más.</string>
+    <string name="languages_fetch_failed">No se pudo conectar con el servidor de idiomas. Se muestra lo que hay en este dispositivo.</string>
+    <string name="languages_update_app">Se necesita una versión más reciente de JustType para descargar idiomas.</string>
+    <string name="languages_state_bundled">Integrado</string>
+    <string name="languages_state_installed">Instalado</string>
+    <string name="languages_state_downloading">Descargando…</string>
+    <string name="languages_state_downloading_pct">Descargando… %d%%</string>
+    <string name="languages_state_installing">Instalando…</string>
+    <string name="languages_state_size">Descargar (%s)</string>
+    <string name="languages_state_unavailable">No disponible</string>
+    <string name="languages_action_download">DESCARGAR</string>
+    <string name="languages_action_update">ACTUALIZAR</string>
+    <string name="languages_action_remove">ELIMINAR</string>
+    <string name="languages_action_cancel">CANCELAR</string>
+    <string name="languages_download_title">Idioma de JustType: %s</string>
+    <string name="languages_download_failed">Error de descarga: %s</string>
+    <string name="languages_no_space">No hay suficiente espacio de almacenamiento para instalar este idioma.</string>
+    <string name="languages_verify_failed">El archivo descargado estaba dañado. Inténtelo de nuevo.</string>
+    <string name="languages_install_io_error">No se pudo instalar el idioma. Inténtelo de nuevo.</string>
+    <string name="languages_installed_toast">%s instalado</string>
+    <string name="languages_update_confirm_title">¿Actualizar %s?</string>
+    <string name="languages_update_confirm_message">La actualización reemplaza la base de datos de palabras de %s. Las palabras que usted agregó se conservan, pero el uso de palabras aprendido para este idioma se restablece.</string>
+    <string name="languages_remove_confirm_title">¿Eliminar %s?</string>
+    <string name="languages_remove_confirm_message">Esto borra de este dispositivo la base de datos de palabras de %s, incluido su uso de palabras aprendido. Puede descargarla de nuevo más adelante.</string>
+
+    <string name="toast_saved">Guardado</string>
+    <string name="dev_hint_langpack_manifest_url">URL del manifiesto de paquetes de idioma (vacío = predeterminado)</string>
+
+    <string name="sr_main_get_more_languages">Obtener Más Idiomas…</string>
+    <string name="sr_main_get_more_languages_description">Descargue idiomas adicionales para escribir en este dispositivo.</string>
+
+    <string name="sr_main_speech_voice">Voz Personal</string>
+    <string name="sr_main_speech_voice_desc">Elija la voz utilizada para hablar el idioma de escritura actual.</string>
+    <string name="settings_ctrl_voice_current">ACTUAL</string>
+
+    <string name="sr_main_voice_for_ui_language">Voz de Respuesta de la Interfaz</string>
+    <string name="sr_main_voice_for_ui_language_desc">La voz del dispositivo: se usa para indicaciones habladas, nombres de teclas y otros anuncios dirigidos a usted.</string>
+
+    <string name="languages_state_loading">Cargando idiomas…</string>
+    <string name="languages_remove_confirm_keyboard">Presione ELIMINAR de nuevo para eliminar %1$s y su uso de palabras aprendido</string>
+    <string name="languages_removed_announce">%1$s eliminado</string>
+    <string name="languages_download_started_announce">Descargando %1$s</string>
+
+    <string name="languages_action_select_voice">ELEGIR VOZ</string>
+
+    <!-- ScrollMode key captions -->
+    <string name="nav_scroll_back">ATRÁS</string>
+    <string name="nav_scroll_longer">MÁS</string>
+    <string name="nav_scroll_shorter">MENOS</string>
+    <string name="nav_scroll_min">MÍN</string>
+    <!-- Drag-page key caption -->
+    <string name="nav_drag_select">ELEGIR</string>
+    <!-- Nav page key captions -->
+    <string name="nav_key_more">MÁS</string>
+    <string name="nav_key_tap">TOCAR</string>
+    <string name="nav_key_double_tap">TOQUE DOBLE</string>
+    <string name="nav_key_long_tap">TOQUE LARGO</string>
+    <!-- More page (system nav 2) key captions -->
+    <string name="nav_key_back">ATRÁS</string>
+    <string name="nav_key_move">MOVER</string>
+    <string name="nav_key_scroll">DESPLAZAR</string>
+    <string name="nav_key_drag">ARRASTRAR</string>
+    <string name="nav_key_home">INICIO</string>
+    <string name="nav_key_recents">RECIENTES</string>
+    <!-- Center-cell mode labels (two lines; keep short to fit the key) -->
+    <string name="nav_center_layer_1">TOQUE\nPANTALLA 1</string>
+    <string name="nav_center_layer_2">NAV\nSISTEMA 2</string>
+    <string name="nav_center_scroll">DESPLAZAR\nPANTALLA</string>
+    <string name="nav_center_drag_select">ELEGIR\nOBJETIVO</string>
+    <string name="nav_center_drag_move">MOVER\nOBJETIVO</string>
+    <string name="nav_center_move_keyboard">MOVER\nTECLADO</string>
+
+</resources>

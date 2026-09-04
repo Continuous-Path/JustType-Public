@@ -1,0 +1,1363 @@
+#!/usr/bin/env bash
+# jt — single entry point for all gradle work on this project.
+#
+# Why this exists:
+#   - Project-local mkdir-based lock to prevent the launch of two parallel
+#     gradle invocations at the same time. Concurrent daemons fight over 
+#     locks and pin CPU. We use `mkdir` (atomic on POSIX) instead of 
+#     `flock(1)` because macOS does not ship flock by default.
+#   - Post-acquire worker cleanup: any of THIS project's `GradleWorkerMain`
+#     JVMs still alive once we hold the lock is a leak (the lock means no
+#     legitimate run is in flight here). Scoped via the project path embedded
+#     in worker cmdlines — a concurrent worktree/main-checkout run has its
+#     own lock, and its live workers must survive our sweep.
+#   - Wedged-daemon guard: a watchdog kill leaves a marker file; the next
+#     invocation stops the gradle daemon (`--stop`, force-kill fallback)
+#     before running. A wedged daemon otherwise reproduces the hang on
+#     every run until manually stopped.
+#   - Trap-on-exit cleanup: this script's own gradle children are reaped
+#     when it exits, even on Ctrl-C or hangup.
+#   - Convenience subcommands map to the tasks we actually use, so we don't
+#     have to remember `:app:testDebugUnitTest` vs `testDebugUnitTest` etc.
+#
+# Run `./jt help` for the full subcommand reference.
+
+set -euo pipefail
+
+# ── Configuration ────────────────────────────────────────────────────────
+
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+GRADLEW="${PROJECT_ROOT}/gradlew"
+GRADLE_DIR="${PROJECT_ROOT}/.gradle"
+# The lock is a directory, not a file — `mkdir` is atomic on POSIX, and
+# unlike `flock(1)` it's available on macOS without extra deps. The
+# directory contains a `pid` file for diagnostics + stale-lock detection.
+LOCK_DIR="${GRADLE_DIR}/jt.lock.d"
+LOCK_PID_FILE="${LOCK_DIR}/pid"
+LOCK_TIMEOUT_SECS=600  # 10 min — longer waits are almost certainly a hang
+LOCK_POLL_INTERVAL_SECS=2
+LOCK_HELD=false  # set true after we own the lock; gates trap-side release
+
+# Written by the watchdogs when they kill a run; its presence tells the next
+# invocation the daemon is suspect (a wedged daemon reproduces the hang on
+# every subsequent run) and must be stopped before running anything.
+WATCHDOG_KILL_MARKER="${GRADLE_DIR}/jt-watchdog-killed"
+DAEMON_STOP_TIMEOUT_SECS=30  # budget for `gradlew --stop` before force-kill
+
+# Per-subcommand wall-clock budget. Override with: JT_TIMEOUT=N ./jt <cmd>
+WATCHDOG_POLL_INTERVAL_SECS=15
+declare -A WATCHDOG_BUDGET_SECS=(
+	[test]=300                # ~30 s warm, ~50 s cold → 5 min is generous
+	[test-release]=300
+	[test-instrumented]=900   # device-dependent; instrumented tests run live
+	[detekt]=300
+	[detekt-baseline]=300
+	[spotless]=180
+	[spotless-fix]=180
+	[lint]=300
+	[lint-fix]=300
+	[check]=600               # tests + spotless + detekt parallelized
+	[check-full]=900          # + lint + jacoco
+	[jacoco]=600
+	[build]=600
+	[build-release]=600
+	[build-beta]=600
+	[build-internal]=600
+	[install]=600
+	[install-release]=300
+	[install-beta]=300
+	[install-internal]=300
+	[uninstall]=120
+	[english-db]=120
+	[espanol-db]=120
+	[clean]=120
+	[stop]=60
+	[clean-procs]=60
+	[tasks]=120
+	[raw]=600                 # escape hatch — override with JT_TIMEOUT for long runs
+)
+WATCHDOG_DEFAULT_BUDGET=600
+WATCHDOG_PID=""
+JT_SUBCMD=""  # set by main() so acquire_lock_and_run can look up the budget
+
+# Hang detection — separate from the wall-clock budget. Fires when gradle's
+# combined stdout/stderr has zero growth for this many seconds. Off by default.
+# Enable via env (JT_HANG_DETECT_SECS=90 ./jt test) or flag (./jt --hang-detect test).
+JT_HANG_DETECT_SECS="${JT_HANG_DETECT_SECS:-0}"
+JT_HANG_LOG=""
+JT_HANG_FIFO=""
+JT_TEE_PID=""
+HANG_WATCHDOG_PID=""
+HANG_WATCHDOG_POLL_SECS=5
+
+# ── Pretty output ────────────────────────────────────────────────────────
+
+if [[ -t 1 ]]; then
+	BOLD=$'\033[1m'
+	DIM=$'\033[2m'
+	YELLOW=$'\033[33m'
+	GREEN=$'\033[32m'
+	RED=$'\033[31m'
+	RESET=$'\033[0m'
+else
+	BOLD=''; DIM=''; YELLOW=''; GREEN=''; RED=''; RESET=''
+fi
+
+log()  { echo "${DIM}jt:${RESET} $*" >&2; }
+warn() { echo "${YELLOW}jt:${RESET} $*" >&2; }
+err()  { echo "${RED}jt: $*${RESET}" >&2; }
+
+# ── Cleanup ──────────────────────────────────────────────────────────────
+
+project_worker_pids() {
+	# GradleWorkerMain JVMs belonging to THIS project only. Worker cmdlines
+	# embed the project path (-Dorg.gradle.internal.worker.tmpdir=<project>/…),
+	# so the filter is reliable. Never sweep machine-wide: concurrent runs in
+	# other worktrees / the main checkout own their workers.
+	# Anchor on the tmpdir= arg followed by a module dir: a bare
+	# "${PROJECT_ROOT}/" substring also matches WORKTREE workers from the main
+	# checkout (worktrees live under <main>/.claude/worktrees/…).
+	local pid
+	for pid in $(pgrep -f 'GradleWorkerMain' 2>/dev/null || true); do
+		if ps -o command= -p "$pid" 2>/dev/null |
+			grep -qE -- "-Dorg\.gradle\.internal\.worker\.tmpdir=${PROJECT_ROOT}/(app|buildSrc|build)/"; then
+			printf '%s\n' "$pid"
+		fi
+	done
+}
+
+cleanup_orphan_workers() {
+	# Kill this project's leaked GradleWorkerMain JVMs. Safe ONLY when called
+	# while we hold the lock — at that moment any of OUR workers is a leak
+	# (orphaned PPID=1, or wedged under a still-alive daemon from a prior
+	# invocation that crashed/timed-out without reaping it).
+	local pids
+	pids="$(project_worker_pids)"
+	if [[ -z "$pids" ]]; then return 0; fi
+
+	local killed=0
+	while IFS= read -r pid; do
+		[[ -z "$pid" ]] && continue
+		log "cleanup: killing leaked GradleWorkerMain pid=$pid"
+		kill -TERM "$pid" 2>/dev/null || true
+		killed=$((killed + 1))
+	done <<< "$pids"
+
+	if [[ $killed -gt 0 ]]; then
+		sleep 1
+		# SIGKILL anything that didn't honor SIGTERM.
+		while IFS= read -r pid; do
+			[[ -z "$pid" ]] && continue
+			if kill -0 "$pid" 2>/dev/null; then
+				log "cleanup: SIGKILL pid=$pid (didn't honor SIGTERM)"
+				kill -KILL "$pid" 2>/dev/null || true
+			fi
+		done <<< "$(project_worker_pids)"
+	fi
+}
+
+cleanup_wedged_daemon() {
+	# Called at lock-acquire when the previous run was watchdog-killed. The
+	# wedge can live in the daemon itself, not just the workers (2026-07-24:
+	# four consecutive full-suite hangs at test-JVM init until
+	# `gradlew --stop`; the suite then passed in 39 s), so don't trust it —
+	# stop it and let the next build spawn a fresh one.
+	warn "previous run was watchdog-killed — stopping gradle daemon (wedged-daemon guard)"
+	"$GRADLEW" --stop >/dev/null 2>&1 &
+	local stop_pid=$!
+	local waited=0
+	while kill -0 "$stop_pid" 2>/dev/null; do
+		sleep 1
+		waited=$((waited + 1))
+		if (( waited >= DAEMON_STOP_TIMEOUT_SECS )); then
+			# A daemon too wedged to honor --stop won't honor anything else.
+			# pkill is machine-wide by necessity (daemon cmdlines don't carry
+			# the project path) — acceptable for an already-broken state.
+			warn "gradlew --stop unresponsive after ${DAEMON_STOP_TIMEOUT_SECS}s — force-killing GradleDaemon JVMs"
+			kill -KILL "$stop_pid" 2>/dev/null || true
+			pkill -KILL -f 'GradleDaemon' 2>/dev/null || true
+			break
+		fi
+	done
+	wait "$stop_pid" 2>/dev/null || true
+	rm -f "$WATCHDOG_KILL_MARKER"
+}
+
+cleanup_on_exit() {
+	# Reap any children we spawned. Don't touch the gradle daemon — gradle
+	# manages its own lifecycle and shutting it down between every command
+	# would tank performance.
+	local exit_code=$?
+	if [[ -n "${WATCHDOG_PID:-}" ]] && kill -0 "$WATCHDOG_PID" 2>/dev/null; then
+		kill -TERM "$WATCHDOG_PID" 2>/dev/null || true
+	fi
+	if [[ -n "${HANG_WATCHDOG_PID:-}" ]] && kill -0 "$HANG_WATCHDOG_PID" 2>/dev/null; then
+		kill -TERM "$HANG_WATCHDOG_PID" 2>/dev/null || true
+	fi
+	if [[ -n "${GRADLE_PID:-}" ]] && kill -0 "$GRADLE_PID" 2>/dev/null; then
+		log "trap: terminating gradle pid=$GRADLE_PID"
+		kill -TERM "$GRADLE_PID" 2>/dev/null || true
+	fi
+	if [[ -n "${JT_TEE_PID:-}" ]] && kill -0 "$JT_TEE_PID" 2>/dev/null; then
+		# Give tee a moment to flush; SIGTERM only if it's still alive after.
+		wait "$JT_TEE_PID" 2>/dev/null || kill -TERM "$JT_TEE_PID" 2>/dev/null || true
+	fi
+	if [[ -n "${JT_HANG_FIFO:-}" && -p "$JT_HANG_FIFO" ]]; then
+		rm -f "$JT_HANG_FIFO"
+	fi
+	if [[ -n "${JT_HANG_LOG:-}" && -f "$JT_HANG_LOG" ]]; then
+		rm -f "$JT_HANG_LOG"
+	fi
+	if $LOCK_HELD; then
+		release_lock
+	fi
+	exit "$exit_code"
+}
+
+# ── Watchdog ─────────────────────────────────────────────────────────────
+
+WATCHDOG_DUMP_DIR="${GRADLE_DIR}/jt-watchdog"
+
+watchdog_resolve_budget() {
+	if [[ -n "${JT_TIMEOUT:-}" ]]; then
+		echo "$JT_TIMEOUT"
+		return
+	fi
+	echo "${WATCHDOG_BUDGET_SECS[$1]:-$WATCHDOG_DEFAULT_BUDGET}"
+}
+
+watchdog_start() {
+	local budget="$1"
+	local subcmd="$2"
+	local gradle_pid="$3"
+	mkdir -p "$WATCHDOG_DUMP_DIR"
+	(
+		local elapsed=0
+		while kill -0 "$gradle_pid" 2>/dev/null; do
+			sleep "$WATCHDOG_POLL_INTERVAL_SECS"
+			elapsed=$((elapsed + WATCHDOG_POLL_INTERVAL_SECS))
+			if (( elapsed >= budget )); then
+				watchdog_fire "$subcmd" "$gradle_pid" "$budget"
+				exit 0
+			fi
+		done
+	) &
+	WATCHDOG_PID=$!
+	disown "$WATCHDOG_PID" 2>/dev/null || true
+}
+
+watchdog_fire() {
+	local subcmd="$1"
+	local gradle_pid="$2"
+	local budget="$3"
+	local stamp
+	stamp="$(date +%Y%m%d-%H%M%S)"
+	echo >&2
+	echo "${RED}${BOLD}╔══════════════════════════════════════════════════════════════╗${RESET}" >&2
+	echo "${RED}${BOLD}║  ./jt watchdog: '${subcmd}' exceeded ${budget}s — KILLED      ${RESET}" >&2
+	echo "${RED}${BOLD}╚══════════════════════════════════════════════════════════════╝${RESET}" >&2
+	echo "${RED}A test or gradle task hung. This is almost certainly a leak"     >&2
+	echo "(uncancelled coroutine, unregistered receiver, looper not idled)."     >&2
+	echo "DO NOT commit until you find and fix the cause."                       >&2
+
+	# jstack attaches via HotSpot socket — fails when the JVM is safepoint-
+	# stalled (the frozen-worker signature). Fall back to macOS `sample`.
+	local dumped=0
+	for pid in $(project_worker_pids); do
+		[[ -z "$pid" ]] && continue
+		local dump="${WATCHDOG_DUMP_DIR}/dump-${stamp}-pid${pid}.txt"
+		local got_dump=false
+		if command -v jstack >/dev/null 2>&1; then
+			if jstack -l "$pid" >"$dump" 2>&1; then
+				if grep -q "^\"" "$dump" 2>/dev/null; then
+					got_dump=true
+					echo "${RED}  jstack: $dump${RESET}" >&2
+				fi
+			fi
+		fi
+		if ! $got_dump && command -v sample >/dev/null 2>&1; then
+			sample "$pid" 3 -mayDie >"$dump" 2>&1 || true
+			got_dump=true
+			echo "${RED}  sample: $dump${RESET}" >&2
+		fi
+		if ! $got_dump; then
+			echo "(no jstack/sample available, or both failed)" >"$dump"
+			echo "${RED}  dump: $dump (diagnostic tools unavailable)${RESET}" >&2
+		fi
+		# SIGKILL after dumping — a safepoint-stalled worker never honors TERM
+		# and otherwise spins at 100% CPU until the next jt run sweeps it.
+		kill -KILL "$pid" 2>/dev/null || true
+		dumped=$((dumped + 1))
+	done
+	if (( dumped == 0 )); then
+		echo "${RED}  (no GradleWorkerMain alive — main gradle process likely the culprit)${RESET}" >&2
+	fi
+
+	# Kill gradle process tree. SIGKILL so a malicious shutdown hook can't stall us.
+	pkill -KILL -P "$gradle_pid" 2>/dev/null || true
+	kill -KILL "$gradle_pid" 2>/dev/null || true
+	# Flag the daemon as suspect — the next invocation stops it before running.
+	printf '%s watchdog %s\n' "$stamp" "$subcmd" > "$WATCHDOG_KILL_MARKER" 2>/dev/null || true
+	echo "${RED}Workers killed; next ./jt run will also stop the (suspect) daemon.${RESET}" >&2
+	echo >&2
+}
+
+# ── Hang detector (no-progress watchdog) ────────────────────────────────
+#
+# Different from the wall-clock budget above: this fires when gradle's
+# combined output has zero growth for $JT_HANG_DETECT_SECS, even if we're
+# well under the total budget. Catches tests that wedge mid-suite while
+# gradle still claims the worker is "running".
+
+hang_watchdog_start() {
+	local secs="$1" subcmd="$2" gradle_pid="$3" log_file="$4"
+	mkdir -p "$WATCHDOG_DUMP_DIR"
+	(
+		local prev_size=0 idle=0
+		while kill -0 "$gradle_pid" 2>/dev/null; do
+			sleep "$HANG_WATCHDOG_POLL_SECS"
+			local cur
+			cur="$(wc -c <"$log_file" 2>/dev/null || echo 0)"
+			if [[ "$cur" == "$prev_size" ]]; then
+				idle=$((idle + HANG_WATCHDOG_POLL_SECS))
+				if (( idle >= secs )); then
+					hang_watchdog_fire "$subcmd" "$gradle_pid" "$secs"
+					exit 0
+				fi
+			else
+				idle=0
+			fi
+			prev_size="$cur"
+		done
+	) &
+	HANG_WATCHDOG_PID=$!
+	disown "$HANG_WATCHDOG_PID" 2>/dev/null || true
+}
+
+hang_watchdog_fire() {
+	local subcmd="$1" gradle_pid="$2" secs="$3"
+	local stamp
+	stamp="$(date +%Y%m%d-%H%M%S)"
+	echo >&2
+	echo "${RED}${BOLD}╔══════════════════════════════════════════════════════════════╗${RESET}" >&2
+	echo "${RED}${BOLD}║  ./jt hang-detect: '${subcmd}' had no output for ${secs}s — KILLED  ${RESET}" >&2
+	echo "${RED}${BOLD}╚══════════════════════════════════════════════════════════════╝${RESET}" >&2
+	for pid in $(project_worker_pids); do
+		[[ -z "$pid" ]] && continue
+		local dump="${WATCHDOG_DUMP_DIR}/dump-${stamp}-pid${pid}.txt"
+		if command -v sample >/dev/null 2>&1; then
+			sample "$pid" 3 -mayDie >"$dump" 2>&1 || true
+			echo "${RED}  sample: $dump${RESET}" >&2
+		fi
+		kill -KILL "$pid" 2>/dev/null || true
+	done
+	pkill -KILL -P "$gradle_pid" 2>/dev/null || true
+	kill -KILL "$gradle_pid" 2>/dev/null || true
+	printf '%s hang-detect %s\n' "$stamp" "$subcmd" > "$WATCHDOG_KILL_MARKER" 2>/dev/null || true
+}
+
+# ── Lock + run ───────────────────────────────────────────────────────────
+#
+# Hand-rolled mkdir-based lock. `mkdir` is atomic on POSIX: the first
+# caller wins and creates the directory; everyone else gets EEXIST. No
+# external deps (macOS has no `flock(1)` by default).
+#
+# Stale-lock recovery: if the lock directory exists but the PID inside it
+# is dead, we break the lock and try again. This handles crashed
+# invocations that didn't get to release_lock.
+
+try_acquire_lock() {
+	# Returns 0 if we now hold the lock, 1 if someone else still does.
+	mkdir -p "$GRADLE_DIR"
+	if mkdir "$LOCK_DIR" 2>/dev/null; then
+		printf '%s\n' "$$" > "$LOCK_PID_FILE"
+		LOCK_HELD=true
+		return 0
+	fi
+	# Lock exists. Check if it's stale.
+	local holder
+	holder="$(cat "$LOCK_PID_FILE" 2>/dev/null || true)"
+	if [[ -n "$holder" ]] && ! kill -0 "$holder" 2>/dev/null; then
+		warn "breaking stale lock (pid=$holder is dead)"
+		rm -rf "$LOCK_DIR"
+		# Retry once. Anyone racing us this instant has the same right to win.
+		if mkdir "$LOCK_DIR" 2>/dev/null; then
+			printf '%s\n' "$$" > "$LOCK_PID_FILE"
+			LOCK_HELD=true
+			return 0
+		fi
+	fi
+	return 1
+}
+
+release_lock() {
+	# Only the holder should call this. Check PID file just in case.
+	local holder
+	holder="$(cat "$LOCK_PID_FILE" 2>/dev/null || true)"
+	if [[ "$holder" == "$$" ]]; then
+		rm -rf "$LOCK_DIR"
+	fi
+	LOCK_HELD=false
+}
+
+acquire_lock_and_run() {
+	if ! try_acquire_lock; then
+		local holder
+		holder="$(cat "$LOCK_PID_FILE" 2>/dev/null || true)"
+		warn "another jt invocation (pid=${holder:-?}) holds the lock — waiting up to ${LOCK_TIMEOUT_SECS}s"
+		local waited=0
+		while ! try_acquire_lock; do
+			sleep "$LOCK_POLL_INTERVAL_SECS"
+			waited=$((waited + LOCK_POLL_INTERVAL_SECS))
+			if [[ $waited -ge $LOCK_TIMEOUT_SECS ]]; then
+				err "lock timeout after ${LOCK_TIMEOUT_SECS}s. Another invocation is hung."
+				err "Try: pgrep -fl GradleWorkerMain  and kill any orphans."
+				err "Or: ./jt stop"
+				return 1
+			fi
+		done
+	fi
+
+	# Install the cleanup trap now — anything that crashes from here on
+	# (gradle worker cleanup, gradle itself, an `err` call) must release
+	# the lock or no one else can run jt until manual recovery.
+	trap cleanup_on_exit EXIT INT TERM HUP
+
+	cleanup_orphan_workers
+	if [[ -f "$WATCHDOG_KILL_MARKER" ]]; then
+		cleanup_wedged_daemon
+	fi
+
+	if (( JT_HANG_DETECT_SECS > 0 )); then
+		JT_HANG_LOG="$(mktemp -t jt-hang.XXXXXX)"
+		JT_HANG_FIFO="${JT_HANG_LOG}.fifo"
+		log "hang-detect enabled (${JT_HANG_DETECT_SECS}s threshold); log: $JT_HANG_LOG"
+		mkfifo "$JT_HANG_FIFO"
+		# Foreground tee with explicit PID so we can wait for it to flush
+		# before exit. Process substitution was racy: tee got SIGPIPE'd on
+		# parent exit before its final lines reached the redirect target.
+		tee -a "$JT_HANG_LOG" < "$JT_HANG_FIFO" &
+		JT_TEE_PID=$!
+		"$@" > "$JT_HANG_FIFO" 2>&1 &
+		GRADLE_PID=$!
+		hang_watchdog_start "$JT_HANG_DETECT_SECS" "${JT_SUBCMD:-raw}" "$GRADLE_PID" "$JT_HANG_LOG"
+	else
+		"$@" &
+		GRADLE_PID=$!
+	fi
+	local budget
+	budget="$(watchdog_resolve_budget "${JT_SUBCMD:-raw}")"
+	watchdog_start "$budget" "${JT_SUBCMD:-raw}" "$GRADLE_PID"
+	wait "$GRADLE_PID" 2>/dev/null
+	local rc=$?
+	GRADLE_PID=""
+	# Wait for tee to drain the FIFO and flush its buffers — gradle's stdout
+	# pipe just closed, so tee sees EOF and exits naturally.
+	if [[ -n "${JT_TEE_PID:-}" ]] && kill -0 "$JT_TEE_PID" 2>/dev/null; then
+		wait "$JT_TEE_PID" 2>/dev/null
+	fi
+	JT_TEE_PID=""
+	if [[ -n "${JT_HANG_FIFO:-}" && -p "$JT_HANG_FIFO" ]]; then
+		rm -f "$JT_HANG_FIFO"
+		JT_HANG_FIFO=""
+	fi
+	if [[ -n "${WATCHDOG_PID:-}" ]] && kill -0 "$WATCHDOG_PID" 2>/dev/null; then
+		kill -TERM "$WATCHDOG_PID" 2>/dev/null || true
+	fi
+	WATCHDOG_PID=""
+	if [[ -n "${HANG_WATCHDOG_PID:-}" ]] && kill -0 "$HANG_WATCHDOG_PID" 2>/dev/null; then
+		kill -TERM "$HANG_WATCHDOG_PID" 2>/dev/null || true
+	fi
+	HANG_WATCHDOG_PID=""
+	return $rc
+}
+
+# ── Gradle invocations ───────────────────────────────────────────────────
+
+run_gradle() {
+	local args=("$@")
+	log "$ ./gradlew ${args[*]}"
+	"$GRADLEW" "${args[@]}"
+}
+
+# ── Reports (AI-friendly summaries of build outputs) ─────────────────────
+
+cmd_report() {
+	# Dispatch to a specific report parser. Default: test.
+	local kind="${1:-test}"
+	case "$kind" in
+		test)
+			# Absolute defaults so the report works from any CWD; caller
+			# flags later in argv still override (argparse last-wins).
+			python3 "${PROJECT_ROOT}/utils/jt/report_test.py" \
+				--results-dir "${PROJECT_ROOT}/app/build/test-results/testDebugUnitTest" \
+				--marker-file "${PROJECT_ROOT}/.gradle/jt-test-invocation" \
+				"${@:2}"
+			;;
+		detekt)
+			python3 "${PROJECT_ROOT}/utils/jt/report_detekt.py" "${@:2}"
+			;;
+		spotless)
+			python3 "${PROJECT_ROOT}/utils/jt/report_spotless.py" "${@:2}"
+			;;
+		lint)
+			python3 "${PROJECT_ROOT}/utils/jt/report_lint.py" "${@:2}"
+			;;
+		jacoco|coverage)
+			python3 "${PROJECT_ROOT}/utils/jt/report_jacoco.py" "${@:2}"
+			;;
+		*)
+			err "unknown report kind: $kind"
+			err "supported: test, detekt, spotless, lint, jacoco"
+			return 2
+			;;
+	esac
+}
+
+# Run a report parser as a post-step on failure. Silent on success.
+maybe_auto_report() {
+	local kind="$1"; shift
+	local rc="$1"; shift
+	# rc 0 = task succeeded; we don't auto-report on success (the AI agent
+	# can call `./jt report <kind>` explicitly if they want a summary).
+	# Non-zero = failure; show the parsed summary.
+	if [[ "$rc" -ne 0 ]]; then
+		echo
+		echo "──── ./jt report $kind ────"
+		cmd_report "$kind" "$@" || true
+	fi
+	return "$rc"
+}
+
+# ── Device (adb) helpers ─────────────────────────────────────────────────
+#
+# adb-driven helpers for the install flags (-f/--fresh, -p/--perms, -s/--select)
+# and the standalone `perms` subcommand. The applicationId is identical across
+# every variant (no suffix), so the package + component IDs below work for
+# debug/release/beta/internal alike.
+
+APP_PKG="org.continuouspath.justtype"
+# IME id is the flattenToShortString form (leading-dot class) — that's how the
+# framework registers it and what `ime enable` matches against.
+IME_ID="${APP_PKG}/.JustTypeIME"
+# Accessibility services store the fully-qualified flattenToString form.
+NAV_SERVICE_ID="${APP_PKG}/${APP_PKG}.navigation.NavigationModeService"
+
+# ── Learned-prediction state (debug builds; adb run-as) ─────────────────
+# The learned state = the active language DBs (use counts, recency, case
+# counts) + CustomDb.db (custom words, ngb_user learned tier, ngb_conf
+# personalized weights). Settings are NOT touched by these helpers.
+LEARNED_DB_FILES="CustomDb.db EnglishDbActive.db EspanolDbActive.db TiengVietDbActive.db"
+LEARNED_DIR=".jt-learned"
+
+cmd_learned_save() {
+	local name="${1:-}"
+	[[ -n "$name" ]] || { err "usage: jt learned-save <name>"; return 2; }
+	resolve_adb || return 1
+	local dest="$LEARNED_DIR/$name"
+	mkdir -p "$dest"
+	local saved=0
+	for f in $LEARNED_DB_FILES; do
+		if "$ADB_BIN" shell "run-as $APP_PKG test -f files/$f" 2>/dev/null; then
+			"$ADB_BIN" exec-out "run-as $APP_PKG cat files/$f" > "$dest/$f" || return 1
+			saved=$((saved + 1))
+		fi
+	done
+	echo "learned-save: $saved file(s) -> $dest/"
+}
+
+cmd_learned_restore() {
+	local name="${1:-}"
+	[[ -n "$name" ]] || { err "usage: jt learned-restore <name>"; return 2; }
+	resolve_adb || return 1
+	local src="$LEARNED_DIR/$name"
+	[[ -d "$src" ]] || { err "learned-restore: no snapshot at $src"; return 2; }
+	"$ADB_BIN" shell am force-stop "$APP_PKG"
+	local restored=0
+	for f in $LEARNED_DB_FILES; do
+		if [[ -f "$src/$f" ]]; then
+			"$ADB_BIN" push "$src/$f" "/data/local/tmp/$f" >/dev/null || return 1
+			"$ADB_BIN" shell "run-as $APP_PKG cp /data/local/tmp/$f files/$f" || return 1
+			"$ADB_BIN" shell "rm /data/local/tmp/$f"
+			restored=$((restored + 1))
+		fi
+	done
+	echo "learned-restore: $restored file(s) from $src/ (app was force-stopped; reopen the keyboard)"
+}
+
+cmd_learned_reset() {
+	resolve_adb || return 1
+	"$ADB_BIN" shell am force-stop "$APP_PKG"
+	local removed=0
+	for f in $LEARNED_DB_FILES; do
+		if "$ADB_BIN" shell "run-as $APP_PKG test -f files/$f" 2>/dev/null; then
+			"$ADB_BIN" shell "run-as $APP_PKG rm -f files/$f files/$f-journal" && removed=$((removed + 1))
+		fi
+	done
+	echo "learned-reset: $removed DB(s) removed — active DBs reseed from their pristine build on next keyboard start (Ground 0; settings untouched)"
+}
+
+ADB_BIN=""
+resolve_adb() {
+	if [[ -n "$ADB_BIN" ]]; then return 0; fi
+	if [[ -n "${ANDROID_HOME:-}" && -x "${ANDROID_HOME}/platform-tools/adb" ]]; then
+		ADB_BIN="${ANDROID_HOME}/platform-tools/adb"
+	elif [[ -n "${ANDROID_SDK_ROOT:-}" && -x "${ANDROID_SDK_ROOT}/platform-tools/adb" ]]; then
+		ADB_BIN="${ANDROID_SDK_ROOT}/platform-tools/adb"
+	elif command -v adb >/dev/null 2>&1; then
+		ADB_BIN="$(command -v adb)"
+	else
+		err "adb not found. Set ANDROID_HOME (or ANDROID_SDK_ROOT), or put adb on PATH."
+		return 1
+	fi
+	return 0
+}
+
+# Run adb, echoing the command. Honors ANDROID_SERIAL natively — export it to
+# target a specific device when several are attached.
+adb_sh() {
+	log "$ adb $*"
+	"$ADB_BIN" "$@"
+}
+
+# Overlay (SYSTEM_ALERT_WINDOW) — the "draw over other apps" grant the Nav
+# overlay + directional/TSS capture need. $1 = allow|deny.
+perms_overlay() { adb_sh shell appops set "$APP_PKG" SYSTEM_ALERT_WINDOW "$1"; }
+
+# IME enable/disable. `ime enable/disable` edits the secure list itself, so no
+# manual merge needed. Deliberately does NOT set JustType as the active
+# keyboard — selecting it is a usage choice, not a permission grant. $1 =
+# enable|disable.
+perms_ime() { adb_sh shell ime "$1" "$IME_ID"; }
+
+# Explicit opt-in (install -s / perms -s) to also make JustType the active
+# keyboard, e.g. after a signature-mismatch reinstall wipes the IME selection.
+perms_ime_select() { adb_sh shell ime set "$IME_ID"; }
+
+# Accessibility (Nav keyboard). enabled_accessibility_services is a SHARED,
+# colon-separated list — merge in/out so other services (HeadBoard, TalkBack,
+# …) survive. Overwriting it would silently disable them.
+perms_accessibility_enable() {
+	local current new
+	current="$(adb_sh shell settings get secure enabled_accessibility_services 2>/dev/null | tr -d '\r')"
+	if [[ "$current" == "null" || -z "$current" ]]; then
+		new="$NAV_SERVICE_ID"
+	elif [[ ":$current:" == *":$NAV_SERVICE_ID:"* ]]; then
+		new="$current"  # already enabled
+	else
+		new="${current}:${NAV_SERVICE_ID}"
+	fi
+	adb_sh shell settings put secure enabled_accessibility_services "$new"
+	adb_sh shell settings put secure accessibility_enabled 1
+}
+
+perms_accessibility_disable() {
+	local current new
+	current="$(adb_sh shell settings get secure enabled_accessibility_services 2>/dev/null | tr -d '\r')"
+	if [[ "$current" == "null" || -z "$current" ]]; then return 0; fi
+	# paste is the pipe terminus and always exits 0, so an empty result (we
+	# were the only entry) doesn't trip set -e.
+	new="$(printf '%s' "$current" | tr ':' '\n' | grep -vxF "$NAV_SERVICE_ID" | paste -sd ':' -)"
+	adb_sh shell settings put secure enabled_accessibility_services "$new"
+	[[ -z "$new" ]] && adb_sh shell settings put secure accessibility_enabled 0
+	return 0
+}
+
+cmd_perms() {
+	local mode="enable"
+	local select_ime=false
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			-y|--yes|--enable)  mode="enable";  shift ;;
+			-n|--no|--disable)  mode="disable"; shift ;;
+			-s|--select)        select_ime=true; shift ;;
+			-h|--help)
+				echo "usage: ./jt perms [-y|--enable | -n|--disable] [-s|--select]   (default: -y)"
+				return 0 ;;
+			*) err "perms: unknown flag: $1 (use -y to enable, -n to disable, -s to also select the IME)"; return 2 ;;
+		esac
+	done
+	resolve_adb || return 1
+	# Best-effort: attempt all three grants even if one fails (e.g. app not
+	# installed yet, or a grant already in the target state).
+	set +e
+	if [[ "$mode" == "enable" ]]; then
+		log "granting JustType perms: overlay + IME + accessibility (Nav)"
+		perms_overlay allow
+		perms_ime enable
+		perms_accessibility_enable
+		if $select_ime; then
+			perms_ime_select
+			log "done. JustType selected as the active IME."
+		else
+			log "done. Pick JustType in the keyboard switcher to make it the active IME."
+		fi
+	else
+		log "revoking JustType perms: overlay + IME + accessibility (Nav)"
+		perms_overlay deny
+		perms_ime disable
+		perms_accessibility_disable
+		log "done."
+	fi
+	set -e
+	return 0
+}
+
+# Shared install flags for the install* subcommands. Sets INSTALL_FRESH /
+# INSTALL_PERMS; resets them each call so re-entry is clean.
+INSTALL_FRESH=false
+INSTALL_PERMS=false
+INSTALL_SELECT=false
+parse_install_flags() {
+	INSTALL_FRESH=false
+	INSTALL_PERMS=false
+	INSTALL_SELECT=false
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			-f|--fresh)  INSTALL_FRESH=true;  shift ;;
+			-p|--perms)  INSTALL_PERMS=true;  shift ;;
+			-s|--select) INSTALL_SELECT=true; shift ;;
+			# Combined short flags: -f/-p/-s letters in any order/count (-fp, -fps, -sp, ...).
+			-[fps][fps] | -[fps][fps][fps])
+				local letters="${1#-}"
+				[[ "$letters" == *f* ]] && INSTALL_FRESH=true
+				[[ "$letters" == *p* ]] && INSTALL_PERMS=true
+				[[ "$letters" == *s* ]] && INSTALL_SELECT=true
+				shift ;;
+			*) err "install: unknown flag: $1 (supported: -f/--fresh, -p/--perms, -s/--select)"; return 2 ;;
+		esac
+	done
+	return 0
+}
+
+# Fresh = full removal (app + all data) before reinstall. `adb uninstall`
+# drops the package and its data; a missing install is a no-op, not an error.
+install_fresh_uninstall() {
+	resolve_adb || return 1
+	log "fresh: removing $APP_PKG (app + all data) before reinstall"
+	if "$ADB_BIN" uninstall "$APP_PKG" >/dev/null 2>&1; then
+		log "fresh: previous install removed"
+	else
+		log "fresh: nothing to remove (not currently installed)"
+	fi
+	return 0
+}
+
+# install* wrapper: optional fresh-wipe before, optional perms-grant (and
+# optional IME-select) after a successful install. -s implies -p: selecting
+# the IME requires it be enabled first, so a fresh reinstall (which wipes the
+# IME-enabled list on a signature change) needs both.
+run_install() {
+	local gradle_task="$1"; shift
+	parse_install_flags "$@" || return $?
+	if $INSTALL_FRESH; then install_fresh_uninstall || return 1; fi
+	set +e
+	acquire_lock_and_run run_gradle "$gradle_task"
+	local rc=$?
+	set -e
+	if [[ $rc -eq 0 ]]; then
+		if $INSTALL_SELECT; then
+			cmd_perms -y -s || true
+		elif $INSTALL_PERMS; then
+			cmd_perms -y || true
+		fi
+	fi
+	return "$rc"
+}
+
+# ── Release signing (keytool + macOS Keychain; no gradle) ────────────────
+
+JT_KEYSTORE_DIR="${HOME}/.justtype"
+JT_KEYSTORE="${JT_KEYSTORE_DIR}/justtype-release.jks"
+JT_KEY_ALIAS="justtype"
+# Keychain item app/build.gradle reads the signing password from at build time.
+JT_KEYCHAIN_SERVICE="justtype-signing"
+
+KEYTOOL_BIN=""
+resolve_keytool() {
+	if [[ -n "$KEYTOOL_BIN" ]]; then return 0; fi
+	local jbr="/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/keytool"
+	if [[ -n "${JAVA_HOME:-}" && -x "${JAVA_HOME}/bin/keytool" ]]; then
+		KEYTOOL_BIN="${JAVA_HOME}/bin/keytool"
+	elif command -v keytool >/dev/null 2>&1; then
+		KEYTOOL_BIN="$(command -v keytool)"
+	elif [[ -x "$jbr" ]]; then
+		KEYTOOL_BIN="$jbr"
+	else
+		err "keytool not found. Install a JDK, or Android Studio (its bundled JDK works)."
+		return 1
+	fi
+	return 0
+}
+
+# True if the password opens the keystore AND the expected alias exists.
+keystore_password_ok() {
+	JT_SP="$1" "$KEYTOOL_BIN" -list -keystore "$JT_KEYSTORE" -alias "$JT_KEY_ALIAS" \
+		-storepass:env JT_SP >/dev/null 2>&1
+}
+
+keychain_read_password() {
+	security find-generic-password -s "$JT_KEYCHAIN_SERVICE" -w 2>/dev/null
+}
+
+cmd_signing_setup() {
+	if [[ "$(uname)" != "Darwin" ]]; then
+		err "signing-setup targets macOS (Keychain). Elsewhere, set the JUSTTYPE_KEYSTORE_FILE"
+		err "+ JUSTTYPE_KEYSTORE_PASSWORD/JUSTTYPE_KEY_PASSWORD gradle properties by hand."
+		return 1
+	fi
+	if [[ ! -t 0 ]]; then
+		err "signing-setup is interactive — run it in a terminal"
+		return 1
+	fi
+	resolve_keytool || return 1
+	local src="${1:-}"
+	umask 077
+	mkdir -p "$JT_KEYSTORE_DIR"
+	chmod 700 "$JT_KEYSTORE_DIR"
+
+	local pw="" generated=false ans
+	if [[ -n "$src" ]]; then
+		if [[ ! -f "$src" ]]; then
+			err "no such file: $src"
+			return 1
+		fi
+		if [[ "$(cd "$(dirname "$src")" && pwd)/$(basename "$src")" != "$JT_KEYSTORE" ]]; then
+			if [[ -f "$JT_KEYSTORE" ]] && ! cmp -s "$src" "$JT_KEYSTORE"; then
+				warn "a DIFFERENT keystore already exists at $JT_KEYSTORE"
+				warn "replacing the signing key breaks updates for every installed build"
+				read -r -p "Replace it? [y/N] " ans
+				[[ "$ans" == [yY] ]] || { log "keeping the existing keystore"; return 1; }
+			fi
+			cp "$src" "$JT_KEYSTORE"
+		fi
+		chmod 600 "$JT_KEYSTORE"
+	elif [[ -f "$JT_KEYSTORE" ]]; then
+		log "using existing keystore at $JT_KEYSTORE"
+	else
+		echo "No keystore found at $JT_KEYSTORE."
+		echo "If the team already has one (justtype-signing repo), re-run with its path:"
+		echo "    ./jt signing-setup <path-to>/justtype-release.jks"
+		read -r -p "Generate a brand-new signing key instead? [y/N] " ans
+		[[ "$ans" == [yY] ]] || return 1
+		local pw2
+		while true; do
+			read -r -s -p "New keystore password (12+ chars): " pw; echo
+			if [[ ${#pw} -lt 12 ]]; then warn "too short — use at least 12 characters"; continue; fi
+			if [[ "$pw" == " "* || "$pw" == *" " ]]; then
+				warn "password must not start or end with a space"; continue
+			fi
+			read -r -s -p "Repeat password: " pw2; echo
+			[[ "$pw" == "$pw2" ]] || { warn "passwords do not match"; continue; }
+			break
+		done
+		warn "store this password in the shared password manager NOW — it cannot be recovered"
+		# PKCS12 → store password doubles as the key password. Password passed via
+		# env, never argv (argv is visible in `ps`).
+		JT_SP="$pw" "$KEYTOOL_BIN" -genkeypair \
+			-keystore "$JT_KEYSTORE" -alias "$JT_KEY_ALIAS" \
+			-keyalg RSA -keysize 4096 -validity 20000 -storetype PKCS12 \
+			-storepass:env JT_SP \
+			-dname "CN=JustType, O=Continuous Path"
+		chmod 600 "$JT_KEYSTORE"
+		generated=true
+		log "new keystore generated at $JT_KEYSTORE"
+		log "back it up: copy it into the private justtype-signing repo and push"
+	fi
+
+	if ! $generated; then
+		local attempts=0
+		while true; do
+			read -r -s -p "Keystore password: " pw; echo
+			if keystore_password_ok "$pw"; then break; fi
+			if JT_SP="$pw" "$KEYTOOL_BIN" -list -keystore "$JT_KEYSTORE" \
+				-storepass:env JT_SP >/dev/null 2>&1; then
+				err "keystore opens, but has no '$JT_KEY_ALIAS' key — is this the right file?"
+				return 1
+			fi
+			attempts=$((attempts + 1))
+			if [[ $attempts -ge 3 ]]; then
+				err "wrong password (3 attempts) — nothing was changed"
+				return 1
+			fi
+			warn "wrong password, try again"
+		done
+	fi
+
+	# -U updates the item in place on re-runs.
+	security add-generic-password -a "$JT_KEY_ALIAS" -s "$JT_KEYCHAIN_SERVICE" -w "$pw" -U
+	log "password stored in the macOS Keychain (service: $JT_KEYCHAIN_SERVICE)"
+	log "done — Android Studio and ./jt release builds now sign automatically"
+	log "check anytime with: ./jt signing-status"
+}
+
+cmd_signing_status() {
+	resolve_keytool || return 1
+	local ok=true
+	if [[ -f "$JT_KEYSTORE" ]]; then
+		log "keystore: $JT_KEYSTORE"
+		local perms
+		perms="$(stat -f '%Lp' "$JT_KEYSTORE" 2>/dev/null || stat -c '%a' "$JT_KEYSTORE" 2>/dev/null)"
+		if [[ "$perms" != "600" ]]; then
+			warn "keystore permissions are $perms (expected 600) — fix: chmod 600 $JT_KEYSTORE"
+		fi
+	else
+		warn "keystore: MISSING ($JT_KEYSTORE)"
+		ok=false
+	fi
+	local pw=""
+	if pw="$(keychain_read_password)"; then
+		log "password: found in Keychain (service: $JT_KEYCHAIN_SERVICE)"
+	else
+		warn "password: NOT in Keychain (service: $JT_KEYCHAIN_SERVICE)"
+		ok=false
+	fi
+	if $ok; then
+		if keystore_password_ok "$pw"; then
+			JT_SP="$pw" "$KEYTOOL_BIN" -list -v -keystore "$JT_KEYSTORE" \
+				-alias "$JT_KEY_ALIAS" -storepass:env JT_SP 2>/dev/null \
+				| grep -E 'SHA-256:|Valid from' | sed 's/^[[:space:]]*/  /'
+		else
+			err "Keychain password does not open the keystore — re-run ./jt signing-setup"
+			ok=false
+		fi
+	fi
+	if $ok; then
+		echo "${GREEN}release/beta/internal builds will be signed with the release key (jt + Android Studio).${RESET}"
+		return 0
+	fi
+	echo "${YELLOW}release builds will fall back to the DEBUG key — run ./jt signing-setup${RESET}"
+	return 1
+}
+
+# ── Subcommands ──────────────────────────────────────────────────────────
+
+# Record test-invocation start so report_test.py can flag stale/partial XMLs.
+# $1 = "full" | "filtered". Fourth marker token is a PID nonce so the
+# completion flip only ever touches this invocation's own marker ($$ is
+# stable across the subshell acquire_lock_and_run uses; a shell var isn't).
+mark_test_invocation() {
+	mkdir -p "${PROJECT_ROOT}/.gradle"
+	printf '%s %s started %s\n' "$(date +%s)" "$1" "$$" \
+		> "${PROJECT_ROOT}/.gradle/jt-test-invocation" 2>/dev/null || true
+}
+
+# Runs under the jt lock so the marker write and gradle share one critical
+# section — a queued concurrent invocation can't interleave its marker.
+run_marked_gradle() {
+	local scope="$1"; shift
+	mark_test_invocation "$scope"
+	run_gradle "$@"
+}
+
+# On clean gradle exit, flip the marker to 'completed' — the on-disk XMLs are
+# then trustworthy even when the task was UP-TO-DATE (no new files written).
+# A marker left at 'started' means the run died or a composite task failed.
+# Only flips a marker this invocation wrote (epoch + PID match); a newer
+# queued invocation owns the file by then.
+mark_test_completion() {
+	local rc="$1"
+	local f="${PROJECT_ROOT}/.gradle/jt-test-invocation"
+	if [[ "$rc" -eq 0 && -f "$f" ]]; then
+		local _epoch _scope _status _nonce
+		read -r _epoch _scope _status _nonce < "$f" 2>/dev/null || return 0
+		if [[ "$_nonce" == "$$" ]]; then
+			printf '%s %s completed %s\n' "$_epoch" "${_scope:-full}" "$$" > "$f" 2>/dev/null || true
+		fi
+	fi
+	return 0
+}
+
+# Shared sandwich for every test-running gradle invocation: marker under the
+# lock, completion flip after. Echoes gradle's rc.
+run_tests_marked() {
+	local scope="$1"; shift
+	set +e
+	acquire_lock_and_run run_marked_gradle "$scope" "$@"
+	local rc=$?
+	set -e
+	mark_test_completion "$rc"
+	return "$rc"
+}
+
+cmd_test() {
+	local args=(:app:testDebugUnitTest)
+	local scope="full"
+	if [[ $# -gt 0 ]]; then
+		args+=(--tests "$1")
+		scope="filtered"
+	fi
+	# Don't let `set -e` short-circuit the auto-report path.
+	set +e
+	run_tests_marked "$scope" "${args[@]}"
+	local rc=$?
+	set -e
+	maybe_auto_report test "$rc"
+	return "$rc"
+}
+
+cmd_test_release() {
+	acquire_lock_and_run run_gradle :app:testReleaseUnitTest
+}
+
+cmd_test_instrumented() {
+	acquire_lock_and_run run_gradle :app:connectedDebugAndroidTest
+}
+
+cmd_detekt() {
+	set +e
+	# detektDebug adds the type-resolution rules (UnsafeCallOnNullableType,
+	# InjectDispatcher, ...) that the plain task cannot run.
+	acquire_lock_and_run run_gradle :app:detekt :app:detektDebug
+	local rc=$?
+	set -e
+	maybe_auto_report detekt "$rc"
+	return "$rc"
+}
+
+cmd_detekt_baseline() {
+	# Plain + per-variant (type-resolution) baselines; keep all five in sync.
+	acquire_lock_and_run run_gradle :app:detektBaseline \
+		:app:detektBaselineDebug :app:detektBaselineBeta \
+		:app:detektBaselineInternal :app:detektBaselineRelease
+}
+
+# Spotless writes violations to gradle stdout (no report file), so we
+# tee the output to .gradle/jt-last-spotless.log for the parser to read.
+SPOTLESS_LOG_PATH="${GRADLE_DIR}/jt-last-spotless.log"
+
+cmd_spotless() {
+	mkdir -p "$GRADLE_DIR"
+	set +e
+	acquire_lock_and_run bash -c "'$GRADLEW' spotlessKotlinCheck 2>&1 | tee '$SPOTLESS_LOG_PATH'; exit \${PIPESTATUS[0]}"
+	local rc=$?
+	set -e
+	maybe_auto_report spotless "$rc"
+	return "$rc"
+}
+
+cmd_spotless_fix()     { acquire_lock_and_run run_gradle spotlessApply; }
+
+cmd_lint() {
+	set +e
+	acquire_lock_and_run run_gradle :app:lint
+	local rc=$?
+	set -e
+	maybe_auto_report lint "$rc"
+	return "$rc"
+}
+
+cmd_lint_fix()         { acquire_lock_and_run run_gradle :app:lintFix; }
+
+cmd_jacoco() {
+	set +e
+	# -Pcoverage flips on the JaCoCo agent in app/build.gradle's testOptions.
+	# Without this flag, ./jt test runs without the agent (faster, no
+	# Robolectric/Mockito/JaCoCo classloader race that wedges workers).
+	run_tests_marked full -Pcoverage :app:jacocoTestReport :app:jacocoCoverageVerification
+	local rc=$?
+	set -e
+	# Auto-report on success too — jacoco's whole point is to surface
+	# coverage numbers. (Override the maybe_auto_report convention here.)
+	if [[ "$rc" -eq 0 ]]; then
+		echo
+		echo "──── ./jt report jacoco ────"
+		cmd_report jacoco || true
+	else
+		maybe_auto_report jacoco "$rc"
+	fi
+	return "$rc"
+}
+
+cmd_build()            { acquire_lock_and_run run_gradle :app:assembleDebug; }
+cmd_build_release()    { acquire_lock_and_run run_gradle :app:assembleRelease; }
+cmd_build_beta()       { acquire_lock_and_run run_gradle :app:assembleBeta; }
+cmd_build_internal()   { acquire_lock_and_run run_gradle :app:assembleInternal; }
+
+cmd_install()          { run_install :app:installDebug    "$@"; }
+cmd_install_release()  { run_install :app:installRelease  "$@"; }
+cmd_install_beta()     { run_install :app:installBeta     "$@"; }
+cmd_install_internal() { run_install :app:installInternal "$@"; }
+
+cmd_uninstall() {
+	local revoke=false
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			-p|--perms) revoke=true; shift ;;
+			*) err "uninstall: unknown flag: $1 (supported: -p/--perms)"; return 2 ;;
+		esac
+	done
+	# Revoke while the app is still installed (ime/appops need the package present).
+	if $revoke; then cmd_perms -n || true; fi
+	acquire_lock_and_run run_gradle :app:uninstallDebug
+}
+
+cmd_clean()            { acquire_lock_and_run run_gradle clean; }
+cmd_english_db()       { acquire_lock_and_run run_gradle :app:buildEnglishDb; }
+cmd_espanol_db()       { acquire_lock_and_run run_gradle :app:buildEspanolDb; }
+
+cmd_check() {
+	# Single gradle invocation — gradle parallelizes safely inside its own JVM.
+	# Matches the AGENTS.md "pre-commit checklist" trio.
+	run_tests_marked full \
+		:app:testDebugUnitTest \
+		spotlessKotlinCheck \
+		:app:detekt \
+		:app:detektDebug
+	stamp_check_passed
+}
+
+cmd_check_full() {
+	# Composite + lint + coverage. Use before a substep-closing commit.
+	# -Pcoverage attaches the JaCoCo agent for the test task (see cmd_jacoco).
+	run_tests_marked full -Pcoverage \
+		:app:testDebugUnitTest \
+		spotlessKotlinCheck \
+		:app:detekt \
+		:app:detektDebug \
+		:app:lint \
+		:app:jacocoTestReport \
+		:app:jacocoCoverageVerification
+	stamp_check_passed
+}
+
+# Records a successful check run; the commit-gate hooks compare this stamp
+# against source mtimes to decide whether checks are fresh.
+stamp_check_passed() {
+	date +%s > "${PROJECT_ROOT}/.gradle/jt-check-stamp"
+}
+
+cmd_tasks() {
+	# `--all` is verbose; allow a grep filter as the next arg.
+	local pattern="${1:-}"
+	if [[ -n "$pattern" ]]; then
+		acquire_lock_and_run bash -c "'$GRADLEW' tasks --all | grep -i '$pattern'"
+	else
+		acquire_lock_and_run run_gradle tasks --all
+	fi
+}
+
+cmd_stop() {
+	# `--stop` shuts the daemon down cleanly. Also sweep orphans afterward.
+	log "stopping gradle daemon"
+	"$GRADLEW" --stop || true
+	rm -f "$WATCHDOG_KILL_MARKER"  # daemon freshly stopped — no longer suspect
+	if try_acquire_lock; then
+		trap cleanup_on_exit EXIT INT TERM HUP
+		cleanup_orphan_workers
+		release_lock
+	else
+		warn "couldn't acquire lock for orphan cleanup — another invocation is running"
+	fi
+}
+
+cmd_clean_procs() {
+	if try_acquire_lock; then
+		trap cleanup_on_exit EXIT INT TERM HUP
+		cleanup_orphan_workers
+		release_lock
+		log "orphan cleanup done"
+	else
+		err "couldn't acquire lock — another invocation is running; refusing to scan PIDs"
+		return 1
+	fi
+}
+
+cmd_raw() {
+	# Escape hatch: pass everything after `--` to gradle directly.
+	if [[ $# -eq 0 || "$1" != "--" ]]; then
+		err "usage: jt raw -- <gradle args>"
+		return 2
+	fi
+	shift
+	# Raw runs that touch the debug unit-test task still get the freshness
+	# marker, or report_test.py would classify their results with the
+	# previous invocation's scope/status.
+	local a has_test=0 has_filter=0
+	for a in "$@"; do
+		case "$a" in
+			*testDebugUnitTest*) has_test=1 ;;
+			--tests | --tests=*) has_filter=1 ;;
+		esac
+	done
+	if [[ "$has_test" -eq 1 ]]; then
+		local scope="full"
+		[[ "$has_filter" -eq 1 ]] && scope="filtered"
+		run_tests_marked "$scope" "$@"
+		return $?
+	fi
+	acquire_lock_and_run run_gradle "$@"
+}
+
+cmd_help() {
+	cat <<EOF
+${BOLD}jt${RESET} — single entry point for gradle on this project.
+
+${BOLD}Usage:${RESET} ./jt <subcommand> [args]
+       /jt <subcommand> [args]   ${DIM}(equivalent, via Claude slash command)${RESET}
+
+${BOLD}Tests${RESET}
+  test [pattern]        Run debug unit tests; pattern uses --tests glob.
+  test-release          Run release-variant unit tests.
+  test-instrumented     Run connected-device instrumented tests.
+
+${BOLD}Static analysis${RESET}
+  detekt                Run detekt (plain + type-resolution debug task).
+  detekt-baseline       Regenerate all five detekt baselines (advisory).
+  spotless              Check Kotlin formatting.
+  spotless-fix          Apply formatting fixes.
+  lint                  Run Android lint.
+  lint-fix              Run lint + auto-apply safe fixes.
+
+${BOLD}Coverage${RESET}
+  jacoco                Run tests + write JaCoCo HTML/XML reports.
+
+${BOLD}Build${RESET} (debug-tier scheme: Tier 0 = release, Tier 1 = beta, Tier 2 = debug/internal)
+  build                 :app:assembleDebug      (Tier 2 — full diagnostic, no R8)
+  build-release         :app:assembleRelease    (Tier 0 — R8 + shrink + Log.d/i/v stripped)
+  build-beta            :app:assembleBeta       (Tier 1 — minified, crash-diagnostic breadcrumbs)
+  build-internal        :app:assembleInternal   (Tier 2 — minified, full diagnostic chatter)
+  install [-f] [-p] [-s]  Install debug APK to connected device.
+  install-release …       Install release APK (Tier 0).
+  install-beta …          Install beta APK    (Tier 1).
+  install-internal …      Install internal APK (Tier 2).
+                        ${DIM}-f/--fresh:  adb-uninstall (wipe app + data) first.${RESET}
+                        ${DIM}-p/--perms:  grant overlay+IME+accessibility after.${RESET}
+                        ${DIM}-s/--select: also select JustType as the active IME${RESET}
+                        ${DIM}             (implies -p — selecting needs it enabled).${RESET}
+                        ${DIM}Combine as -fp, -fps, etc. Flags work on every install* variant.${RESET}
+  uninstall [-p]        Uninstall debug APK. -p/--perms revokes perms first.
+  clean                 Delete build/.
+  english-db            Rebuild prebuilt English-words SQLite asset.
+  espanol-db            Rebuild prebuilt Español (Spanish) SQLite asset.
+
+${BOLD}Device perms${RESET} (adb; no gradle)
+  perms [-y|-n] [-s]    Grant (-y, default) or revoke (-n) JustType's three
+                        grants — overlay (SYSTEM_ALERT_WINDOW), IME enable,
+                        and the Nav accessibility service. Merges the shared
+                        accessibility list so other services survive.
+                        ${DIM}-s/--select also sets JustType as the active IME${RESET}
+                        ${DIM}(only meaningful with -y). Without -s, pick it${RESET}
+                        ${DIM}from the keyboard switcher instead.${RESET}
+
+${BOLD}Learned prediction state${RESET} (adb run-as; debug builds; settings untouched)
+  learned-save <name>   Snapshot the learned state (active language DBs +
+                        CustomDb: use counts, case counts, ngb_user tier,
+                        personalized confidence weights) to .jt-learned/<name>/.
+  learned-restore <name> Push a snapshot back (force-stops the app first).
+  learned-reset         Ground 0: delete the active DBs + CustomDb so they
+                        reseed pristine on next keyboard start.
+
+${BOLD}Release signing${RESET} (keytool + macOS Keychain; no gradle)
+  signing-setup [ks]    One-time per machine: install the release keystore
+                        (~/.justtype/) and store its password in the Keychain.
+                        Pass the path to the team keystore (.jks), or run bare
+                        to generate a brand-new key. Idempotent; re-run freely.
+  signing-status        Show keystore, cert fingerprint/expiry, and whether
+                        release builds (jt or Android Studio) will be signed.
+
+${BOLD}Composites${RESET}
+  check                 tests + spotless + detekt x2 (pre-commit gate).
+  check-full            check + lint + jacoco + coverage floor.
+
+${BOLD}Reports (AI-friendly summaries)${RESET}
+  report <kind>         Print compact summary of last gradle output.
+                        Kinds: test, detekt, spotless, lint, jacoco.
+                        ${DIM}Each task auto-runs its report on failure;${RESET}
+                        ${DIM}jacoco auto-runs on success too (coverage rollup).${RESET}
+                        ${DIM}--all to lift caps; --verbose where applicable.${RESET}
+
+${BOLD}Discovery + process management${RESET}
+  tasks [pattern]       List gradle tasks (optionally filtered).
+  stop                  Stop gradle daemon + sweep orphan workers.
+  clean-procs           Sweep orphan workers without stopping the daemon.
+  raw -- <args>         Run arbitrary gradle invocation (lock-protected).
+
+${BOLD}Notes${RESET}
+  - All invocations are serialized by a project-local lock at
+    ${LOCK_DIR}.
+  - This project's orphan GradleWorkerMain processes are cleaned up before
+    every run (other worktrees' workers are left alone).
+    After a watchdog kill, the next run also stops the gradle daemon —
+    a wedged daemon reproduces the hang until restarted.
+  - Each subcommand has a wall-clock budget. Exceeding it dumps + kills the
+    hung workers, kills gradle, and prints a loud warning.
+    Override with: JT_TIMEOUT=900 ./jt test
+  - Hang detection (--hang-detect[=N], default 90s; or JT_HANG_DETECT_SECS=N)
+    kills if gradle has zero output for N seconds. Fires faster than the
+    budget for stuck-mid-suite hangs. Captures sample dumps to
+    ${WATCHDOG_DUMP_DIR}.
+  - Don't call ./gradlew directly. The PreToolUse hook will reject it.
+  - install -f/-p/-s, uninstall -p, and perms shell out to adb (resolved from
+    ANDROID_HOME/ANDROID_SDK_ROOT/PATH). Export ANDROID_SERIAL to target a
+    specific device when several are attached.
+  - Examples:  ./jt test            ./jt check         ./jt detekt
+               ./jt test "*Foo*"    ./jt raw -- :app:tasks
+               ./jt install -fps    ./jt perms -n      ./jt perms
+EOF
+}
+
+# ── Dispatch ─────────────────────────────────────────────────────────────
+
+main() {
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			--hang-detect)    JT_HANG_DETECT_SECS=90; shift ;;
+			--hang-detect=*)  JT_HANG_DETECT_SECS="${1#*=}"; shift ;;
+			*) break ;;
+		esac
+	done
+
+	if [[ $# -eq 0 ]]; then
+		cmd_help
+		return 0
+	fi
+
+	local sub="$1"; shift
+	JT_SUBCMD="$sub"
+	case "$sub" in
+		test)              cmd_test "$@" ;;
+		test-release)      cmd_test_release "$@" ;;
+		test-instrumented) cmd_test_instrumented "$@" ;;
+		detekt)            cmd_detekt "$@" ;;
+		detekt-baseline)   cmd_detekt_baseline "$@" ;;
+		spotless)          cmd_spotless "$@" ;;
+		spotless-fix)      cmd_spotless_fix "$@" ;;
+		lint)              cmd_lint "$@" ;;
+		lint-fix)          cmd_lint_fix "$@" ;;
+		jacoco)            cmd_jacoco "$@" ;;
+		build)             cmd_build "$@" ;;
+		build-release)     cmd_build_release "$@" ;;
+		build-beta)        cmd_build_beta "$@" ;;
+		build-internal)    cmd_build_internal "$@" ;;
+		install)           cmd_install "$@" ;;
+		install-release)   cmd_install_release "$@" ;;
+		install-beta)      cmd_install_beta "$@" ;;
+		install-internal)  cmd_install_internal "$@" ;;
+		uninstall)         cmd_uninstall "$@" ;;
+		perms)             cmd_perms "$@" ;;
+		learned-save)      cmd_learned_save "$@" ;;
+		learned-restore)   cmd_learned_restore "$@" ;;
+		learned-reset)     cmd_learned_reset "$@" ;;
+		signing-setup)     cmd_signing_setup "$@" ;;
+		signing-status)    cmd_signing_status "$@" ;;
+		clean)             cmd_clean "$@" ;;
+		english-db)        cmd_english_db "$@" ;;
+		espanol-db)        cmd_espanol_db "$@" ;;
+		check)             cmd_check "$@" ;;
+		check-full)        cmd_check_full "$@" ;;
+		tasks)             cmd_tasks "$@" ;;
+		stop)              cmd_stop "$@" ;;
+		clean-procs)       cmd_clean_procs "$@" ;;
+		report)            cmd_report "$@" ;;
+		raw)               cmd_raw "$@" ;;
+		help|-h|--help)    cmd_help ;;
+		*)
+			err "unknown subcommand: $sub"
+			cmd_help
+			return 2
+			;;
+	esac
+}
+
+main "$@"

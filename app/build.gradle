@@ -1,0 +1,463 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.detekt)
+    id 'jacoco'
+}
+
+jacoco {
+    toolVersion = '0.8.12'
+}
+
+// Release signing — configured once per machine by `./jt signing-setup`:
+// keystore at ~/.justtype/justtype-release.jks, password in the macOS Keychain
+// (service 'justtype-signing' — never a plaintext file). Android Studio and jt
+// builds both pick these up. CI overrides via JUSTTYPE_KEYSTORE_FILE +
+// JUSTTYPE_KEYSTORE_PASSWORD/JUSTTYPE_KEY_PASSWORD properties (repo secrets).
+// See docs/release.md.
+def releaseStoreFile = file(providers.gradleProperty('JUSTTYPE_KEYSTORE_FILE')
+    .getOrElse("${System.getProperty('user.home')}/.justtype/justtype-release.jks"))
+def keychainPassword = {
+    if (!System.getProperty('os.name').toLowerCase().contains('mac')) return null
+    def exec = providers.exec {
+        commandLine 'security', 'find-generic-password', '-s', 'justtype-signing', '-w'
+        ignoreExitValue = true
+    }
+    exec.result.get().exitValue == 0 ? exec.standardOutput.asText.get().trim() : null
+}
+def releaseStorePassword = providers.gradleProperty('JUSTTYPE_KEYSTORE_PASSWORD').orNull ?: keychainPassword()
+// PKCS12 keystores use a single password for store and key.
+def releaseKeyPassword = providers.gradleProperty('JUSTTYPE_KEY_PASSWORD').orNull ?: releaseStorePassword
+def hasReleaseSigning = releaseStoreFile.exists() && releaseStorePassword != null && releaseKeyPassword != null
+
+// Source identity baked into every build so a tester's screenshot names the exact commit
+// it came from. `git describe` is restricted to v* tags so only real releases are matched:
+// on a tagged commit it yields the tag (v1.1), past one the tag plus distance and short SHA
+// (v1.1-14-ga1b2c3d), and before any release exists a bare SHA — with -dirty appended for
+// an uncommitted tree. Falls back to "unknown" where git is unavailable (a source tarball,
+// or a build made from the published snapshot).
+def gitOutput = { List<String> argv ->
+    def exec = providers.exec {
+        commandLine argv
+        ignoreExitValue = true
+    }
+    exec.result.get().exitValue == 0 ? exec.standardOutput.asText.get().trim() : ''
+}
+def sourceRevision = gitOutput(['git', 'describe', '--tags', '--match', 'v*', '--always', '--dirty']) ?: 'unknown'
+def sourceBranch = gitOutput(['git', 'rev-parse', '--abbrev-ref', 'HEAD']) ?: 'unknown'
+
+android {
+    namespace 'org.continuouspath.justtype'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'org.continuouspath.justtype'
+        minSdk 26
+        targetSdk 34
+        versionCode 3
+        versionName '1.2.0'
+
+        // Static language-pack manifest (see docs/langpacks.md). Interim host: GitHub Releases on a
+        // fixed tag whose assets get replaced; the Foundation server later is just a URL change.
+        buildConfigField 'String', 'LANGPACK_MANIFEST_URL',
+            '"https://github.com/Continuous-Path/JustType-langpacks/releases/download/langpacks-v1/manifest.json"'
+
+        buildConfigField 'String', 'SOURCE_REVISION', "\"${sourceRevision}\""
+        buildConfigField 'String', 'SOURCE_BRANCH', "\"${sourceBranch}\""
+        buildConfigField 'String', 'SOURCE_REPO_URL',
+            '"https://github.com/Continuous-Path/JustType1"'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    signingConfigs {
+        release {
+            if (hasReleaseSigning) {
+                storeFile releaseStoreFile
+                storePassword releaseStorePassword
+                keyAlias 'justtype'
+                keyPassword releaseKeyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        // Three-tier debug build system (see docs/.plans/twinkling-mapping-sketch.md):
+        //   debug    : Tier 2 — local dev, full diagnostic, no minification
+        //   release  : Tier 0 — production lean, R8 strips Log.d/i/v, DEBUG_EDITING=false
+        //   beta     : Tier 1 — crash-diagnostic breadcrumbs, R8 still strips direct Log.*
+        //   internal : Tier 2 — optimized but with full debug diagnostic chatter
+        // Log.w / Log.e / Log.wtf survive R8 stripping in ALL tiers.
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                          'proguard-rules.pro',
+                          'proguard-rules-lean.pro'
+            buildConfigField 'boolean', 'DEBUG_EDITING', 'false'
+            buildConfigField 'int', 'DEBUG_TIER', '0'
+            debuggable false
+            signingConfig hasReleaseSigning ? signingConfigs.release : signingConfigs.debug
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField 'boolean', 'DEBUG_EDITING', 'true'
+            buildConfigField 'int', 'DEBUG_TIER', '2'
+        }
+        beta {
+            initWith release
+            versionNameSuffix '-beta'
+            matchingFallbacks = ['release']
+            // Override release's Tier 0 settings: beta gets the debug-log
+            // infrastructure compiled in, but Log.d/i/v direct calls are
+            // still stripped via the lean ProGuard rules inherited from release.
+            buildConfigField 'boolean', 'DEBUG_EDITING', 'true'
+            buildConfigField 'int', 'DEBUG_TIER', '1'
+        }
+        internal {
+            initWith release
+            versionNameSuffix '-internal'
+            matchingFallbacks = ['release']
+            // Override release: full diagnostic chatter (no Log.* stripping)
+            // but keep release-style minification + signing for realistic
+            // performance characteristics.
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                          'proguard-rules.pro'
+            buildConfigField 'boolean', 'DEBUG_EDITING', 'true'
+            buildConfigField 'int', 'DEBUG_TIER', '2'
+        }
+    }
+
+    // Beta + internal reuse the release-variant DebugSettingsPreset stub so they
+    // behave like a production build (no auto-applied debug settings).
+    sourceSets {
+        beta {
+            java.srcDirs += 'src/release/java'
+        }
+        internal {
+            java.srcDirs += 'src/release/java'
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    // PNG crunching (non-debug variants) strips the APNG animation chunks from the
+    // tts_speaking_* speaking-indicator icons; the app's 15 PNGs total ~436K so the
+    // size win is negligible.
+    aaptOptions {
+        cruncherEnabled false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                maxHeapSize = '4g'
+                forkEvery = 40
+                // ParallelGC: G1's humongous-allocation path stalled the test JVM at shutdown.
+                // Counted-loop safepoints: ParallelGC (unlike G1) defaults UseCountedLoopSafepoints
+                // off, so C2-compiled counted loops never poll. A spinning thread (Robolectric main,
+                // coroutine dispatcher worker) then stalls safepoint sync forever -> suite hangs at
+                // 100% CPU. Captured via -XX:+SafepointTimeout: "Safepoint sync time longer than
+                // 10000ms detected when executing ICBufferFull", straggler _thread_in_Java.
+                // LoopStripMiningIter=1000 matches G1's default poll interval (negligible overhead).
+                // 2026-07-27: counted-loop polls did NOT fully close the hole — a worker still froze
+                // mid-test (VM thread pinned in SafepointSynchronize; Robolectric main thread spinning
+                // in a poll-free JIT loop; six consecutive ./jt check wedges, fresh daemon each time).
+                // AbortVMOnSafepointTimeout turns a >15s safepoint stall into a worker abort: gradle
+                // fails in seconds and names the in-flight test, instead of a 600s frozen JVM that
+                // jstack can't even attach to.
+                jvmArgs '-XX:+UseParallelGC', '-XX:+UseCountedLoopSafepoints', '-XX:LoopStripMiningIter=1000',
+                        '-XX:+UnlockDiagnosticVMOptions', '-XX:+SafepointTimeout',
+                        '-XX:SafepointTimeoutDelay=15000', '-XX:+AbortVMOnSafepointTimeout'
+                // Pre-attach byte-buddy-agent: JDK 21 disables self-attach; Mockito-inline races without this.
+                doFirst {
+                    def byteBuddyAgent = classpath.find { it.name.startsWith('byte-buddy-agent-') }
+                    if (byteBuddyAgent != null) {
+                        jvmArgs "-javaagent:${byteBuddyAgent.absolutePath}"
+                    }
+                }
+            }
+        }
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+        abortOnError true
+        warningsAsErrors false
+        // Translation coverage is tracked out-of-band (langpack owner); per-string
+        // English fallback makes gaps non-fatal, and the 300+ Swahili entries drown
+        // real findings.
+        disable 'MissingTranslation'
+        // Emit XML alongside the default HTML so `./jt report lint` can
+        // parse violations programmatically. AGP writes the XML to
+        // app/build/reports/lint-results-debug.xml by default once enabled.
+        xmlReport = true
+    }
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    config.setFrom(files("${rootProject.projectDir}/config/detekt/detekt.yml"))
+    baseline = file("${rootProject.projectDir}/config/detekt/baseline.xml")
+}
+
+// One-line setup nag when release/beta tasks run without a working signing
+// config. Scoped to the requested tasks so debug builds stay quiet.
+if (!hasReleaseSigning) {
+    def signalsRelease = gradle.startParameter.taskNames.any { name ->
+        name.contains('assembleRelease')  || name.contains('assembleBeta')  || name.contains('assembleInternal') ||
+        name.contains('installRelease')   || name.contains('installBeta')   || name.contains('installInternal')  ||
+        name.contains('bundleRelease')    || name.contains('bundleBeta')    || name.contains('bundleInternal')
+    }
+    if (signalsRelease) {
+        logger.warn('jt: release signing not configured — APK signed with the DEBUG key. Run ./jt signing-setup (docs/release.md).')
+    }
+}
+
+// ── Language word DBs ───────────────────────────────────────────────────────
+// One build{Id}Db task per src/main/db/{Id}WordsRaw.txt corpus.
+//
+// Bundling model (keeps release APKs slim while debug + unit tests stay complete):
+//   • English is the universal default — always in src/main/assets (every variant).
+//   • Any OTHER language named in -PbundledLanguages also goes to src/main/assets
+//     (i.e. into release too) — the "fat build for an offline tester" escape hatch.
+//   • Every remaining language with a corpus goes to src/DEBUG/assets, so the debug
+//     variant (and the Robolectric unit tests that run on it) bundle it, but
+//     release/beta/internal do not.
+// Result: default `assembleRelease` ships English only; `assembleDebug` and tests
+// ship English + Español; `-PbundledLanguages=English,Espanol` forces a fat release.
+def bundledLanguages = ((findProperty('bundledLanguages') ?: 'English') as String)
+    .split(',').collect { it.trim() }.findAll { !it.isEmpty() }
+if (!bundledLanguages.contains('English')) {
+    bundledLanguages = ['English'] + bundledLanguages // English is always universal
+}
+
+def languageIds = fileTree(dir: 'src/main/db', include: '*WordsRaw.txt')
+    .files.collect { it.name - 'WordsRaw.txt' }.sort()
+
+def mainDbDir = 'src/main/assets/databases'
+def debugDbDir = 'src/debug/assets/databases'
+
+def languageDbTasks = languageIds.collectEntries { id ->
+    def universal = bundledLanguages.contains(id)
+    def task = tasks.register("build${id}Db", BuildWordDbTask) {
+        inputFile = file("src/main/db/${id}WordsRaw.txt")
+        def tags = file("src/main/db/${id}RegionTags.txt")
+        if (tags.exists()) regionTagsFile = tags
+        def layout = file("src/main/db/${id}Layout.json")
+        if (layout.exists()) layoutFile = layout
+        def avoid = file("src/main/db/${id}WordsAvoid.txt")
+        if (avoid.exists()) avoidFile = avoid
+        def units = file("src/main/db/${id}Units.txt")
+        if (units.exists()) unitsFile = units
+        def ngb = file("src/main/db/${id}Ngb.txt")
+        if (ngb.exists()) ngbFile = ngb
+        outputFile = universal
+            ? file("$mainDbDir/${id}Db.db")       // all variants
+            : file("$debugDbDir/${id}Db.db")       // debug + unit tests only
+    }
+    [(id): task]
+}
+
+// Drop stale generated DBs so a language that changed bundling tier doesn't leak
+// into the wrong variant. (Plain java.io.File in doLast — project APIs there break
+// the configuration cache.)
+def pruneStaleDbAssets = tasks.register('pruneStaleDbAssets') {
+    def mainDir = file(mainDbDir)
+    def debugDir = file(debugDbDir)
+    def universal = bundledLanguages.toList()
+    doLast {
+        // main/assets keeps only universal languages…
+        (mainDir.listFiles() ?: new File[0]).findAll { it.name.endsWith('Db.db') }.each { f ->
+            if (!universal.contains(f.name - 'Db.db')) {
+                logger.lifecycle("Pruning ${f.name} from main assets (now debug-only)")
+                f.delete()
+            }
+        }
+        // …debug/assets keeps only NON-universal languages (universal ones live in main).
+        (debugDir.listFiles() ?: new File[0]).findAll { it.name.endsWith('Db.db') }.each { f ->
+            if (universal.contains(f.name - 'Db.db')) {
+                logger.lifecycle("Pruning ${f.name} from debug assets (now universal)")
+                f.delete()
+            }
+        }
+    }
+}
+
+// Universal (English + any -P extras) build with every variant via preBuild;
+// debug-only languages attach to preDebugBuild so release/beta/internal skip them.
+def universalIds = languageIds.findAll { bundledLanguages.contains(it) }
+def debugOnlyIds = languageIds.findAll { !bundledLanguages.contains(it) }
+
+tasks.named('preBuild').configure {
+    dependsOn pruneStaleDbAssets
+    dependsOn universalIds.collect { "build${it}Db" }
+}
+tasks.matching { it.name == 'preDebugBuild' }.configureEach {
+    dependsOn debugOnlyIds.collect { "build${it}Db" }
+}
+
+// Build-time download escape hatch: pull a published artifact into assets for a one-off
+// bundled build (url + sha256 from the published manifest.json). Preferred path while
+// corpora live in-repo is local generation via build{Id}Db.
+tasks.register('fetchLanguageDb', FetchLanguageArtifactTask) {
+    url = (findProperty('fetchUrl') ?: '') as String
+    sha256 = (findProperty('fetchSha256') ?: '') as String
+    outputFile = file("$mainDbDir/${findProperty('fetchLanguage') ?: 'Unknown'}Db.db")
+}
+
+// Publishable langpack artifacts + manifest (upload with:
+//   gh release upload langpacks-v1 dist/langpacks/* --clobber)
+tasks.register('packageLanguageArtifacts', PackageLanguageArtifactsTask) {
+    dependsOn languageDbTasks.values()
+    catalogFile = file('src/main/db/langpacks.properties')
+    dbFiles = languageIds.collect { languageDbTasks[it].get().outputFile }
+    baseUrl = (findProperty('langpackBaseUrl')
+        ?: 'https://github.com/Continuous-Path/JustType-langpacks/releases/download/langpacks-v1') as String
+    minAppVersionCode = 1
+    outputDir = file("$rootDir/dist/langpacks")
+}
+
+// ── JaCoCo coverage ─────────────────────────────────────────────────────────
+// Run `./jt jacoco` (or `./gradlew -Pcoverage :app:jacocoTestReport`) to
+// produce HTML + XML coverage reports at app/build/reports/jacoco/jacocoTestReport/.
+//
+// The JaCoCo Java agent is DISABLED by default on unit-test tasks. When
+// attached, it rewrites every loaded class, and together with Robolectric's
+// shadow classloader + Mockito-inline's ByteBuddy instrumentation it can
+// wedge the test JVM during fork startup (worker pinned at 100% CPU, no
+// tests ever run). The -Pcoverage flag flips the agent on for the run.
+tasks.withType(Test).configureEach { testTask ->
+    testTask.extensions.findByType(JacocoTaskExtension)?.with {
+        enabled = project.hasProperty('coverage')
+        includeNoLocationClasses = true
+        excludes = ['jdk.internal.*']
+    }
+    // Temporary: per-test event logging to diagnose worker hangs.
+    if (project.hasProperty('testTrace')) {
+        testLogging {
+            events 'started', 'passed', 'failed', 'skipped'
+            showStandardStreams = false
+            exceptionFormat = 'full'
+        }
+    }
+}
+
+def jacocoExclusions = [
+    '**/R.class',
+    '**/R$*.class',
+    '**/BuildConfig.*',
+    '**/Manifest*.*',
+    '**/*Test*.*',
+    '**/databinding/**',
+    '**/*ViewBinding*.*',
+    'android/**/*.*',
+]
+
+tasks.register('jacocoTestReport', JacocoReport) {
+    dependsOn 'testDebugUnitTest'
+    group = 'verification'
+    description = 'Generates JaCoCo coverage report for the debug unit test variant.'
+
+    reports {
+        xml.required = true
+        html.required = true
+        csv.required = false
+    }
+
+    def javaClasses = fileTree(
+        dir: layout.buildDirectory.dir('intermediates/javac/debug/compileDebugJavaWithJavac/classes').get().asFile,
+        excludes: jacocoExclusions,
+    )
+    def kotlinClasses = fileTree(
+        dir: layout.buildDirectory.dir('tmp/kotlin-classes/debug').get().asFile,
+        excludes: jacocoExclusions,
+    )
+
+    classDirectories.setFrom(files([javaClasses, kotlinClasses]))
+    sourceDirectories.setFrom(files([
+        'src/main/java',
+        'src/main/kotlin',
+        'src/debug/java',
+        'src/debug/kotlin',
+    ]))
+    executionData.setFrom(fileTree(
+        dir: layout.buildDirectory.get().asFile,
+        includes: ['jacoco/testDebugUnitTest.exec'],
+    ))
+}
+
+// Ratchet floor: raise as coverage grows, never lower. Measured 49.5% line 2026-08-06.
+tasks.register('jacocoCoverageVerification', JacocoCoverageVerification) {
+    dependsOn 'jacocoTestReport'
+    group = 'verification'
+    description = 'Fails when line coverage drops below the ratchet floor.'
+
+    violationRules {
+        rule {
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.45
+            }
+        }
+    }
+
+    def javaClasses = fileTree(
+        dir: layout.buildDirectory.dir('intermediates/javac/debug/compileDebugJavaWithJavac/classes').get().asFile,
+        excludes: jacocoExclusions,
+    )
+    def kotlinClasses = fileTree(
+        dir: layout.buildDirectory.dir('tmp/kotlin-classes/debug').get().asFile,
+        excludes: jacocoExclusions,
+    )
+    classDirectories.setFrom(files([javaClasses, kotlinClasses]))
+    sourceDirectories.setFrom(files([
+        'src/main/java',
+        'src/main/kotlin',
+        'src/debug/java',
+        'src/debug/kotlin',
+    ]))
+    executionData.setFrom(fileTree(
+        dir: layout.buildDirectory.get().asFile,
+        includes: ['jacoco/testDebugUnitTest.exec'],
+    ))
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.documentfile
+    implementation libs.androidx.datastore.preferences
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.kotlinx.serialization.json
+
+    testImplementation libs.junit
+    testImplementation libs.robolectric
+    testImplementation libs.androidx.test.core
+    testImplementation libs.mockito.kotlin
+    testImplementation libs.kotlinx.coroutines.test
+    testImplementation libs.truth
+    testImplementation libs.turbine
+    androidTestImplementation libs.androidx.test.ext.junit
+    androidTestImplementation libs.androidx.espresso.core
+}

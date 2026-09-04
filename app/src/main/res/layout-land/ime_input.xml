@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IME Input Layout, landscape — the JT key history bar becomes a vertical
+     column beside the grid instead of a horizontal bar above it -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- JT Layout key history region, top-bar option (shown when vertical is off) -->
+    <include layout="@layout/include_key_history_jt" />
+
+    <!-- Phrase/abbreviation overlay (IME-managed, hidden by default) -->
+    <include layout="@layout/include_phrase_overlay" />
+
+    <!-- Settings overlay (keyboard-navigable settings panel, hidden by default) -->
+    <include layout="@layout/include_settings_overlay" />
+
+    <!-- JT Layout row: vertical key history column option + 3x3 grid with selection list -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_key_history_jt_vertical" />
+
+        <include
+            layout="@layout/include_jt_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- Scan Layout key history region -->
+    <include layout="@layout/include_key_history_scan" />
+
+    <!-- Scan Layout - Center preview, selection columns, and scan buttons -->
+    <include layout="@layout/include_scan_layout" />
+
+    <!-- Switch bar (single green or green/red) - shown when touch screen switch is active -->
+    <FrameLayout
+        android:id="@+id/switchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:background="@color/keyboard_background"
+        android:visibility="gone" />
+
+</LinearLayout>

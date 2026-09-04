@@ -1,0 +1,1941 @@
+{
+ "diacritic_groups": [
+  {
+   "base": "a",
+   "variants": [
+    {
+     "char": "á",
+     "cp": "U+00E1",
+     "name": "LATIN SMALL LETTER A WITH ACUTE",
+     "upper": "Á",
+     "upper_cp": "U+00C1",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "à",
+     "cp": "U+00E0",
+     "name": "LATIN SMALL LETTER A WITH GRAVE",
+     "upper": "À",
+     "upper_cp": "U+00C0",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "â",
+     "cp": "U+00E2",
+     "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX",
+     "upper": "Â",
+     "upper_cp": "U+00C2",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ä",
+     "cp": "U+00E4",
+     "name": "LATIN SMALL LETTER A WITH DIAERESIS",
+     "upper": "Ä",
+     "upper_cp": "U+00C4",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ã",
+     "cp": "U+00E3",
+     "name": "LATIN SMALL LETTER A WITH TILDE",
+     "upper": "Ã",
+     "upper_cp": "U+00C3",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "å",
+     "cp": "U+00E5",
+     "name": "LATIN SMALL LETTER A WITH RING ABOVE",
+     "upper": "Å",
+     "upper_cp": "U+00C5",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ā",
+     "cp": "U+0101",
+     "name": "LATIN SMALL LETTER A WITH MACRON",
+     "upper": "Ā",
+     "upper_cp": "U+0100",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 7
+    },
+    {
+     "char": "ă",
+     "cp": "U+0103",
+     "name": "LATIN SMALL LETTER A WITH BREVE",
+     "upper": "Ă",
+     "upper_cp": "U+0102",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 8
+    },
+    {
+     "char": "ą",
+     "cp": "U+0105",
+     "name": "LATIN SMALL LETTER A WITH OGONEK",
+     "upper": "Ą",
+     "upper_cp": "U+0104",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 9
+    },
+    {
+     "char": "ǎ",
+     "cp": "U+01CE",
+     "name": "LATIN SMALL LETTER A WITH CARON",
+     "upper": "Ǎ",
+     "upper_cp": "U+01CD",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 10
+    },
+    {
+     "char": "ȧ",
+     "cp": "U+0227",
+     "name": "LATIN SMALL LETTER A WITH DOT ABOVE",
+     "upper": "Ȧ",
+     "upper_cp": "U+0226",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 11
+    },
+    {
+     "char": "ạ",
+     "cp": "U+1EA1",
+     "name": "LATIN SMALL LETTER A WITH DOT BELOW",
+     "upper": "Ạ",
+     "upper_cp": "U+1EA0",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 12
+    },
+    {
+     "char": "ả",
+     "cp": "U+1EA3",
+     "name": "LATIN SMALL LETTER A WITH HOOK ABOVE",
+     "upper": "Ả",
+     "upper_cp": "U+1EA2",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 13
+    },
+    {
+     "char": "ấ",
+     "cp": "U+1EA5",
+     "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE",
+     "upper": "Ấ",
+     "upper_cp": "U+1EA4",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 14
+    },
+    {
+     "char": "ầ",
+     "cp": "U+1EA7",
+     "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND GRAVE",
+     "upper": "Ầ",
+     "upper_cp": "U+1EA6",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 15
+    },
+    {
+     "char": "ẩ",
+     "cp": "U+1EA9",
+     "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE",
+     "upper": "Ẩ",
+     "upper_cp": "U+1EA8",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 16
+    },
+    {
+     "char": "ẫ",
+     "cp": "U+1EAB",
+     "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE",
+     "upper": "Ẫ",
+     "upper_cp": "U+1EAA",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 17
+    },
+    {
+     "char": "ậ",
+     "cp": "U+1EAD",
+     "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW",
+     "upper": "Ậ",
+     "upper_cp": "U+1EAC",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 18
+    },
+    {
+     "char": "ắ",
+     "cp": "U+1EAF",
+     "name": "LATIN SMALL LETTER A WITH BREVE AND ACUTE",
+     "upper": "Ắ",
+     "upper_cp": "U+1EAE",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 19
+    },
+    {
+     "char": "ằ",
+     "cp": "U+1EB1",
+     "name": "LATIN SMALL LETTER A WITH BREVE AND GRAVE",
+     "upper": "Ằ",
+     "upper_cp": "U+1EB0",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 20
+    },
+    {
+     "char": "ẳ",
+     "cp": "U+1EB3",
+     "name": "LATIN SMALL LETTER A WITH BREVE AND HOOK ABOVE",
+     "upper": "Ẳ",
+     "upper_cp": "U+1EB2",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 21
+    },
+    {
+     "char": "ẵ",
+     "cp": "U+1EB5",
+     "name": "LATIN SMALL LETTER A WITH BREVE AND TILDE",
+     "upper": "Ẵ",
+     "upper_cp": "U+1EB4",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 22
+    },
+    {
+     "char": "ặ",
+     "cp": "U+1EB7",
+     "name": "LATIN SMALL LETTER A WITH BREVE AND DOT BELOW",
+     "upper": "Ặ",
+     "upper_cp": "U+1EB6",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 23
+    }
+   ]
+  },
+  {
+   "base": "e",
+   "variants": [
+    {
+     "char": "é",
+     "cp": "U+00E9",
+     "name": "LATIN SMALL LETTER E WITH ACUTE",
+     "upper": "É",
+     "upper_cp": "U+00C9",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "è",
+     "cp": "U+00E8",
+     "name": "LATIN SMALL LETTER E WITH GRAVE",
+     "upper": "È",
+     "upper_cp": "U+00C8",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ê",
+     "cp": "U+00EA",
+     "name": "LATIN SMALL LETTER E WITH CIRCUMFLEX",
+     "upper": "Ê",
+     "upper_cp": "U+00CA",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ë",
+     "cp": "U+00EB",
+     "name": "LATIN SMALL LETTER E WITH DIAERESIS",
+     "upper": "Ë",
+     "upper_cp": "U+00CB",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ē",
+     "cp": "U+0113",
+     "name": "LATIN SMALL LETTER E WITH MACRON",
+     "upper": "Ē",
+     "upper_cp": "U+0112",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "ě",
+     "cp": "U+011B",
+     "name": "LATIN SMALL LETTER E WITH CARON",
+     "upper": "Ě",
+     "upper_cp": "U+011A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ę",
+     "cp": "U+0119",
+     "name": "LATIN SMALL LETTER E WITH OGONEK",
+     "upper": "Ę",
+     "upper_cp": "U+0118",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 7
+    },
+    {
+     "char": "ė",
+     "cp": "U+0117",
+     "name": "LATIN SMALL LETTER E WITH DOT ABOVE",
+     "upper": "Ė",
+     "upper_cp": "U+0116",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 8
+    },
+    {
+     "char": "ĕ",
+     "cp": "U+0115",
+     "name": "LATIN SMALL LETTER E WITH BREVE",
+     "upper": "Ĕ",
+     "upper_cp": "U+0114",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 9
+    },
+    {
+     "char": "ẽ",
+     "cp": "U+1EBD",
+     "name": "LATIN SMALL LETTER E WITH TILDE",
+     "upper": "Ẽ",
+     "upper_cp": "U+1EBC",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 10
+    },
+    {
+     "char": "ẹ",
+     "cp": "U+1EB9",
+     "name": "LATIN SMALL LETTER E WITH DOT BELOW",
+     "upper": "Ẹ",
+     "upper_cp": "U+1EB8",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 11
+    },
+    {
+     "char": "ẻ",
+     "cp": "U+1EBB",
+     "name": "LATIN SMALL LETTER E WITH HOOK ABOVE",
+     "upper": "Ẻ",
+     "upper_cp": "U+1EBA",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 12
+    },
+    {
+     "char": "ế",
+     "cp": "U+1EBF",
+     "name": "LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE",
+     "upper": "Ế",
+     "upper_cp": "U+1EBE",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 13
+    },
+    {
+     "char": "ề",
+     "cp": "U+1EC1",
+     "name": "LATIN SMALL LETTER E WITH CIRCUMFLEX AND GRAVE",
+     "upper": "Ề",
+     "upper_cp": "U+1EC0",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 14
+    },
+    {
+     "char": "ể",
+     "cp": "U+1EC3",
+     "name": "LATIN SMALL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE",
+     "upper": "Ể",
+     "upper_cp": "U+1EC2",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 15
+    },
+    {
+     "char": "ễ",
+     "cp": "U+1EC5",
+     "name": "LATIN SMALL LETTER E WITH CIRCUMFLEX AND TILDE",
+     "upper": "Ễ",
+     "upper_cp": "U+1EC4",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 16
+    },
+    {
+     "char": "ệ",
+     "cp": "U+1EC7",
+     "name": "LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW",
+     "upper": "Ệ",
+     "upper_cp": "U+1EC6",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 17
+    }
+   ]
+  },
+  {
+   "base": "i",
+   "variants": [
+    {
+     "char": "í",
+     "cp": "U+00ED",
+     "name": "LATIN SMALL LETTER I WITH ACUTE",
+     "upper": "Í",
+     "upper_cp": "U+00CD",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ì",
+     "cp": "U+00EC",
+     "name": "LATIN SMALL LETTER I WITH GRAVE",
+     "upper": "Ì",
+     "upper_cp": "U+00CC",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "î",
+     "cp": "U+00EE",
+     "name": "LATIN SMALL LETTER I WITH CIRCUMFLEX",
+     "upper": "Î",
+     "upper_cp": "U+00CE",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ï",
+     "cp": "U+00EF",
+     "name": "LATIN SMALL LETTER I WITH DIAERESIS",
+     "upper": "Ï",
+     "upper_cp": "U+00CF",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ī",
+     "cp": "U+012B",
+     "name": "LATIN SMALL LETTER I WITH MACRON",
+     "upper": "Ī",
+     "upper_cp": "U+012A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "į",
+     "cp": "U+012F",
+     "name": "LATIN SMALL LETTER I WITH OGONEK",
+     "upper": "Į",
+     "upper_cp": "U+012E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ǐ",
+     "cp": "U+01D0",
+     "name": "LATIN SMALL LETTER I WITH CARON",
+     "upper": "Ǐ",
+     "upper_cp": "U+01CF",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 7
+    },
+    {
+     "char": "ĭ",
+     "cp": "U+012D",
+     "name": "LATIN SMALL LETTER I WITH BREVE",
+     "upper": "Ĭ",
+     "upper_cp": "U+012C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 8
+    },
+    {
+     "char": "ĩ",
+     "cp": "U+0129",
+     "name": "LATIN SMALL LETTER I WITH TILDE",
+     "upper": "Ĩ",
+     "upper_cp": "U+0128",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 9
+    },
+    {
+     "char": "ı",
+     "cp": "U+0131",
+     "name": "LATIN SMALL LETTER DOTLESS I",
+     "upper": "I",
+     "upper_cp": "U+0049",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 10
+    },
+    {
+     "char": "ị",
+     "cp": "U+1ECB",
+     "name": "LATIN SMALL LETTER I WITH DOT BELOW",
+     "upper": "Ị",
+     "upper_cp": "U+1ECA",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 11
+    },
+    {
+     "char": "ỉ",
+     "cp": "U+1EC9",
+     "name": "LATIN SMALL LETTER I WITH HOOK ABOVE",
+     "upper": "Ỉ",
+     "upper_cp": "U+1EC8",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 12
+    }
+   ]
+  },
+  {
+   "base": "o",
+   "variants": [
+    {
+     "char": "ó",
+     "cp": "U+00F3",
+     "name": "LATIN SMALL LETTER O WITH ACUTE",
+     "upper": "Ó",
+     "upper_cp": "U+00D3",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ò",
+     "cp": "U+00F2",
+     "name": "LATIN SMALL LETTER O WITH GRAVE",
+     "upper": "Ò",
+     "upper_cp": "U+00D2",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ô",
+     "cp": "U+00F4",
+     "name": "LATIN SMALL LETTER O WITH CIRCUMFLEX",
+     "upper": "Ô",
+     "upper_cp": "U+00D4",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ö",
+     "cp": "U+00F6",
+     "name": "LATIN SMALL LETTER O WITH DIAERESIS",
+     "upper": "Ö",
+     "upper_cp": "U+00D6",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "õ",
+     "cp": "U+00F5",
+     "name": "LATIN SMALL LETTER O WITH TILDE",
+     "upper": "Õ",
+     "upper_cp": "U+00D5",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "ø",
+     "cp": "U+00F8",
+     "name": "LATIN SMALL LETTER O WITH STROKE",
+     "upper": "Ø",
+     "upper_cp": "U+00D8",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ō",
+     "cp": "U+014D",
+     "name": "LATIN SMALL LETTER O WITH MACRON",
+     "upper": "Ō",
+     "upper_cp": "U+014C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 7
+    },
+    {
+     "char": "ő",
+     "cp": "U+0151",
+     "name": "LATIN SMALL LETTER O WITH DOUBLE ACUTE",
+     "upper": "Ő",
+     "upper_cp": "U+0150",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 8
+    },
+    {
+     "char": "ŏ",
+     "cp": "U+014F",
+     "name": "LATIN SMALL LETTER O WITH BREVE",
+     "upper": "Ŏ",
+     "upper_cp": "U+014E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 9
+    },
+    {
+     "char": "ǒ",
+     "cp": "U+01D2",
+     "name": "LATIN SMALL LETTER O WITH CARON",
+     "upper": "Ǒ",
+     "upper_cp": "U+01D1",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 10
+    },
+    {
+     "char": "ọ",
+     "cp": "U+1ECD",
+     "name": "LATIN SMALL LETTER O WITH DOT BELOW",
+     "upper": "Ọ",
+     "upper_cp": "U+1ECC",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 11
+    },
+    {
+     "char": "ơ",
+     "cp": "U+01A1",
+     "name": "LATIN SMALL LETTER O WITH HORN",
+     "upper": "Ơ",
+     "upper_cp": "U+01A0",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 12
+    },
+    {
+     "char": "ỏ",
+     "cp": "U+1ECF",
+     "name": "LATIN SMALL LETTER O WITH HOOK ABOVE",
+     "upper": "Ỏ",
+     "upper_cp": "U+1ECE",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 13
+    },
+    {
+     "char": "ố",
+     "cp": "U+1ED1",
+     "name": "LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE",
+     "upper": "Ố",
+     "upper_cp": "U+1ED0",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 14
+    },
+    {
+     "char": "ồ",
+     "cp": "U+1ED3",
+     "name": "LATIN SMALL LETTER O WITH CIRCUMFLEX AND GRAVE",
+     "upper": "Ồ",
+     "upper_cp": "U+1ED2",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 15
+    },
+    {
+     "char": "ổ",
+     "cp": "U+1ED5",
+     "name": "LATIN SMALL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE",
+     "upper": "Ổ",
+     "upper_cp": "U+1ED4",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 16
+    },
+    {
+     "char": "ỗ",
+     "cp": "U+1ED7",
+     "name": "LATIN SMALL LETTER O WITH CIRCUMFLEX AND TILDE",
+     "upper": "Ỗ",
+     "upper_cp": "U+1ED6",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 17
+    },
+    {
+     "char": "ộ",
+     "cp": "U+1ED9",
+     "name": "LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW",
+     "upper": "Ộ",
+     "upper_cp": "U+1ED8",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 18
+    },
+    {
+     "char": "ớ",
+     "cp": "U+1EDB",
+     "name": "LATIN SMALL LETTER O WITH HORN AND ACUTE",
+     "upper": "Ớ",
+     "upper_cp": "U+1EDA",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 19
+    },
+    {
+     "char": "ờ",
+     "cp": "U+1EDD",
+     "name": "LATIN SMALL LETTER O WITH HORN AND GRAVE",
+     "upper": "Ờ",
+     "upper_cp": "U+1EDC",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 20
+    },
+    {
+     "char": "ở",
+     "cp": "U+1EDF",
+     "name": "LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE",
+     "upper": "Ở",
+     "upper_cp": "U+1EDE",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 21
+    },
+    {
+     "char": "ỡ",
+     "cp": "U+1EE1",
+     "name": "LATIN SMALL LETTER O WITH HORN AND TILDE",
+     "upper": "Ỡ",
+     "upper_cp": "U+1EE0",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 22
+    },
+    {
+     "char": "ợ",
+     "cp": "U+1EE3",
+     "name": "LATIN SMALL LETTER O WITH HORN AND DOT BELOW",
+     "upper": "Ợ",
+     "upper_cp": "U+1EE2",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 23
+    }
+   ]
+  },
+  {
+   "base": "u",
+   "variants": [
+    {
+     "char": "ü",
+     "cp": "U+00FC",
+     "name": "LATIN SMALL LETTER U WITH DIAERESIS",
+     "upper": "Ü",
+     "upper_cp": "U+00DC",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ú",
+     "cp": "U+00FA",
+     "name": "LATIN SMALL LETTER U WITH ACUTE",
+     "upper": "Ú",
+     "upper_cp": "U+00DA",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ù",
+     "cp": "U+00F9",
+     "name": "LATIN SMALL LETTER U WITH GRAVE",
+     "upper": "Ù",
+     "upper_cp": "U+00D9",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "û",
+     "cp": "U+00FB",
+     "name": "LATIN SMALL LETTER U WITH CIRCUMFLEX",
+     "upper": "Û",
+     "upper_cp": "U+00DB",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ū",
+     "cp": "U+016B",
+     "name": "LATIN SMALL LETTER U WITH MACRON",
+     "upper": "Ū",
+     "upper_cp": "U+016A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "ů",
+     "cp": "U+016F",
+     "name": "LATIN SMALL LETTER U WITH RING ABOVE",
+     "upper": "Ů",
+     "upper_cp": "U+016E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ű",
+     "cp": "U+0171",
+     "name": "LATIN SMALL LETTER U WITH DOUBLE ACUTE",
+     "upper": "Ű",
+     "upper_cp": "U+0170",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 7
+    },
+    {
+     "char": "ų",
+     "cp": "U+0173",
+     "name": "LATIN SMALL LETTER U WITH OGONEK",
+     "upper": "Ų",
+     "upper_cp": "U+0172",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 8
+    },
+    {
+     "char": "ŭ",
+     "cp": "U+016D",
+     "name": "LATIN SMALL LETTER U WITH BREVE",
+     "upper": "Ŭ",
+     "upper_cp": "U+016C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 9
+    },
+    {
+     "char": "ǔ",
+     "cp": "U+01D4",
+     "name": "LATIN SMALL LETTER U WITH CARON",
+     "upper": "Ǔ",
+     "upper_cp": "U+01D3",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 10
+    },
+    {
+     "char": "ụ",
+     "cp": "U+1EE5",
+     "name": "LATIN SMALL LETTER U WITH DOT BELOW",
+     "upper": "Ụ",
+     "upper_cp": "U+1EE4",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 11
+    },
+    {
+     "char": "ũ",
+     "cp": "U+0169",
+     "name": "LATIN SMALL LETTER U WITH TILDE",
+     "upper": "Ũ",
+     "upper_cp": "U+0168",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 12
+    },
+    {
+     "char": "ư",
+     "cp": "U+01B0",
+     "name": "LATIN SMALL LETTER U WITH HORN",
+     "upper": "Ư",
+     "upper_cp": "U+01AF",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 13
+    },
+    {
+     "char": "ủ",
+     "cp": "U+1EE7",
+     "name": "LATIN SMALL LETTER U WITH HOOK ABOVE",
+     "upper": "Ủ",
+     "upper_cp": "U+1EE6",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 14
+    },
+    {
+     "char": "ứ",
+     "cp": "U+1EE9",
+     "name": "LATIN SMALL LETTER U WITH HORN AND ACUTE",
+     "upper": "Ứ",
+     "upper_cp": "U+1EE8",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 15
+    },
+    {
+     "char": "ừ",
+     "cp": "U+1EEB",
+     "name": "LATIN SMALL LETTER U WITH HORN AND GRAVE",
+     "upper": "Ừ",
+     "upper_cp": "U+1EEA",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 16
+    },
+    {
+     "char": "ử",
+     "cp": "U+1EED",
+     "name": "LATIN SMALL LETTER U WITH HORN AND HOOK ABOVE",
+     "upper": "Ử",
+     "upper_cp": "U+1EEC",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 17
+    },
+    {
+     "char": "ữ",
+     "cp": "U+1EEF",
+     "name": "LATIN SMALL LETTER U WITH HORN AND TILDE",
+     "upper": "Ữ",
+     "upper_cp": "U+1EEE",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 18
+    },
+    {
+     "char": "ự",
+     "cp": "U+1EF1",
+     "name": "LATIN SMALL LETTER U WITH HORN AND DOT BELOW",
+     "upper": "Ự",
+     "upper_cp": "U+1EF0",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 19
+    }
+   ]
+  },
+  {
+   "base": "y",
+   "variants": [
+    {
+     "char": "ý",
+     "cp": "U+00FD",
+     "name": "LATIN SMALL LETTER Y WITH ACUTE",
+     "upper": "Ý",
+     "upper_cp": "U+00DD",
+     "tier": "common",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ÿ",
+     "cp": "U+00FF",
+     "name": "LATIN SMALL LETTER Y WITH DIAERESIS",
+     "upper": "Ÿ",
+     "upper_cp": "U+0178",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ỳ",
+     "cp": "U+1EF3",
+     "name": "LATIN SMALL LETTER Y WITH GRAVE",
+     "upper": "Ỳ",
+     "upper_cp": "U+1EF2",
+     "tier": "uncommon",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ŷ",
+     "cp": "U+0177",
+     "name": "LATIN SMALL LETTER Y WITH CIRCUMFLEX",
+     "upper": "Ŷ",
+     "upper_cp": "U+0176",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ȳ",
+     "cp": "U+0233",
+     "name": "LATIN SMALL LETTER Y WITH MACRON",
+     "upper": "Ȳ",
+     "upper_cp": "U+0232",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "ỹ",
+     "cp": "U+1EF9",
+     "name": "LATIN SMALL LETTER Y WITH TILDE",
+     "upper": "Ỹ",
+     "upper_cp": "U+1EF8",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ỵ",
+     "cp": "U+1EF5",
+     "name": "LATIN SMALL LETTER Y WITH DOT BELOW",
+     "upper": "Ỵ",
+     "upper_cp": "U+1EF4",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 7
+    },
+    {
+     "char": "ỷ",
+     "cp": "U+1EF7",
+     "name": "LATIN SMALL LETTER Y WITH HOOK ABOVE",
+     "upper": "Ỷ",
+     "upper_cp": "U+1EF6",
+     "tier": "vietnamese",
+     "used_in_vietnamese": true,
+     "rank_in_tier": 8
+    }
+   ]
+  },
+  {
+   "base": "c",
+   "variants": [
+    {
+     "char": "ç",
+     "cp": "U+00E7",
+     "name": "LATIN SMALL LETTER C WITH CEDILLA",
+     "upper": "Ç",
+     "upper_cp": "U+00C7",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "č",
+     "cp": "U+010D",
+     "name": "LATIN SMALL LETTER C WITH CARON",
+     "upper": "Č",
+     "upper_cp": "U+010C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ć",
+     "cp": "U+0107",
+     "name": "LATIN SMALL LETTER C WITH ACUTE",
+     "upper": "Ć",
+     "upper_cp": "U+0106",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ĉ",
+     "cp": "U+0109",
+     "name": "LATIN SMALL LETTER C WITH CIRCUMFLEX",
+     "upper": "Ĉ",
+     "upper_cp": "U+0108",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ċ",
+     "cp": "U+010B",
+     "name": "LATIN SMALL LETTER C WITH DOT ABOVE",
+     "upper": "Ċ",
+     "upper_cp": "U+010A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    }
+   ]
+  },
+  {
+   "base": "n",
+   "variants": [
+    {
+     "char": "ñ",
+     "cp": "U+00F1",
+     "name": "LATIN SMALL LETTER N WITH TILDE",
+     "upper": "Ñ",
+     "upper_cp": "U+00D1",
+     "tier": "common",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ň",
+     "cp": "U+0148",
+     "name": "LATIN SMALL LETTER N WITH CARON",
+     "upper": "Ň",
+     "upper_cp": "U+0147",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ń",
+     "cp": "U+0144",
+     "name": "LATIN SMALL LETTER N WITH ACUTE",
+     "upper": "Ń",
+     "upper_cp": "U+0143",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ņ",
+     "cp": "U+0146",
+     "name": "LATIN SMALL LETTER N WITH CEDILLA",
+     "upper": "Ņ",
+     "upper_cp": "U+0145",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ǹ",
+     "cp": "U+01F9",
+     "name": "LATIN SMALL LETTER N WITH GRAVE",
+     "upper": "Ǹ",
+     "upper_cp": "U+01F8",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "ṅ",
+     "cp": "U+1E45",
+     "name": "LATIN SMALL LETTER N WITH DOT ABOVE",
+     "upper": "Ṅ",
+     "upper_cp": "U+1E44",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    },
+    {
+     "char": "ṇ",
+     "cp": "U+1E47",
+     "name": "LATIN SMALL LETTER N WITH DOT BELOW",
+     "upper": "Ṇ",
+     "upper_cp": "U+1E46",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 7
+    }
+   ]
+  },
+  {
+   "base": "s",
+   "variants": [
+    {
+     "char": "š",
+     "cp": "U+0161",
+     "name": "LATIN SMALL LETTER S WITH CARON",
+     "upper": "Š",
+     "upper_cp": "U+0160",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ś",
+     "cp": "U+015B",
+     "name": "LATIN SMALL LETTER S WITH ACUTE",
+     "upper": "Ś",
+     "upper_cp": "U+015A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ş",
+     "cp": "U+015F",
+     "name": "LATIN SMALL LETTER S WITH CEDILLA",
+     "upper": "Ş",
+     "upper_cp": "U+015E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ș",
+     "cp": "U+0219",
+     "name": "LATIN SMALL LETTER S WITH COMMA BELOW",
+     "upper": "Ș",
+     "upper_cp": "U+0218",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ŝ",
+     "cp": "U+015D",
+     "name": "LATIN SMALL LETTER S WITH CIRCUMFLEX",
+     "upper": "Ŝ",
+     "upper_cp": "U+015C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    },
+    {
+     "char": "ṡ",
+     "cp": "U+1E61",
+     "name": "LATIN SMALL LETTER S WITH DOT ABOVE",
+     "upper": "Ṡ",
+     "upper_cp": "U+1E60",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 6
+    }
+   ]
+  },
+  {
+   "base": "z",
+   "variants": [
+    {
+     "char": "ž",
+     "cp": "U+017E",
+     "name": "LATIN SMALL LETTER Z WITH CARON",
+     "upper": "Ž",
+     "upper_cp": "U+017D",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ż",
+     "cp": "U+017C",
+     "name": "LATIN SMALL LETTER Z WITH DOT ABOVE",
+     "upper": "Ż",
+     "upper_cp": "U+017B",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ź",
+     "cp": "U+017A",
+     "name": "LATIN SMALL LETTER Z WITH ACUTE",
+     "upper": "Ź",
+     "upper_cp": "U+0179",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ẑ",
+     "cp": "U+1E91",
+     "name": "LATIN SMALL LETTER Z WITH CIRCUMFLEX",
+     "upper": "Ẑ",
+     "upper_cp": "U+1E90",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ẓ",
+     "cp": "U+1E93",
+     "name": "LATIN SMALL LETTER Z WITH DOT BELOW",
+     "upper": "Ẓ",
+     "upper_cp": "U+1E92",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    }
+   ]
+  },
+  {
+   "base": "r",
+   "variants": [
+    {
+     "char": "ř",
+     "cp": "U+0159",
+     "name": "LATIN SMALL LETTER R WITH CARON",
+     "upper": "Ř",
+     "upper_cp": "U+0158",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ŕ",
+     "cp": "U+0155",
+     "name": "LATIN SMALL LETTER R WITH ACUTE",
+     "upper": "Ŕ",
+     "upper_cp": "U+0154",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ŗ",
+     "cp": "U+0157",
+     "name": "LATIN SMALL LETTER R WITH CEDILLA",
+     "upper": "Ŗ",
+     "upper_cp": "U+0156",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ṛ",
+     "cp": "U+1E5B",
+     "name": "LATIN SMALL LETTER R WITH DOT BELOW",
+     "upper": "Ṛ",
+     "upper_cp": "U+1E5A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    }
+   ]
+  },
+  {
+   "base": "l",
+   "variants": [
+    {
+     "char": "ł",
+     "cp": "U+0142",
+     "name": "LATIN SMALL LETTER L WITH STROKE",
+     "upper": "Ł",
+     "upper_cp": "U+0141",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ľ",
+     "cp": "U+013E",
+     "name": "LATIN SMALL LETTER L WITH CARON",
+     "upper": "Ľ",
+     "upper_cp": "U+013D",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ĺ",
+     "cp": "U+013A",
+     "name": "LATIN SMALL LETTER L WITH ACUTE",
+     "upper": "Ĺ",
+     "upper_cp": "U+0139",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ļ",
+     "cp": "U+013C",
+     "name": "LATIN SMALL LETTER L WITH CEDILLA",
+     "upper": "Ļ",
+     "upper_cp": "U+013B",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ŀ",
+     "cp": "U+0140",
+     "name": "LATIN SMALL LETTER L WITH MIDDLE DOT",
+     "upper": "Ŀ",
+     "upper_cp": "U+013F",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    }
+   ]
+  },
+  {
+   "base": "t",
+   "variants": [
+    {
+     "char": "ť",
+     "cp": "U+0165",
+     "name": "LATIN SMALL LETTER T WITH CARON",
+     "upper": "Ť",
+     "upper_cp": "U+0164",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ţ",
+     "cp": "U+0163",
+     "name": "LATIN SMALL LETTER T WITH CEDILLA",
+     "upper": "Ţ",
+     "upper_cp": "U+0162",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ț",
+     "cp": "U+021B",
+     "name": "LATIN SMALL LETTER T WITH COMMA BELOW",
+     "upper": "Ț",
+     "upper_cp": "U+021A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ŧ",
+     "cp": "U+0167",
+     "name": "LATIN SMALL LETTER T WITH STROKE",
+     "upper": "Ŧ",
+     "upper_cp": "U+0166",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    }
+   ]
+  },
+  {
+   "base": "d",
+   "variants": [
+    {
+     "char": "ď",
+     "cp": "U+010F",
+     "name": "LATIN SMALL LETTER D WITH CARON",
+     "upper": "Ď",
+     "upper_cp": "U+010E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ḑ",
+     "cp": "U+1E11",
+     "name": "LATIN SMALL LETTER D WITH CEDILLA",
+     "upper": "Ḑ",
+     "upper_cp": "U+1E10",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ḍ",
+     "cp": "U+1E0D",
+     "name": "LATIN SMALL LETTER D WITH DOT BELOW",
+     "upper": "Ḍ",
+     "upper_cp": "U+1E0C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    }
+   ]
+  },
+  {
+   "base": "g",
+   "variants": [
+    {
+     "char": "ğ",
+     "cp": "U+011F",
+     "name": "LATIN SMALL LETTER G WITH BREVE",
+     "upper": "Ğ",
+     "upper_cp": "U+011E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ģ",
+     "cp": "U+0123",
+     "name": "LATIN SMALL LETTER G WITH CEDILLA",
+     "upper": "Ģ",
+     "upper_cp": "U+0122",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ġ",
+     "cp": "U+0121",
+     "name": "LATIN SMALL LETTER G WITH DOT ABOVE",
+     "upper": "Ġ",
+     "upper_cp": "U+0120",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ĝ",
+     "cp": "U+011D",
+     "name": "LATIN SMALL LETTER G WITH CIRCUMFLEX",
+     "upper": "Ĝ",
+     "upper_cp": "U+011C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    },
+    {
+     "char": "ǧ",
+     "cp": "U+01E7",
+     "name": "LATIN SMALL LETTER G WITH CARON",
+     "upper": "Ǧ",
+     "upper_cp": "U+01E6",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 5
+    }
+   ]
+  },
+  {
+   "base": "k",
+   "variants": [
+    {
+     "char": "ķ",
+     "cp": "U+0137",
+     "name": "LATIN SMALL LETTER K WITH CEDILLA",
+     "upper": "Ķ",
+     "upper_cp": "U+0136",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ǩ",
+     "cp": "U+01E9",
+     "name": "LATIN SMALL LETTER K WITH CARON",
+     "upper": "Ǩ",
+     "upper_cp": "U+01E8",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    }
+   ]
+  },
+  {
+   "base": "h",
+   "variants": [
+    {
+     "char": "ħ",
+     "cp": "U+0127",
+     "name": "LATIN SMALL LETTER H WITH STROKE",
+     "upper": "Ħ",
+     "upper_cp": "U+0126",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ĥ",
+     "cp": "U+0125",
+     "name": "LATIN SMALL LETTER H WITH CIRCUMFLEX",
+     "upper": "Ĥ",
+     "upper_cp": "U+0124",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ḥ",
+     "cp": "U+1E25",
+     "name": "LATIN SMALL LETTER H WITH DOT BELOW",
+     "upper": "Ḥ",
+     "upper_cp": "U+1E24",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    }
+   ]
+  },
+  {
+   "base": "j",
+   "variants": [
+    {
+     "char": "ĵ",
+     "cp": "U+0135",
+     "name": "LATIN SMALL LETTER J WITH CIRCUMFLEX",
+     "upper": "Ĵ",
+     "upper_cp": "U+0134",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    }
+   ]
+  },
+  {
+   "base": "w",
+   "variants": [
+    {
+     "char": "ŵ",
+     "cp": "U+0175",
+     "name": "LATIN SMALL LETTER W WITH CIRCUMFLEX",
+     "upper": "Ŵ",
+     "upper_cp": "U+0174",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ẃ",
+     "cp": "U+1E83",
+     "name": "LATIN SMALL LETTER W WITH ACUTE",
+     "upper": "Ẃ",
+     "upper_cp": "U+1E82",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ẁ",
+     "cp": "U+1E81",
+     "name": "LATIN SMALL LETTER W WITH GRAVE",
+     "upper": "Ẁ",
+     "upper_cp": "U+1E80",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    },
+    {
+     "char": "ẅ",
+     "cp": "U+1E85",
+     "name": "LATIN SMALL LETTER W WITH DIAERESIS",
+     "upper": "Ẅ",
+     "upper_cp": "U+1E84",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 4
+    }
+   ]
+  },
+  {
+   "base": "m",
+   "variants": [
+    {
+     "char": "ḿ",
+     "cp": "U+1E3F",
+     "name": "LATIN SMALL LETTER M WITH ACUTE",
+     "upper": "Ḿ",
+     "upper_cp": "U+1E3E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ṁ",
+     "cp": "U+1E41",
+     "name": "LATIN SMALL LETTER M WITH DOT ABOVE",
+     "upper": "Ṁ",
+     "upper_cp": "U+1E40",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    },
+    {
+     "char": "ṃ",
+     "cp": "U+1E43",
+     "name": "LATIN SMALL LETTER M WITH DOT BELOW",
+     "upper": "Ṃ",
+     "upper_cp": "U+1E42",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 3
+    }
+   ]
+  },
+  {
+   "base": "b",
+   "variants": [
+    {
+     "char": "ḃ",
+     "cp": "U+1E03",
+     "name": "LATIN SMALL LETTER B WITH DOT ABOVE",
+     "upper": "Ḃ",
+     "upper_cp": "U+1E02",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ḅ",
+     "cp": "U+1E05",
+     "name": "LATIN SMALL LETTER B WITH DOT BELOW",
+     "upper": "Ḅ",
+     "upper_cp": "U+1E04",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    }
+   ]
+  },
+  {
+   "base": "f",
+   "variants": [
+    {
+     "char": "ḟ",
+     "cp": "U+1E1F",
+     "name": "LATIN SMALL LETTER F WITH DOT ABOVE",
+     "upper": "Ḟ",
+     "upper_cp": "U+1E1E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    }
+   ]
+  },
+  {
+   "base": "p",
+   "variants": [
+    {
+     "char": "ṗ",
+     "cp": "U+1E57",
+     "name": "LATIN SMALL LETTER P WITH DOT ABOVE",
+     "upper": "Ṗ",
+     "upper_cp": "U+1E56",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    }
+   ]
+  },
+  {
+   "base": "v",
+   "variants": [
+    {
+     "char": "ṽ",
+     "cp": "U+1E7D",
+     "name": "LATIN SMALL LETTER V WITH TILDE",
+     "upper": "Ṽ",
+     "upper_cp": "U+1E7C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ṿ",
+     "cp": "U+1E7F",
+     "name": "LATIN SMALL LETTER V WITH DOT BELOW",
+     "upper": "Ṿ",
+     "upper_cp": "U+1E7E",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    }
+   ]
+  },
+  {
+   "base": "x",
+   "variants": [
+    {
+     "char": "ẋ",
+     "cp": "U+1E8B",
+     "name": "LATIN SMALL LETTER X WITH DOT ABOVE",
+     "upper": "Ẋ",
+     "upper_cp": "U+1E8A",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 1
+    },
+    {
+     "char": "ẍ",
+     "cp": "U+1E8D",
+     "name": "LATIN SMALL LETTER X WITH DIAERESIS",
+     "upper": "Ẍ",
+     "upper_cp": "U+1E8C",
+     "tier": "uncommon",
+     "used_in_vietnamese": false,
+     "rank_in_tier": 2
+    }
+   ]
+  }
+ ],
+ "standalone_letters": [
+  {
+   "char": "æ",
+   "cp": "U+00E6",
+   "name": "LATIN SMALL LETTER AE",
+   "upper": "Æ",
+   "upper_cp": "U+00C6",
+   "suggested_key": "a / e",
+   "tier": "common",
+   "used_in_vietnamese": false,
+   "note": "ash ligature"
+  },
+  {
+   "char": "œ",
+   "cp": "U+0153",
+   "name": "LATIN SMALL LIGATURE OE",
+   "upper": "Œ",
+   "upper_cp": "U+0152",
+   "suggested_key": "o / e",
+   "tier": "common",
+   "used_in_vietnamese": false,
+   "note": "ethel ligature"
+  },
+  {
+   "char": "ß",
+   "cp": "U+00DF",
+   "name": "LATIN SMALL LETTER SHARP S",
+   "upper": "ẞ",
+   "upper_cp": "U+1E9E",
+   "suggested_key": "s",
+   "tier": "common",
+   "used_in_vietnamese": false,
+   "note": "eszett; full uppercasing = \"SS\""
+  },
+  {
+   "char": "ø",
+   "cp": "U+00F8",
+   "name": "LATIN SMALL LETTER O WITH STROKE",
+   "upper": "Ø",
+   "upper_cp": "U+00D8",
+   "suggested_key": "o",
+   "tier": "common",
+   "used_in_vietnamese": false,
+   "note": "slashed o"
+  },
+  {
+   "char": "ð",
+   "cp": "U+00F0",
+   "name": "LATIN SMALL LETTER ETH",
+   "upper": "Ð",
+   "upper_cp": "U+00D0",
+   "suggested_key": "d",
+   "tier": "uncommon",
+   "used_in_vietnamese": false,
+   "note": "eth"
+  },
+  {
+   "char": "þ",
+   "cp": "U+00FE",
+   "name": "LATIN SMALL LETTER THORN",
+   "upper": "Þ",
+   "upper_cp": "U+00DE",
+   "suggested_key": "t",
+   "tier": "uncommon",
+   "used_in_vietnamese": false,
+   "note": "thorn"
+  },
+  {
+   "char": "đ",
+   "cp": "U+0111",
+   "name": "LATIN SMALL LETTER D WITH STROKE",
+   "upper": "Đ",
+   "upper_cp": "U+0110",
+   "suggested_key": "d",
+   "tier": "uncommon",
+   "used_in_vietnamese": true,
+   "note": "d-stroke (used in Vietnamese)"
+  },
+  {
+   "char": "ŋ",
+   "cp": "U+014B",
+   "name": "LATIN SMALL LETTER ENG",
+   "upper": "Ŋ",
+   "upper_cp": "U+014A",
+   "suggested_key": "n",
+   "tier": "uncommon",
+   "used_in_vietnamese": false,
+   "note": "eng"
+  },
+  {
+   "char": "ĳ",
+   "cp": "U+0133",
+   "name": "LATIN SMALL LIGATURE IJ",
+   "upper": "Ĳ",
+   "upper_cp": "U+0132",
+   "suggested_key": "i / j",
+   "tier": "uncommon",
+   "used_in_vietnamese": false,
+   "note": "Dutch ij digraph"
+  },
+  {
+   "char": "ŉ",
+   "cp": "U+0149",
+   "name": "LATIN SMALL LETTER N PRECEDED BY APOSTROPHE",
+   "upper": null,
+   "upper_cp": null,
+   "suggested_key": "n",
+   "tier": "uncommon",
+   "used_in_vietnamese": false,
+   "note": "apostrophe-n; no single-char capital"
+  }
+ ],
+ "case_overrides": [
+  {
+   "locale": "tr / az",
+   "lower": "i",
+   "upper": "İ",
+   "upper_cp": "U+0130",
+   "note": "dotted i -> dotted capital (NOT plain I)"
+  },
+  {
+   "locale": "tr / az",
+   "lower": "ı",
+   "upper": "I",
+   "upper_cp": "U+0049",
+   "note": "dotless i -> plain capital I"
+  },
+  {
+   "locale": "default",
+   "lower": "i",
+   "upper": "I",
+   "upper_cp": "U+0049",
+   "note": "plain English mapping"
+  },
+  {
+   "locale": "default",
+   "lower": "ı",
+   "upper": "I",
+   "upper_cp": "U+0049",
+   "note": "dotless lowercase also folds to plain I (lossy)"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+    <!-- Mask-fit inset: a circular launcher mask keeps only the inscribed ~33% radius;
+         the key-matrix corners reach 394.6/1024 from center. 0.86 fits them exactly;
+         0.81 (Cliff, 2026-08-14) adds breathing room so the square keyboard aspect
+         reads clearly inside the circle. -->
+    <group
+        android:pivotX="512"
+        android:pivotY="512"
+        android:scaleX="0.81"
+        android:scaleY="0.81">
+        <path
+            android:fillColor="#FF91A6BF"
+            android:pathData="M261,233 H355 A28,28 0,0 1,383,261 V355 A28,28 0,0 1,355,383 H261 A28,28 0,0 1,233,355 V261 A28,28 0,0 1,261,233 Z M465,233 H559 A28,28 0,0 1,587,261 V355 A28,28 0,0 1,559,383 H465 A28,28 0,0 1,437,355 V261 A28,28 0,0 1,465,233 Z M669,233 H763 A28,28 0,0 1,791,261 V355 A28,28 0,0 1,763,383 H669 A28,28 0,0 1,641,355 V261 A28,28 0,0 1,669,233 Z M261,437 H355 A28,28 0,0 1,383,465 V559 A28,28 0,0 1,355,587 H261 A28,28 0,0 1,233,559 V465 A28,28 0,0 1,261,437 Z M669,437 H763 A28,28 0,0 1,791,465 V559 A28,28 0,0 1,763,587 H669 A28,28 0,0 1,641,559 V465 A28,28 0,0 1,669,437 Z M261,641 H355 A28,28 0,0 1,383,669 V763 A28,28 0,0 1,355,791 H261 A28,28 0,0 1,233,763 V669 A28,28 0,0 1,261,641 Z M465,641 H559 A28,28 0,0 1,587,669 V763 A28,28 0,0 1,559,791 H465 A28,28 0,0 1,437,763 V669 A28,28 0,0 1,465,641 Z M669,641 H763 A28,28 0,0 1,791,669 V763 A28,28 0,0 1,763,791 H669 A28,28 0,0 1,641,763 V669 A28,28 0,0 1,669,641 Z" />
+        <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#FF35E7F1"
+            android:strokeWidth="42"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M282,206 H538 M410,206 V512 C410,568.33 370.38,614 321.5,614 C272.62,614 233,568.33 233,512 M486,410 H742 M614,410 V818" />
+        <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#FF91A6BF"
+            android:strokeWidth="16"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M465,445 H559 A20,20 0,0 1,579,465 V559 A20,20 0,0 1,559,579 H465 A20,20 0,0 1,445,559 V465 A20,20 0,0 1,465,445 Z" />
+    </group>
+</vector>
+

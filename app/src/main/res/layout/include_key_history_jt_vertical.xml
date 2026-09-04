@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Key History for JT Layout — vertical side-column variant (landscape only;
+     JTLayoutController picks this or the horizontal bar by preference) -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyHistoryScrollViewVertical"
+    style="@style/KeyHistoryScrollView"
+    android:contentDescription="@string/content_desc_key_history"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <org.continuouspath.justtype.view.KeyHistoryView
+        android:id="@+id/keyHistoryViewVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</ScrollView>

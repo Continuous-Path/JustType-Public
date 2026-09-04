@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Keyboard background colors -->
+    <color name="keyboard_background">#424242</color>
+    <color name="keyboard_background_semi_transparent">#DD212121</color>
+    
+    <!-- Button colors -->
+    <color name="button_text_color">#000000</color>
+    <color name="button_text_color_light">#FFFFFF</color>
+    
+    <!-- Center label -->
+    <color name="center_label_text_color">#FFFFFFFF</color>
+    <!-- Center-square live surface (sls.md "Center-square surface"):
+         Select-armed = very light green (Green 100, kin to key_flash),
+         confidence-fired = light gray; both carry dark-green text
+         (Green 900; >=7:1 contrast on either background). -->
+    <color name="center_armed_bg">#C8E6C9</color>
+    <color name="center_signal_bg">#E0E0E0</color>
+    <color name="center_live_text">#1B5E20</color>
+    
+    <!-- Scan mode highlighting -->
+    <color name="scan_highlight">#FFD600</color>
+    <color name="scan_next_highlight">#FFFBD6</color>
+    
+    <!-- Key feedback -->
+    <color name="key_flash">#81C784</color>
+    
+    <!-- Phrase overlay -->
+    <color name="phrase_overlay_title">#FFFFFF</color>
+    <color name="phrase_overlay_abbrev_label">#FFEB3B</color>
+
+    <!-- Switch setup buttons (high contrast for low vision) -->
+    <color name="switch_setup_red">#C62828</color>
+    <color name="switch_setup_green">#2E7D32</color>
+    <color name="switch_setup_button_text">#FFFFFF</color>
+    <color name="switch_setup_waiting">#B26A00</color>
+    <color name="switch_unassigned_warning">#FF5252</color>
+</resources>

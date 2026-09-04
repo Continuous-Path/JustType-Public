@@ -1,0 +1,16 @@
+# Auto-labels for iOS-port categorization (docs/ios-port/PORTING-WORKFLOW.md).
+# `port-review` means: a human must decide port-needed vs android-only before merge.
+
+shared-core:
+  - changed-files:
+      - any-glob-to-any-file: 'jt-core/**'
+
+port-review:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'app/src/main/java/org/continuouspath/justtype/ime/**'
+          - 'app/src/main/java/org/continuouspath/justtype/view/**'
+          - 'app/src/main/java/org/continuouspath/justtype/settings/**'
+          - 'app/src/main/java/org/continuouspath/justtype/logic/**'
+          - 'app/src/main/java/org/continuouspath/justtype/hierarchy/**'
+          - 'app/src/main/res/**'

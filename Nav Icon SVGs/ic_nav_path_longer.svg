@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" aria-label="Longer path concept without transformation arrow">
+  <title>Longer Path V2 - No Transformation Arrow</title>
+  <style>
+    :root {
+      --line: #17212b;
+      --accent: #006d77;
+      --transform: #c2410c;
+    }
+    .thin {
+      fill: none;
+      stroke: var(--line);
+      stroke-width: 3.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .guide {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 2.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.9;
+    }
+    .move {
+      fill: none;
+      stroke: var(--transform);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .fill {
+      fill: var(--line);
+    }
+    .accent {
+      stroke: var(--accent);
+    }
+    .accent-fill {
+      fill: var(--accent);
+    }
+    .transform {
+      stroke: var(--transform);
+    }
+    .transform-fill {
+      fill: var(--transform);
+    }
+  </style>
+
+  <path class="thin" d="M14 12 H34"></path>
+  <path class="fill" d="M43 12 L34 5 V19 Z"></path>
+
+  <path class="thin accent" d="M14 30 H45"></path>
+  <path class="accent-fill" d="M54 30 L45 23 V37 Z"></path>
+
+  <path class="guide" d="M54 34 V8"></path>
+
+  <path class="move" d="M45 12 H49"></path>
+  <path class="transform-fill" d="M54 12 L49 8 V16 Z"></path>
+</svg>

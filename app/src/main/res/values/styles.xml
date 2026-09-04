@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base keyboard button style -->
+    <style name="KeyboardButton">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:padding">@dimen/button_padding</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <!-- Grid keyboard button (for JT 3x3 layout) -->
+    <style name="GridKeyboardButton" parent="KeyboardButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+    </style>
+
+    <!-- Scan mode button (for scan layout pool) -->
+    <style name="ScanKeyboardButton" parent="KeyboardButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Center label style (shared between JT and Scan layouts) -->
+    <style name="CenterLabel">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/center_label_text_color</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <!-- Center label for grid layout. No contentDescription: it would override the
+         label's live text (the previewed word) for screen readers. -->
+    <style name="GridCenterLabel" parent="CenterLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+    </style>
+
+    <!-- Selection list style -->
+    <style name="SelectionList">
+        <item name="android:background">@drawable/rounded_rectangle_bg</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:gravity">start|top</item>
+        <item name="android:padding">@dimen/button_padding</item>
+        <item name="android:textSize">@dimen/selection_text_size</item>
+    </style>
+
+    <!-- Key history scroll view style -->
+    <style name="KeyHistoryScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:background">@color/keyboard_background</item>
+    </style>
+
+    <!-- Keyboard layout container style -->
+    <style name="KeyboardLayoutContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@color/keyboard_background</item>
+    </style>
+
+    <!-- Scan row container style -->
+    <style name="ScanRowContainer">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

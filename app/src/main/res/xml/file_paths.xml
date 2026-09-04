@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Paths exposed via FileProvider authority "org.continuouspath.justtype.fileprovider".
+    Used by the Submit Feedback button to share zipped debug logs with the
+    Android share-sheet (email, Drive, etc.).
+-->
+<paths>
+    <!-- Where DebugLogShareHelper writes the zip bundle. cache-path resolves
+         to {context.cacheDir}/share/ so files are cleaned by the system
+         under storage pressure. -->
+    <cache-path name="share" path="share/" />
+</paths>

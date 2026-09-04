@@ -1,0 +1,85 @@
+JustType (JT)
+Copyright 2026 Continuous Path Foundation
+
+This product includes software developed by the Continuous Path Foundation,
+a nonprofit organization exempt from federal income tax under section 501(c)(3)
+of the Internal Revenue Code.
+
+  Project home: https://github.com/Continuous-Path
+  Security and licensing contact: security@continuouspath.org
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+THIRD-PARTY CODE
+================================================================================
+
+Android Open Source Project — Apache License 2.0
+  Copyright (C) The Android Open Source Project
+  The directional focus-search algorithm in
+  app/src/main/java/com/justtype/nativeapp/navigation/engine/FocusGeometry.kt
+  is ported from AOSP's FocusFinder (edge-based candidacy, beam preference, and
+  the 13·major² + minor² weighted distance), with project-specific additions.
+
+Material Design Icons — Apache License 2.0
+  Copyright (C) Google LLC
+  app/src/main/res/drawable/ic_back.xml, ic_clear.xml, ic_info.xml, ic_menu.xml
+
+Build- and test-time dependencies (not redistributed in the APK) are resolved
+from Maven Central and Google's Maven repository; see gradle/libs.versions.toml.
+All are Apache-2.0 or MIT except JUnit 4 (EPL-1.0) and JaCoCo (EPL-2.0), which
+are test/build scope only.
+
+================================================================================
+LANGUAGE DATA
+================================================================================
+
+The language data files are NOT covered by the Apache License above. They are
+derived from Creative Commons Attribution-ShareAlike sources and are therefore
+distributed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/),
+with attribution as set out below. This applies to:
+
+  app/src/main/db/*WordsRaw.txt, app/src/main/db/*RegionTags.txt,
+  the generated *Db.db assets, and the published language packs.
+
+English (app/src/main/db/EnglishWordsRaw.txt)
+  - Word frequencies: hermitdave/FrequencyWords, OpenSubtitles 2018 en_full
+    (CC BY-SA 4.0) — https://github.com/hermitdave/FrequencyWords
+  - Vocabulary inventory: English Wiktionary via Kaikki wiktextract
+    (CC BY-SA 4.0) — Wiktionary contributors; wiktextract by Tatu Ylonen
+  - Part-of-speech tags and capitalization statistics: derived from English
+    Wikipedia (CC BY-SA 4.0) — Wikipedia contributors — using spaCy (MIT).
+
+English regional variants (app/src/main/db/EnglishRegionTags.txt)
+  - British/American spelling and vocabulary skew: English Wiktionary via Kaikki
+    wiktextract (CC BY-SA 4.0)
+
+Word-exclusion lists (app/src/main/db/*WordsAvoid.txt, build-time only — never shipped)
+  - LDNOOBW, List of Dirty, Naughty, Obscene and Otherwise Bad Words (CC BY 4.0)
+  - coffee-and-fun/google-profanity-words (MIT)
+  - words/cuss (MIT)
+  - 4troDev/profanity.csv (MIT)
+  - Wiktionary sense tags and slur categories via Kaikki wiktextract (CC BY-SA 4.0)
+
+Español (app/src/main/db/EspanolWordsRaw.txt, EspanolRegionTags.txt)
+  - Word frequencies: hermitdave/FrequencyWords, OpenSubtitles 2016 es_full
+    (CC BY-SA 4.0)
+  - Capitalization statistics: Spanish Wikipedia (CC BY-SA 4.0)
+  - Regional skew tags: Spanish Wiktionary via Kaikki wiktextract (CC BY-SA 4.0)
+
+Tiếng Việt (app/src/main/db/TiengVietWordsRaw.txt)
+  - Syllable frequencies: hermitdave/FrequencyWords, OpenSubtitles 2018 vi
+    (CC BY-SA 4.0)
+  - Tail counts and capitalization statistics: Vietnamese Wikipedia
+    (CC BY-SA 4.0)
+  - Multi-syllable unit inventory and canonical orthography
+    (TiengVietUnits.txt): Vietnamese Wiktionary via Kaikki wiktextract
+    (CC BY-SA 4.0) — Wiktionary contributors
+  - N-gram and unit counts (TiengVietNgb.txt): HPLT v2 vie_Latn web corpus
+    (CC0)
+
+Character and symbol hierarchy data, keyboard layouts, the word-exclusion list,
+and all other assets are original works of the Continuous Path Foundation under the Apache
+License 2.0.

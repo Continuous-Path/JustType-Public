@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:JustTypeIME.kt$JustTypeIME$key == KEY_HEADTRACKING_DEADZONE || key == KEY_HEADTRACKING_ACTIVEZONE || key == KEY_HEADTRACKING_EXITZONE || key == KEY_HEADTRACKING_KEY_ACT_THRESHOLD || key == KEY_HEADTRACKING_EXIT_DELAY_MS || key == KEY_HEADTRACKING_CORNER_BIAS</ID>
+    <ID>ComplexCondition:JustTypeIME.kt$JustTypeIME$key == KEY_TOUCH_OVERLAY_TIMEOUT_SEC || key == KEY_DIRECTIONAL_SELECTION_SWIPE_PERCENT || key == KEY_TOUCH_SCREEN_SWITCH_DEBOUNCE_MS || key == KEY_DIRECTIONAL_SELECTION_DEBOUNCE_MS || key == KEY_TSS_BUTTON_HEIGHT_PERCENT || key == KEY_TSS_OVERLAY_OPACITY || key == KEY_TSS_OVERLAY_MODE</ID>
+    <ID>CyclomaticComplexMethod:HeadTrackingState.kt$HeadTrackingState$fun process(x: Float, y: Float): ProcessResult</ID>
+    <ID>CyclomaticComplexMethod:HeadTrackingSubsystem.kt$HeadTrackingSubsystem$internal fun applyUiUpdate(result: HeadTrackingState.ProcessResult)</ID>
+    <ID>CyclomaticComplexMethod:ImeTextController.kt$ImeTextController$fun applyEditorUpdate(topCandidate: String?)</ID>
+    <ID>CyclomaticComplexMethod:ImeTextController.kt$ImeTextController$fun canPullInAtCursor(checkRightContext: Boolean = true): Int</ID>
+    <ID>CyclomaticComplexMethod:ImeTextController.kt$ImeTextController$fun handleDeleteWord()</ID>
+    <ID>CyclomaticComplexMethod:ImeTextController.kt$ImeTextController$private fun handleSelectingCursorMove(ic: InputConnection, direction: Int, movementMode: Int)</ID>
+    <ID>CyclomaticComplexMethod:ImeTextController.kt$ImeTextController$private fun processSelectionChange(oldSelStart: Int, oldSelEnd: Int, newSelStart: Int, newSelEnd: Int, candidatesStart: Int, candidatesEnd: Int)</ID>
+    <ID>CyclomaticComplexMethod:JTUI.kt$JTUI$fun buttonPressed(buttonNumber: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null)</ID>
+    <ID>CyclomaticComplexMethod:JTUI.kt$JTUI$private fun applyShiftAndCaps(list: List&lt;MutableMap&lt;String, Any?&gt;&gt;): List&lt;Map&lt;String, Any?&gt;&gt;</ID>
+    <ID>CyclomaticComplexMethod:JTUI.kt$JTUI$private fun definePages()</ID>
+    <ID>CyclomaticComplexMethod:JTUI.kt$JTUI$private fun updateUi(suppressTopCandidate: Boolean = false, forceSelectedCandidate: String? = null, forceTopCandidate: String? = null)</ID>
+    <ID>CyclomaticComplexMethod:JustTypeIME.kt$JustTypeIME$@Suppress("TooGenericExceptionCaught") override fun onCreateInputView(): View</ID>
+    <ID>CyclomaticComplexMethod:SquareButton.kt$SquareButton$override fun onDraw(canvas: Canvas)</ID>
+    <ID>CyclomaticComplexMethod:UiUpdateHandler.kt$UiUpdateHandler$fun handleUiSnapshot(ui: JTUISnapshot)</ID>
+    <ID>CyclomaticComplexMethod:VocabularyManagementActivity.kt$VocabularyManagementActivity$private fun renderVocabListLocked(wordDb: WordDb, repo: SettingsRepository)</ID>
+    <ID>CyclomaticComplexMethod:WLD.kt$WLD$fun getDisambiguationCandidates( keys: List&lt;Int&gt;, maxWordCompleteEntries: Int, minFreqClass: Int?, includeExcludedAtEnd: Boolean, anyFreqMask: Long, minFreqMask: Long, baseSearchDepth: Int, searchExpansionDepth: Int, maxExaminedNodes: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null, ): DisambiguationResult</ID>
+    <ID>EmptyFunctionBlock:DeveloperSettingsActivity.kt$DeveloperSettingsActivity.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:InputMethodsActivity.kt$InputMethodsActivity.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:SetupDirectSelectionActivity.kt$SetupDirectSelectionActivity.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:SetupDirectionalSelectionActivity.kt$SetupDirectionalSelectionActivity.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:VocabularyManagementActivity.kt$VocabularyManagementActivity.&lt;no name provided&gt;${}</ID>
+    <ID>ForbiddenComment:PhraseRepository.kt$PhraseRepository$// TODO: singleton this when multi-Activity write races become observable.</ID>
+    <ID>FunctionOnlyReturningConstant:PhraseFlowController.kt$PhraseFlowController.ActiveFlow$fun completeFromCustomWord(@Suppress("UNUSED_PARAMETER") word: String): Boolean</ID>
+    <ID>ImplicitDefaultLocale:JustTypeIME.kt$JustTypeIME$String.format("%08X", attribute?.inputType ?: 0)</ID>
+    <ID>LongMethod:DeveloperSettingsActivity.kt$DeveloperSettingsActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:HeadTrackingState.kt$HeadTrackingState$fun process(x: Float, y: Float): ProcessResult</ID>
+    <ID>LongMethod:InputMethodsActivity.kt$InputMethodsActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:JTUI.kt$JTUI$fun buttonPressed(buttonNumber: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null)</ID>
+    <ID>LongMethod:JTUI.kt$JTUI$private fun definePages()</ID>
+    <ID>LongMethod:JTUI.kt$JTUI$private fun updateUi(suppressTopCandidate: Boolean = false, forceSelectedCandidate: String? = null, forceTopCandidate: String? = null)</ID>
+    <ID>LongMethod:JustTypeIME.kt$JustTypeIME$@Suppress("TooGenericExceptionCaught") override fun onCreateInputView(): View</ID>
+    <ID>LongMethod:JustTypeIME.kt$JustTypeIME$override fun onCreate()</ID>
+    <ID>LongMethod:SettingsRegistry.kt$SettingsRegistry$private fun buildPages(): Map&lt;String, List&lt;SettingsDef&gt;&gt;</ID>
+    <ID>LongMethod:SquareButton.kt$SquareButton$override fun onDraw(canvas: Canvas)</ID>
+    <ID>LongParameterList:PreferenceCoordinator.kt$PreferenceCoordinator$( private val context: Context, private val scanSubsystem: ScanSubsystem, private val twoSwitchSubsystem: TwoSwitchSubsystem, private val joystickSubsystem: JoystickSubsystem, private val mouseJoystickSubsystem: MouseJoystickSubsystem, private val headTrackingSubsystem: HeadTrackingSubsystem, private val phraseFlowController: PhraseFlowController, private val ttsController: TtsController, private val imeTextController: ImeTextController, private val callbacks: PreferenceCoordinatorCallbacks, )</ID>
+    <ID>LongParameterList:UiUpdateHandler.kt$UiUpdateHandler$( private val context: Context, private val getKeyHistoryView: () -&gt; org.continuouspath.justtype.view.KeyHistoryView?, private val getKeyHistoryScrollView: () -&gt; View?, private val getSelectionListView: () -&gt; TextView?, private val getCenterLabelView: () -&gt; TextView?, private val getKeyGridActiveView: () -&gt; View?, private val getButtons: () -&gt; List&lt;Button&gt;, private val getSelectionListScanContainer: () -&gt; View?, private val useScanLayout: () -&gt; Boolean, private val phraseFlowController: PhraseFlowController, private val scanSubsystem: ScanSubsystem, private val ttsController: TtsController, private val imeTextController: ImeTextController, private val callbacks: UiUpdateCallbacks, )</ID>
+    <ID>LongParameterList:WLD.kt$WLD$( keys: List&lt;Int&gt;, maxWordCompleteEntries: Int, minFreqClass: Int?, includeExcludedAtEnd: Boolean, anyFreqMask: Long, minFreqMask: Long, baseSearchDepth: Int, searchExpansionDepth: Int, maxExaminedNodes: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null, )</ID>
+    <ID>LoopWithTooManyJumpStatements:BackupManager.kt$BackupManager$while</ID>
+    <ID>LoopWithTooManyJumpStatements:KeyboardSettingsController.kt$KeyboardSettingsController$for</ID>
+    <ID>LoopWithTooManyJumpStatements:SquareButton.kt$SquareButton$for</ID>
+    <ID>LoopWithTooManyJumpStatements:VocabImportHelper.kt$VocabImportHelper$for</ID>
+    <ID>LoopWithTooManyJumpStatements:WLD.kt$WLD$for</ID>
+    <ID>LoopWithTooManyJumpStatements:WLD.kt$WLD$while</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[applyEditorUpdate 13] first/non-first preview: selStart=$selStart prevChar='${prevChar ?: '∅'}' cursorBefore=$cursorBeforeInsertion needSpace=$need decided=$autoSpaceDecision autoSpaceInserted=$autoSpaceInserted")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[applyEditorUpdate 9] lastPreview UPDATED from '$saveLastPreview' TO '$lastPreview' lastComposingSent='$lastComposingSent' isPullInMode=$isPullInMode autoSpaceDecision=$autoSpaceDecision autoSpaceInserted=$autoSpaceInserted")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[canPullInAtCursor 9] SUCCESS: Found producible word '$wordNow' at abs $detectedStart..$detectedEnd (textRelative $wordStart..$endUsed, textStartOffset=$textStartOffset, cursorPos=$cursorPos)")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[onUndoPressed 1] Context: ambigBefore=${context.ambigSeqLenBefore}, currentSelection=${context.currentSelection}, hadComposing=${context.hadComposingBefore}, willHaveComposing=${context.willHaveComposingAfter}, listFunctionCount=${context.listFunctionCount}")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[onUndoPressed 2] Variables: ambigSeqLen=$ambigSeqLen, selectCount=$selectCount, hasComposing=$hasComposing, listFunctionCount=$listFunctionCount, willHaveComposing=$willHaveComposing")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[processSelectionChange 2a1] State: haveComposing=$haveComposing lastPullInWord='$lastPullInWord' lastPullInEnd=$lastPullInEnd msSincePullIn=${android.os.SystemClock.uptimeMillis() - lastPullInTs}")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[processSelectionChange 2a] ENTERING Params: Ignore-range:$ignoreCursorStart..$ignoreCursorEnd oldSelStart $oldSelStart oldSelEnd $oldSelEnd newSelStart $newSelStart newSelEnd $newSelEnd candidatesStart $candidatesStart candidatesEnd $candidatesEnd ")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[processSelectionChange 2d-guard] Skip: haveComposing=true but candidatesStart=$candidatesStart within pull-in cooldown (${msSincePullIn}ms) — trusting deferred composing pipeline")</ID>
+    <ID>MaxLineLength:ImeTextController.kt$ImeTextController$callbacks.debugLog("[tryImmediatePullInAtCurrentCursor 10] BLOCKED: word '$detectedWord' at $detectedStart..$detectedEnd matches recent pull-in (${msSinceLastPullIn}ms ago, isPullInMode=$isPullInMode)")</ID>
+    <ID>MaxLineLength:JTUI.kt$JTUI$"[accentHints] config enabled=$enabled rawMask=${hexMask(rawMask)} activeMask=${hexMask(activeMask)} accentMask=${hexMask(accentMask)} minFreqClass=$minFreqClass maxFreqClass=$maxFreqClass maxUseCountSystem=$maxUseCountSystem maxUseCountImported=$maxUseCountImported"</ID>
+    <ID>MaxLineLength:JTUI.kt$JTUI$"[buildVocabMaskConfig] minFreqKey=$minFreqKey includeJT=$includeJustType includeCustom=$includeCustom includePhrases=$includePhrases freqFilter=$freqFilterEnabled slider=$slider minFreqClass=$minFreqClass dynamicMask=${hexMask(dynamicMask)} anyMask=${hexMask(anyFreqMask)} minMask=${hexMask(minFreqMask)}"</ID>
+    <ID>MaxLineLength:JTUI.kt$JTUI$"[rootHints] computeRootLetterHints called: ambigSeq=${state.ambiguousKeySequence.size} keyHistory=${state.keyHistory.size} selectCount=${state.selectKeyCount} currentSelection=${state.currentSelection}"</ID>
+    <ID>MaxLineLength:JTUI.kt$JTUI$log(DebugCategory.AmbigBuffer, "[$callFrom] Current Ambiguous Sequence: undoStack.size=${undoStack.size}, ambigSeqLen=${state.ambiguousKeySequence.size}, ambigKeys=${state.ambiguousKeySequence.map { it.display }}")</ID>
+    <ID>MaxLineLength:JTUI.kt$JTUI$log(DebugCategory.UndoFlow, "[KF_Undo 2] ENTRY: ambigSeqLenBefore=$ambigSeqLenBefore, currentSelection=$currentSelection, listFunctionCount=$listFunctionCount, hadComposingBefore=$hadComposingBefore, willHaveComposingAfter=$willHaveComposingAfter")</ID>
+    <ID>MaxLineLength:JTUI.kt$JTUI$log(DebugCategory.UndoFlow, "[KF_Undo 5] Calling onUndoPressed with context: before=$ambigSeqLenBefore, hadComposing=$hadComposingBefore, willHaveComposing=$willHaveComposingAfter, listFunctionCount=$listFunctionCount")</ID>
+    <ID>MaxLineLength:JustTypeIME.kt$JustTypeIME$debugLog("[onUpdateSelection 0a] Skip: isInputViewShown=FALSE selection $newSelStart..$newSelEnd ignore-range ${imeTextController.ignoreCursorStart}..${imeTextController.ignoreCursorEnd}; skipping")</ID>
+    <ID>MaxLineLength:JustTypeIME.kt$JustTypeIME$private fun handleCursorMove(direction: Int, hadAmbig: Boolean, movementMode: Int = JTUI.MOVEMENT_CHARACTER_LINE, isSelecting: Boolean = false)</ID>
+    <ID>MaxLineLength:JustTypeIME.kt$JustTypeIME$private fun runPullInFlow(word: String, startAbs: Int, endAbs: Int, selectFirstOnMatch: Boolean = false, suppressUIUpdate: Boolean = false): Boolean</ID>
+    <ID>MaxLineLength:UiUpdateHandler.kt$UiUpdateHandler$callbacks.debugLog("[onCreateInputView 2a] Deleting composing text '${imeTextController.lastComposingSent}' - no preview available (ambLen=$ambLenCheck, imeTextController.autoSpaceInserted=${imeTextController.autoSpaceInserted})")</ID>
+    <ID>MaxLineLength:WordDb.kt$WordDb$db.compileStatement("INSERT OR IGNORE INTO words (word, freqClass, classMask, useCount, useTime, rawFreq, PartOfSpeech1, PartOfSpeech2, lowerCaseCount, titleCaseCount, upperCaseCount, originalCaseCount) VALUES (?, ?, ?, 0, NULL, ?, ?, ?, ?, ?, ?, ?)")</ID>
+    <ID>MaxLineLength:WordDb.kt$WordDb$db.compileStatement("INSERT OR REPLACE INTO words (word, freqClass, classMask, useCount, useTime, rawFreq, PartOfSpeech1, PartOfSpeech2, lowerCaseCount, titleCaseCount, upperCaseCount, originalCaseCount) VALUES (?, ?, ?, 0, NULL, ?, ?, ?, ?, ?, ?, ?)")</ID>
+    <ID>MaxLineLength:WordDb.kt$WordDb$db.compileStatement("INSERT OR REPLACE INTO words (word, freqClass, classMask, useCount, useTime, rawFreq, PartOfSpeech1, PartOfSpeech2, lowerCaseCount, titleCaseCount, upperCaseCount, originalCaseCount, posEncoded) VALUES (?, ?, ?, 0, NULL, ?, ?, ?, ?, ?, ?, ?, ?)")</ID>
+    <ID>NestedBlockDepth:HeadTrackingState.kt$HeadTrackingState$fun process(x: Float, y: Float): ProcessResult</ID>
+    <ID>NestedBlockDepth:HeadTrackingSubsystem.kt$HeadTrackingSubsystem$internal fun applyUiUpdate(result: HeadTrackingState.ProcessResult)</ID>
+    <ID>NestedBlockDepth:ImeTextController.kt$ImeTextController$fun applyEditorUpdate(topCandidate: String?)</ID>
+    <ID>NestedBlockDepth:ImeTextController.kt$ImeTextController$fun canPullInAtCursor(checkRightContext: Boolean = true): Int</ID>
+    <ID>NestedBlockDepth:ImeTextController.kt$ImeTextController$fun handleBookmark(action: Int, isSelecting: Boolean = false)</ID>
+    <ID>NestedBlockDepth:ImeTextController.kt$ImeTextController$fun handleDeleteWord()</ID>
+    <ID>NestedBlockDepth:ImeTextController.kt$ImeTextController$fun onNumericOutput(text: String)</ID>
+    <ID>NestedBlockDepth:ImeTextController.kt$ImeTextController$private fun processSelectionChange(oldSelStart: Int, oldSelEnd: Int, newSelStart: Int, newSelEnd: Int, candidatesStart: Int, candidatesEnd: Int)</ID>
+    <ID>NestedBlockDepth:JTUI.kt$JTUI$fun buttonPressed(buttonNumber: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null)</ID>
+    <ID>NestedBlockDepth:JTUI.kt$JTUI$private fun applyShiftAndCaps(list: List&lt;MutableMap&lt;String, Any?&gt;&gt;): List&lt;Map&lt;String, Any?&gt;&gt;</ID>
+    <ID>NestedBlockDepth:JTUI.kt$JTUI$private fun computeNextLetterHints(): Set&lt;Char&gt;</ID>
+    <ID>NestedBlockDepth:JoystickState.kt$JoystickState$fun process(x: Float, y: Float): ProcessResult</ID>
+    <ID>NestedBlockDepth:JustTypeIME.kt$JustTypeIME$override fun onCreate()</ID>
+    <ID>NestedBlockDepth:JustTypeIME.kt$JustTypeIME$override fun onStartInput(attribute: android.view.inputmethod.EditorInfo?, restarting: Boolean)</ID>
+    <ID>NestedBlockDepth:JustTypeIME.kt$JustTypeIME$private fun applyKeyboardSize()</ID>
+    <ID>NestedBlockDepth:JustTypeIME.kt$JustTypeIME$private fun updateSettingsKeyLabels(labels: List&lt;String&gt;)</ID>
+    <ID>NestedBlockDepth:KeyHistoryView.kt$KeyHistoryView$override fun onDraw(canvas: Canvas)</ID>
+    <ID>NestedBlockDepth:SquareButton.kt$SquareButton$override fun onDraw(canvas: Canvas)</ID>
+    <ID>NestedBlockDepth:UiUpdateHandler.kt$UiUpdateHandler$fun handleUiSnapshot(ui: JTUISnapshot)</ID>
+    <ID>NestedBlockDepth:VocabImportHelper.kt$VocabImportHelper$fun importTokens( wordDb: WordDb, tokens: List&lt;TokenInfo&gt;, mask: Long, ): List&lt;String&gt;</ID>
+    <ID>NestedBlockDepth:VocabularyManagementActivity.kt$VocabularyManagementActivity$private fun renderVocabListLocked(wordDb: WordDb, repo: SettingsRepository)</ID>
+    <ID>NestedBlockDepth:WLD.kt$WLD$fun getDisambiguationCandidates( keys: List&lt;Int&gt;, maxWordCompleteEntries: Int, minFreqClass: Int?, includeExcludedAtEnd: Boolean, anyFreqMask: Long, minFreqMask: Long, baseSearchDepth: Int, searchExpansionDepth: Int, maxExaminedNodes: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null, ): DisambiguationResult</ID>
+    <ID>ReturnCount:ImeTextController.kt$ImeTextController$private fun processSelectionChange(oldSelStart: Int, oldSelEnd: Int, newSelStart: Int, newSelEnd: Int, candidatesStart: Int, candidatesEnd: Int)</ID>
+    <ID>ReturnCount:JTUI.kt$JTUI$fun buttonPressed(buttonNumber: Int, shouldAbort: (() -&gt; Boolean)? = null, applyPendingHighlight: (() -&gt; Unit)? = null)</ID>
+    <ID>SwallowedException:ImeTextController.kt$ImeTextController$e: Exception</ID>
+    <ID>SwallowedException:JTUI.kt$JTUI$e: Exception</ID>
+    <ID>ThrowingExceptionsWithoutMessageOrCause:SettingsRepository.kt$SettingsRepository$Throwable()</ID>
+    <ID>TooGenericExceptionCaught:DeveloperSettingsActivity.kt$DeveloperSettingsActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ImeTextController.kt$ImeTextController$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JTUI.kt$JTUI$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JustTypeIME.kt$JustTypeIME$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:KeyFeedbackController.kt$KeyFeedbackController$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:OverlayCoordinator.kt$OverlayCoordinator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WordDb.kt$WordDb.Companion$e: Exception</ID>
+    <ID>TooManyFunctions:BackupManager.kt$BackupManager</ID>
+    <ID>TooManyFunctions:HeadTrackingViewBridge.kt$HeadTrackingViewBridge</ID>
+    <ID>TooManyFunctions:ImeTextCallbacks.kt$ImeTextCallbacks</ID>
+    <ID>TooManyFunctions:ImeTextCallbacksImpl.kt$ImeTextCallbacksImplDeps</ID>
+    <ID>TooManyFunctions:ImeTextController.kt$ImeTextController</ID>
+    <ID>TooManyFunctions:JTUI.kt$JTUI</ID>
+    <ID>TooManyFunctions:JustTypeIME.kt$JustTypeIME : InputMethodService</ID>
+    <ID>TooManyFunctions:PhraseFlowController.kt$PhraseFlowCallbacks</ID>
+    <ID>TooManyFunctions:PosEncoding.kt$PosEncoding</ID>
+    <ID>TooManyFunctions:PreferenceCoordinator.kt$PreferenceCoordinatorCallbacks</ID>
+    <ID>TooManyFunctions:PreferenceCoordinatorCallbacksImpl.kt$PreferenceCoordinatorCallbacksImplDeps</ID>
+    <ID>TooManyFunctions:UiUpdateHandler.kt$UiUpdateCallbacks</ID>
+    <ID>TooManyFunctions:VocabImportHelper.kt$VocabImportHelper</ID>
+    <ID>TooManyFunctions:WordDb.kt$WordDb$Companion</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$// Core constants mirroring main.py private const val NumberOfKeys = 8</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$// ── Settings navigation ────────────────────────────────────── private const val KF_EnterSettings = 70</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_AddNewPhrase = 35</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_AllSymbolsAscend = 77 // ALL SYMBOLS: up one level; at root, exit to the entry page</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_AllSymbolsDescend = 76 // arg: absolute child index of the current ALL SYMBOLS level</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_AllSymbolsMore = 78 // ALL SYMBOLS: page to the next six entries of the current level</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_AllSymbolsPick = 79 // arg: symbol string — verbatim insert (no case-fold)</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Ambig = 1</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_BackToCaller = 73</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_BackToMain = 48</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CancelNewPhrase = 36</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CapsLock = 17</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CaseToLower = 57</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CaseToSentence = 58</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CaseToTitle = 55</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CaseToUpper = 56</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CheckAddCustomWord = 29</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ClearAmbig = 34</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ClearInput = 9</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ClearOutput = 28</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Copy = 51</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CreateCustomWord = 30</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CursorDown = 46</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CursorLeft = 43</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CursorRight = 44</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CursorUp = 45</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Cut = 50</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_CycleCursorMode = 49</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_DeleteChar = 39</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_DeleteWord = 10</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_EditUndo = 53</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_EditWord = 59</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_EndSentence = 24</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_EndSentenceMulti = 42</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Enter = 13</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_FinishNumericString = 38</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_GoToPage = 6</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Immed = 5</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ImmedNoSpace = 27</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ImmedSpell = 31</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_JumpToMarkA = 62</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_JumpToMarkB = 63</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_NumericDelete = 33</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_OpenNavigationKeyboard = 72</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Paste = 52</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_PhraseDone = 37</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_RefreshKeyboardView = 40</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_RefreshUI = 26</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SaveLast = 21</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ScrollDown = 16</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_ScrollUp = 15</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Select = 2</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SelectText = 47</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SetMarkA = 60</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SetMarkB = 61</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SettingsKey = 71 // arg = key index 0–7, dispatched to controller</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Shift = 7</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Snug = 4</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpaceIfNeeded = 25</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpaceIfNeededMulti = 41</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Speak = 20</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpeakLastSelection = 23</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpeakNextSentence = 22</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpeakSelectionOrSentence = 54</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpeakSentence = 12</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Speech = 11</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpellDelete = 32</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpellSetAccumulate = 75 // arg: 1 = accumulate (ADD NEW WORD), 0 = emit-each (LETTER/SYMBOL)</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SpellShiftCycle = 74</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_SymbolMode = 8</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Term = 0</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val KF_Undo = 3</ID>
+    <ID>TopLevelPropertyNaming:JTUI.kt$private const val StartingPage = "Main"</ID>
+    <ID>UnusedParameter:VocabularyImportActivity.kt$VocabularyImportActivity$name: String</ID>
+    <ID>UseCheckOrError:SettingsRegistry.kt$SettingsRegistry.Companion$throw IllegalStateException("SettingsRegistry not initialized. Call getInstance(context) first.")</ID>
+    <ID>VariableNaming:ExportVocabUsageActivity.kt$ExportVocabUsageActivity$private val CHAR_WIDTHS = mapOf( 'i' to 0.35, 'l' to 0.35, 'I' to 0.4, 'j' to 0.4, 't' to 0.45, 'f' to 0.45, 'r' to 0.45, ' ' to SPACE_WIDTH, 'm' to 0.9, 'w' to 0.9, 'M' to 0.95, 'W' to 0.95, 'A' to 0.75, 'B' to 0.7, 'C' to 0.75, 'D' to 0.75, 'E' to 0.7, 'F' to 0.7, 'G' to 0.8, 'H' to 0.75, 'J' to 0.6, 'K' to 0.75, 'L' to 0.65, 'N' to 0.8, 'O' to 0.8, 'P' to 0.7, 'Q' to 0.8, 'R' to 0.75, 'S' to 0.7, 'T' to 0.7, 'U' to 0.8, 'V' to 0.75, 'X' to 0.75, 'Y' to 0.75, 'Z' to 0.7, )</ID>
+    <ID>VariableNaming:ExportVocabUsageActivity.kt$ExportVocabUsageActivity$private val DEFAULT_CHAR_WIDTH = 0.6</ID>
+    <ID>VariableNaming:ExportVocabUsageActivity.kt$ExportVocabUsageActivity$private val SPACE_WIDTH = 0.5</ID>
+    <ID>VariableNaming:KeyboardSettingsController.kt$KeyboardSettingsController$val C = org.continuouspath.justtype.Constants</ID>
+  </CurrentIssues>
+</SmellBaseline>

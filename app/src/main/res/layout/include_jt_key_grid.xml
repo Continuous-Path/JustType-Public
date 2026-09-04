@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JT Layout 3x3 Button Grid -->
+<org.continuouspath.justtype.view.SquareGridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyGrid"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:alignmentMode="alignBounds"
+    android:columnCount="3"
+    android:columnOrderPreserved="false"
+    android:rowCount="3"
+    android:useDefaultMargins="true">
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn0"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/top_left" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn1"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/top" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn2"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/top_right" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn3"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/left" />
+
+    <org.continuouspath.justtype.view.SquareTextView
+        android:id="@+id/centerLabel"
+        style="@style/GridCenterLabel" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn4"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/right" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn5"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/bottom_left" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn6"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/bottom" />
+
+    <org.continuouspath.justtype.view.SquareButton
+        android:id="@+id/btn7"
+        style="@style/GridKeyboardButton"
+        android:contentDescription="@string/bottom_right" />
+
+</org.continuouspath.justtype.view.SquareGridLayout>

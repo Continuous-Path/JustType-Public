@@ -1,0 +1,798 @@
+JustType Settings� Info Prompts
+=================================
+For each setting, review the proposed INFO PROMPT and edit as needed.
+Where appropriate, enter a NEW SETTING NAME to rename the setting. Likewise with PAGE NAMEs, SECTION NAMEs, and/or LINK NAMEs or BUTTON NAMEs.  
+
+Meta-instructions for this document, where needed, are placed between ">>>" and "<<<" 
+
+
+========================================================================
+PAGE NAME: JustType Settings (Main)
+NEW PAGE NAME: 
+========================================================================
+
+SECTION NAME:  --- Language ---
+NEW SECTION NAME:  --- UI Language ---
+
+SETTING NAME: UI Language
+NEW SETTING NAME:
+INFO PROMPT: Controls the language used for all on-screen key labels, menus, help text, and messages. Choose System Default to follow your device language, or pick a specific language.
+
+SETTING NAME: Typing Language
+NEW SETTING NAME:
+INFO PROMPT: Selects which word database is used for typing words with the JustType keyboard. Currently only English is available.
+
+------------------------------------------------------------------------
+LINK NAME: INPUT METHODS 
+NEW LINK NAME: 
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+LINK NAME: VOCABULARY MANAGEMENT 
+NEW LINK NAME: 
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+LINK NAME: BACKUP & RESTORE 
+NEW LINK NAME: 
+------------------------------------------------------------------------
+
+SECTION NAME:  --- Keyboard ---
+NEW SECTION NAME:  --- JustType Keyboard ---
+NOTE: The three "Show Keystroke History / Key History Height / Shrink Key History to Fit" settings (formerly under "JustType Display") were moved into this section, between "Keyboard Size" and "Extra Blank Line on Enter". The "JustType Display" section is removed (now empty: "Next-Letter Hints" was moved to Vocabulary Management; "Error Beep" was moved to Input Methods/Auditory Feedback).
+
+SETTING NAME: Letter Arrangement
+NEW SETTING NAME:
+INFO PROMPT: Choose between Optimized (letters grouped by frequency for faster typing) and Alphabetical (letters in A-Z order for a more familiar appearance). The Optimized arrangement is more efficient, requires fewer keystrokes, and is recommended for most people. Changing this is reversible and can be tested before confirming. 
+
+SETTING NAME: [NONE: NEW SETTING]
+NEW SETTING NAME: Optimized Letter Arrangement Language
+INFO PROMPT: It is likely that most people will first become familiar with the letter arrangement for their own language, and that this arrangement will be by far the most familiar keyboard for most individuals.  Multi-lingual individuals will likely want to use more than one language.  The Optimized arrangement for some languages may differ only slightly, so that it may be advantageous to continue to use the arrangement with which they are most familiar: the arrangement for their native language.  Such individuals can select their native language for this setting.  Another setting option is "Use Native Keyboard" in which case the Optimized arrangement will be the arrangement developed for the current language being used.  In some case, where a language has a different alphabet, selecting that language as the Typing Language will automatically force this setting to change to match the Typing Language.
+
+SETTING NAME: Keyboard Size
+NEW SETTING NAME:
+INFO PROMPT: Sets the height of the JustType keyboard as a percentage of the screen. Increase for larger, easier-to-read keys; decrease to leave more room for the text field above.
+
+SETTING NAME: Extra Blank Line on Enter
+NEW SETTING NAME:
+INFO PROMPT: When ON, pressing Enter inserts two line breaks instead of one, creating a visible blank line between paragraphs. Useful for drafting emails or documents with paragraph spacing.
+
+SECTION NAME:  --- Speech Output ---
+NEW SECTION NAME:  
+
+SETTING NAME: Speak Each Output Word
+NEW SETTING NAME:
+INFO PROMPT: When ON, each word is spoken aloud as soon as it is finalized - after you Select it and then as soon as you type the first key of the next word (or the Auto-Speak Delay is enabled and times out). This helps verify that the correct word was selected without having to look at the text field each time.
+
+SETTING NAME: Speak Each Output Phrase
+NEW SETTING NAME: Speak Each Abbreviated Phrase
+INFO PROMPT: When ON, once a stored phrase is Selected in the Selection List, it is spoken aloud after the Auto-Speak Delay elapses. This lets you speak a stored phrase that you recall without having to type a following key first.
+
+SETTING NAME: Speak Each Completed Sentence
+NEW SETTING NAME:
+INFO PROMPT: When ON, each completed sentence is spoken aloud after it is finalized by adding a period, exclamation point or question mark. Allows you to automatically speak each sentence as it is completed.
+
+SETTING NAME: Speak the Name of Punctuation Characters
+NEW SETTING NAME:
+INFO PROMPT: When ON, punctuation characters (period, comma, etc.) are spoken by name when they are output. Useful for verifying that the intended punctuation was typed.
+
+SETTING NAME: Phrase Speak Delay
+NEW SETTING NAME: Auto-Speak Delay
+INFO PROMPT: The number of seconds that JustType will wait after a word or abbreviated phrase is selected before automatically speaking the selected word or phrase. Set to OFF (0) to disable automatic speaking. When the Auto-Speak Delay is disabled, the selected word or phrase will only be spoken when you begin typing the next word.
+
+SECTION NAME:  --- JustType Display ---
+NEW SECTION NAME:
+
+SETTING NAME: Highlight possible next letters
+NEW SETTING NAME: Enable Standard Next-Letter Hints
+NOTE: This setting was moved from the "JustType Settings" page to the "Vocabulary Management" page where it sits next to "Enable Accented Next-Letter Hints" under a single "Next-Letter Hints" section.
+INFO PROMPT: As you are typing a word, JustType figures out all the possible words in the database that match the keys you have typed so far.  JustType can also determine what all the letters are that come next in any of the words that you might be typing.  When "Next-Letter Hints" is ON, JustType will "highlight" each of those letters on the keyboard by displaying these "Next-Letters" in bold font, while all other letters are"grayed out."  Turning "Next-Letter Hints" ON can help guide you as you spell longer words - if you have entered the correct key sequence so far, the next letter of your word will be highlighted.  If your next letter is "grayed out," you probably need to back up a little and fix a typing mistake (or add a new word that is not yet included in the database).  When ALL of the letters on a key are "grayed out" it will not do anything if pressed (and if "Error Beep" is ON, you will hear a short beep that can help alert you to this). 
+
+SETTING NAME: Show buttons pressed
+NEW SETTING NAME: Show Keystroke History
+NOTE: This setting was moved from the "JustType Display" section to the "JustType Keyboard" section.
+INFO PROMPT: When ON, a strip above the keyboard shows the sequence of keys you have pressed for the current word. Helps you track your progress and spot errors.
+
+SETTING NAME: Key history max height
+NEW SETTING NAME: Key History Height
+INFO PROMPT: Sets the height of the key history strip above the keyboard.  You set the height as a multiple (from 0.25 to 1.0) of the height of the keys in the keyboard.  Increase for a taller, more readable strip; decrease to save screen space.
+
+SETTING NAME: Shrink to fit
+NEW SETTING NAME: Shrink Key History to Fit
+INFO PROMPT: When ON, the key history strip automatically reduces its height for longer words so that all of the keys pressed fit on the display. When OFF, the strip always uses the full configured height, and earlier keys scroll off to the left for longer words.
+
+>>> This setting should be moved to the "Auditory Feedback" section on the "Input Methods" page.  <<<
+
+SETTING NAME: Error Beep
+NEW SETTING NAME:
+INFO PROMPT: When ON, a short beep sounds when you press a key that has no valid "Next-Letters," alerting you to a potential input error.
+
+SECTION NAME: --- Selection List ---
+NEW SECTION NAME:
+
+SETTING NAME: Auto-Restore Selection at Cursor
+NEW SETTING NAME: Auto-Load Word at Cursor
+INFO PROMPT: When ON, tapping on an existing word in the text field automatically loads it into the selection list so you can cycle through alternatives, extend the word by typing additional letters, or shorten it by hitting the UnDo key. When OFF, you must manually initiate editing of existing words by pressing the Select key.  When "Auto-Load" is ON and Edit Mode is used to move the cursor into a word, the word will be automatically loaded when you return to the Main keyboard (by hitting "BACK TO MAIN").  
+
+SETTING NAME: Show Case Type Variants
+NEW SETTING NAME: Automatically Add Capitalized Word Forms to Selection List
+INFO PROMPT: When ON, the selection list includes any Capitalized Forms of a word that are available (e.g., "brown" for the color, and perhaps also "Brown" for "Ms. Brown"). When OFF, only the default capitalization of each word is shown in the list, and the SHIFT or CAPS LOCK functions must be used to create Capitalized Forms when desired.
+
+SETTING NAME: Deferred Case Expansion
+NEW SETTING NAME: Wait Until Word is Selected to Add Capitalized Forms
+INFO PROMPT: When ON, Capitalized Forms of a word are not added immediately when the word is Selected - they are only added for the Selected word after the "Delay to Add Capitalized Forms" elapses. This keeps the selection list shorter (fewer words to step over), while still making other forms available when wanted.
+
+SETTING NAME: Case Expansion Delay
+NEW SETTING NAME: Delay to Add Capitalized Forms
+INFO PROMPT: The number of seconds to wait before displaying Capitalized Forms of a word once it is Selected in the selection list. This Delay only applies when "Wait Until Word is Selected to Add Capitalized Forms" is ON, and the currently selected word has one or more variant Capitalized Forms. When this Delay is set to OFF (0), available Capitalized Forms are shown immediately (as soon as a word is Selected).
+
+SETTING NAME: Show Abbreviation in Selection List
+NEW SETTING NAME: Show Phrase Abbreviation in Selection List
+INFO PROMPT: When ON, the abbreviation that is associated with a phrase entry (e.g., "CMBL" for "Call me back later. ") will be shown in the selection list (along with the phrase itself if "Show Phrase in Selection" is also ON). When OFF, phrase abbreviations are not shown in the selection list. 
+
+SETTING NAME: Show Phrase in Selection
+NEW SETTING NAME: Show Expanded Phrase in Selection List
+INFO PROMPT: When ON, multi-word phrases that have been added with an associated abbreviation (e.g., the phrase "Call me back later. " that could be abbreviated as "CMBL") are shown in the selection list. When OFF, only the abbreviation is shown.
+
+
+========================================================================
+PAGE: Input Methods
+========================================================================
+
+>>> Move the "Adaptive Input Methods" section to follow the "Touchscreen Input Methods" section.  <<<
+
+SECTION NAME:  --- Other Input Methods ---
+NEW SECTION NAME:  --- Adaptive Input Methods ---
+INFO PROMPT: There are four adaptive input methods that can be used to activate keys, that can be used in addition to any touchscreen method that might be used.  These adaptive methods include:
+(1) Head Tracking (move a cursor in response to head movement)
+(2) Joystick (requires an external joystick)
+(3) Single-Switch Scanning (single-switch linear scanning of the 8 keys)
+(4) Two-Switch Selection (a sequence of three activations of either of two switches immediately selects one of the 8 keys)
+(5) (None - use only one of the touchscreen methods, either Direct Selection or Directional Selection).
+
+SETTING NAME: Head Tracking
+NEW SETTING NAME:
+INFO PROMPT: The Head Tracking input method requires that the "HeadBoard" application (also available from the Continuous Path Foundation) is also installed and configured on your device (just follow the prompts when installing HeadBoard).  The HeadBoard app uses the front-facing camera to track your head movement, and move an on-screen mouse cursor in response to it.  This cursor appears whenever you are operating any software on your device OTHER THAN THE JUSTTYPE KEYBOARD ITSELF.  When the cursor enters the keyboard, its exact location is no longer displayed.  This is because keys are pressed just by moving your head in the general direction of the key you want to press.  You don't have to be very precise - just move your head from the "resting area" (the center of the keyboard) in the direction of the key (the "compass direction" of the key from the center of the keyboard).  As soon as the key turns green, move back toward the center.  The key will be activated, and you can move directly toward the next key you want to press.  If you accidentally activate the wrong key, just go up to the "Undo" key to remove that keystroke.
+
+SETTING NAME: Joystick
+NEW SETTING NAME:
+INFO PROMPT: The Joystick input method requires that you use an external Bluetooth joystick installed and configured on your device.  JustType will display an on-screen mouse cursor that will move in response to how you move the joystick.  This cursor appears whenever you are operating any software on your device OTHER THAN THE JUSTTYPE KEYBOARD ITSELF.  When the cursor enters the keyboard, its exact location is no longer displayed.  This is because keys are pressed just by moving the joystick in the general direction of the key you want to press.  You don't have to be very precise - just move from the "resting area" (the center of the keyboard, where the joystick is close to its center position) in the direction of the key (the "compass direction" of the key from the center of the keyboard).  As soon as the key turns green, move back toward the center.  The key will be activated, and you can move directly toward the next key you want to press.  If you accidentally activate the wrong key, just go up to the "Undo" key to remove that keystroke.
+
+SETTING NAME: Single Switch Scanning
+NEW SETTING NAME:
+INFO PROMPT: Single-Switch Scanning displays the keyboard as one or two horizontal rows of keys that are scanned (highlighted) in sequence.  This allows you to close a single switch to activate the key that is currently highlighted.  Because the JustType keyboard only has eight keys, it is easier and more efficient to just scan all the keys in sequence rather than arrange them in multiple rows and use some kind of "row-column scanning" that might be used on a keyboard with many more keys.  The switch itself can be an external Bluetooth switch that has been installed and configured on your device.  If you don't use an external switch, you can set up the "Touchscreen Switch" so that you can use the bottom of the device screen as your switch and just tap the screen to close the switch.
+
+SETTING NAME: Two-Switch Selection
+NEW SETTING NAME:
+INFO PROMPT: Two-Switch Selection is different from scanning methods: it uses two different switches (a "green" and a "red" switch, though the actual color of the switches doesn't really matter), and selecting a key requires a sequence of three switch hits on one of the two keys.  The keys are each highlighted in either green or red - and all you do is hit the switch that matches the color of the key you want.  At the start of a sequence, four of the keys are highlighted in green and the other four in red.  Let's say the key you want to press is highlighted in green at this point - then you start by hitting the green switch.  Then the four keys that were red stop being highlighted, and two of the keys that were green now turn red.  Again, just keep hitting the switch that matches the color of the highlight on your key.  After the second switch hit, there will only be two keys left - a green one and a red one - you know what to do.  At first, you will find the changing highlighting helpful to guide you.  But there is also a setting ("Show color code band at bottom") that you can turn ON whenever you want.  This will display a rectangle below each key with three color bands, either green or red.  The left-to-right sequence of color bands shows the sequence of switches that activate that key.  Then you don't have to watch the key and think about it: if the band shows green then red then green, just hit the switches green-red-green without waiting, and the key will be activated.
+
+SECTION NAME: --- Touchscreen Input Methods ---
+NEW SECTION NAME:  
+
+INFO PROMPT: NOTE: When Directional Selection (or the Touchscreen Switch) is turned ON below, JustType will "capture" all of the touch actions that are performed on all (or part) of the touchscreen.  When this is happening, you are not able to touch and interact with other UI controls that may be displayed on the screen.  If you or someone else needs to operate your device and thus needs to be able to interact with the screen, the simplest approach is to open the Functions keyboard and activate the "HIDE KEYBOARD" function.  When the keyboard is hidden, this screen "capture" is paused so someone can interact as usual with whatever is shown on the screen.  This also means that Directional Selection (or the Touchscreen Switch) will no longer work until the keyboard is displayed again.  The simplest way to bring the keyboard back is by simply touching a text field.  If there is a need to also enter text while Directional Selection (or the Touchscreen Switch) is OFF, first hide the keyboard with the "HIDE KEYBOARD" function, then go to the system settings and turn Directional Selection (or the Touchscreen Switch) OFF in the JustType settings.  When you are done, just go back to settings and turn Directional Selection (or the Touchscreen Switch) back ON again.  
+
+
+SETTING NAME: Direct Selection (Touch)
+NEW SETTING NAME: Direct Selection 
+INFO PROMPT: When ON, you can tap directly on each key to activate it. This is the default touch-screen input method. At least one of Direct Selection or Directional Selection will always remain enabled so a teacher or clinician can interact with the device directly.
+
+SETTING NAME: Directional Selection
+NEW SETTING NAME:
+INFO PROMPT: When this method is ON, keys can be activated by swiping anywhere on the keyboard and tracing a stroke in one of the 8 possible directions (toward any of the 8 compass points).  A stroke of almost any length, anywhere on the keyboard, will activate the key that is in the same direction relative to the center of the keyboard. For many people, this can be much easier and quicker than having to precisely tap a specific key. At least one of Direct Selection or Directional Selection will always remain enabled so a teacher or clinician can interact with the device directly.
+
+SETTING NAME: Touch Screen Switch
+NEW SETTING NAME: Touchscreen Switch
+INFO PROMPT: When ON, the touchscreen area at the bottom of the screen acts as a virtual switch, providing switch-style input without requiring any external hardware. Can operate in Single- or Two-Switch mode.  When enabled, other settings control the size and behavior of the Touch Screen Switch.  
+
+
+SECTION NAME:  --- Auditory Feedback ---
+NEW SECTION NAME:  
+
+SETTING NAME: Beep on Key Select
+NEW SETTING NAME: Beep when key is activated
+INFO PROMPT: When ON, a short single beep sounds each time a key is activated. Provides auditory confirmation that a key press was detected.
+
+SETTING NAME: [MISSING]
+NEW SETTING NAME: Beep When Keystroke Has No Effect (Error Beep)
+INFO PROMPT: When ON, a short double-beep sounds when a key is activated that is not a "valid" key (the key has no effect). Provides an auditory indication that the key pressed was likely not the intended key.
+
+SETTING NAME: Speak Selected Key
+NEW SETTING NAME: Speak Each Selected Key
+INFO PROMPT: When ON, the "name" of each key (the list of the letters on the key, or the name of the function on the key) is spoken aloud when the key is activated. Helps identify which key was pressed when visual identification of the key is difficult.
+
+SETTING NAME: Speak Punctuation
+NEW SETTING NAME: Speak Punctuation on Key
+INFO PROMPT: When ON, punctuation names are included when speaking selected key contents (e.g., "E F G H apostrophe period" instead of just "E F G H"). Only applies when "Speak each selected key" is ON.
+
+SETTING NAME: Speak Selected Word
+NEW SETTING NAME: Speak Each Selected Word
+INFO PROMPT: When ON, each time you press the Select key, the word that becomes selected in the selection list is spoken aloud. Since the vast majority of the time your intended word will be the first word in the list, turning this ON allows you to focus on the keyboard as you spell each word, and since the word is spoken aloud when you finish typing and hit Select, you don't have to keep looking up at the text to confirm that you are getting the word that you intended.  When only "Speak Each Output Word� is ON (on the JustType Settings page), the word will not be spoken until you start typing the next word.  This delays the time the word is spoken, but has the advantage of not speaking a word you don't actually want to say, but you have to "step over it" to Select a word that is lower down in the Selection List.  
+SETTING NAME: Speak Prompts Aloud
+NEW SETTING NAME:
+INFO PROMPT: When ON, settings navigation prompts (such as "UI Language", "Input Methods", etc.) are spoken aloud when selected in addition to being displayed on screen. Turn OFF if you prefer visual-only prompts.
+
+SECTION NAME:  --- Visual Feedback ---
+NEW SECTION NAME:  
+
+SETTING NAME: Flash Key on Select
+NEW SETTING NAME: Flash Key When Activated
+INFO PROMPT: When ON, each key that is activated briefly flashes with a visual highlight when pressed. Provides immediate visual confirmation of each key that is activated.
+
+========================================================================
+PAGE: Set Up Head Tracking
+========================================================================
+
+>>> This Setting (Corner Bias) should be moved to be the first item in the "--- Tuning ---" section below (as it is defined there). <<<
+
+SETTING NAME: Corner Bias
+NEW SETTING NAME:
+INFO PROMPT: Adjusts the apparent relative size of diagonal/corner keys. The keyboard is like a pizza with eight "slices" corresponding to the 8 keys, where you select a key by moving up into that "slice."  Values above 1.0 make it easier to reach corner keys - the corner "slices" become bigger; values below 1.0 favor the cardinal directions (up, down, left, right).
+
+
+SECTION NAME:  [MISSING - THIS IS A NEW SECTION] 
+NEW SECTION NAME:  --- Zone Thresholds ---
+
+INFO PROMPT: The relative size of the center region where head movement has no effect - where you can just "rest" without trying to activate a key, and without worrying about activating a key unintentionally. A larger Resting Zone requires more head movement away from the center to get to where the surrounding keys start to respond to your head movement. Increase the size if the keys start to activate even though you are just trying to rest in the middle.  The boundary of each Zone is set as a fraction between 0.0 and 1.0, with 0.0 at the center of the keyboard and 1.0 at the very edge.  
+ 
+SETTING NAME: Active Zone (Dead Zone < Active Zone < Exit Zone). The maximum value for Active Zone is 0.75
+NEW SETTING NAME: Active Zone (Resting Zone < Active Zone < Exit Zone)
+NOTE: The maximum value for Active Zone (0.75) is enforced by the slider and is not part of the displayed setting name.
+INFO PROMPT: The relative distance that you have to move away from the center in order to activate a key. When you enter the Active Zone for a key, the key will turn green. After you enter the Active Zone and a key turns green, you just move back toward the center to activate the key. Decreasing the Active Zone makes it so that you can activate keys with less head movement, but may increase the chance that a key will be accidentally activated.
+
+SETTING NAME: Exit Zone (Active Zone < Exit Zone < 1.0)
+NEW SETTING NAME:
+INFO PROMPT: The relative limit that defines the outer boundary for head movement within the keyboard region. You can pause Head-Tracking by turning your head to the right until the you reach the boundary of the Exit Zone, and then keep your head turned until the Exit Delay time elapses. The keyboard border will start flashing when you reach the Exit Zone. Decrease the size of the Exit Zone to reduce how far you need to turn your head to pause or leave the keyboard.  When you move upward (instead of to the right) into the Exit Zone, you can move the cursor out of the JustType keyboard. The keyboard border will start to flash, and then the cursor will appear in the region above the keyboard once the Exit Delay time elapses.  
+
+SETTING NAME: Key Activation Threshold (0% - 100%)
+NEW SETTING NAME:
+INFO PROMPT: Once a key turns green and you start moving back toward the center, this threshold determines how far you must move back before the key activates. A lower value means keys will be activated more quickly, since it will happen before you have to move very far back toward the center. Setting this value to 100% means that you have to go all the way back to the start of the Active Zone in order to activate the key.
+
+SETTING NAME: Exit/Pause Keyboard Delay (2 - 5 sec)
+NEW SETTING NAME: Exit/Pause Keyboard Delay Time (2 - 5 sec)
+INFO PROMPT: The number of seconds that the cursor must remain in the Exit Zone (with the keyboard border flashing) in order to pause or exit.  If the keyboard border starts flashing but you don't want to exit or pause, just move your head back toward the center to continue using the keyboard.  Once the keyboard border has flashed for the Exit/Pause Keyboard Delay Time, JustType will either (a) pause head tracking and display "Head Tracking Paused" (moving to the right) or (b) exit the keyboard into the region above (moving upward).  Reverse the process, moving all the way to the left to resume typing ("un-pause"), or move down to make the cursor "push against" the top border of the keyboard to re-enter the keyboard.  Increase the Exit/Pause Delay time (or the Exit Zone size) if pausing/exiting happens too easily.
+
+SECTION NAME:  [MISSING - THIS IS A NEW SECTION] 
+NEW SECTION NAME:  --- Tuning and Feedback ---     
+
+SETTING NAME: Corner Bias
+NEW SETTING NAME: Corner Weighting
+INFO PROMPT: Adjusts the relative sensitivity of diagonal/corner keys (the "ordinal" directions - Northeast, southwest, etc.) compared to "cardinal" keys (straight up/down or left/right - North, South, East, West). For some people, corner keys seem harder to trigger than the straight up/down/left/right keys.  Values above 1.0 make it easier to reach corner keys - they become relatively bigger targets relative to other keys.  Values below 1.0 do the opposite and make the cardinal directions (up, down, left, right) become bigger targets.
+
+SETTING NAME: Vertical Sensitivity
+NEW SETTING NAME:
+INFO PROMPT: This adjusts the relative ease with which up/down head movement moves the cursor vertically compared to how much left/right movement moves the cursor horizontally. Increase if vertical movements feel sluggish compared to horizontal (or simply if it is more difficult to move your head up and down). Values above 1.0 amplify vertical motion, and values below 1.0 amplify horizontal motion.
+
+SETTING NAME: Response Curve
+NEW SETTING NAME: Responsiveness 
+INFO PROMPT: Controls how much (or how fast) the cursor moves in response to head movement.  Values above 1.0 make the cursor move faster/farther (easier to move larger distances). Values below 1.0 result in slower/smaller cursor movements (for more precise targeting).
+
+SETTING NAME: Debug Overlay
+NEW SETTING NAME:
+INFO PROMPT: When ON, JustType a diagnostic overlay on the keyboard with zone boundaries, cursor position, and frame rate information. Useful for troubleshooting head tracking behavior.
+
+
+========================================================================
+PAGE NAME: Joystick
+NEW PAGE NAME: Set up Joystick
+========================================================================
+
+SETTING NAME: Dead Zone (0.10 - 0.80) 
+NEW SETTING NAME: Resting Zone (0.10 - 0.80)
+
+SETTING NAME: Dead Zone
+NEW SETTING NAME:
+INFO PROMPT: The relative size of the center region where joystick movement has no effect - where you can just "rest" without trying to activate a key, and without worrying about activating a key unintentionally. A larger Resting Zone requires more joystick movement away from the center to get to where the surrounding keys start to respond to the joystick movement. Increase the size if the keys start to activate even though you are just trying to rest in the middle.  The boundary of each Zone is set as a fraction between 0.0 and 1.0, with 0.0 at the center of the keyboard and 1.0 at the very edge.  
+ 
+SETTING NAME: Active Zone (> dead zone, < 1.0)
+NEW SETTING NAME: Active Zone (Resting Zone < Active Zone < Exit Zone)
+NOTE: The maximum value for Active Zone (0.90) is enforced by the slider and is not part of the displayed setting name.
+
+INFO PROMPT: The relative amount of joystick deflection at which a key becomes armed for activation. When you enter the Active Zone for a key, the key will turn green. After you enter the Active Zone and a key turns green, you just release the joystick back toward the center to activate the key. Decreasing the Active Zone makes it so that you can activate keys with less joystick deflection, but may increase the chance that a key will be accidentally activated.
+
+SETTING NAME: [N/A - THIS IS A NEW JOYSTICK SETTING]
+NEW SETTING NAME: Exit Zone (Active Zone < Exit Zone < 1.0)
+INFO PROMPT: The relative limit that defines the outer boundary for joystick deflection within the keyboard region. You can move the cursor out of the JustType keyboard into the region above (or below) and use your joystick to navigate your device. When you move upward (instead of to the right) until you reach the Exit Zone, the keyboard border will start to flash, and once the Exit Delay time elapses, the cursor will appear in the region above the keyboard. Decrease the size of the Exit Zone to reduce how far you need to move the joystick to leave the keyboard (or pause the joystick). Although this is probably less useful, you can also pause joystick activity in the keyboard by deflecting the joystick to the right (instead of upward) to exit into the Selection List region.  IMPORTANT NOTE: You will also need to open HeadBoard and configure a switch to use with the joystick in order to click (or double-click, etc.) at the joystick cursor location.  
+
+SETTING NAME: [N/A - THIS IS A NEW JOYSTICK SETTING]
+NEW SETTING NAME: Exit/Pause Keyboard Delay Time (2 - 5 sec)
+INFO PROMPT: The number of seconds that the joystick must remain in the Exit Zone (with the keyboard border flashing) in order to exit or pause.  If the keyboard border starts flashing but you don't want to exit or pause, just move the joystick back toward the center to continue using the keyboard.  Once the keyboard border has flashed for the Exit/Pause Keyboard Delay Time, JustType will either (a) exit the keyboard into the region above (when moving upward) or (b) pause the joystick and display "Joystick Paused" (moving to the right).  Reverse the process, moving all the way to the left to resume typing ("un-pause"), or move down to make the cursor "push against" the top border of the keyboard to re-enter the keyboard.  Increase the Exit/Pause Delay time (or the Exit Zone size) if pausing/exiting happens too easily.
+
+SETTING NAME: Corner Bias
+NEW SETTING NAME: Corner Weighting
+INFO PROMPT: Adjusts the relative sensitivity of diagonal/corner keys (the "ordinal" directions - Northeast, Southwest, etc.) compared to "cardinal" keys (straight up/down or left/right - North, South, East, West). For some people, corner keys may seem harder (or easier) to trigger than the straight up/down/left/right keys.  Values above 1.0 make it easier to reach corner keys - they become relatively bigger targets relative to other keys.  Values below 1.0 do the opposite and make the cardinal directions (up, down, left, right) become bigger targets.
+
+
+========================================================================
+PAGE: Set up Single Switch Scanning
+========================================================================
+
+SETTING NAME: Assign Switch
+NEW SETTING (BUTTON) NAME: ACTIVATE SCANNING SWITCH
+SUB-PROMPT NAME: Switch configured as: ___________ (Switch identifier or "No switch selected")
+NEW SUB-PROMPT NAME: Scanning Switch configured as: ___________ (Switch identifier or "No switch selected")
+INFO PROMPT: If you want to use a Bluetooth switch, make sure that you have paired it with your Android device as a "Connected Device" in the system settings.  If you want to use a switch that can be set up in HeadBoard (either a Head Movement switch or a Facial Gesture), then you will need to have configured and then enabled the switch below. Then press the "Activate Scanning Switch" button to enter switch assignment mode, and either press a physical switch or perform the HeadBoard action to trigger the switch you want to use. JustType will record which switch you triggered and then use it as your scanning switch.
+
+SETTING NAME: Use Touch Screen Switch
+NEW SETTING NAME: Use Touchscreen Switch
+INFO PROMPT: When ON, the touchscreen area at the bottom of the screen acts as a virtual switch, providing switch-style input without requiring any external hardware. The Touchscreen Switch can operate in Single- or Two-Switch mode.  When enabled, other settings control the size and behavior of the Touchscreen Switch.  
+
+SETTING NAME: Scan Layout Size
+NEW SETTING NAME: Scanning Layout Key Size
+INFO PROMPT: Choose between Large (bigger keys, easier to read) and Small (more compact, leaves more room for other content to be displayed above on the screen).
+
+SETTING NAME: Scan Step Delay
+NEW SETTING NAME: Scan Step Delay Time
+INFO PROMPT: The number of seconds that the scanning highlight stays on each key before the scan moves on to the next key. Decrease for faster scanning; increase if you need more time to react.
+
+SETTING NAME: Initial Delay Increase
+NEW SETTING NAME: Add Extra Delay on First Scanned Key
+INFO PROMPT: Extra time (in seconds) added to the first scan step after you press the switch or when the scanning process re-starts. This allows you more time to release the switch and have enough time to press the switch to select the first key when the next scan actually starts. Set to OFF (0) for no extra delay.
+
+SETTING NAME: Beep at Each Scan Step
+NEW SETTING NAME: Beep at Each Scanning Step
+INFO PROMPT: When ON, a short beep sounds each time the scan highlight moves to the next key. Provides auditory tracking of scanning progress that can help support visual tracking of the progress of the scan.
+
+SETTING NAME: Skip keys with no valid letters
+NEW SETTING NAME: Skip Keys with No Valid Next-Letters
+INFO PROMPT: When ON, the scanner automatically skips over keys that have no valid next-letters highlighted on the key. Speeds up scanning by skipping over useless keys. This also makes the scan less predictable, so you may want to turn ON the next feature "Show Next Key to be Scanned".  
+
+SETTING NAME: Show Next Key in Scan
+NEW SETTING NAME: Show Next Key to be Scanned (when any key will be skipped)
+INFO PROMPT: When "Skip Keys with No Valid Next-Letters" is ON, the progress of the scan becomes less predictable.  When "Show Next Key to be Scanned" is ON, then whenever one or more keys in the current scan cycle will be skipped, the next key that will be highlighted for selection is shown first with a pale yellow highlight, giving you an advance indication that the key will be scanned next (highlighted in bright yellow) to help you prepare to close the switch when it is actually highlighted.
+
+SETTING NAME: Auto-Repeat Mode
+NEW SETTING NAME: Key Activation Auto-Repeat Mode
+INFO PROMPT: When you close the switch during a scan, it immediately activates the currently highlighted key. When " Key Activation Auto-Repeat Mode" is ON, you can continue to hold the switch closed to automatically repeat activations of that key at the Auto-Repeat Delay Time interval (below). When the word you are spelling has two or more letters in a row that are on the same key, this can be much faster than releasing the switch and waiting to scan from the start all the way back to the same key again and then close the switch a second time.  If holding the switch closed and waiting to release it at the right time is not difficult, this is highly recommended since it saves significant time for roughly 17% of the letters you type.  
+
+SETTING NAME: Auto-Repeat Delay [or NAME is MISSING]
+NEW SETTING NAME: Auto-Repeat Delay Time 
+INFO PROMPT: The number of seconds between each repeated key activation when the switch is held down in Key Activation Auto-Repeat Mode. In most cases, it will likely work well to set this to the same time interval as the Scan Step Delay Time.  
+
+SETTING NAME: Select Key Triggers Scan
+NEW SETTING NAME: Select Key Triggers Scan of Selection List
+INFO PROMPT: When ON, pressing the switch to activate the Select key automatically starts a scan of the words shown in the current Selection List. Turning this feature ON means that Selecting a word will ALWAYS require two separate switch closures: once to activate the Select key, and then a second time to Select the desired word when it is scanned in the Selection list.  For most people, this will be LESS efficient, but this feature may be worth exploring if: (a) Auto-Repeat Mode is not a viable option for you (in that case, simply holding the switch closed on the Select key achieves the same thing but more efficiently); (b) the Scan Step Delay needs to be rather long, so typing additional letters of a word to shorten the Selection List is time-consuming; and (c) you are able to keep an eye on the Selection List as it changes and notice when your word appears (potentially lower in the list).  
+
+SETTING NAME: Scan Repeat Count
+NEW SETTING NAME: Number of Times to Repeat Scan if No Key is Selected
+INFO PROMPT: When scanning continues but no key is Selected, this is the number of times the scanning will cycle through all of the keys before automatically stopping. Set to 0 for "infinite" scanning (scanning only stops when you press the switch to activate a key, and then it re-starts). Reduce the number of repeat cycles if you find the repeated cycling distracting. Once scanning stops, just press the switch once to re-start scanning.  
+
+SETTING NAME: Switch Debounce / Cooldown (or "Physical Switch Debounce")
+NEW SETTING NAME: Ignore Rapid Switch Hits (Debounce) 
+INFO PROMPT: This setting enables the system to ignore rapid repeated switch activations within a short time window. Increase this time if your device registers double-taps or multiple presses when you are simply trying to do a single closure of the switch. The default is 120 ms.  
+
+>>> THE "Highlight Timeout" DOES NOT APPLY TO SINGLE-SWITCH SCANNING, AND NEEDS TO BE MOVED TO THE BOTTOM OF THE "Set up Two-Switch Selection" PAGE.  <<<
+SETTING NAME: Highlight Timeout
+NEW SETTING NAME:
+INFO PROMPT: The number of seconds that the highlight remains on the last scanned key before the scanner stops automatically. Set to OFF (0) for no timeout. Useful for conserving attention when you step away.
+
+
+========================================================================
+PAGE: Two Switch Selection Set-Up
+========================================================================
+
+SETTING NAME: Assign Switch (or "Assign Red Switch")
+NEW SETTING (BUTTON) NAME: ACTIVATE RED SWITCH
+SUB-PROMPT NAME: Red Switch = ___________ (Switch identifier or "No switch selected")
+NEW SUB-PROMPT NAME: 
+INFO PROMPT: If you want to use a Bluetooth switch, make sure that you have paired it with your Android device as a "Connected Device" in the system settings.  If you want to use one or more of the switches that can be set up in HeadBoard (either a Head Movement switch or a Facial Gesture), then you will need to have configured and then enabled the switch(es) below. Then press the "Activate (Red or Green) Switch" button to enter switch assignment mode, and either press a physical switch or perform the HeadBoard action to trigger you want to use. JustType will record which switch you triggered and then use it as your scanning switch.
+
+SETTING NAME: Assign Switch (or "Assign Green Switch")
+NEW SETTING (BUTTON) NAME: ACTIVATE GREEN SWITCH
+SUB-PROMPT NAME: Green Switch = ___________ (Switch identifier or "No switch selected")
+NEW SUB-PROMPT NAME: 
+
+SETTING NAME: Use Touch Screen Switch
+NEW SETTING NAME: Use Touchscreen Switch
+INFO PROMPT: When ON, the touchscreen area at the bottom of the screen acts as a virtual switch, providing switch-style input without requiring any external hardware.  The Touchscreen Switch can operate in Single- or Two-Switch mode.  When enabled, other settings control the size and behavior of the Touchscreen Switch.  
+
+SETTING NAME: Auto-Repeat Mode
+NEW SETTING NAME: Auto-Repeat Switch Activation
+INFO PROMPT: When ON, holding either the Red or the Green switch causes repeated activations of that switch at the Auto-Repeat Switch Delay Time interval. Useful when switches are easier to hold closed (and release) than it is to press the same switch repeatedly. For example, activating the Select Key is done with three activations in a row of the Green Switch.  With Auto-Repeat Switch Activations, this can be done by just holding the Green Switch closed for the time required.  Note: When both Auto-Repeat Switch Activation and Auto-Repeat Key Activation are turned ON, then once a three-switch sequence of switch activations is complete, the first key activation is triggered, and continuing to hold the switch closed will generate repeated key activations.  
+
+SETTING NAME: Auto-Repeat Delay
+NEW SETTING NAME: Auto-Repeat Switch Activation Delay Time
+INFO PROMPT: The number of seconds between each repeated switch activation when a switch is held down in Auto-Repeat Switch Activation mode.
+
+SETTING NAME: Repeat Activations
+NEW SETTING NAME: Auto-Repeat Key Activation
+INFO PROMPT: When ON, the third switch closure of each three-switch sequence can be held closed to automatically repeat activation of the key just selected. Speeds up typing for experienced users.
+
+SETTING NAME: Repeat Activation Delay
+NEW SETTING NAME: Auto-Repeat Key Activation Delay Time
+INFO PROMPT: The number of seconds between each repeated key activation when Auto-Repeat Key Activation mode is ON and the third switch closure is held closed.
+
+SETTING NAME: Beep when switch is activated 
+NEW SETTING NAME: Beep on Each Switch Activation 
+INFO PROMPT: When ON, a short beep sounds each time a switch is closed. Provides auditory confirmation that each switch closure was detected.
+
+SETTING NAME: Show Color Band
+NEW SETTING NAME:
+INFO PROMPT: When ON, a colored band with a sequence of three green or red segments is displayed below each key, showing the sequence of switch activations that activates that key.  This helps to memorize the sequence for each key and speed up input, since you can plan the sequence of switch activations without waiting to see how the key highlight colors actually change.
+
+>>> REMOVE THE "Disable Highlight" setting, and ensure that the code is written such that the red and green key highlighting in Two-Switch Selection Mode is ALWAYS enabled.  <<<
+
+SETTING NAME: Disable Highlight [REMOVE THIS SETTING] 
+NEW SETTING NAME:
+INFO PROMPT: When ON, the directional highlight indicator on keys is hidden. Use this if you find the highlight distracting and prefer to navigate by key labels alone.
+
+>>> THE "Highlight Timeout" DOES NOT APPLY TO SINGLE-SWITCH SCANNING, AND NEEDS TO BE MOVED HERE FROM THE SINGLE-SWITCH SCANNING PAGE.  <<<
+
+SETTING NAME: Highlight Timeout
+NEW SETTING NAME: Two-Switch Selection Reset Delay
+INFO PROMPT: Each key activation using Two-Switch Selection requires a sequence of three consecutive switch activations.  There may be times when you start to enter a switch sequence to activate a key but turn your attention to something else before all three switch activations are entered. When you come back to typing, this may be confusing, or you may simply want to type something different at that time. When the "Two-Switch Selection Reset Delay" is set to something other than 0 (which is "OFF"), then if you pause in entering a switch sequence for longer than the Reset Delay, the unfinished switch sequence will be canceled and any red and green highlighting will disappear. When you are ready to resume typing, press either switch and the red and green highlighting will be restored to the keys so that you can start a new switch sequence and type the next key. 
+
+
+SETTING NAME: Stuck Switch Timeout
+NEW SETTING NAME:
+INFO PROMPT: In case the system fails to detect when a switch is released, this is the number of seconds that the system will wait until deciding to treat what seems to be a continuously closed switch as a "stuck switch" and just ignore it. This prevents "runaway input" if a switch malfunctions or is accidentally held closed. Set this time higher if it triggers when you are intentionally holding a switch for long periods.
+
+
+========================================================================
+PAGE NAME: Touch Screen Switch
+NEW PAGE NAME: Set up Touchscreen Switch
+========================================================================
+>>>  THIS PAGE STARTS WITH AN EXPLANATORY INFO PROMPT. THE TEXT OF THIS PROMPT SHOULD BE CORRECTED AS FOLLOWS.  NOTE ALSO THAT THE ILLUSTRATION THAT IS SHOWN HERE NEEDS TO BE CORRECTED TO SHOW THAT THE GREEN SWITCH IS ON THE LEFT AND THE RED SWITCH IS ON THE RIGHT.  <<< 
+
+SECTION NAME:  How Touch Screen Switch Works 
+NEW SECTION NAME:  How Touchscreen Switch Works
+INFO PROMPT: 
+
+Touchscreen Switch allows you to use the lower portion of the screen as a switch input.  When used with Single-Switch Scanning, the entire width of the display is used for a single switch that can be tapped anywhere in the green area shown.  When used with Two-Switch Selection, the left half of the display is used for the Green switch, and the right half is used for the Red switch: 
+
+___________________________________  ___________________________________
+|              LEFT               |  |              RIGHT              |  
+|        (Switch 1 / Green)       |  |         (Switch 2 / Red)        |  
+___________________________________  ___________________________________
+
+
+SECTION NAME:  Settings 
+NEW SECTION NAME:  Touchscreen Settings
+
+>>> NOTE: The two modes for "Touchscreen Switch Mode" should be named "Single-Switch" and "Two-Switch".  <<<
+
+SETTING NAME: Switch Mode [MISSING]
+NEW SETTING NAME: Touchscreen Switch Mode
+INFO PROMPT: To create a single switch, choose Single-Switch (a single, green on-screen touch area is defined at the bottom of the touchscreen, extending across the entire width of the screen).  This switch can be used for Single-Switch Scanning or as a Selection Switch for Head-Tracking or Joystick input.  To create two separate switches, choose Two-Switch (two adjacent on-screen touch areas are defined at the bottom of the touchscreen, extending across the entire width of the screen, split into left and right halves that function as the Green and Red switches for Two-Switch Selection).
+
+>>> NOTE: "Touchscreen Switch Height" is a new setting that needs to be added. <<<  
+
+SETTING NAME: [NEW SETTING] 
+NEW SETTING NAME: Touchscreen Switch Height
+INFO PROMPT: The Touchscreen Switch is always placed at the bottom of the screen to make it easy to activate the switch(es) without unintentionally activating something else on the screen.  It also occupies the entire width of the screen.  This setting lets you define how tall the touchscreen switch area is.  The height is set relative to the height of each row of keys on the JustType keyboard, so setting the height to 1 makes it as tall as the bottom row of the keyboard, and 3 makes it as tall as all three rows.  You can set it to anything from 0.5 to 4.0, using decimal values to get exactly the height that works best.   
+
+
+SETTING NAME: Flash on Select
+NEW SETTING NAME: Flash Switch Bar on Activation
+INFO PROMPT: When ON, the touchscreen switch area briefly flashes when tapped, providing visual confirmation that the touch was registered and the switch was activated.
+
+SETTING NAME: Beep on Select
+NEW SETTING NAME: Beep on Switch Activation
+INFO PROMPT: When ON, a short beep sounds when the touchscreen switch area is tapped, providing auditory confirmation that the touch was registered and the switch was activated.
+
+SETTING NAME: Touch Debounce / Cooldown
+NEW SETTING NAME: Ignore Rapid Switch Hits (Debounce) 
+INFO PROMPT: This setting enables the system to ignore rapid repeated switch activations within a short time window. Increase this time if your device registers double-taps or multiple presses when you are simply trying to do a single closure of the switch. The default is 120 ms.  
+
+>>> THE FOLLOWING "Overlay Mode" is a new setting.  Implement these settings elements even though the feature itself is yet to be implemented in the code.  <<<
+
+SETTING NAME: Overlay Mode
+NEW SETTING NAME:
+INFO PROMPT: When Overlay Mode is ON, the Touchscreen Switches do not take up any screen space, they are shown as a translucent overlay,  beneath which the entire screen is still visible. The JustType Keyboard appears in its usual place at the bottom of the screen. The touchscreen switches still capture all touch events in the area occupied by the switch overlay, so whatever is beneath the touchscreen switch area can be seen but will not respond to touches (which are captured by the Overlay switch area). Even if you do not intentionally turn Overlay Mode ON, it will be automatically turned ON if the height of the combined touchscreen switches and JustType keyboard area (including the Key History display, if shown) extends higher than two-thirds of the total available screen height. 
+
+>>> NEED TO CONFIRM THE OPERATION AND DEFINITION OF THE FOLLOWING:  <<<
+
+SETTING NAME: Overlay Timeout
+NEW SETTING NAME: Overlay Mode Display Timeout
+INFO PROMPT: The number of seconds that the Touchscreen Switch overlay remains visible after being displayed when no switch activations are received. The overlay shows the Touchscreen Switch areas on screen. After the timeout, it becomes fully transparent do the switch areas are no longer visible, but the Touchscreen Switch will still remain active.
+
+
+
+========================================================================
+PAGE: Direct Selection
+========================================================================
+
+SETTING NAME: Touch Debounce / Cooldown
+NEW SETTING NAME: Ignore Rapid Key Hits (Debounce) 
+INFO PROMPT: This setting enables the system to ignore rapid repeated key activations within a short time window. Increase this time if your device registers double-taps or multiple presses on a key when you are simply trying to tap it once. The default is 120 ms.  
+
+
+========================================================================
+PAGE: Directional Selection
+========================================================================
+
+SETTING NAME: Swipe Debounce / Cooldown
+NEW SETTING NAME: Ignore Rapid Screen Swipes (Debounce) 
+INFO PROMPT: This setting enables the system to ignore rapid repeated screen swipes within a short time window. Increase this time if a single swipe gesture is registering as multiple inputs. The default is 120 ms.
+
+SETTING NAME: Swipe Sensitivity
+NEW SETTING NAME: Swipe Sensitivity (Minimum Swipe Length)
+INFO PROMPT: The minimum distance that a screen swipe is required to cover in order to register as a swipe. Decrease to make swipes easier to trigger with smaller movements; increase to prevent accidental swipes.  This value is set by adjusting the slider setting so that the length of the slider setting on the screen matches to the desired minimum swipe length.  
+
+
+========================================================================
+PAGE: Vocabulary Management
+========================================================================
+
+NOTE (Phase 3C-B): The Vocabulary Management page now contains four sections, in order:
+  1. "--- Next-Letter Hints ---"
+       SETTING: Enable Standard Next-Letter Hints (moved from JustType Settings)
+       SETTING: Enable Accented Next-Letter Hints (was the old section heading on its own)
+  2. "--- Select Active Vocabularies ---" (NEW SECTION)
+       Inlines the multi-row table that used to live on the Select Active
+       Vocabularies page. Each row covers one of the standard modules
+       (JustType Main Database / Custom User Words / Abbreviations & Phrases /
+       Past Vocabularies) plus any imported custom Vocabulary Modules.
+  3. "--- Manage Imported Vocabulary Module Words ---" (NEW SECTION)
+       SETTING: Promote Words from Active Imported Vocabularies (moved from
+                 Select Active Vocabularies page)
+       SETTING: Turn OFF Accented Hints for Vocabulary Words Spelled More
+                 Than ___ Times (moved here from the Next-Letter Hints
+                 section so it sits with the other Imported-Vocab settings)
+  4. "--- Manage JustType Database Words ---" (renamed from "--- Limit
+       Uncommon Words ---") — settings unchanged.
+The "Manage Vocabularies" link button at the bottom is the only navigation
+off this page; the former "Select Active Vocabularies" button is removed
+because the table is now inline above.
+
+REMOVE INDENTED SECTIONS:
+--- Vocabulary Sources ---
+
+SETTING NAME: Include JustType Dictionary
+NEW SETTING NAME:
+INFO PROMPT: When ON, the words contained in the built-in JustType word dictionary are included in the words that JustType can spell. Turn this OFF only if you want to limit the words that can be generated to only those contained in selected vocabulary lists (and/or Custom Words).
+
+SETTING NAME: Include Custom Words
+NEW SETTING NAME:
+INFO PROMPT: When ON, the words that you have added manually (via the Add New Word function on the Navigation page) are included in the words that JustType can spell.
+
+SETTING NAME: Include Phrases
+NEW SETTING NAME: Include Abbreviation/Phrase Pairs
+INFO PROMPT: When ON, the Selection List will also include multi-word abbreviation/phrase pairs that you have added manually to the dictionary (via the Add New Phrase function on the Navigation page) when you type the associated abbreviation.
+
+SECTION NAME:  --- Frequency Filter ---
+NEW SECTION NAME:  --- Manage JustType Database Words ---
+
+SETTING NAME: Enable Frequency Filter
+NEW SETTING NAME: Restrict Uncommon Words
+INFO PROMPT: When ON, the following features are enabled to restrict the words that JustType displays or generates to words that are more common. 
+
+SETTING NAME: Min Freq (Next Letter)
+NEW SETTING NAME: Limit Next-Letter Hints to Common Words
+INFO PROMPT: When ON, next-letter hints are no longer shown for words below a minimum frequency threshold. Higher values show hints only for more-common words, reducing clutter so that the hints shown will stand out more.
+
+SETTING NAME: Min Freq (Selection)
+NEW SETTING NAME: Minimum Frequency for Words Allowed in Selection List (List Cutoff)
+INFO PROMPT: When ON, JustType database words below a minimum frequency threshold are excluded from the Selection List. This can be useful to limit the number of rare or obscure words that show up in the Selection List in order to emphasize more-often-used vocabulary, or to restrict the list to more common words when learning how to spell.
+
+SETTING NAME: Show Excluded at End
+NEW SETTING NAME: Add Restricted Words to End of List
+INFO PROMPT: When ON, words that were filtered out by the frequency filter are still shown at the end of the selection list (after all qualifying words). This allows you to still access less common words, but without having them clutter the top of the list.
+
+SECTION NAME:  --- Accented Next-Letter Prediction ---
+NEW SECTION NAME:  --- Next-Letter Hints ---
+NOTE: This section now contains both "Enable Standard Next-Letter Hints" (moved from "JustType Settings") and "Enable Accented Next-Letter Hints" so the two related toggles sit together.
+
+SETTING NAME: Enable Accent Module
+NEW SETTING NAME: Enable Accented Next-Letter Hints
+INFO PROMPT: When ON, this enables JustType to show a second type of "Accented" Next-Letter Hints for selected groups of words. (Next-Letter Hints are described in the "JustType Display" settings.) "Accented" Next-Letter Hints are displayed by showing a letter on a key in a bold, DARK RED font so that they stand out from "ordinary" Next-Letter Hints.  The following settings enable you define the specific groups of words that will be displayed with Accented Next-Letter Hints so that they naturally draw attention when typing with JustType.  When someone is trying to learn new vocabulary, this can help by making the Next-Letter Hints for those words really stand out.  
+
+ALWAYS-ON INFO PROMPT: Total active word shown with Accented Hints: ___ (Calculated number is shown)
+
+>>> REQUIRED CODE FIX: The current code shows this feature as "Disabled" when it is set to its maximum value on the slider.  This logic should be corrected to show it as "Disabled" when it is set to 0 (the minimum slider value), and as enabled when set to a non-zero value.  Simultaneously re-structure the slider to have a range from 0 (disabled) up through a valid range of 1 - 20 (max value).  <<<
+
+SETTING NAME: Show Accented Prediction for Vocabulary Words Spelled Less Than ___ Times
+NEW SETTING NAME: Turn OFF Accented Hints for Vocabulary Words Spelled More Than ___ Times
+INFO PROMPT:  The fewer the number of words shown with Accented Hints, the more the Accented Hints will stand out. The purpose of this setting is to help keep Accented Hints as effective as possible by turning it off for words that someone already "knows."  JustType keeps track of how many times a word has been spelled by typing it in with JustType.  This setting assumes that the spelling of that word is likely already "known" once that word has been typed in a certain number of times.  If that is true, Accented Hints would no longer be needed for that word.  This setting lets you choose a number "N" where once a word has been spelled "N times" then Accented Hints are turned off for that word.  If N is set to 0, this feature is disabled, meaning that Accented Hints will still be shown for all words in selected vocabularies, no matter how many times they have been spelled.   
+
+>>> REMOVE the following Table on the Vocabulary Management page that has three rows: 
+
+SECTION NAME:  --- Main Vocabulary Modules ---
+NEW SECTION NAME:  
+
+JustType Database Words
+Custom Words
+Abbreviated Phrases
+
+With five columns: Module Name / Active Word Count / Enable Module (checkbox) / Show Accented Prediction (checkbox) / Accented Word Count 
+
+THIS TABLE is ALREADY INCLUDED in the Table at the top of the Select Active Vocabularies page,  so it can be REMOVED from the Vocabulary Management page.  <<<
+
+SECTION NAME:  --- Filter Main JustType Database Words by Frequency ---
+NEW SECTION NAME:  --- Limit Main JustType Database Words by Frequency ---
+
+SETTING NAME: Enable Frequency Filtering 
+NEW SETTING NAME: Enable Limit-by-Frequency Filtering 
+INFO PROMPT: If Limit-by-Frequency Filtering is turned OFF, then ALL of the Main JustType Database Words, including Custom Words and Abbreviated Phrases, are included when typing with JustType, and the following features are disabled. 
+
+SETTING NAME: Minimum Frequency to Include Word
+NEW SETTING NAME: Minimum Frequency to Include Word
+INFO PROMPT: When set to 0, this feature is OFF (disabled).  When set to a frequency class from 1 to 14, only higher frequency words will be included in the Selection List. This is useful for reducing the number of rare or obscure words that are shown in order to keep the Selection List focused on more-often-used vocabulary, or even for restricting the list to very common words for someone working on literacy skills.  Setting this to higher numbers (higher word frequencies) will reduce the total number of "active" words (words that can be spelled with JustType).  This number is shown in the table on the Select Active Vocabularies page.  
+
+SETTING NAME: Display excluded words at end of list
+NEW SETTING NAME: Display Excluded Words at End of List
+INFO PROMPT: When "Minimum Frequency to Include Word" is set to a number (frequency class) greater than 0, then lower-frequency words are excluded from the standard Selection List.  But when "Display Excluded Words at End of List" is turned ON, those excluded words are added to the end of the Selection List, but only after all of the more common words that were NOT excluded.  
+
+SECTION NAME:  [NO SECTION NAME]
+NEW SECTION NAME:  --- Limit Accented Hints for Main JustType Words by Frequency ---
+
+SETTING NAME: Minimum Frequency for Accented Prediction
+NEW SETTING NAME: Minimum Frequency to Show Accented Hints for JustType Words
+INFO PROMPT: When set to a value above the maximum frequency class (slider all the way to the right), this feature is OFF.  When set to a frequency class, Accented Hints will be shown ONLY for Main Database words that are at least that frequent (or higher).  
+
+SETTING NAME: Maximum Frequency for Accented Prediction
+NEW SETTING NAME: Maximum Frequency to Show Accented Hints for JustType Words
+INFO PROMPT: When set to 0, this feature is OFF (disabled).  When set to a higher frequency class (a number from 1 to 14), only lower-frequency words will be displayed with Accented Hints when typed.  Combining this with the "Minimum Frequency for Accented Hints" allows you to limit Accented Hints first to very common words, and then as those are learned, limit Accented Hints to limited groups of lower frequency words (even just one frequency class at a time). The lower the frequency class, the more words it will contain. 
+
+SETTING NAME: Show Accented Prediction for Words Spelled Less Than ___ Times
+NEW SETTING NAME: Turn OFF Accented Hints for JustType Words Spelled More Than ___ Times
+INFO PROMPT:  The fewer the number of words shown with Accented Hints, the more the Accented Hints will stand out. The purpose of this setting is to help keep Accented Hints as effective as possible by turning it off for words that someone already "knows."  JustType keeps track of how many times a word has been spelled by typing it in with JustType.  This setting assumes that the spelling of a word is likely already "known" once that word has been typed in a certain number of times.  If that is true, Accented Hints would no longer be needed for that word.  This setting lets you choose a number "N" where once a word has been spelled "N times" then Accented Hints are turned off for that word.  If N is set to 0, this feature is disabled, meaning that Accented Hints will still be shown for all words in enabled frequency classes, no matter how many times they have been spelled.   
+
+========================================================================
+PAGE: Select Active Vocabularies  [REMOVED in Phase 3C-C]
+========================================================================
+
+NOTE (Phase 3C-B / 3C-C): This page no longer exists. Phase 3C-B moved the
+Active Vocabularies table and the "Promote Words from Active Imported
+Vocabularies" setting onto the Vocabulary Management page (under sections
+"Select Active Vocabularies" and "Manage Imported Vocabulary Module Words"
+respectively). Phase 3C-C moved the "Export Vocabulary Usage" section onto
+the renamed "Import / Export / Merge / Delete Vocabularies" page, where the
+table's new "Export Vocabulary" column drives which rows are exported. The
+SelectActiveVocabulariesActivity and its layout XML have been deleted and
+the manifest entry removed. The page-level information below (column
+headings, system module rows) applies wherever the table now lives (i.e.,
+on Vocabulary Management).
+
+SETTING NAME: Promote Imported Words
+NEW SETTING NAME: Promote Words from Active Imported Vocabularies
+INFO PROMPT: One of the features of JustType is designed to support learning literacy skills.  One way to help with this is to be able to specify specific lists of words so that they JustType can make them easier to enter.  This is done by importing files that contain a list words, and that defines and "Imported Vocabulary" that is identified by the name of the file.  Then any number of these Imported Vocabulary sets can be Enabled (or disabled), both for whether the word shows up when typed and separately, whether Accented Hints are shown when it is typed. Words from the JustType Database (even words not contained in any Imported Vocabulary) can also be Enabled (or disabled).  When "Promote Words from Active Imported Vocabularies" is turned ON, words contained in Imported Vocabulary lists (that are enabled) receive a ranking boost, which makes them appear higher in the Selection List relative to ordinary JustType Main Database Words.
+
+SECTION NAME:  [MISSING - ADD NEW SECTION HEADING]
+NEW SECTION NAME:  --- Select Active Vocabulary Modules ---
+
+INFO PROMPT (for "Select Active Vocabulary Modules" heading): The table below enables you to Enable/Disable each Vocabulary Module in JustType.  These Vocabulary Modules include three types of modules that are always included in JustType ("standard" modules) as well as any custom Imported Vocabularies that have been manually imported.  Each module appears in a separate row, and each has two check-boxes.  
+
+INFO PROMPT CONTINUED (for "Select Active Vocabulary Modules" heading): JustType allows you to have a total of 28 different Imported Vocabularies loaded at one time.  If you get to a point where all 28 slots have been used and you want to import a new Vocabulary, you can free up one of the 28 slots by going to the "Manage Vocabularies" page and either deleting or "merging" one of the existing Imported Vocabularies.  When you "merge" an Imported Vocabulary, the words in that Vocabulary can be merged with either: (1) another existing Imported Vocabulary that you select, or (2) with a special system module called "Past Vocabularies" that can hold as many Imported Vocabularies as you want.  The only limitation is that all of those words will Enabled/Disabled at the same time when you Enable or Disable the "Past Vocabularies" module.
+
+COLUMN HEADING:  Active Word Count
+NEW COLUMN HEADING: 
+INFO PROMPT (for "Active Word Count"): The "Active Word Count" shows the number of words from that module that can be typed with JustType given the current settings (on the Vocabulary Management page) that can limit how many words are active.  Restricting the number of active words can make it easier to enter the words that ARE active.  
+
+COLUMN HEADING:  Date Added
+NEW COLUMN HEADING: 
+INFO PROMPT (for "Date Added"): The shows the date that an Imported Vocabulary was imported.  This may be helpful in managing Imported Vocabularies.  
+
+COLUMN HEADING:  Enable Module
+NEW COLUMN HEADING: 
+INFO PROMPT (for "Enable Module"): Check this box to include the words in the module as words that can be typed with JustType.  If this box is not checked, the words in the module will not appear when you type. 
+
+COLUMN HEADING: Show Accented Prediction
+NEW COLUMN HEADING: Show Accented Hints
+INFO PROMPT (for "Show Accented Hints"): If "Enable Module" is checked for a row, then you can also check "Show Accented Hints" so that JustType will display Accented Hints to make it easier to type words that are in the module.  
+
+COLUMN HEADING:  Accented Word Count
+NEW COLUMN HEADING: 
+INFO PROMPT (for "Accented Word Count"): The "Accented Word Count" shows the number of words from that module that will trigger Accented Hints when they are typed.  This is also determined by other settings (on the Vocabulary Management page) that can limit how many words trigger Accented Hints.  Restricting the number of Accented Hints words can make the Accented Hints that ARE triggered more effective.  
+
+ROW HEADING:  JustType Main Database
+NEW ROW HEADING: 
+INFO PROMPT (for "JustType Main Database"): The "JustType Main Database" is one of the three standard JustType vocabulary modules.  This is the word dictionary containing all the words (in the language that you have selected) that you can spell by using JustType. In the case of English, this includes almost 51,000 words. Turn this OFF only if you want to limit the words that can be generated to only those contained in selected vocabulary lists (and/or Custom Words).  You can also change the settings on the Vocabulary Management page to limit which of these words can be spelled.  
+
+ROW HEADING:  Custom User Words
+NEW ROW HEADING: 
+INFO PROMPT (for "Custom Words"): The "Custom User Words" module is the second of the three standard JustType vocabulary modules.  This module includes all the words that you have added manually (via the Add New Word function on the Navigation page). These would include words such as unusual names that are not in the JustType Main Database.  
+
+ROW HEADING:  Abbreviations/Phrases
+NEW ROW HEADING: 
+INFO PROMPT (for "Abbreviations/Phrases"): The "Abbreviations/Phrases" module contains the multi-word phrases or sentences that you have added manually to the dictionary (via the Add New Phrase function on the Navigation page).  When you use the Add New Phrase function, you also choose an abbreviation that you type to recall the phrase.  For example, you could add the phrase "Call me back later. " with the abbreviation "CMBL", and then recall the phrase by just typing "CMBL". 
+
+ROW HEADING:  (Past Vocabularies)
+NEW ROW HEADING: 
+INFO PROMPT (for "(Past Vocabularies)"): The "(Past Vocabularies)" module is a dedicated module that can be used to accumulate words from all of the past Vocabulary Modules that no longer need to be kept as separate, active modules.  There is a limit of 28 slots for Vocabulary Modules that can be defined at any one time.   When all (or most) of the words in a module have already been learned, you can "recycle" that slot (there is a limit of 28 Vocabulary Modules at any one time) and use it to load a new set of vocabulary words.  The no-longer needed vocabulary can be merged into "(Past Vocabularies)" which can be Enabled to make all of the previously learned words active.  For some, this may be a better option than Enabling the JustType Main Database, which might result in too many words being active at once.  
+
+SECTION NAME:  --- Export Vocabulary Usage ---
+NEW SECTION NAME:  --- Export Usage for Selected Vocabularies ---
+NOTE (Phase 3C-C): This section was moved from the (now-removed) Select
+Active Vocabularies page onto the Manage Vocabularies page (renamed to
+"Import / Export / Merge / Delete Vocabularies"). The set of vocabularies
+being exported is now selected by checking the "Export Vocabulary" column
+on the table on that page (previously it followed the master "Enabled"
+state for each module). Only Past Vocabularies and user-imported
+vocabularies appear in that table — JustType Main Database, Custom Words,
+and Phrases are NOT exportable from this page in the current design (flag
+for a future pass if those need to be added).
+
+INFO PROMPT (for "Export Usage for Selected Vocabularies" heading): You may find it useful to be able to see which words are included in which Vocabulary modules.  The Export feature allows you to select specific Vocabulary Modules and export all of the words they contain to a text file.  The modules that will be exported are all of the modules that have the "Export Vocabulary" column checked on the Manage Vocabularies table above.  You can also limit the words that are exported based on how many times they have actually been used by typing them in with the JustType keyboard.  Note that, for each word exported, the export file will also show how many times that word has been typed.  You can choose to export only those words:
+(1) Never: only words that have never been typed.
+(2) At Least Once: only words that have been typed one or more times.
+(3) At Least ___ Times: only words that have been typed at least the number of times that you select with the slider.
+(4) All Words: all the words in the module(s) will be exported.
+
+Once you have adjusted the settings for what you want to export, push the "Export Usage Data for Active Words in Selected Vocabularies" button.
+
+========================================================================
+PAGE: Export Vocabulary Usage 
+========================================================================
+
+INFO PROMPT (at the top of the "Export Vocabulary Usage" page): First press the "CHOOSE EXPORT FOLDER" button to select (or create) a folder on your device where you want to create the export file.  A name will be automatically generated for the export file based on the module(s) you have selected and the current date and time.  You can edit this name and use whatever name you like.  Once you have selected a folder and specified a name, the "EXPORT USAGE DATA" button can be pressed to create the export file.  
+
+========================================================================
+PAGE: Manage Vocabularies
+========================================================================
+NEW PAGE NAME: Import / Export / Merge / Delete Vocabularies
+NOTE (Phase 3C-C): This page now also hosts the "Export Usage for Selected
+Vocabularies" section (moved from the removed Select Active Vocabularies
+page) and adds an "Export Vocabulary" column to the table to drive which
+rows the export operates on.
+
+INFO PROMPT (at the top of the "Manage Vocabularies" page): This page allows you to do three different things to set up and manage Vocabulary Modules in JustType: 
+(1) Create a new Vocabulary Module by importing all of the words contained in a file.  Note: The "CHOOSE FILE TO IMPORT" button will be grayed out if all 28 Vocabulary Module slots are already used.  If so, you simply need to Merge or Delete an existing Vocabulary Module before creating a new one.  
+(2) Merge two existing Vocabulary Modules into a single module to free up one of the 28 available slots for modules.  Alternatively, any module can be freed up by merging its contents into the dedicated "(Past Vocabularies)" module.  
+(3) Simply Delete the no-longer-needed Vocabulary Module.  Note that this simply frees up the Vocabulary Module slot - the words that it contained will still be present in the database, and can still be typed.  
+
+To create a new Vocabulary Module: 
+(1) Create a plain text file containing the list of words you want to include in the module.  This file can be on your device or in a Google Drive folder that you can access from your device.  By default, the Vocabulary Module will be created with the same name as this text file. 
+(2) Press the "CHOOSE FILE TO IMPORT" button and select the text file you created. 
+(3) The name of the file will be shown as the name that will be used for the module.  If you want, you can edit it to be something different.  
+(4) Press the "IMPORT SELECTED FILE" button to create the new vocabulary module. 
+
+
+INFO PROMPT (next to "Select Vocabularies to Merge, Delete or Export" heading): This section allows you to free up Vocabulary Module slots by either Merging or Deleting existing vocabularies.  
+
+INFO PROMPT (next to the word "Merge" in the "Select Vocabularies to Merge, Delete or Export" heading): 
+To Merge existing modules: 
+(1) Select the target module into which the words will be Merged.  The dedicated "(Past Vocabularies)" module will already be selected by default. You can choose a different custom module if you want. 
+(2) Choose one (or more) Vocabulary Modules to be merged from the list by checking the box in the "Merge From" column. 
+(3) Press the "MERGE SELECTED VOCABULARIES" button.
+
+INFO PROMPT (next to the word "Delete" in the "Select Vocabularies to Merge, Delete or Export" heading): 
+To Delete existing modules: 
+(1) Choose one (or more) Vocabulary Modules to be Deleted from the list by checking the box in the "Delete Vocabulary" column. 
+(3) Press the "DELETE SELECTED VOCABULARIES" button.
+
+
+========================================================================
+PAGE: Backup & Restore 
+========================================================================
+
+INFO PROMPT (shown beneath the "Backup & Restore" heading): 
+You can completely backup JustType, including everything you have added or modified: Vocabulary Modules, Custom Words, Abbreviated Phrases, all of your settings, and all of the modifications that are made to the Main JustType Database to reflect how your individual use of JustType.  All of the data is written to a folder that you select - either on your device or in a Google Drive folder that you can access.  Then later, if you need to, you can use the files saved in the folder to restore JustType, or set JustType up exactly the same way on a different device.  Note: If you are helping more than one individual, setting up JustType on different devices, then at the bottom you can turn �Use Advanced Backup & Restore" ON - otherwise, keep things simple and leave that setting OFF.  
+To create a backup (or update an existing one to reflect additional changes):
+(1) Press the "CREATE BACKUP NOW" button.  If you have alreaady backed up JustType before, this will update that backup to include all the changes that may have happened since the last time JustType was backed up.  You are all done! Steps (2) - (4) only happen the first time you backup.  
+
+(2) If you have not created a backup before, the "CREATE BACKUP NOW" button will take you to a standard Android dialog where you can select the folder to store the backup.  Navigate to the folder and press the "Use this folder" button.  If/when a prompt appears asking for permission to "Allow JustType to access files in JustType backups?", press "Allow". 
+(3) You will return to the previous screen, which will show the selected folder.  In the future, you will also see the date and time of the last backup created in the folder. 
+(4) Press the "CREATE BACKUP NOW" button again to create a complete backup in the selected folder.  This will automatically be the backup that will be used if you later want to restore JustType.  
+
+INFO PROMPT (shown above the "RESTORE FROM BACKUP" button): 
+If something has happened to your device that has, for example, forced you to re-install JustType, you may want to restore your JustType data from a previous back-up.  Please be aware, if you haven't lost your data and you do this, you will lose any changes in your data since the backup was created.  But if you need to restore your data from a previous backup:
+(1) Press the "RESTORE FROM BACKUP" button.  (It will be greyed out if you haven't created a backup yet.) 
+(2) A prompt will pop up, asking "Restore backup? This will overwrite current data.  A restart may be needed to reload data."  As long as you are sure you want to do this, press "RESTORE".  
+
+
+SETTING NAME: Use Advanced Backup & Restore
+NEW SETTING NAME: 
+INFO PROMPT: When you turn "Use Advanced Backup & Restore" ON, you are able to create and load different back-ups of JustType that may be used on different devices.  This can be helpful if, for example, you are a teacher or technical support person, especially since these backups can be created on a shared Google Drive.  This means you can back up someone's device to a shared drive, load that backup into your device and edit it (for example by creating and adding new Vocabulary Modules, Custom Words, Abbreviated Phrases or adjusted Settings), and then save it and reload the edited version from the individual's device. 
+
+If you are just using JustType for yourself, it is probably best to just leave the "Advanced" mode turned OFF.  Then you will always backup to the same location, and if needed, restore from the latest backup.
+
+
+------------------------------------------------------------------------
+>>> The following INFO PROMPTs apply to the Backup & Restore page ONLY when "Use Advanced Backup & Restore" is ON.  In Advanced mode, the page is rearranged: a new "Previous Backups" heading and list appear at the top, the "CHOOSE BACKUP FOLDER" button is replaced by "CHOOSE/CREATE NEW BACKUP FOLDER" at the bottom of the list, and the "CREATE BACKUP NOW" and "RESTORE FROM BACKUP" buttons act on whichever folder is currently selected in the list.  JustType records the location of every backup folder you have used in its backup manifest, so the list is preserved across sessions and across restores. <<<
+------------------------------------------------------------------------
+
+INFO PROMPT (shown beneath the "Backup & Restore" heading when "Use Advanced Backup & Restore" is ON, replacing the simple-mode page-level prompt):
+With "Use Advanced Backup & Restore" ON, you can keep more than one backup of JustType and switch between them.  Each backup lives in its own folder, and JustType remembers all of the folders you have used.  This is helpful, for example, if you are a teacher or technical support person setting up JustType on more than one person's device, or if you want to keep separate backups for different users or different stages of a setup.  The "Previous Backups" list below shows every backup folder JustType has created or used, with the date and time of the most recent backup in each folder.  Pick a folder from the list - or press "CHOOSE/CREATE NEW BACKUP FOLDER" to add a new one - to choose which backup to update or restore from.
+
+INFO PROMPT (shown beneath the "Previous Backups" heading):
+This list shows every backup folder JustType has created or used, sorted with the most recent backup at the top.  Each row shows the folder location, the date and time of the last backup made there, and a checkbox to select that folder as the current target for any backup or restore operation.  The most recent backup is selected as the default.  Pressing "CREATE BACKUP NOW" updates the backup in whichever folder is currently selected, and pressing "RESTORE FROM BACKUP" loads JustType with the data from that folder.  When the list is empty (no backup folders have been chosen yet), "CREATE BACKUP NOW" and "RESTORE FROM BACKUP" are both grayed out until you press "CHOOSE/CREATE NEW BACKUP FOLDER" and pick a folder.
+
+INFO PROMPT (shown above the "CHOOSE/CREATE NEW BACKUP FOLDER" button):
+Press this button to pick a folder for a new backup, or to add an existing folder that JustType has not used before.  This will take you to a standard Android dialog where you can navigate to the folder and press "Use this folder".  If/when a prompt appears asking for permission to "Allow JustType to access files in JustType backups?", press "Allow".  The folder you chose is then added to the "Previous Backups" list and selected as the current target.  Press "CREATE BACKUP NOW" to put a fresh backup into the new folder.  Any earlier backups in other folders are preserved exactly as they were.  This button is always available, so you can add another folder at any time.
+
+INFO PROMPT (shown above the "CREATE BACKUP NOW" button when "Use Advanced Backup & Restore" is ON, replacing the simple-mode prompt):
+Press this button to update the backup in the folder currently selected in the "Previous Backups" list.  All of your current data - Vocabulary Modules, Custom Words, Abbreviated Phrases, settings, and all of the modifications that reflect how you individually use JustType - is written to that folder, replacing whatever was there before.  Other backups in other folders are not touched.  This button is grayed out until a folder is selected in the list; the list is empty until you press "CHOOSE/CREATE NEW BACKUP FOLDER" for the first time.
+
+INFO PROMPT (shown above the "RESTORE FROM BACKUP" button when "Use Advanced Backup & Restore" is ON, replacing the simple-mode prompt):
+Press this button to load JustType with the data from the backup folder currently selected in the "Previous Backups" list.  A prompt will pop up, asking "Restore backup? This will overwrite current data.  A restart may be needed to reload data."  As long as you are sure you want to do this, press "RESTORE".  This button is grayed out until a folder containing a completed backup is selected - a folder you have just added with "CHOOSE/CREATE NEW BACKUP FOLDER" but have not yet backed up to will not enable Restore.
+

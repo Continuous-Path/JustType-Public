@@ -1,0 +1,560 @@
+[
+    {
+        "layout": "optimized",
+        "keys": [
+            1,
+            5,
+            0
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "the",
+            "they",
+            "there"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            1
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "to",
+            "the",
+            "they",
+            "this",
+            "that",
+            "there"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            1,
+            5
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "to",
+            "the",
+            "they",
+            "this",
+            "that",
+            "there"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            4,
+            4,
+            5
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "and"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            3,
+            5,
+            3
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "you",
+            "your"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            2,
+            2
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "is",
+            "with"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            2,
+            4,
+            2
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "was",
+            "said"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            5,
+            4
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "on",
+            "one",
+            "had",
+            "have"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            2,
+            5,
+            2,
+            3,
+            5
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "which"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            1,
+            5,
+            0
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": 4,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 0,
+            "minFreqMask": 1,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "the",
+            "they"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            1,
+            5,
+            0
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": 4,
+            "includeExcludedAtEnd": true,
+            "anyFreqMask": 0,
+            "minFreqMask": 1,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "the",
+            "they",
+            "there"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            1
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 3,
+            "searchExpansionDepth": 0,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "to",
+            "the",
+            "they",
+            "this",
+            "that"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            1
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 2
+        },
+        "expected": [
+            "to",
+            "the"
+        ],
+        "termination": "MEN"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            0,
+            0,
+            5
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 2,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "zed"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            0,
+            0,
+            5
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 11,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "zed"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "optimized",
+        "keys": [
+            0,
+            0,
+            5
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [],
+        "termination": "BOT"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            3,
+            2,
+            2
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "the",
+            "she",
+            "they",
+            "there"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            3
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "to",
+            "the",
+            "she",
+            "use",
+            "said",
+            "that",
+            "they",
+            "this",
+            "there"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            0,
+            1,
+            0
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "and"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            5,
+            1,
+            3
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "you",
+            "your"
+        ],
+        "termination": "MAXD"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            4,
+            3
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "is",
+            "it"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            5,
+            0,
+            3
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "was"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            5,
+            2,
+            4,
+            0,
+            2
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 1,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "which"
+        ],
+        "termination": "BOT"
+    },
+    {
+        "layout": "alphabetical",
+        "keys": [
+            5,
+            2,
+            0
+        ],
+        "params": {
+            "maxWordCompleteEntries": 100,
+            "minFreqClass": null,
+            "includeExcludedAtEnd": false,
+            "anyFreqMask": 11,
+            "minFreqMask": 0,
+            "baseSearchDepth": 8,
+            "searchExpansionDepth": 7,
+            "maxExaminedNodes": 5000
+        },
+        "expected": [
+            "zed",
+            "what"
+        ],
+        "termination": "MAXD"
+    }
+]

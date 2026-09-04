@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="56dp"
+    android:viewportWidth="64"
+    android:viewportHeight="56">
+
+    <!-- Soft word silhouettes. -->
+    <path android:fillColor="#20242B" android:fillAlpha="0.18"
+        android:pathData="M7.5,4 H25.5 A5.5,5.5 0,0 1,31,9.5 A5.5,5.5 0,0 1,25.5,15 H7.5 A5.5,5.5 0,0 1,2,9.5 A5.5,5.5 0,0 1,7.5,4 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.18"
+        android:pathData="M39.5,4 H51.5 A5.5,5.5 0,0 1,57,9.5 A5.5,5.5 0,0 1,51.5,15 H39.5 A5.5,5.5 0,0 1,34,9.5 A5.5,5.5 0,0 1,39.5,4 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.18"
+        android:pathData="M7.5,22.5 H19.5 A5.5,5.5 0,0 1,25,28 A5.5,5.5 0,0 1,19.5,33.5 H7.5 A5.5,5.5 0,0 1,2,28 A5.5,5.5 0,0 1,7.5,22.5 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.18"
+        android:pathData="M39.5,22.5 H56.5 A5.5,5.5 0,0 1,62,28 A5.5,5.5 0,0 1,56.5,33.5 H39.5 A5.5,5.5 0,0 1,34,28 A5.5,5.5 0,0 1,39.5,22.5 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.18"
+        android:pathData="M7.5,41 H23.5 A5.5,5.5 0,0 1,29,46.5 A5.5,5.5 0,0 1,23.5,52 H7.5 A5.5,5.5 0,0 1,2,46.5 A5.5,5.5 0,0 1,7.5,41 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.18"
+        android:pathData="M39.5,41 H49.5 A5.5,5.5 0,0 1,55,46.5 A5.5,5.5 0,0 1,49.5,52 H39.5 A5.5,5.5 0,0 1,34,46.5 A5.5,5.5 0,0 1,39.5,41 Z" />
+
+    <!-- Dark rounded word cores. -->
+    <path android:fillColor="#20242B" android:fillAlpha="0.88"
+        android:pathData="M7,6.5 H26 A3,3 0,0 1,29,9.5 A3,3 0,0 1,26,12.5 H7 A3,3 0,0 1,4,9.5 A3,3 0,0 1,7,6.5 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.88"
+        android:pathData="M39,6.5 H52 A3,3 0,0 1,55,9.5 A3,3 0,0 1,52,12.5 H39 A3,3 0,0 1,36,9.5 A3,3 0,0 1,39,6.5 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.88"
+        android:pathData="M7,25 H20 A3,3 0,0 1,23,28 A3,3 0,0 1,20,31 H7 A3,3 0,0 1,4,28 A3,3 0,0 1,7,25 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.88"
+        android:pathData="M39,25 H57 A3,3 0,0 1,60,28 A3,3 0,0 1,57,31 H39 A3,3 0,0 1,36,28 A3,3 0,0 1,39,25 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.88"
+        android:pathData="M7,43.5 H24 A3,3 0,0 1,27,46.5 A3,3 0,0 1,24,49.5 H7 A3,3 0,0 1,4,46.5 A3,3 0,0 1,7,43.5 Z" />
+    <path android:fillColor="#20242B" android:fillAlpha="0.88"
+        android:pathData="M39,43.5 H50 A3,3 0,0 1,53,46.5 A3,3 0,0 1,50,49.5 H39 A3,3 0,0 1,36,46.5 A3,3 0,0 1,39,43.5 Z" />
+
+    <!-- Subtle gaps suggest low-detail letter shapes. -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.18"
+        android:pathData="M11,6.5 H13 V12.5 H11 Z M22,6.5 H23.5 V12.5 H22 Z M42,6.5 H43.5 V12.5 H42 Z M9,25 H10.5 V31 H9 Z M43,25 H45 V31 H43 Z M53,25 H54.5 V31 H53 Z M12,43.5 H14 V49.5 H12 Z M20,43.5 H21.5 V49.5 H20 Z M42,43.5 H43.5 V49.5 H42 Z" />
+</vector>

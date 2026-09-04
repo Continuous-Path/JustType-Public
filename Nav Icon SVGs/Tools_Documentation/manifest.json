@@ -1,0 +1,166 @@
+[
+  {
+    "label": "Android Home",
+    "file": "svg/ic_nav_android_home.svg"
+  },
+  {
+    "label": "Android Back",
+    "file": "svg/ic_nav_android_back.svg"
+  },
+  {
+    "label": "Android App Switcher",
+    "file": "svg/ic_nav_android_app_switcher.svg"
+  },
+  {
+    "label": "Single Tap",
+    "file": "svg/ic_nav_tap.svg"
+  },
+  {
+    "label": "Double Tap",
+    "file": "svg/ic_nav_double_tap.svg"
+  },
+  {
+    "label": "Tap and Hold",
+    "file": "svg/ic_nav_long_press.svg"
+  },
+  {
+    "label": "Layer 1 to 2",
+    "file": "svg/ic_nav_layer_1_to_2.svg"
+  },
+  {
+    "label": "Layer 2 to 1",
+    "file": "svg/ic_nav_layer_2_to_1.svg"
+  },
+  {
+    "label": "Back to Nav 1",
+    "file": "svg/ic_nav_return_to_layer_1.svg"
+  },
+  {
+    "label": "Back to Nav 2",
+    "file": "svg/ic_nav_return_to_layer_2.svg"
+  },
+  {
+    "label": "Longer Path",
+    "file": "svg/ic_nav_path_longer.svg"
+  },
+  {
+    "label": "Shorter Path",
+    "file": "svg/ic_nav_path_shorter.svg"
+  },
+  {
+    "label": "Move Keyboard Mode",
+    "file": "svg/ic_nav_mode_move_keyboard.svg"
+  },
+  {
+    "label": "Scroll Mode",
+    "file": "svg/ic_nav_mode_scroll.svg"
+  },
+  {
+    "label": "Drag Mode",
+    "file": "svg/ic_nav_mode_drag.svg"
+  },
+  {
+    "label": "Navigate Up",
+    "file": "svg/ic_nav_focus_up.svg"
+  },
+  {
+    "label": "Navigate Left",
+    "file": "svg/ic_nav_focus_left.svg"
+  },
+  {
+    "label": "Navigate Right",
+    "file": "svg/ic_nav_focus_right.svg"
+  },
+  {
+    "label": "Navigate Down",
+    "file": "svg/ic_nav_focus_down.svg"
+  },
+  {
+    "label": "Navigate Up Left",
+    "file": "svg/ic_nav_focus_up_left.svg"
+  },
+  {
+    "label": "Navigate Up Right",
+    "file": "svg/ic_nav_focus_up_right.svg"
+  },
+  {
+    "label": "Navigate Down Left",
+    "file": "svg/ic_nav_focus_down_left.svg"
+  },
+  {
+    "label": "Navigate Down Right",
+    "file": "svg/ic_nav_focus_down_right.svg"
+  },
+  {
+    "label": "Move Keyboard Up Left",
+    "file": "svg/ic_nav_keyboard_move_up_left.svg"
+  },
+  {
+    "label": "Move Keyboard Up",
+    "file": "svg/ic_nav_keyboard_move_up.svg"
+  },
+  {
+    "label": "Move Keyboard Up Right",
+    "file": "svg/ic_nav_keyboard_move_up_right.svg"
+  },
+  {
+    "label": "Move Keyboard Left",
+    "file": "svg/ic_nav_keyboard_move_left.svg"
+  },
+  {
+    "label": "Move Keyboard Right",
+    "file": "svg/ic_nav_keyboard_move_right.svg"
+  },
+  {
+    "label": "Move Keyboard Down Left",
+    "file": "svg/ic_nav_keyboard_move_down_left.svg"
+  },
+  {
+    "label": "Move Keyboard Down",
+    "file": "svg/ic_nav_keyboard_move_down.svg"
+  },
+  {
+    "label": "Move Keyboard Down Right",
+    "file": "svg/ic_nav_keyboard_move_down_right.svg"
+  },
+  {
+    "label": "Scroll Up",
+    "file": "svg/ic_nav_scroll_up.svg"
+  },
+  {
+    "label": "Scroll Left",
+    "file": "svg/ic_nav_scroll_left.svg"
+  },
+  {
+    "label": "Scroll Right",
+    "file": "svg/ic_nav_scroll_right.svg"
+  },
+  {
+    "label": "Scroll Down",
+    "file": "svg/ic_nav_scroll_down.svg"
+  },
+  {
+    "label": "Pick Up",
+    "file": "svg/ic_nav_drag_select.svg"
+  },
+  {
+    "label": "Drag Up",
+    "file": "svg/ic_nav_drag_up.svg"
+  },
+  {
+    "label": "Drag Left",
+    "file": "svg/ic_nav_drag_left.svg"
+  },
+  {
+    "label": "Drag Right",
+    "file": "svg/ic_nav_drag_right.svg"
+  },
+  {
+    "label": "Drag Down",
+    "file": "svg/ic_nav_drag_down.svg"
+  },
+  {
+    "label": "Drop",
+    "file": "svg/ic_nav_drop.svg"
+  }
+]

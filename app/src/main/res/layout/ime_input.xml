@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IME Input Layout - Root container for all keyboard layouts -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- JT Layout key history region (shown when enabled) -->
+    <include layout="@layout/include_key_history_jt" />
+
+    <!-- Phrase/abbreviation overlay (IME-managed, hidden by default) -->
+    <include layout="@layout/include_phrase_overlay" />
+
+    <!-- Settings overlay (keyboard-navigable settings panel, hidden by default) -->
+    <include layout="@layout/include_settings_overlay" />
+
+    <!-- JT Layout - 3x3 grid with selection list -->
+    <include layout="@layout/include_jt_layout" />
+
+    <!-- Scan Layout key history region -->
+    <include layout="@layout/include_key_history_scan" />
+
+    <!-- Scan Layout - Center preview, selection columns, and scan buttons -->
+    <include layout="@layout/include_scan_layout" />
+
+    <!-- Switch bar (single green or green/red) - shown when touch screen switch is active -->
+    <FrameLayout
+        android:id="@+id/switchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:background="@color/keyboard_background"
+        android:visibility="gone" />
+
+</LinearLayout>

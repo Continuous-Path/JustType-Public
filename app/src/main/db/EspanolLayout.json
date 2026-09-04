@@ -1,0 +1,387 @@
+{
+ "formatVersion": 1,
+ "language": "espanol",
+ "keyCount": 6,
+ "lettersPerKey": [
+  "pazd12345_#/-@+",
+  "qñlcok",
+  "igwés67890.",
+  "túyríó",
+  "unmáh",
+  "febvjx"
+ ],
+ "grids": [
+  [
+   "15_",
+   "",
+   "#/-\n@+",
+   "p",
+   "",
+   "a",
+   "z",
+   "",
+   "d"
+  ],
+  [
+   "q",
+   "",
+   "ñ",
+   "l",
+   "",
+   "c",
+   "o",
+   "",
+   "k"
+  ],
+  [
+   "i",
+   "",
+   "g",
+   "60.",
+   "",
+   "w",
+   "é",
+   "",
+   "s"
+  ],
+  [
+   "t",
+   "",
+   "ú",
+   "y",
+   "",
+   "r",
+   "í",
+   "",
+   "ó"
+  ],
+  [
+   "u",
+   "",
+   "n",
+   "m",
+   "",
+   "á",
+   "h",
+   "",
+   ""
+  ],
+  [
+   "f",
+   "",
+   "e",
+   "b",
+   "",
+   "v",
+   "j",
+   "",
+   "x"
+  ]
+ ],
+ "functionKeys": {
+  "symbols": 2,
+  "functions": 4,
+  "navigation": 5
+ },
+ "alpha": {
+  "lettersPerKey": [
+   "abcd.",
+   "nopq",
+   "efgh",
+   "rstu",
+   "ijklm",
+   "vwxyz"
+  ],
+  "grids": [
+   [
+    "a",
+    "",
+    "b",
+    "",
+    "",
+    "c",
+    "d",
+    "",
+    "."
+   ],
+   [
+    "n",
+    "",
+    "o",
+    "",
+    "",
+    "",
+    "p",
+    "",
+    "q"
+   ],
+   [
+    "e",
+    "",
+    "f",
+    "",
+    "",
+    "",
+    "g",
+    "",
+    "h"
+   ],
+   [
+    "r",
+    "",
+    "s",
+    "",
+    "",
+    "",
+    "t",
+    "",
+    "u"
+   ],
+   [
+    "i",
+    "",
+    "j",
+    "",
+    "",
+    "k",
+    "l",
+    "",
+    "m"
+   ],
+   [
+    "v",
+    "",
+    "w",
+    "",
+    "",
+    "x",
+    "y",
+    "",
+    "z"
+   ]
+  ]
+ },
+ "fold": {
+  "ü": "u"
+ },
+ "spellMode": {
+  "keys": [
+   {
+    "keyNum": 0,
+    "level2": [
+     {
+      "char": "p",
+      "cell": 3
+     },
+     {
+      "char": "a",
+      "cell": 5
+     },
+     {
+      "char": "z",
+      "cell": 6
+     },
+     {
+      "char": "d",
+      "cell": 8
+     }
+    ],
+    "overflow": []
+   },
+   {
+    "keyNum": 1,
+    "level2": [
+     {
+      "char": "q",
+      "cell": 0
+     },
+     {
+      "char": "ñ",
+      "cell": 2
+     },
+     {
+      "char": "l",
+      "cell": 3
+     },
+     {
+      "char": "c",
+      "cell": 5
+     },
+     {
+      "char": "o",
+      "cell": 6
+     },
+     {
+      "char": "k",
+      "cell": 8
+     }
+    ],
+    "overflow": []
+   },
+   {
+    "keyNum": 2,
+    "level2": [
+     {
+      "char": "i",
+      "cell": 0
+     },
+     {
+      "char": "g",
+      "cell": 2
+     },
+     {
+      "char": "w",
+      "cell": 5
+     },
+     {
+      "char": "é",
+      "cell": 6
+     },
+     {
+      "char": "s",
+      "cell": 8
+     }
+    ],
+    "overflow": []
+   },
+   {
+    "keyNum": 3,
+    "level2": [
+     {
+      "char": "t",
+      "cell": 0
+     },
+     {
+      "char": "ú",
+      "cell": 2
+     },
+     {
+      "char": "y",
+      "cell": 3
+     },
+     {
+      "char": "r",
+      "cell": 5
+     },
+     {
+      "char": "í",
+      "cell": 6
+     },
+     {
+      "char": "ó",
+      "cell": 8
+     }
+    ],
+    "overflow": []
+   },
+   {
+    "keyNum": 4,
+    "level2": [
+     {
+      "char": "u",
+      "cell": 0
+     },
+     {
+      "char": "n",
+      "cell": 2
+     },
+     {
+      "char": "m",
+      "cell": 3
+     },
+     {
+      "char": "á",
+      "cell": 5
+     },
+     {
+      "char": "h",
+      "cell": 6
+     }
+    ],
+    "overflow": []
+   },
+   {
+    "keyNum": 5,
+    "level2": [
+     {
+      "char": "f",
+      "cell": 0
+     },
+     {
+      "char": "e",
+      "cell": 2
+     },
+     {
+      "char": "b",
+      "cell": 3
+     },
+     {
+      "char": "v",
+      "cell": 5
+     },
+     {
+      "char": "j",
+      "cell": 6
+     },
+     {
+      "char": "x",
+      "cell": 8
+     }
+    ],
+    "overflow": []
+   }
+  ],
+  "needsReview": false,
+  "slotGroups": [
+   {
+    "keyNum": 0,
+    "cell": 0,
+    "chars": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "_"
+    ],
+    "display": "15_"
+   },
+   {
+    "keyNum": 0,
+    "cell": 2,
+    "chars": [
+     "#",
+     "/",
+     "-",
+     "@",
+     "+"
+    ],
+    "display": "#/-\n@+"
+   },
+   {
+    "keyNum": 2,
+    "cell": 3,
+    "chars": [
+     "6",
+     "7",
+     "8",
+     "9",
+     "0",
+     "."
+    ],
+    "display": "60."
+   }
+  ]
+ },
+ "metric": {
+  "eFullCorpus": 0.041876,
+  "eSearchSubset": 0.027823,
+  "searchCoverage": 0.95,
+  "corpusWords": 195005
+ },
+ "generator": {
+  "tool": "layout-analyzer",
+  "version": "0.1.0",
+  "date": "2026-07-31"
+ }
+}

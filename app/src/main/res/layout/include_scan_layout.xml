@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Scan Layout Container - Center preview, selection columns, and scan buttons -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scanLayoutContainer"
+    android:orientation="vertical"
+    style="@style/KeyboardLayoutContainer"
+    tools:visibility="visible"
+    android:visibility="gone">
+
+    <!-- Center preview and selection list row -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scanTopRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <org.continuouspath.justtype.view.SquareTextView
+            android:id="@+id/centerLabelScan"
+            style="@style/CenterLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_center_label"
+            android:background="@color/keyboard_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/selectionListScanContainer"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <!-- Dynamic column selection list container for scan layout -->
+        <!-- TextViews are created dynamically based on item count and available space -->
+        <LinearLayout
+            android:id="@+id/selectionListScanContainer"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_rectangle_bg"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@id/centerLabelScan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/centerLabelScan"
+            app:layout_constraintBottom_toBottomOf="@id/centerLabelScan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Key rows container -->
+    <LinearLayout
+        android:id="@+id/scanKeysContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp">
+
+        <!-- Large layout rows -->
+        <LinearLayout
+            android:id="@+id/scanLargeRowTop"
+            style="@style/ScanRowContainer" />
+
+        <LinearLayout
+            android:id="@+id/scanLargeRowBottom"
+            style="@style/ScanRowContainer" />
+
+        <!-- Small layout single row -->
+        <LinearLayout
+            android:id="@+id/scanSmallRow"
+            style="@style/ScanRowContainer" />
+
+        <!-- Button pool (keeps single instances of buttons) -->
+        <include layout="@layout/include_scan_button_pool" tools:visibility="invisible" />
+
+    </LinearLayout>
+</LinearLayout>

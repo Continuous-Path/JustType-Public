@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings Overlay - Keyboard-navigable settings panel displayed above the keyboard -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:layout_marginTop="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="#DD212121">
+
+        <!-- Page title header -->
+        <TextView
+            android:id="@+id/settingsOverlayTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/heading_settings"
+            android:textColor="#FFEB3B"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <!-- Auto-revert countdown banner (hidden by default) -->
+        <TextView
+            android:id="@+id/settingsAutoRevertBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#CCFF5722"
+            android:padding="6dp"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Scrollable settings list -->
+        <ScrollView
+            android:id="@+id/settingsOverlayScroll"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#FF333333"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="12dp">
+
+            <LinearLayout
+                android:id="@+id/settingsOverlayList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp" />
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

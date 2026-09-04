@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<application>
+		<!-- Debug-only editor host for the instrumented smoke suite; must live in the
+		     app process so startActivitySync can drive it. -->
+		<!-- Exported so `adb shell am start` can drive it for manual IME probing too. -->
+		<activity
+			android:name=".SmokeTestActivity"
+			android:exported="true"
+			android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+	</application>
+
+</manifest>

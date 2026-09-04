@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Key History for Scan Layout -->
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyHistoryScrollViewScan"
+    style="@style/KeyHistoryScrollView"
+    android:contentDescription="@string/content_desc_key_history">
+
+    <org.continuouspath.justtype.view.KeyHistoryView
+        android:id="@+id/keyHistoryViewScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</HorizontalScrollView>

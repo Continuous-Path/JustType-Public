@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base dimensions for phones -->
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="button_padding">8dp</dimen>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="grid_margin">4dp</dimen>
+    <dimen name="output_text_size">16sp</dimen>
+    <dimen name="ambig_text_size">14sp</dimen>
+    <dimen name="selection_text_size">14sp</dimen>
+</resources>

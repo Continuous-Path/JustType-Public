@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JT Layout Container, landscape — selection list sits in a columns container so
+     the wide right side can hold 2-3 word columns (JTLayoutController manages the
+     extra column views; portrait keeps the single full-width list). -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jtLayoutContainer"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    style="@style/KeyboardLayoutContainer">
+
+    <include layout="@layout/include_jt_key_grid" />
+
+    <LinearLayout
+        android:id="@+id/selectionListJtColumns"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4">
+
+        <org.continuouspath.justtype.view.SelectionListView
+            android:id="@+id/selectionList"
+            style="@style/SelectionList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
