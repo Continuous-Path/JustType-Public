@@ -19,7 +19,7 @@ THIRD-PARTY CODE
 Android Open Source Project — Apache License 2.0
   Copyright (C) The Android Open Source Project
   The directional focus-search algorithm in
-  app/src/main/java/com/justtype/nativeapp/navigation/engine/FocusGeometry.kt
+  app/src/main/java/org/continuouspath/justtype/navigation/engine/FocusGeometry.kt
   is ported from AOSP's FocusFinder (edge-based candidacy, beam preference, and
   the 13·major² + minor² weighted distance), with project-specific additions.
 
