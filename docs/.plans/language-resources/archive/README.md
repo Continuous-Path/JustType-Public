@@ -1,6 +1,12 @@
 # Archive — pre-rebuild English list ("back pocket")
 
-`EnglishWordsRaw.PRE-2026-08.txt.keep` is the English list as it stood before the
+> **2026-09-07:** `EnglishWordsRaw.PRE-2026-08.txt.keep` was removed from this
+> repository. It was reference material only (never a build input — the `.keep`
+> extension keeps it out of the `*WordsRaw.txt` glob) and should not have been in
+> the public snapshot. The private reference copy is retained; this README stays as
+> the record.
+
+`EnglishWordsRaw.PRE-2026-08.txt.keep` was the English list as it stood before the
 2026-08 license-clean rebuild: inherited from the Kivy-era port as `pwl_clean.txt`
 (provenance never recorded, believed to originate from a microbiology-heavy corpus)
 and hand-revised heavily over time.
