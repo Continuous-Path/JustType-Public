@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [react()],
 	build: {
 		emptyOutDir: false,
-		lib: { entry: "src/index.ts", formats: ["es"], fileName: "index" },
+		lib: { entry: "src/index.ts", formats: ["es"], fileName: "index", cssFileName: "style" },
 		rollupOptions: { external: ["react", "react-dom", "react/jsx-runtime"] },
 	},
 	test: { include: ["test/**/*.test.{ts,tsx}"] },
