@@ -8,6 +8,8 @@ import {
 	type SymbolData,
 	localStorageStore,
 } from "../src";
+// The demo build skips the side-effect-free barrel, so load the stylesheet directly.
+import "../src/styles.css";
 
 const METHODS: Record<InputMethod, string> = {
 	direct: "Direct selection — tap keys, or use the numpad / QWE·AD·ZXC. Tap a word in the message to edit it.",
