@@ -2,6 +2,8 @@
 
 JustType's 8-key predictive keyboard as a React component, for AAC web apps (PWAs).
 
+**[▶ Run the demo](https://aulitech.github.io/JustType-Public/)** — opens in your browser, nothing to install.
+
 It is a TypeScript port of the parts of the Android app that do not depend on Android: the
 word-prediction engine, the key pages, the input methods and key feedback. It types into
 **its own message buffer** — a web page cannot act as a system keyboard, so there is no
@@ -60,6 +62,9 @@ attribute them when you ship the data.
 
 Slots are numbered NW, N, NE, W, E, SW, S, SE (0–7). Six slots hold letters; N is
 UnDo/Delete and S is Select.
+
+The keyboard takes half its container's width by default, and its height follows. Set
+`--jt-width` on `.jt` to change that (for example `100%` on a phone).
 
 - Type one key per letter. The top candidate is previewed; **Select** steps down the list.
 - After the first two rows, Select **pages** the rest of the list onto the six letter keys;

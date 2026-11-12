@@ -17,6 +17,7 @@
 		"build:data": "node scripts/build-data.mjs English && node scripts/build-data.mjs Espanol",
 		"dev": "npm run build:data && vite",
 		"build": "npm run build:data && tsc -p tsconfig.build.json && vite build",
+		"build:demo": "npm run build:data && vite build --mode demo",
 		"typecheck": "tsc --noEmit",
 		"test": "npm run build:data && vitest run"
 	},

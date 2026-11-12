@@ -16,10 +16,14 @@
 	--jt-gap: 8px;
 	--jt-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
+	/* Share of the container's width; the height follows, since the key grid is square. */
+	--jt-width: 50%;
+
 	display: flex;
 	flex-direction: column;
 	gap: var(--jt-gap);
 	box-sizing: border-box;
+	width: var(--jt-width);
 	padding: var(--jt-gap);
 	background: var(--jt-bg);
 	color: var(--jt-text);
