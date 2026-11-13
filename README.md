@@ -10,6 +10,11 @@ Mode drives the whole device with the same 8-key grid via an accessibility servi
 JT is **pre-launch** — preparing for its first batch of test users. It is not yet shipping
 to real users.
 
+[`web/justtype-react`](./web/justtype-react/) is a web port of the keyboard: a React component
+for AAC web apps (PWAs), built from the same word lists. It types into its own message
+buffer and cannot act as a system keyboard, so it has no Navigation Mode.
+[Try the demo](https://aulitech.github.io/JustType-Public/).
+
 For project conventions, planning workflow, and AI-agent guidelines, see [AGENTS.md](./AGENTS.md).
 For a deeper architecture tour, see [docs/architecture-cheatsheet.md](./docs/architecture-cheatsheet.md)
 and [docs/InputMethods.md](./docs/InputMethods.md).
@@ -30,6 +35,7 @@ and [docs/InputMethods.md](./docs/InputMethods.md).
 ├── docs/                       Architecture docs, plans (`.plans/`), retrospectives
 ├── jt                          Project gradle wrapper (./jt — flock+cleanup)
 ├── tools/                      Repo scripts (e.g. feature catalog builder)
+├── web/justtype-react/         React port of the keyboard for web apps (npm, not gradle)
 ├── build.gradle                Root build (Spotless config)
 ├── app/build.gradle            App build (Android, detekt, jacoco, English DB task)
 └── gradle/libs.versions.toml   Version catalog

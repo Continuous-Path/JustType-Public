@@ -1,0 +1,348 @@
+/* JustType keyboard. Theme by overriding the --jt-* custom properties on .jt. */
+.jt {
+	--jt-bg: #f4f5f7;
+	--jt-surface: #ffffff;
+	--jt-text: #14171c;
+	--jt-muted: #5c6470;
+	--jt-border: #c3c9d3;
+	--jt-key: #ffffff;
+	--jt-key-fn: #e3e8f0;
+	--jt-accent: #1d5fd1;
+	--jt-accent-text: #ffffff;
+	--jt-highlight: #ffb300;
+	--jt-green: #1f8f4d;
+	--jt-red: #cc3a2f;
+	--jt-radius: 12px;
+	--jt-gap: 8px;
+	--jt-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+	/* Share of the container's width; the height follows, since the key grid is square. */
+	--jt-width: 50%;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--jt-gap);
+	box-sizing: border-box;
+	width: var(--jt-width);
+	padding: var(--jt-gap);
+	background: var(--jt-bg);
+	color: var(--jt-text);
+	font-family: var(--jt-font);
+	container-type: inline-size;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.jt {
+		--jt-bg: #111418;
+		--jt-surface: #1a1f26;
+		--jt-text: #f0f2f5;
+		--jt-muted: #a3acb9;
+		--jt-border: #3a424e;
+		--jt-key: #232a33;
+		--jt-key-fn: #2e3742;
+		--jt-accent: #6ea4ff;
+		--jt-accent-text: #0b1220;
+	}
+}
+
+.jt *,
+.jt *::before,
+.jt *::after {
+	box-sizing: border-box;
+}
+
+.jt-text {
+	min-height: 3.2em;
+	max-height: 9em;
+	overflow-y: auto;
+	padding: 10px 12px;
+	border: 1px solid var(--jt-border);
+	border-radius: var(--jt-radius);
+	background: var(--jt-surface);
+	font-size: clamp(1.1rem, 4.5cqi, 1.75rem);
+	line-height: 1.35;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	-webkit-user-select: text;
+	user-select: text;
+}
+
+.jt-banner {
+	padding: 6px 12px;
+	border-radius: var(--jt-radius);
+	background: var(--jt-accent);
+	color: var(--jt-accent-text);
+	font-size: clamp(0.8rem, 2.8cqi, 1rem);
+	font-weight: 600;
+}
+
+.jt-token[data-word] {
+	cursor: pointer;
+}
+
+.jt-token-selected {
+	background: var(--jt-accent);
+	color: var(--jt-accent-text);
+}
+
+.jt-composing {
+	text-decoration: underline;
+	text-decoration-color: var(--jt-accent);
+	text-underline-offset: 0.2em;
+}
+
+.jt-caret {
+	display: inline-block;
+	width: 2px;
+	height: 1em;
+	margin-left: 1px;
+	vertical-align: text-bottom;
+	background: var(--jt-accent);
+	animation: jt-blink 1.1s steps(1) infinite;
+}
+
+@keyframes jt-blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+.jt-body {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+	gap: var(--jt-gap);
+	align-items: stretch;
+}
+
+.jt-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+	margin: 0;
+	padding: 4px;
+	overflow-y: auto;
+	border: 1px solid var(--jt-border);
+	border-radius: var(--jt-radius);
+	background: var(--jt-surface);
+	list-style: none;
+	/* The grid sets the row height; the list scrolls within it. */
+	height: 0;
+	min-height: 100%;
+}
+
+.jt-item {
+	padding: 0.3em 0.5em;
+	border-radius: calc(var(--jt-radius) / 2);
+	font-size: clamp(0.9rem, 3.6cqi, 1.4rem);
+	font-weight: 600;
+	overflow-wrap: anywhere;
+}
+
+.jt-item-partial {
+	font-weight: 400;
+	color: var(--jt-muted);
+}
+
+.jt-item-predicted {
+	font-style: italic;
+}
+
+.jt-item-page {
+	color: var(--jt-accent);
+	letter-spacing: 0.04em;
+}
+
+.jt-item-phrase {
+	font-weight: 400;
+}
+
+.jt-item-family {
+	padding-left: 1.1em;
+}
+
+/* Pausing on this row expands its word family. */
+.jt-item-expandable::after {
+	content: " …";
+	color: var(--jt-accent);
+}
+
+.jt-item-pad {
+	display: none;
+}
+
+/* Rows currently shown on the letter keys. */
+.jt-item-paged {
+	box-shadow: inset 3px 0 0 var(--jt-accent);
+	background: color-mix(in srgb, var(--jt-accent) 14%, transparent);
+}
+
+.jt-item-selected {
+	background: var(--jt-accent);
+	color: var(--jt-accent-text);
+}
+
+.jt-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--jt-gap);
+	aspect-ratio: 1;
+	min-width: 0;
+}
+
+.jt[data-method="swipe"] .jt-grid,
+.jt[data-method="mouseJoystick"] .jt-grid {
+	touch-action: none;
+}
+
+.jt-key,
+.jt-centre {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 4px;
+	border: 2px solid var(--jt-border);
+	border-radius: var(--jt-radius);
+	font: inherit;
+	color: inherit;
+}
+
+.jt-key {
+	background: var(--jt-key);
+	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.jt:not([data-method="direct"]) .jt-key {
+	cursor: default;
+	pointer-events: none;
+}
+
+.jt-key[data-kind="function"] {
+	background: var(--jt-key-fn);
+}
+
+.jt-key[data-kind="blank"] {
+	border-style: dashed;
+	background: transparent;
+	cursor: default;
+}
+
+.jt-key:focus-visible {
+	outline: 3px solid var(--jt-accent);
+	outline-offset: 2px;
+}
+
+.jt[data-method="direct"] .jt-key:active:not(:disabled) {
+	border-color: var(--jt-accent);
+	transform: scale(0.97);
+}
+
+.jt-key[data-active] {
+	border-color: var(--jt-accent);
+	box-shadow: inset 0 0 0 2px var(--jt-accent);
+}
+
+.jt-key[data-group="green"] {
+	border-color: var(--jt-green);
+	box-shadow: inset 0 0 0 3px var(--jt-green);
+}
+
+.jt-key[data-group="red"] {
+	border-color: var(--jt-red);
+	box-shadow: inset 0 0 0 3px var(--jt-red);
+}
+
+.jt-key[data-highlight] {
+	border-color: var(--jt-highlight);
+	box-shadow: inset 0 0 0 4px var(--jt-highlight);
+}
+
+.jt-face {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	width: 100%;
+	height: 100%;
+}
+
+.jt-cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: clamp(0.85rem, 4.2cqi, 1.9rem);
+	font-weight: 700;
+	line-height: 1;
+}
+
+/* Next-letter hints: no word continues with this letter. */
+.jt-cell-dim {
+	opacity: 0.28;
+}
+
+.jt-badge {
+	font-size: clamp(0.55rem, 2cqi, 0.9rem);
+	font-weight: 600;
+	color: var(--jt-accent);
+	letter-spacing: 0.03em;
+}
+
+.jt-label {
+	font-size: clamp(0.7rem, 2.9cqi, 1.3rem);
+	font-weight: 700;
+	line-height: 1.15;
+	text-align: center;
+	white-space: pre-line;
+}
+
+.jt-label-word {
+	font-size: clamp(0.9rem, 4cqi, 1.7rem);
+	overflow-wrap: anywhere;
+}
+
+.jt-key[data-kind="word"] {
+	border-color: var(--jt-accent);
+}
+
+.jt-centre-mode {
+	font-size: clamp(0.6rem, 2.3cqi, 1rem);
+	font-weight: 600;
+	color: var(--jt-muted);
+	white-space: pre-line;
+}
+
+.jt-centre {
+	flex-direction: column;
+	gap: 4px;
+	border-style: none;
+	background: transparent;
+	text-align: center;
+}
+
+.jt-centre-word {
+	font-size: clamp(0.9rem, 3.6cqi, 1.6rem);
+	font-weight: 700;
+	overflow-wrap: anywhere;
+}
+
+.jt-centre-status {
+	font-size: clamp(0.6rem, 2cqi, 0.85rem);
+	color: var(--jt-muted);
+	letter-spacing: 0.05em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.jt-caret {
+		animation: none;
+	}
+
+	.jt-key {
+		transform: none !important;
+	}
+}
